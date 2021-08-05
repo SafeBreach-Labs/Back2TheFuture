@@ -1,0 +1,3 @@
+[submodule ".\\rpc\\RpcView"]
+	path = .\\rpc\\RpcView
+	url = https://github.com/silverf0x/RpcView.git
