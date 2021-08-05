@@ -1,0 +1,15 @@
+[
+uuid(4c8d0bef-d7f1-49f0-9102-caa05f58d114),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_18_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_18_t;
+error_status_t Proc0_RPCQueryLANIds(
+[in]long arg_1,
+[out]/* simple_ref */struct Struct_18_t* arg_2);
+}
+

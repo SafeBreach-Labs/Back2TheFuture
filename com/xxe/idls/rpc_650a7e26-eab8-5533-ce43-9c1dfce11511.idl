@@ -1,0 +1,271 @@
+[
+uuid(650a7e26-eab8-5533-ce43-9c1dfce11511),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_178_t
+{
+ short StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] byte *StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] byte *StructMember4;
+long StructMember5;
+[unique] [size_is(StructMember5)] byte *StructMember6;
+long StructMember7;
+[unique] [size_is(StructMember7)] byte *StructMember8;
+}Struct_178_t;
+typedef struct Struct_266_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_266_t;
+typedef struct Struct_280_t
+{
+long StructMember0;
+}Struct_280_t;
+typedef struct Struct_460_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] long *StructMember1;
+}Struct_460_t;
+typedef struct Struct_482_t
+{
+byte StructMember0[16] ;
+}Struct_482_t;
+typedef struct Struct_582_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ [string]  wchar_t** StructMember1;
+}Struct_582_t;
+typedef struct Struct_680_t
+{
+long StructMember0;
+byte StructMember1;
+}Struct_680_t;
+typedef struct Struct_730_t
+{
+byte StructMember0[16] ;
+byte StructMember1;
+}Struct_730_t;
+typedef struct Struct_898_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_898_t;
+typedef struct Struct_1032_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_1032_t;
+typedef struct Struct_1060_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_1060_t;
+typedef struct Struct_1074_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_1074_t;
+typedef struct Struct_1204_t
+{
+char StructMember0[6] ;
+}Struct_1204_t;
+typedef struct Struct_514_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_482_t* StructMember1;
+}Struct_514_t;
+typedef struct Struct_598_t
+{
+[unique] [string]  wchar_t* StructMember0;
+struct Struct_582_t StructMember1;
+struct Struct_582_t StructMember2;
+}Struct_598_t;
+typedef struct Struct_642_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_598_t* StructMember1;
+}Struct_642_t;
+typedef struct Struct_658_t
+{
+struct Struct_642_t StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+}Struct_658_t;
+typedef struct Struct_714_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_680_t* StructMember1;
+}Struct_714_t;
+typedef struct Struct_762_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_730_t* StructMember1;
+}Struct_762_t;
+typedef struct Struct_866_t
+{
+struct Struct_582_t StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_866_t;
+typedef struct Struct_1046_t
+{
+struct Struct_582_t StructMember0;
+}Struct_1046_t;
+typedef struct Struct_1226_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_1204_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_1226_t;
+typedef [switch_type(/* enum_16 */ short )] union union_230
+{
+[case(0)] struct Struct_266_t unionMember_0;
+[case(1)] struct Struct_280_t unionMember_1;
+[case(3)] struct Struct_280_t unionMember_3;
+[case(2)] /* FC_ZERO */;
+[case(4)] /* FC_ZERO */;
+}union_230;
+typedef struct Struct_530_t
+{
+struct Struct_460_t StructMember0;
+struct Struct_514_t StructMember1;
+hyper StructMember2;
+}Struct_530_t;
+typedef struct Struct_778_t
+{
+struct Struct_714_t StructMember0;
+struct Struct_714_t StructMember1;
+struct Struct_762_t StructMember2;
+struct Struct_762_t StructMember3;
+long StructMember4;
+}Struct_778_t;
+typedef [switch_type(/* enum_16 */ short )] union union_996
+{
+[case(0)] struct Struct_1032_t unionMember_0;
+[case(1)] struct Struct_1046_t unionMember_1;
+[case(2)] struct Struct_1060_t unionMember_2;
+[case(3)] struct Struct_280_t unionMember_3;
+[case(4)] struct Struct_1074_t unionMember_4;
+}union_996;
+typedef struct Struct_286_t
+{
+ short StructMember0;
+[switch_is(StructMember0)] union union_230 StructMember1;
+}Struct_286_t;
+typedef struct Struct_324_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_286_t* StructMember1;
+}Struct_324_t;
+typedef struct Struct_1088_t
+{
+ short StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[switch_is(StructMember0)] union union_996 StructMember3;
+}Struct_1088_t;
+typedef struct Struct_1130_t
+{
+long StructMember0;
+long StructMember1;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember1)]  /*  */ struct Struct_1088_t* StructMember2;
+}Struct_1130_t;
+typedef [switch_type(/* enum_16 */ short )] union union_106
+{
+[case(2)] struct Struct_178_t unionMember_2;
+[case(7)] [unique] struct Struct_324_t* unionMember_7;
+[case(8)] long unionMember_8;
+[default] ;
+}union_106;
+typedef struct Struct_340_t
+{
+[range(0,10)]  /* enum_16 */ short StructMember0;
+long StructMember1;
+[switch_is(StructMember0)] union union_106 StructMember2;
+hyper StructMember3;
+}Struct_340_t;
+long Proc0_Rpc_VpnProtEngOpen(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_Rpc_VpnProtEngClose(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_Rpc_VpnProtEngEventSubscribe(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc3_Rpc_VpnProtEngEventSubscriptionGetLastEvent(
+[in][context_handle] void* arg_2,
+[out][ref]struct Struct_340_t** arg_3);
+
+long Proc4_Rpc_VpnProtEngEventUnsubscribe(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc5_Rpc_VpnProtEngSendGetCredentialsRequest(
+[in][context_handle] void* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]byte *arg_6);
+
+long Proc6_Rpc_VpnProtEngSendNegotiatingNetworkRequest(
+[in][context_handle] void* arg_1);
+
+long Proc7_Rpc_VpnProtEngSendInterfaceCreateRequest(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_530_t* arg_2,
+[in]/* simple_ref */long *arg_3,
+[in]/* simple_ref */struct Struct_482_t* arg_4,
+[in][unique]struct Struct_658_t* arg_5,
+[in][unique]struct Struct_778_t* arg_6,
+[in]long arg_7);
+
+long Proc8_Rpc_VpnProtEngSendInterfaceDestroyRequest(
+[in][context_handle] void* arg_1);
+
+long Proc9_Rpc_VpnProtEngSendConnectError(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4);
+
+long Proc10_Rpc_VpnProtEngGetConfiguration(
+[in][context_handle] void* arg_1,
+[out][ref]struct Struct_866_t** arg_2,
+[out]/* simple_ref */struct Struct_898_t* arg_3);
+
+long Proc11_Rpc_VpnProtEngGetBestCostInterface(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */struct Struct_898_t* arg_2);
+
+long Proc12_Rpc_VpnProtEngGetStatementOfHealth(
+[in][context_handle] void* arg_1,
+[out][ref][size_is(, *arg_3)]byte **arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc13_Rpc_VpnProtEngSendGetCustomPromptRequest(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_1130_t* arg_2);
+
+long Proc14_Rpc_VpnProtEngSendGetCertificateConsentBlankUiRequest(
+[in][context_handle] void* arg_1,
+[in]long arg_2);
+
+long Proc15_Rpc_VpnProtEngSendCloseCertificateConsentBlankUiRequest(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_2)]byte *arg_3);
+
+long Proc16_Rpc_VpnProtEngPluginInstall(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_1226_t* arg_3);
+
+long Proc17_Rpc_VpnProtEngPluginUninstall(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_1226_t* arg_2);
+}
+

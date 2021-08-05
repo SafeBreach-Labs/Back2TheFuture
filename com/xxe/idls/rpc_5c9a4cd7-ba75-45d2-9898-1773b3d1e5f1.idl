@@ -1,0 +1,63 @@
+[
+uuid(5c9a4cd7-ba75-45d2-9898-1773b3d1e5f1),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_92_t
+{
+[unique] [range(0,32767)]  [string]  wchar_t* StructMember0;
+[unique] [range(0,32767)]  [string]  wchar_t* StructMember1;
+}Struct_92_t;
+typedef struct Struct_182_t
+{
+hyper StructMember0;
+[unique] [range(0,32767)]  [string]  wchar_t* StructMember1;
+}Struct_182_t;
+typedef [switch_type(unsigned long )] union union_48
+{
+[case(1)] [unique] struct Struct_92_t* unionMember_1;
+}union_48;
+typedef struct Struct_112_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_48 StructMember1;
+}Struct_112_t;
+typedef [switch_type(unsigned long )] union union_152
+{
+[case(1)] [unique] struct Struct_182_t* unionMember_1;
+}union_152;
+typedef struct Struct_198_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_152 StructMember1;
+}Struct_198_t;
+long Proc0_PNP_Local_Connect(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc1_PNP_Local_Connect(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc2_PNP_Local_InstallDevInst(
+[in][ref][range(0,200)] [string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_112_t* arg_3,
+[in]/* simple_ref */struct Struct_198_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[in]long arg_6);
+
+long Proc3_PNP_Local_AddDriverPackage(
+[in][ref][range(0,32767)] [string] wchar_t* arg_2,
+[in][ref][range(0,32767)] [string] wchar_t* arg_3,
+[in]long arg_4,
+[in]/* simple_ref */struct Struct_198_t* arg_5,
+[in][out]/* simple_ref *//*[range(0,32767)] */long *arg_6,
+[out]/* simple_ref */[string][size_is(, *arg_6)]/*[range(0,0)]*/  wchar_t* arg_7,
+[out]/* simple_ref */long *arg_8,
+[in]long arg_9);
+
+long Proc4_PNP_Local_DeleteDriverPackage(
+[in][ref][range(0,32767)] [string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_198_t* arg_3,
+[out]/* simple_ref */long *arg_4,
+[in]long arg_5);
+}
+

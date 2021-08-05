@@ -1,0 +1,16 @@
+[
+uuid(8782d3b9-ebbd-4644-a3d8-e8725381919b),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_PsmSrvRegisterQuiesceResumeApp(
+[out]/* simple_ref */[context_handle] void** arg_1,
+[out]/* simple_ref */small *arg_2);
+
+long Proc1_PsmSrvQuiesceCallbacksComplete(
+[in][context_handle] void* arg_0);
+
+long Proc2_PsmSrvCloseActivationChannel(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

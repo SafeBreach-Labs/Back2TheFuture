@@ -1,0 +1,142 @@
+[
+uuid(b9e79e60-3d52-11ce-aaa1-00006901293f),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_36_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(0,524288)] */ byte StructMember1[] ;
+}Struct_36_t;
+typedef struct Struct_74_t
+{
+long StructMember0;
+[length_is(0)] byte StructMember1[1024] ;
+}Struct_74_t;
+typedef struct Struct_92_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_92_t;
+typedef struct Struct_104_t
+{
+hyper StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_104_t;
+typedef struct Struct_224_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_224_t;
+typedef struct Struct_144_t
+{
+[unique] struct Struct_74_t* StructMember0;
+long StructMember1;
+}Struct_144_t;
+typedef struct Struct_202_t
+{
+long StructMember0;
+ [size_is(StructMember0)] /*[range(0,524288)] */  /*  */ struct Struct_144_t StructMember1[] ;
+}Struct_202_t;
+typedef struct Struct_308_t
+{
+long StructMember0;
+ [size_is(StructMember0)] /*[range(0,524288)] */  /*  */ [unique] struct Struct_36_t* StructMember1;
+}Struct_308_t;
+typedef struct Struct_240_t
+{
+struct Struct_224_t StructMember0;
+struct Struct_104_t StructMember1;
+}Struct_240_t;
+long Proc0_IrotRegister(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_36_t* arg_3,
+[in]/* simple_ref */struct Struct_74_t* arg_4,
+[in]/* simple_ref */struct Struct_74_t* arg_5,
+[in]/* simple_ref */struct Struct_92_t* arg_6,
+[in]long arg_7,
+[in]long arg_8,
+[out]/* simple_ref */struct Struct_104_t* arg_9,
+[out]/* simple_ref */error_status_t *arg_10);
+
+long Proc1_IrotRevoke(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_104_t* arg_2,
+[out][ref]struct Struct_74_t** arg_3,
+[out][ref]struct Struct_74_t** arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */error_status_t *arg_6);
+
+long Proc2_IrotIsRunning(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_36_t* arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc3_IrotGetObject(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */struct Struct_36_t* arg_4,
+[out]/* simple_ref */struct Struct_104_t* arg_5,
+[out][ref]struct Struct_74_t** arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */error_status_t *arg_8);
+
+long Proc4_IrotNoteChangeTime(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_104_t* arg_2,
+[in]/* simple_ref */struct Struct_92_t* arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc5_IrotGetTimeOfLastChange(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_36_t* arg_3,
+[out]/* simple_ref */struct Struct_92_t* arg_4,
+[out]/* simple_ref */error_status_t *arg_5);
+
+long Proc6_IrotEnumRunning(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out][ref]struct Struct_202_t** arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc7_IMgotRegister(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_224_t* arg_3,
+[in]/* simple_ref */struct Struct_36_t* arg_4,
+[in]/* simple_ref */struct Struct_74_t* arg_5,
+[in]long arg_6,
+[out]/* simple_ref */struct Struct_240_t* arg_7,
+[out]/* simple_ref */error_status_t *arg_8);
+
+long Proc8_IMgotRevoke(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_240_t* arg_2,
+[out][ref]struct Struct_74_t** arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */error_status_t *arg_5);
+
+long Proc9_IMgotGetObject(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_224_t* arg_3,
+[in]/* simple_ref */struct Struct_36_t* arg_4,
+[out][ref]struct Struct_74_t** arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */error_status_t *arg_7);
+
+long Proc10_IMgotEnumRunning(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_224_t* arg_3,
+[out][ref]struct Struct_308_t** arg_4,
+[out]/* simple_ref */error_status_t *arg_5);
+}
+

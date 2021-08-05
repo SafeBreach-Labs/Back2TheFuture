@@ -1,0 +1,193 @@
+[
+uuid(1bddb2a6-c0c3-41be-8703-ddbdf4f0e80a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_44_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_44_t;
+typedef struct Struct_144_t
+{
+ short StructMember0;
+ short StructMember1;
+ short StructMember2;
+wchar_t StructMember3[64] ;
+}Struct_144_t;
+typedef struct Struct_238_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_238_t;
+typedef struct Struct_282_t
+{
+char StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_282_t;
+typedef struct Struct_324_t
+{
+ short StructMember0;
+long StructMember1;
+long StructMember2;
+wchar_t StructMember3[256] ;
+wchar_t StructMember4[1024] ;
+long StructMember5;
+long StructMember6;
+}Struct_324_t;
+typedef struct Struct_62_t
+{
+struct Struct_44_t StructMember0;
+wchar_t StructMember1[256] ;
+ short StructMember2;
+}Struct_62_t;
+typedef struct Struct_102_t
+{
+long StructMember0;
+long StructMember1;
+ [size_is(/*FC_CALLBACK not implemented */)]  /*  */ struct Struct_62_t StructMember2[] ;
+}Struct_102_t;
+typedef struct Struct_180_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_44_t StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_180_t;
+typedef struct Struct_258_t
+{
+long StructMember0;
+ long StructMember1;
+struct Struct_238_t StructMember2;
+}Struct_258_t;
+typedef struct Struct_292_t
+{
+struct Struct_282_t StructMember0;
+long StructMember1;
+}Struct_292_t;
+long Proc0_RpcOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in][out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc1_RpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcEnumInterfaces(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_102_t** arg_1);
+
+long Proc3_RpcSetInterface(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4);
+
+long Proc4_RpcGetInterfaceState(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */struct Struct_144_t* arg_2);
+
+long Proc5_RpcReConnect(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1);
+
+long Proc6_RpcRegisterNotification(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in][out]/* simple_ref */long *arg_2);
+
+long Proc7_RpcAsyncGetNotification(
+[in][context_handle] void* arg_1,
+[out][ref]struct Struct_180_t** arg_2);
+
+long Proc8_RpcSetProfile(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc9_RpcGetProfile(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out][ref][string] wchar_t** arg_3);
+
+long Proc10_RpcGetCurrentProfile(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][string] wchar_t** arg_3);
+
+long Proc11_RpcDeleteProfile(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_44_t* arg_1);
+
+long Proc12_RpcUIResponse(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_238_t* arg_2,
+[in]/* simple_ref */struct Struct_258_t* arg_3);
+
+long Proc13_RpcQueryUIRequest(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */struct Struct_238_t* arg_2);
+
+long Proc14_RpcSetProfileEapUserData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_292_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_4)]char *arg_5);
+
+long Proc15_RpcAsyncDoPlap(
+[in]/* simple_ref */wchar_t *arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_4)] /*  */ struct Struct_324_t arg_5[]);
+
+long Proc16_RpcQueryPlapCredentials(
+[in]/* simple_ref */wchar_t *arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_324_t** arg_2,
+[out][ref][string] wchar_t** arg_3,
+[out]/* simple_ref */struct Struct_44_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */long *arg_8);
+
+long Proc17_RpcCancelPlap(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1);
+
+long Proc18_RpcGetProfileEapUserDataInfo(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc19_RpcSetAutoConfigParameter(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]char *arg_3);
+
+long Proc20_RpcQueryAutoConfigParameter(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_4);
+}
+

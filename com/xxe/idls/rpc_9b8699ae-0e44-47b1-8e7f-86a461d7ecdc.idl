@@ -1,0 +1,143 @@
+[
+uuid(9b8699ae-0e44-47b1-8e7f-86a461d7ecdc),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_24_t
+{
+struct Struct_12_t StructMember0;
+struct Struct_12_t StructMember1;
+struct Struct_12_t StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+}Struct_24_t;
+error_status_t Proc0_LaunchActivatorServer(
+[in]/* simple_ref */struct Struct_24_t* arg_1,
+[in][unique][size_is(arg_3)]/*[range(0,0)]*/ wchar_t *arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][range(1,301)] [string] wchar_t* arg_6,
+[in]long arg_7,
+[out]/* simple_ref */unsigned __int3264 *arg_8,
+[out]/* simple_ref */long *arg_9,
+[out]/* simple_ref */long *arg_10);
+
+error_status_t Proc1_LaunchRunAsServer(
+[in]/* simple_ref */struct Struct_24_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in][unique][range(1,301)] [string] wchar_t* arg_5,
+[out]/* simple_ref */unsigned __int3264 *arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */unsigned __int3264 *arg_8,
+[out]/* simple_ref */long *arg_9);
+
+error_status_t Proc2_LaunchService(
+[in]/* simple_ref */struct Struct_24_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */long *arg_5);
+
+error_status_t Proc3_CertifyServerIdentity(
+[in]long arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in][ref][range(1,39)] [string] wchar_t* arg_5,
+[in][unique][range(1,2048)] [string] wchar_t* arg_6,
+[in][unique][range(1,2048)] [string] wchar_t* arg_7,
+[in]long arg_8,
+[in]long arg_9,
+[out]/* simple_ref */long *arg_10);
+
+error_status_t Proc4_QueryNTService(
+[in][unique]struct Struct_12_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */long *arg_5);
+
+error_status_t Proc5_ControlNTService(
+[in][unique]struct Struct_12_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+error_status_t Proc6_PrivRunAsSetWinstaDesktop(
+[in]unsigned __int3264 arg_1,
+[in]/* simple_ref */[string][size_is(301)]/*[range(0,0)]*/  wchar_t* arg_2);
+
+error_status_t Proc7_PrivRunAsRelease(
+[in]unsigned __int3264 arg_1);
+
+error_status_t Proc8_PrivRunAsInvalidateAndRelease(
+[in]unsigned __int3264 arg_1);
+
+error_status_t Proc9_PrivTranslateShareName(
+[in][ref][range(1,261)] [string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+error_status_t Proc10_GenericStream__Commit(
+);
+
+error_status_t Proc11_IsPortOpen(
+[in][ref][range(1,521)] [string] wchar_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc12_TickleActivationSettings(
+);
+
+error_status_t Proc13_CheckWow64Process(
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc14_PrivilegedNotifyWinRTActivationStoreChanged(
+);
+
+error_status_t Proc15_QueryUserSidForSession(
+[in]long arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+error_status_t Proc16_PrivActivatePsmServer(
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+error_status_t Proc17_PrivGetUserTokenForSession(
+[in]long arg_1,
+[out]/* simple_ref */unsigned __int3264 *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc18_PrivGetBrokerToken(
+[in]long arg_1,
+[out]/* simple_ref */unsigned __int3264 *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc19_PrivGetDesktopWinRTBrokerToken(
+[in]long arg_1,
+[out]/* simple_ref */unsigned __int3264 *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc20_PrivGetPsmToken(
+[in]long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[out]/* simple_ref */unsigned __int3264 *arg_5,
+[out]/* simple_ref */long *arg_6);
+}
+

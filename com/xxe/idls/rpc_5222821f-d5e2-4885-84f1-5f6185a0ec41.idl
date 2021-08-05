@@ -1,0 +1,19 @@
+[
+uuid(5222821f-d5e2-4885-84f1-5f6185a0ec41),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+long Proc0_RpcSrvRegisterControlChannelReset(
+[out]/* simple_ref */struct Struct_12_t* arg_1);
+
+long Proc1_RpcSrvUnregisterControlChannelReset(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+}
+

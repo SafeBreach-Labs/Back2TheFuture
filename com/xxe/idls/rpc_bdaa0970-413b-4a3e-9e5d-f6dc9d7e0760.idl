@@ -1,0 +1,23 @@
+[
+uuid(bdaa0970-413b-4a3e-9e5d-f6dc9d7e0760),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_PsmSrvOpenTcChannel(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_PsmSrvApplyTaskCompletion(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1,
+[in]long arg_2,
+[in]small arg_3);
+
+long Proc2_PsmSrvRegisterDynamicProcess(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1,
+[in]long arg_2);
+
+long Proc3_PsmSrvCloseActivationChannel(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

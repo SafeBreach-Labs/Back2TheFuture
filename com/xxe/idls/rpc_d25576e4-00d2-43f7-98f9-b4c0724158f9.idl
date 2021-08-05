@@ -1,0 +1,54 @@
+[
+uuid(d25576e4-00d2-43f7-98f9-b4c0724158f9),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_24_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] short *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_24_t;
+typedef struct Struct_46_t
+{
+short StructMember0;
+short StructMember1;
+}Struct_46_t;
+typedef struct Struct_64_t
+{
+char StructMember0[6] ;
+}Struct_64_t;
+typedef struct Struct_86_t
+{
+char StructMember0;
+char StructMember1;
+struct Struct_64_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_86_t;
+typedef struct Struct_100_t
+{
+[unique] struct Struct_86_t* StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_100_t;
+typedef struct Struct_138_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_100_t* StructMember1;
+}Struct_138_t;
+long Proc0_LsarEasMarkUserControlled(
+[in]/* simple_ref */struct Struct_24_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4);
+
+long Proc1_LsarEasGetCallerPasswordComplexity(
+[out]/* simple_ref */struct Struct_46_t* arg_1,
+[out]/* simple_ref */struct Struct_46_t* arg_2);
+
+long Proc2_LsarEasGetControlledUsersInfo(
+[out]/* simple_ref */struct Struct_46_t* arg_1,
+[out]/* simple_ref */struct Struct_46_t* arg_2,
+[out]/* simple_ref */struct Struct_138_t* arg_3);
+}
+

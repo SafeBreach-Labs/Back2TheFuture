@@ -1,0 +1,158 @@
+[
+uuid(d4254f95-08c3-4fcc-b2a6-0b651377a29d),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_28_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_28_t;
+typedef struct Struct_42_t
+{
+ short StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+ short StructMember4;
+wchar_t StructMember5[18] ;
+long StructMember6;
+}Struct_42_t;
+typedef struct Struct_62_t
+{
+ short StructMember0;
+ short StructMember1;
+}Struct_62_t;
+typedef struct Struct_74_t
+{
+ short StructMember0;
+ short StructMember1;
+long StructMember2;
+}Struct_74_t;
+typedef struct Struct_156_t
+{
+wchar_t StructMember0[7] ;
+long StructMember1;
+wchar_t StructMember2[21] ;
+long StructMember3;
+}Struct_156_t;
+typedef struct Struct_222_t
+{
+long StructMember0;
+long StructMember1;
+ short StructMember2;
+ short StructMember3;
+ short StructMember4;
+}Struct_222_t;
+typedef struct Struct_262_t
+{
+long StructMember0;
+}Struct_262_t;
+typedef struct Struct_274_t
+{
+wchar_t StructMember0[256] ;
+wchar_t StructMember1[21] ;
+ short StructMember2;
+}Struct_274_t;
+typedef struct Struct_336_t
+{
+ short StructMember0;
+ short StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_336_t;
+typedef struct Struct_86_t
+{
+struct Struct_74_t StructMember0;
+long StructMember1;
+}Struct_86_t;
+typedef struct Struct_174_t
+{
+struct Struct_156_t StructMember0;
+long StructMember1;
+ short StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_174_t;
+typedef struct Struct_192_t
+{
+long StructMember0;
+long StructMember1;
+[ptr] struct Struct_174_t* StructMember2;
+}Struct_192_t;
+typedef struct Struct_208_t
+{
+struct Struct_192_t StructMember0;
+}Struct_208_t;
+typedef struct Struct_236_t
+{
+ short StructMember0;
+ short StructMember1;
+wchar_t StructMember2[21] ;
+wchar_t StructMember3[21] ;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+struct Struct_222_t StructMember7;
+}Struct_236_t;
+typedef struct Struct_350_t
+{
+struct Struct_336_t StructMember0;
+ short StructMember1;
+}Struct_350_t;
+typedef struct Struct_118_t
+{
+ short StructMember0;
+long StructMember1;
+struct Struct_62_t StructMember2;
+struct Struct_86_t StructMember3;
+ short StructMember4;
+wchar_t StructMember5[16] ;
+wchar_t StructMember6[21] ;
+wchar_t StructMember7[23] ;
+}Struct_118_t;
+typedef struct Struct_364_t
+{
+[ptr] struct Struct_336_t* StructMember0;
+[ptr] struct Struct_350_t* StructMember1;
+[ptr] struct Struct_336_t* StructMember2;
+[ptr] struct Struct_336_t* StructMember3;
+}Struct_364_t;
+typedef struct Struct_294_t
+{
+struct Struct_28_t StructMember0;
+struct Struct_42_t StructMember1;
+struct Struct_118_t StructMember2;
+struct Struct_208_t StructMember3;
+struct Struct_236_t StructMember4;
+struct Struct_262_t StructMember5;
+struct Struct_274_t StructMember6;
+}Struct_294_t;
+long Proc0_WWDiagQueryInfSnapShot(
+[in]/* simple_ref */struct Struct_12_t* arg_0,
+[out]/* simple_ref */struct Struct_294_t* arg_1);
+
+long Proc1_WWDiagQueryInfRecentStats(
+[in]/* simple_ref */struct Struct_12_t* arg_0,
+[in][out]/* simple_ref */struct Struct_364_t* arg_1);
+
+long Proc2_WWDiagQueryInfBulkStats(
+[in]/* simple_ref */struct Struct_12_t* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_336_t** arg_2);
+
+long Proc3_WWDiagQueryInfSignalStrengthStats(
+[in]/* simple_ref */struct Struct_12_t* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_28_t** arg_2);
+}
+

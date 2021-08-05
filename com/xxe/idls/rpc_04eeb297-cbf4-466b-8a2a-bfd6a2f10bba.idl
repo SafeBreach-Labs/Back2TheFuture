@@ -1,0 +1,31 @@
+[
+uuid(04eeb297-cbf4-466b-8a2a-bfd6a2f10bba),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_EfsKRpcEstablishRpcConnection(
+);
+
+long Proc1_EfsKRpcDecryptFek(
+[in][range(0,262144)] long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]/*[range(0,262144)]*/ char *arg_2,
+[out]/* simple_ref *//*[range(0,1088)] */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,1088)]*/ char **arg_4,
+[out]/* simple_ref *//*[range(0,262144)] */long *arg_5,
+[out][ref][size_is(, *arg_5)]/*[range(0,262144)]*/ char **arg_6);
+
+long Proc2_EfsKRpcGenerateKey(
+[in][range(0,262144)] long arg_1,
+[in][unique][size_is(arg_1)]/*[range(0,262144)]*/ char *arg_2,
+[out]/* simple_ref *//*[range(0,1088)] */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,1088)]*/ char **arg_4,
+[out]/* simple_ref *//*[range(0,262144)] */long *arg_5,
+[out][ref][size_is(, *arg_5)]/*[range(0,262144)]*/ char **arg_6);
+
+long Proc3_EfsKRpcGenerateDirEfs(
+[in][range(0,262144)] long arg_1,
+[in][unique][size_is(arg_1)]/*[range(0,262144)]*/ char *arg_2,
+[out]/* simple_ref *//*[range(0,262144)] */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,262144)]*/ char **arg_4);
+}
+

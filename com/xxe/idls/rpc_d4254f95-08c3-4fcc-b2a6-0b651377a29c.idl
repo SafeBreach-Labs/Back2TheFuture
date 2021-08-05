@@ -1,0 +1,267 @@
+[
+uuid(d4254f95-08c3-4fcc-b2a6-0b651377a29c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_48_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_48_t;
+typedef struct Struct_108_t
+{
+long StructMember0;
+ long StructMember1;
+}Struct_108_t;
+typedef struct Struct_220_t
+{
+char StructMember0[16] ;
+ short StructMember1;
+}Struct_220_t;
+typedef struct Struct_238_t
+{
+ short StructMember0;
+long StructMember1;
+}Struct_238_t;
+typedef struct Struct_288_t
+{
+wchar_t StructMember0[256] ;
+long StructMember1;
+}Struct_288_t;
+typedef struct Struct_368_t
+{
+char StructMember0;
+char StructMember1;
+char StructMember2[160] ;
+}Struct_368_t;
+typedef struct Struct_72_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_48_t StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_72_t;
+typedef struct Struct_250_t
+{
+ short StructMember0;
+struct Struct_238_t StructMember1;
+}Struct_250_t;
+typedef struct Struct_314_t
+{
+long StructMember0;
+[size_is(StructMember0)] struct Struct_288_t StructMember1[] ;
+}Struct_314_t;
+typedef struct Struct_380_t
+{
+ short StructMember0;
+struct Struct_368_t StructMember1;
+}Struct_380_t;
+typedef struct Struct_116_t
+{
+struct Struct_48_t StructMember0;
+wchar_t StructMember1[256] ;
+struct Struct_108_t StructMember2;
+struct Struct_48_t StructMember3;
+long StructMember4;
+}Struct_116_t;
+typedef struct Struct_154_t
+{
+long StructMember0;
+[size_is(StructMember0)] struct Struct_116_t StructMember1[] ;
+}Struct_154_t;
+long Proc0_WwanRpcOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc1_WwanRpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_WwanRpcRegisterNotification(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc3_WwanRpcAsyncGetNotification(
+[in][context_handle] void* arg_1,
+[out][ref]struct Struct_72_t** arg_2);
+
+long Proc4_WwanRpcEnumerateInterfaces(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out][ref]struct Struct_154_t** arg_2);
+
+long Proc5_WwanRpcSetInterface(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4,
+[in][out][unique]long *arg_5,
+[in][out][unique]long *arg_6);
+
+long Proc6_WwanRpcQueryInterface(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4,
+[in][out][unique]long *arg_5,
+[in][out][unique]long *arg_6);
+
+long Proc7_WwanRpcScan(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in][out][unique]long *arg_2,
+[in][out][unique]long *arg_3,
+[in]long arg_4);
+
+long Proc8_WwanRpcRegister(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in][out][unique]long *arg_5,
+[in][out][unique]long *arg_6);
+
+long Proc9_WwanRpcConnect(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]/* simple_ref */struct Struct_48_t* arg_5,
+[out]/* simple_ref */long *arg_6,
+[in][out][unique]long *arg_7);
+
+long Proc10_WwanRpcConnectAdditionalPdpContext(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[out]/* simple_ref */long *arg_4,
+[in][out][unique]long *arg_5);
+
+long Proc11_WwanRpcDisconnect(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in][out][unique]long *arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc12_WwanRpcSetSmsConfiguration(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_220_t* arg_2,
+[in][out][unique]long *arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc13_WwanRpcSmsRead(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_250_t* arg_2,
+[in][out][unique]long *arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc14_WwanRpcSmsSend(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4,
+[in][out][unique]long *arg_5,
+[in][out][unique]long *arg_6);
+
+long Proc15_WwanRpcSmsDelete(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_238_t* arg_2,
+[in][out][unique]long *arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc16_WwanRpcSetProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in][out][unique]long *arg_5,
+[out][ref]/* enum_16 */ short *arg_6);
+
+long Proc17_WwanRpcDeleteProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc18_WwanRpcGetProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out][ref][string] wchar_t** arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc19_WwanRpcGetProfileList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[out][ref]struct Struct_314_t** arg_2);
+
+long Proc20_WwanRpcGetProfileIstream(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4);
+
+long Proc21_WwanRpcGetProfileMetaData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]char **arg_6);
+
+long Proc22_WwanRpcSetProfileMetaData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]char *arg_6);
+
+long Proc23_WwanRpcAuthChallenge(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4,
+[in][out][unique]long *arg_5,
+[in][out][unique]long *arg_6);
+
+long Proc24_WwanRpcGetProfileIndex(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[in][out][unique]long *arg_4);
+
+long Proc25_WwanRpcUssdRequest(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_380_t* arg_2,
+[in][out][unique]long *arg_3);
+
+long Proc26_WwanRpcGetProfileHomeProviderName(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out][ref][string] wchar_t** arg_3);
+}
+

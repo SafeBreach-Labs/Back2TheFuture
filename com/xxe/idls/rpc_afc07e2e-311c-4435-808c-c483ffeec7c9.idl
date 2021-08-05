@@ -1,0 +1,80 @@
+[
+uuid(afc07e2e-311c-4435-808c-c483ffeec7c9),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_44_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_44_t;
+typedef struct Struct_160_t
+{
+[range(0,262144)]  long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_160_t;
+typedef struct Struct_258_t
+{
+char StructMember0[6] ;
+}Struct_258_t;
+typedef struct Struct_5748_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_5748_t;
+typedef struct Struct_280_t
+{
+char StructMember0;
+char StructMember1;
+struct Struct_258_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_280_t;
+typedef struct Struct_1142_t
+{
+[unique] struct Struct_280_t* StructMember0;
+}Struct_1142_t;
+typedef struct Struct_5654_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1142_t* StructMember1;
+}Struct_5654_t;
+typedef struct Struct_5764_t
+{
+struct Struct_44_t StructMember0;
+struct Struct_44_t StructMember1;
+struct Struct_44_t StructMember2;
+struct Struct_5748_t StructMember3;
+struct Struct_160_t StructMember4;
+struct Struct_160_t StructMember5;
+long StructMember6;
+}Struct_5764_t;
+typedef struct Struct_5822_t
+{
+[unique] struct Struct_280_t* StructMember0;
+struct Struct_44_t StructMember1;
+struct Struct_44_t StructMember2;
+struct Struct_44_t StructMember3;
+long StructMember4;
+[range(1,127)]  long StructMember5;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember5)]  /*  */ struct Struct_5764_t** StructMember6;
+}Struct_5822_t;
+typedef struct Struct_5880_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_5822_t* StructMember1;
+}Struct_5880_t;
+long Proc0_LsarGetAvailableCAPIDs(
+[out]/* simple_ref */struct Struct_5654_t* arg_1);
+
+long Proc1_LsarSetCAPs(
+[in]long arg_1,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ struct Struct_44_t* arg_2,
+[in]long arg_3);
+
+long Proc2_LsarQueryCAPs(
+[in]long arg_1,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ struct Struct_1142_t* arg_2,
+[out]/* simple_ref */struct Struct_5880_t* arg_3);
+}
+

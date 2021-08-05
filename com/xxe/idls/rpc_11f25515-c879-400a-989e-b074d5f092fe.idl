@@ -1,0 +1,61 @@
+[
+uuid(11f25515-c879-400a-989e-b074d5f092fe),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_234_t
+{
+short StructMember0;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember0)] /*[range(0,8096)] */ [length_is(StructMember0)] byte *StructMember1/*[]  CONFORMANT_ARRAY*/;
+}Struct_234_t;
+typedef struct Struct_256_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_256_t;
+typedef struct Struct_268_t
+{
+long StructMember0;
+struct Struct_234_t StructMember1;
+struct Struct_256_t StructMember2;
+struct Struct_256_t StructMember3;
+}Struct_268_t;
+long Proc0_RpcBroadcastSystemMessage(
+[in]long arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in][out][ptr]long *arg_4,
+[in]long arg_5,
+[in]unsigned __int3264 arg_6,
+[in]__int3264 arg_7,
+[in]/* simple_ref */[size_is(arg_9)]/*[range(0,0)]*/ byte *arg_8,
+[in]long arg_9,
+[in]small arg_10,
+[out]/* simple_ref */long *arg_11);
+
+long Proc1_RpcSendWindowMessage(
+[in]long arg_1,
+[in]long arg_2,
+[in]unsigned __int3264 arg_3,
+[in]long arg_4,
+[in]unsigned __int3264 arg_5,
+[in]__int3264 arg_6,
+[in]/* simple_ref */[size_is(arg_8)]/*[range(0,0)]*/ byte *arg_7,
+[in]long arg_8,
+[in]small arg_9,
+[out]/* simple_ref */long *arg_10);
+
+long Proc2_RpcCreateSession(
+[in]/* simple_ref */struct Struct_268_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */struct Struct_256_t* arg_5);
+
+long Proc3_RpcTerminateSession(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_256_t* arg_2);
+}
+

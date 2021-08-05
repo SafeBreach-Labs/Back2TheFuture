@@ -1,0 +1,20 @@
+[
+uuid(c605f9fb-f0a3-4e2a-a073-73560f8d9e3e),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+error_status_t Proc0_RBiSrvSignalEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in][unique]small *arg_2,
+[in][unique]struct Struct_12_t* arg_3,
+[in][unique][size_is(arg_5)]byte *arg_4,
+[in]long arg_5);
+}
+

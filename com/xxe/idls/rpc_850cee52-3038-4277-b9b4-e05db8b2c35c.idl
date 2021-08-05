@@ -1,0 +1,99 @@
+[
+uuid(850cee52-3038-4277-b9b4-e05db8b2c35c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_30_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_30_t;
+typedef struct Struct_106_t
+{
+struct Struct_30_t StructMember0;
+long StructMember1;
+}Struct_106_t;
+typedef struct Struct_116_t
+{
+struct Struct_106_t StructMember0;
+ long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_116_t;
+typedef struct Struct_158_t
+{
+struct Struct_116_t StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] /*[range(0,0)] */ char *StructMember3;
+}Struct_158_t;
+long Proc0_DasCreateAssociationContext(
+[in][ref][range(0,768)] [string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_30_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc1_DasCreateAssociationContextFromOobBlob(
+[in]/* simple_ref */struct Struct_30_t* arg_1,
+[in][range(0,65536)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,65536)]*/ char *arg_3,
+[in]/* simple_ref */struct Struct_30_t* arg_4,
+[in]long arg_5,
+[out][ref][string] wchar_t** arg_6,
+[out]/* simple_ref */[context_handle] void** arg_7,
+[out]/* simple_ref */long *arg_8,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_8)]/*[range(0,0)]*/  /*  */ struct Struct_158_t** arg_9);
+
+long Proc2_DasStartEnumCeremonies(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_106_t** arg_3);
+
+long Proc3_DasSelectCeremony(
+[in]/* simple_ref */[context_handle] void** arg_0,
+[in]/* simple_ref */struct Struct_30_t* arg_1);
+
+long Proc4_DasStartReadCeremonyData(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]/*[range(0,0)]*/ char **arg_3);
+
+long Proc5_DasStartWriteCeremonyData(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[in][range(0,65536)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,65536)]*/ char *arg_3);
+
+long Proc6_DasStartFinalize(
+[in]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc7_DasStartDeviceStatusNotification(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[out][ref]/* enum_16 */ short *arg_2);
+
+long Proc8_DasCloseAssociationContext(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc9_DasStartRemoveAssociation(
+[in]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc10_DasCreateImportExportContext(
+[in]/* simple_ref */struct Struct_30_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc11_DasStartAepImport(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[in][range(0,1048576)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,1048576)]*/ char *arg_3,
+[out][ref][string] wchar_t** arg_4);
+
+long Proc12_DasStartAepExport(
+[in]/* simple_ref */[context_handle] void** arg_1,
+[in][ref][range(0,768)] [string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,0)]*/ char **arg_4);
+
+long Proc13_DasCloseImportExportContext(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

@@ -1,0 +1,113 @@
+[
+uuid(c8cb7687-e6d3-11d2-a958-00c04f682e16),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_318_t
+{
+hyper StructMember0;
+}Struct_318_t;
+long Proc0_DavrCreateConnection(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_5/2)]/*[range(0,0)]*/ wchar_t *arg_4,
+[in][range(0,528)] long arg_5,
+[in][unique][string][size_is(arg_7)]/*[range(0,514)]*/  wchar_t* arg_6,
+[in][range(0,514)] long arg_7,
+[in][range(0,4096)] long arg_8,
+[in][unique][size_is(arg_8)]/*[range(0,4096)]*/ char *arg_9,
+[in][unique][string][size_is(arg_11)]/*[range(0,16384)]*/  wchar_t* arg_10,
+[in][range(0,16384)] long arg_11,
+[in]small arg_12,
+[in]small arg_13,
+[in][range(0,528)] long arg_14,
+[in][unique][size_is(arg_14/2)]/*[range(0,0)]*/ wchar_t *arg_15);
+
+long Proc1_DavrGetCookie(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc2_DavrSetCookie(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc3_DavrDoesServerDoDav(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][out]/* simple_ref */small *arg_3,
+[in][unique][string][size_is(arg_5)]/*[range(0,16384)]*/  wchar_t* arg_4,
+[in][range(0,16384)] long arg_5);
+
+long Proc4_DavrIsValidShare(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string][size_is(arg_4)]/*[range(0,16384)]*/  wchar_t* arg_3,
+[in][range(0,16384)] long arg_4,
+[in][out]/* simple_ref */small *arg_5);
+
+long Proc5_DavrEnumNetUses(
+[in][out]/* simple_ref */long *arg_1,
+[out][ref][string] wchar_t** arg_2,
+[out][ref][string] wchar_t** arg_3,
+[in][out]/* simple_ref */small *arg_4);
+
+long Proc6_DavrEnumShares(
+[in][out]/* simple_ref */long *arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out][ref][string] wchar_t** arg_3,
+[in][out]/* simple_ref */small *arg_4);
+
+long Proc7_DavrEnumServers(
+[in][out]/* simple_ref */long *arg_1,
+[out][ref][string] wchar_t** arg_2,
+[in][out]/* simple_ref */small *arg_3);
+
+long Proc8_DavrGetConnection(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2,
+[in][out]/* simple_ref */small *arg_3);
+
+long Proc9_DavrDeleteConnection(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc10_DavrCancelConnectionsToServer(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc11_DavrGetUser(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc12_DavrConnectionExist(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc13_CDavNodeFactory__BeginChildren(
+[out]/* simple_ref */ /* [DBG] FC_CVARRAY */[size_is(arg_2)]/*[range(0,512)]*/ [length_is(, *arg_3)]wchar_t *arg_1/*[] CONFORMANT_ARRAY*/,
+[in][range(0,512)] long arg_2,
+[out]/* simple_ref */long *arg_3,
+[in][out]/* simple_ref */struct Struct_318_t* arg_4,
+[in][out]/* simple_ref */struct Struct_318_t* arg_5);
+
+long Proc14_DavrFreeUsedDiskSpace(
+[in]long arg_1);
+
+long Proc15_DavrGetTheLockOwnerOfTheFile(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc16_DavrInvalidateCache(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+small Proc17_DavrIsWebClientRunning(
+);
+
+long Proc18_DavrGetServerAuthType(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]/*[range(0,0)]*/ byte **arg_5);
+}
+

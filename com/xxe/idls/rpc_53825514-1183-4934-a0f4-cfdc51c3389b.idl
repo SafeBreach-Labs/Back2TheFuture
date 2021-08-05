@@ -1,0 +1,46 @@
+[
+uuid(53825514-1183-4934-a0f4-cfdc51c3389b),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_196_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+wchar_t StructMember3[18] ;
+wchar_t StructMember4[21] ;
+hyper StructMember5;
+hyper StructMember6;
+hyper StructMember7;
+hyper StructMember8;
+long StructMember9;
+[unique] [size_is(StructMember9)] char *StructMember10;
+}Struct_196_t;
+typedef [switch_type(unsigned long )] union union_154
+{
+[case(1)] struct Struct_196_t unionMember_1;
+}union_154;
+typedef struct Struct_230_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_154 StructMember1;
+}Struct_230_t;
+long Proc0_RpcIsCurrentSessionTerminalRemote(
+[out]/* simple_ref */small *arg_1);
+
+long Proc1_RpcGetCurrentSessionTerminalName(
+[out][ref][string] wchar_t** arg_1);
+
+long Proc2_RpcGetCurrentSessionInformation(
+[in]long arg_1,
+[out]/* simple_ref */struct Struct_230_t* arg_2);
+
+long Proc3_RpcGetCurrentSessionCapabilities(
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc4_RpcGetCurrentSessionType(
+[out]/* simple_ref */long *arg_1);
+}
+

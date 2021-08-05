@@ -1,0 +1,89 @@
+[
+uuid(bd84cd86-9825-4376-813d-334c543f89b1),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_62_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_62_t;
+typedef struct Struct_302_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] /*[range(0,0)] */ wchar_t *StructMember1;
+}Struct_302_t;
+typedef struct Struct_74_t
+{
+struct Struct_62_t StructMember0;
+long StructMember1;
+}Struct_74_t;
+typedef struct Struct_84_t
+{
+struct Struct_74_t StructMember0;
+ long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_84_t;
+typedef struct Struct_126_t
+{
+struct Struct_84_t StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] /*[range(0,0)] */ char *StructMember3;
+}Struct_126_t;
+typedef [switch_type(long )] union union_252
+{
+[case(1)] [unique] [string]  wchar_t* unionMember_1;
+[case(2)] struct Struct_302_t unionMember_2;
+[case(0)] char unionMember_0;
+}union_252;
+typedef struct Struct_360_t
+{
+ long StructMember0;
+struct Struct_126_t StructMember1;
+}Struct_360_t;
+typedef struct Struct_440_t
+{
+struct Struct_74_t StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] /*[range(0,0)] */ char *StructMember3;
+}Struct_440_t;
+typedef struct Struct_504_t
+{
+struct Struct_62_t StructMember0;
+ long StructMember1;
+ long StructMember2;
+[switch_is(StructMember2)] union union_252 StructMember3;
+long StructMember4;
+struct Struct_302_t StructMember5;
+long StructMember6;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember6)] /*[range(0,10000)] */  /*  */ struct Struct_84_t* StructMember7;
+long StructMember8;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember8)] /*[range(0,10000)] */  /*  */ struct Struct_360_t* StructMember9;
+long StructMember10;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember10)] /*[range(0,0)] */  /*  */ struct Struct_440_t* StructMember11;
+}Struct_504_t;
+long Proc0_RpcDevQueryCreate(
+[in][ref]struct Struct_504_t* arg_1,
+[out]/* simple_ref */hyper *arg_2,
+[out]/* simple_ref */hyper *arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+void Proc1_RpcDevQueryClose(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcDevQueryGetResult(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref][size_is(, *arg_1)]/*[range(0,0)]*/ char **arg_2);
+
+long Proc3_RpcDevPropertySet(
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][range(0,10000)] long arg_3,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_3)]/*[range(0,10000)]*/  /*  */ struct Struct_126_t* arg_4);
+}
+

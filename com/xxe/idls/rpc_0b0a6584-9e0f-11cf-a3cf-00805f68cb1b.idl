@@ -1,0 +1,56 @@
+[
+uuid(0b0a6584-9e0f-11cf-a3cf-00805f68cb1b),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_88_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(0,2000)] */ byte StructMember1[] ;
+}Struct_88_t;
+typedef struct Struct_384_t
+{
+struct Struct_12_t StructMember0;
+[unique] struct Struct_88_t* StructMember1;
+[string] char StructMember2[64] ;
+}Struct_384_t;
+error_status_t Proc0_OpenEndpointMapper(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+error_status_t Proc1_AllocateReservedIPPort(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */short *arg_3);
+
+void Proc2_ept_insert_ex(
+[in][out]/* simple_ref */[context_handle] void** arg_1,
+[in][range(0,500)] long arg_2,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,500)]*/  /*  */ struct Struct_384_t arg_3[],
+[in]long arg_4,
+[in]long arg_5,
+[in]hyper arg_6,
+[in]long arg_7,
+[out]/* simple_ref */long *arg_8);
+
+void Proc3_ept_delete_ex(
+[in][out]/* simple_ref */[context_handle] void** arg_1,
+[in][range(0,500)] long arg_2,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,500)]*/  /*  */ struct Struct_384_t arg_3[],
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5);
+
+void Proc4_SetRestrictRemoteClients(
+[in]long arg_1);
+
+void Proc5_ResetWithNoAuthException(
+);
+}
+

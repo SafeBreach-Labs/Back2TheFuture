@@ -1,0 +1,76 @@
+[
+uuid(06bba54a-be05-49f9-b0a0-30f790261023),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_CWindowsFirewallDetectoid__OnResetWaitHandle(
+);
+
+_Function_1_NotDecoded();
+
+
+long Proc2_s_wscUnRegisterChangeNotification(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc3_s_wscGetAlertStatus(
+[out]/* simple_ref */long *arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc4_s_wscOverrideComponentStatus(
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc5_s_wscAutoUpdatesGetStatus(
+[out]/* simple_ref */long *arg_1);
+
+long Proc6_s_wscAutoUpdatesEnableScheduledMode(
+);
+
+long Proc7_s_wscFirewallGetStatus(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_78_t** arg_2);
+
+long Proc8_s_wscIcfEnable(
+);
+
+long Proc9_s_wscAntiVirusGetStatus(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_78_t** arg_2);
+
+long Proc10_s_wscAntiSpywareGetStatus(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_78_t** arg_2);
+
+long Proc11_s_wscGeneralSecurityGetStatus(
+[out]/* simple_ref */long *arg_1,
+[in]long arg_2);
+
+long Proc12_s_wscLuaSettingsFix(
+[out]/* simple_ref */long *arg_1);
+
+long Proc13_s_wscRegisterSecurityProduct(
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in]long arg_5);
+
+long Proc14_s_wscUnregisterSecurityProduct(
+[in]/* enum_16 */ short arg_1);
+
+long Proc15_s_wscUpdateProductStatus(
+[in]/* enum_16 */ short arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]long arg_3);
+
+long Proc16_s_wscAntiVirusExpiredBeyondThreshold(
+[in]hyper arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc17_s_wscIsDefenderAntivirusSupported(
+[out]/* simple_ref */long *arg_1);
+
+long Proc18_s_wscUserNotificationRequired(
+[out]/* simple_ref */long *arg_1);
+}
+

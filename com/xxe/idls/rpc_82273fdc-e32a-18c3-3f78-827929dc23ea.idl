@@ -1,0 +1,205 @@
+[
+uuid(82273fdc-e32a-18c3-3f78-827929dc23ea),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_48_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] /*[range(0,0)] */ [length_is(StructMember0/2)] short *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_48_t;
+typedef struct Struct_82_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_82_t;
+typedef struct Struct_168_t
+{
+char StructMember0[6] ;
+}Struct_168_t;
+typedef struct Struct_316_t
+{
+short StructMember0;
+short StructMember1;
+[unique] [size_is(StructMember1)] /*[range(0,0)] */ char *StructMember2;
+}Struct_316_t;
+typedef struct Struct_200_t
+{
+char StructMember0;
+char StructMember1;
+struct Struct_168_t StructMember2;
+[size_is(StructMember1)] /*[range(0,0)] */ long StructMember3[] ;
+}Struct_200_t;
+long Proc0_ElfrClearELFW(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_48_t* arg_1);
+
+long Proc1_ElfrBackupELFW(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1);
+
+long Proc2_ElfrCloseEL(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc3_ElfrDeregisterEventSource(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc4_ElfrNumberOfRecords(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc5_ElfrOldestRecord(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc6_ElfrChangeNotify(
+[in][context_handle] void* arg_0,
+[in]struct Struct_82_t arg_1,
+[in]long arg_2);
+
+long Proc7_ElfrOpenELW(
+[in][unique]wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc8_ElfrRegisterEventSourceW(
+[in][unique]wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc9_ElfrOpenBELW(
+[in][unique]wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc10_ElfrReadELW(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in][range(0,524287)] long arg_3,
+[out]/* simple_ref */[size_is(arg_3)]/*[range(0,524287)]*/ char *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc11_ElfrReportEventW(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]short arg_2,
+[in]short arg_3,
+[in]long arg_4,
+[in][range(0,256)] short arg_5,
+[in][range(0,61440)] long arg_6,
+[in]/* simple_ref */struct Struct_48_t* arg_7,
+[in][unique]struct Struct_200_t* arg_8,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_5)]/*[range(0,256)]*/  /*  */ struct Struct_48_t** arg_9,
+[in][unique][size_is(arg_6)]/*[range(0,61440)]*/ char *arg_10,
+[in]short arg_11,
+[in][out][unique]long *arg_12,
+[in][out][unique]long *arg_13);
+
+long Proc12_ElfrClearELFA(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_316_t* arg_1);
+
+long Proc13_ElfrBackupELFA(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_316_t* arg_1);
+
+long Proc14_ElfrOpenELA(
+[in][unique]char *arg_0,
+[in]/* simple_ref */struct Struct_316_t* arg_1,
+[in]/* simple_ref */struct Struct_316_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc15_ElfrRegisterEventSourceA(
+[in][unique]char *arg_0,
+[in]/* simple_ref */struct Struct_316_t* arg_1,
+[in]/* simple_ref */struct Struct_316_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc16_ElfrOpenBELA(
+[in][unique]char *arg_0,
+[in]/* simple_ref */struct Struct_316_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc17_ElfrReadELA(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in][range(0,524287)] long arg_3,
+[out]/* simple_ref */[size_is(arg_3)]/*[range(0,524287)]*/ char *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc18_ElfrReportEventA(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]short arg_2,
+[in]short arg_3,
+[in]long arg_4,
+[in][range(0,256)] short arg_5,
+[in][range(0,61440)] long arg_6,
+[in]/* simple_ref */struct Struct_316_t* arg_7,
+[in][unique]struct Struct_200_t* arg_8,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_5)]/*[range(0,256)]*/  /*  */ struct Struct_316_t** arg_9,
+[in][unique][size_is(arg_6)]/*[range(0,61440)]*/ char *arg_10,
+[in]short arg_11,
+[in][out][unique]long *arg_12,
+[in][out][unique]long *arg_13);
+
+long Proc19_ElfrRegisterClusterSvc(
+[in][unique]wchar_t *arg_0,
+[out]/* simple_ref *//*[range(0,524287)] */long *arg_1,
+[out][ref][size_is(, *arg_1)]/*[range(0,524287)]*/ char **arg_2);
+
+long Proc20_ElfrDeregisterClusterSvc(
+[in][unique]wchar_t *arg_0);
+
+long Proc21_ElfrWriteClusterEvents(
+[in][unique]wchar_t *arg_0,
+[in][range(0,524287)] long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]/*[range(0,524287)]*/ char *arg_2);
+
+long Proc22_ElfrGetLogInformation(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */[size_is(arg_3)]/*[range(0,1024)]*/ char *arg_2,
+[in][range(0,1024)] long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc23_ElfrFlushEL(
+[in][context_handle] void* arg_0);
+
+long Proc24_ElfrReportEventAndSourceW(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]short arg_2,
+[in]short arg_3,
+[in]long arg_4,
+[in]/* simple_ref */struct Struct_48_t* arg_5,
+[in][range(0,256)] short arg_6,
+[in][range(0,61440)] long arg_7,
+[in]/* simple_ref */struct Struct_48_t* arg_8,
+[in][unique]struct Struct_200_t* arg_9,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)]/*[range(0,256)]*/  /*  */ struct Struct_48_t** arg_10,
+[in][unique][size_is(arg_7)]/*[range(0,61440)]*/ char *arg_11,
+[in]short arg_12,
+[in][out][unique]long *arg_13,
+[in][out][unique]long *arg_14);
+}
+

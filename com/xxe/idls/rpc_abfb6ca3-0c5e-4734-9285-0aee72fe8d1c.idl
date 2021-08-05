@@ -1,0 +1,163 @@
+[
+uuid(abfb6ca3-0c5e-4734-9285-0aee72fe8d1c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_48_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_48_t;
+typedef struct Struct_60_t
+{
+struct Struct_48_t StructMember0;
+ short StructMember1;
+ short StructMember2;
+long StructMember3;
+}Struct_60_t;
+typedef struct Struct_98_t
+{
+long StructMember0;
+long StructMember1;
+ [size_is(StructMember0)]  /*  */ struct Struct_60_t StructMember2[] ;
+}Struct_98_t;
+typedef struct Struct_168_t
+{
+wchar_t StructMember0[256] ;
+struct Struct_48_t StructMember1;
+ short StructMember2;
+}Struct_168_t;
+typedef struct Struct_208_t
+{
+long StructMember0;
+ [size_is(StructMember0)]  /*  */ struct Struct_168_t StructMember1[] ;
+}Struct_208_t;
+typedef struct Struct_290_t
+{
+struct Struct_48_t StructMember0;
+struct Struct_48_t StructMember1;
+wchar_t StructMember2[256] ;
+ short StructMember3;
+ short StructMember4;
+long StructMember5;
+ short StructMember6;
+}Struct_290_t;
+long Proc0_RpcOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in][out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc1_RpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcEnumInterfaces(
+[in][context_handle] void* arg_0,
+[in][unique]char *arg_1,
+[out][ref]struct Struct_98_t** arg_2);
+
+long Proc3_RpcQueryParameter(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]char **arg_5);
+
+long Proc4_RpcSetParameter(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_4)]char *arg_5);
+
+long Proc5_RpcQueryPublicParameter(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]char **arg_5);
+
+long Proc6_RpcSetPublicParameter(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_4)]char *arg_5);
+
+long Proc7_RpcSetProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_208_t* arg_1,
+[in]long arg_2,
+[in]long arg_3);
+
+long Proc8_RpcGetProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[out][ref]struct Struct_208_t** arg_1);
+
+long Proc9_RpcGetTokens(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3);
+
+long Proc10_RpcOrderConnection(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_48_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* enum_16 */ short arg_3);
+
+long Proc11_RpcBeginIgnoreProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in][unique]struct Struct_208_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */unsigned __int3264 *arg_3);
+
+long Proc12_RpcResetIgnoreProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1,
+[in]long arg_2);
+
+long Proc13_RpcEndIgnoreProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc14_RpcEnterConnectedStandby(
+[in]/* simple_ref */wchar_t *arg_0);
+
+long Proc15_RpcExitConnectedStandby(
+[in]/* simple_ref */wchar_t *arg_0);
+
+long Proc16_RpcEnterNetQuiet(
+[in]/* simple_ref */wchar_t *arg_0);
+
+long Proc17_RpcExitNetQuiet(
+[in]/* simple_ref */wchar_t *arg_0);
+
+long Proc18_RpcOpenOnDemandRequestHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* enum_16 */ short arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc19_RpcStartOnDemandRequest(
+[in][context_handle] void* arg_1);
+
+long Proc20_RpcCancelOnDemandRequest(
+[in][context_handle] void* arg_0);
+
+long Proc21_RpcCloseOnDemandRequestHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc22_RpcQueryOnDemandRequestStateInfo(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_290_t** arg_1);
+}
+

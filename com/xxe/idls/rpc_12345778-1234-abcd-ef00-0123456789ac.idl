@@ -1,0 +1,1006 @@
+[
+uuid(12345778-1234-abcd-ef00-0123456789ac),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_52_t
+{
+[range(0,262144)]  long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_52_t;
+typedef struct Struct_102_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_102_t;
+typedef struct Struct_134_t
+{
+char StructMember0[6] ;
+}Struct_134_t;
+typedef struct Struct_348_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_348_t;
+typedef struct Struct_432_t
+{
+ short StructMember0;
+}Struct_432_t;
+typedef struct Struct_456_t
+{
+hyper StructMember0;
+}Struct_456_t;
+typedef struct Struct_624_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] long *StructMember1;
+}Struct_624_t;
+typedef struct Struct_820_t
+{
+long StructMember0;
+}Struct_820_t;
+typedef struct Struct_848_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] long *StructMember1;
+[unique] [size_is(StructMember0)] long *StructMember2;
+}Struct_848_t;
+typedef struct Struct_948_t
+{
+[range(0,32767)]  long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_948_t;
+typedef struct Struct_1270_t
+{
+short StructMember0;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(1260)] [length_is(/* FC_EXPR */((StructMember0 + 7) / 8))] char *StructMember1/*[]  CONFORMANT_ARRAY*/;
+}Struct_1270_t;
+typedef struct Struct_1456_t
+{
+char StructMember0[8] ;
+}Struct_1456_t;
+typedef struct Struct_1648_t
+{
+char StructMember0[516] ;
+}Struct_1648_t;
+typedef struct Struct_1692_t
+{
+char StructMember0[532] ;
+}Struct_1692_t;
+typedef struct Struct_1748_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] short *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_1748_t;
+typedef struct Struct_1772_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_1772_t;
+typedef struct Struct_1836_t
+{
+char StructMember0;
+char StructMember1;
+}Struct_1836_t;
+typedef struct Struct_2116_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1)] [length_is(StructMember0)] char *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_2116_t;
+typedef struct Struct_2208_t
+{
+short StructMember0;
+long StructMember1;
+}Struct_2208_t;
+typedef struct Struct_2288_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1)] [length_is(StructMember0)] char *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_2288_t;
+typedef struct Struct_2446_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_2446_t;
+typedef struct Struct_2758_t
+{
+char StructMember0;
+hyper StructMember1;
+ short StructMember2;
+long StructMember3;
+}Struct_2758_t;
+typedef struct Struct_156_t
+{
+char StructMember0;
+char StructMember1;
+struct Struct_134_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_156_t;
+typedef struct Struct_182_t
+{
+long StructMember0;
+struct Struct_102_t StructMember1;
+}Struct_182_t;
+typedef struct Struct_220_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_182_t* StructMember1;
+}Struct_220_t;
+typedef struct Struct_356_t
+{
+short StructMember0;
+short StructMember1;
+long StructMember2;
+struct Struct_348_t StructMember3;
+struct Struct_348_t StructMember4;
+}Struct_356_t;
+typedef struct Struct_408_t
+{
+struct Struct_348_t StructMember0;
+}Struct_408_t;
+typedef struct Struct_418_t
+{
+struct Struct_102_t StructMember0;
+}Struct_418_t;
+typedef struct Struct_442_t
+{
+struct Struct_348_t StructMember0;
+struct Struct_348_t StructMember1;
+}Struct_442_t;
+typedef struct Struct_486_t
+{
+struct Struct_456_t StructMember0;
+struct Struct_456_t StructMember1;
+short StructMember2;
+}Struct_486_t;
+typedef struct Struct_506_t
+{
+struct Struct_348_t StructMember0;
+struct Struct_348_t StructMember1;
+struct Struct_348_t StructMember2;
+}Struct_506_t;
+typedef struct Struct_552_t
+{
+[unique] struct Struct_156_t* StructMember0;
+}Struct_552_t;
+typedef struct Struct_588_t
+{
+[range(0,1024)]  long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_552_t* StructMember1;
+}Struct_588_t;
+typedef struct Struct_730_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_102_t* StructMember1;
+}Struct_730_t;
+typedef struct Struct_800_t
+{
+struct Struct_102_t StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_102_t StructMember3;
+}Struct_800_t;
+typedef struct Struct_918_t
+{
+struct Struct_102_t StructMember0;
+long StructMember1;
+struct Struct_102_t StructMember2;
+}Struct_918_t;
+typedef struct Struct_968_t
+{
+long StructMember0;
+struct Struct_948_t StructMember1;
+}Struct_968_t;
+typedef struct Struct_1002_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_552_t* StructMember1;
+}Struct_1002_t;
+typedef struct Struct_1204_t
+{
+struct Struct_102_t StructMember0;
+struct Struct_102_t StructMember1;
+long StructMember2;
+struct Struct_102_t StructMember3;
+struct Struct_102_t StructMember4;
+}Struct_1204_t;
+typedef struct Struct_1232_t
+{
+struct Struct_102_t StructMember0;
+struct Struct_102_t StructMember1;
+short StructMember2;
+short StructMember3;
+}Struct_1232_t;
+typedef struct Struct_1352_t
+{
+struct Struct_1270_t StructMember0;
+}Struct_1352_t;
+typedef struct Struct_1432_t
+{
+struct Struct_102_t StructMember0;
+struct Struct_102_t StructMember1;
+}Struct_1432_t;
+typedef struct Struct_1476_t
+{
+struct Struct_1456_t StructMember0[2] ;
+}Struct_1476_t;
+typedef struct Struct_1486_t
+{
+struct Struct_1476_t StructMember0;
+struct Struct_1476_t StructMember1;
+char StructMember2;
+char StructMember3;
+char StructMember4;
+}Struct_1486_t;
+typedef struct Struct_1502_t
+{
+long StructMember0;
+struct Struct_348_t StructMember1;
+struct Struct_348_t StructMember2;
+short StructMember3;
+short StructMember4;
+}Struct_1502_t;
+typedef struct Struct_1676_t
+{
+struct Struct_1648_t StructMember0;
+char StructMember1;
+}Struct_1676_t;
+typedef struct Struct_1720_t
+{
+struct Struct_1692_t StructMember0;
+char StructMember1;
+}Struct_1720_t;
+typedef struct Struct_1892_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_348_t* StructMember1;
+}Struct_1892_t;
+typedef struct Struct_1958_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_102_t StructMember3;
+struct Struct_102_t StructMember4;
+struct Struct_102_t StructMember5;
+}Struct_1958_t;
+typedef struct Struct_2006_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1958_t* StructMember1;
+}Struct_2006_t;
+typedef struct Struct_2022_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_102_t StructMember3;
+struct Struct_102_t StructMember4;
+}Struct_2022_t;
+typedef struct Struct_2066_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_2022_t* StructMember1;
+}Struct_2066_t;
+typedef struct Struct_2082_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_2022_t* StructMember1;
+}Struct_2082_t;
+typedef struct Struct_2134_t
+{
+long StructMember0;
+struct Struct_2116_t StructMember1;
+}Struct_2134_t;
+typedef struct Struct_2172_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_2134_t* StructMember1;
+}Struct_2172_t;
+typedef struct Struct_2188_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_2134_t* StructMember1;
+}Struct_2188_t;
+typedef struct Struct_2352_t
+{
+long StructMember0;
+struct Struct_1748_t StructMember1;
+}Struct_2352_t;
+typedef [switch_type(unsigned long )] union union_2382
+{
+[case(1)] struct Struct_348_t unionMember_1;
+}union_2382;
+typedef struct Struct_2674_t
+{
+long StructMember0;
+ short StructMember1;
+struct Struct_1748_t StructMember2;
+struct Struct_1748_t StructMember3;
+}Struct_2674_t;
+typedef struct Struct_2716_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_2674_t* StructMember1;
+}Struct_2716_t;
+typedef [switch_type(/* enum_16 */ short )] union union_2746
+{
+[case(0)] struct Struct_2758_t unionMember_0;
+}union_2746;
+typedef [switch_type(/* enum_16 */ short )] union union_2790
+{
+[case(0)] struct Struct_820_t unionMember_0;
+}union_2790;
+typedef struct Struct_372_t
+{
+struct Struct_348_t StructMember0;
+struct Struct_102_t StructMember1;
+struct Struct_102_t StructMember2;
+struct Struct_102_t StructMember3;
+struct Struct_348_t StructMember4;
+long StructMember5;
+long StructMember6;
+char StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+}Struct_372_t;
+typedef struct Struct_462_t
+{
+struct Struct_372_t StructMember0;
+struct Struct_456_t StructMember1;
+struct Struct_456_t StructMember2;
+short StructMember3;
+}Struct_462_t;
+typedef struct Struct_2484_t
+{
+long StructMember0;
+struct Struct_456_t StructMember1;
+struct Struct_456_t StructMember2;
+struct Struct_456_t StructMember3;
+long StructMember4;
+long StructMember5;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember5)]  /*  */ struct Struct_2446_t* StructMember6;
+}Struct_2484_t;
+typedef [switch_type(/* enum_16 */ short )] union union_764
+{
+[case(1)] struct Struct_800_t unionMember_1;
+[case(2)] struct Struct_418_t unionMember_2;
+[case(3)] struct Struct_820_t unionMember_3;
+[case(4)] struct Struct_418_t unionMember_4;
+[case(5)] struct Struct_800_t unionMember_5;
+}union_764;
+typedef [switch_type(/* enum_16 */ short )] union union_888
+{
+[case(1)] struct Struct_918_t unionMember_1;
+[case(2)] struct Struct_418_t unionMember_2;
+[case(3)] struct Struct_418_t unionMember_3;
+[case(5)] struct Struct_968_t unionMember_5;
+}union_888;
+typedef struct Struct_1286_t
+{
+struct Struct_102_t StructMember0;
+struct Struct_102_t StructMember1;
+long StructMember2;
+long StructMember3;
+struct Struct_102_t StructMember4;
+struct Struct_102_t StructMember5;
+struct Struct_102_t StructMember6;
+struct Struct_102_t StructMember7;
+struct Struct_102_t StructMember8;
+struct Struct_348_t StructMember9;
+struct Struct_348_t StructMember10;
+struct Struct_348_t StructMember11;
+struct Struct_348_t StructMember12;
+struct Struct_348_t StructMember13;
+struct Struct_1270_t StructMember14;
+short StructMember15;
+short StructMember16;
+long StructMember17;
+}Struct_1286_t;
+typedef struct Struct_1366_t
+{
+struct Struct_102_t StructMember0;
+struct Struct_102_t StructMember1;
+long StructMember2;
+long StructMember3;
+struct Struct_102_t StructMember4;
+struct Struct_102_t StructMember5;
+struct Struct_102_t StructMember6;
+struct Struct_102_t StructMember7;
+struct Struct_102_t StructMember8;
+struct Struct_102_t StructMember9;
+struct Struct_348_t StructMember10;
+struct Struct_348_t StructMember11;
+struct Struct_1270_t StructMember12;
+short StructMember13;
+short StructMember14;
+struct Struct_348_t StructMember15;
+struct Struct_348_t StructMember16;
+long StructMember17;
+}Struct_1366_t;
+typedef struct Struct_1784_t
+{
+long StructMember0;
+struct Struct_948_t StructMember1;
+struct Struct_1748_t StructMember2;
+char StructMember3;
+struct Struct_948_t StructMember4;
+struct Struct_1748_t StructMember5;
+struct Struct_1748_t StructMember6;
+struct Struct_1772_t StructMember7;
+struct Struct_1748_t StructMember8;
+struct Struct_948_t StructMember9;
+struct Struct_948_t StructMember10;
+long StructMember11;
+}Struct_1784_t;
+typedef struct Struct_2530_t
+{
+struct Struct_2484_t StructMember0;
+struct Struct_1748_t StructMember1;
+struct Struct_1748_t StructMember2;
+struct Struct_2446_t StructMember3;
+char StructMember4;
+}Struct_2530_t;
+typedef struct Struct_2558_t
+{
+struct Struct_2484_t StructMember0;
+struct Struct_1748_t StructMember1;
+struct Struct_1748_t StructMember2;
+struct Struct_2446_t StructMember3;
+char StructMember4;
+char StructMember5;
+}Struct_2558_t;
+typedef struct Struct_1518_t
+{
+struct Struct_348_t StructMember0;
+struct Struct_348_t StructMember1;
+struct Struct_348_t StructMember2;
+struct Struct_348_t StructMember3;
+struct Struct_348_t StructMember4;
+struct Struct_348_t StructMember5;
+struct Struct_102_t StructMember6;
+struct Struct_102_t StructMember7;
+struct Struct_102_t StructMember8;
+struct Struct_102_t StructMember9;
+struct Struct_102_t StructMember10;
+struct Struct_102_t StructMember11;
+struct Struct_102_t StructMember12;
+struct Struct_102_t StructMember13;
+struct Struct_102_t StructMember14;
+struct Struct_102_t StructMember15;
+struct Struct_102_t StructMember16;
+struct Struct_102_t StructMember17;
+struct Struct_102_t StructMember18;
+struct Struct_52_t StructMember19;
+long StructMember20;
+long StructMember21;
+long StructMember22;
+long StructMember23;
+struct Struct_1270_t StructMember24;
+short StructMember25;
+short StructMember26;
+short StructMember27;
+short StructMember28;
+char StructMember29;
+char StructMember30;
+char StructMember31;
+char StructMember32;
+}Struct_1518_t;
+typedef [switch_type(/* enum_16 */ short )] union union_1922
+{
+[case(1)] struct Struct_2006_t unionMember_1;
+[case(2)] struct Struct_2066_t unionMember_2;
+[case(3)] struct Struct_2082_t unionMember_3;
+[case(4)] struct Struct_2172_t unionMember_4;
+[case(5)] struct Struct_2188_t unionMember_5;
+}union_1922;
+typedef [switch_type(/* enum_16 */ short )] union union_270
+{
+[case(1)] struct Struct_356_t unionMember_1;
+[case(2)] struct Struct_372_t unionMember_2;
+[case(3)] struct Struct_408_t unionMember_3;
+[case(4)] struct Struct_418_t unionMember_4;
+[case(5)] struct Struct_418_t unionMember_5;
+[case(7)] struct Struct_432_t unionMember_7;
+[case(6)] struct Struct_418_t unionMember_6;
+[case(8)] struct Struct_442_t unionMember_8;
+[case(9)] struct Struct_432_t unionMember_9;
+[case(11)] struct Struct_462_t unionMember_11;
+[case(12)] struct Struct_486_t unionMember_12;
+[case(13)] struct Struct_506_t unionMember_13;
+}union_270;
+typedef struct Struct_2514_t
+{
+struct Struct_2484_t StructMember0;
+char StructMember1;
+}Struct_2514_t;
+typedef struct Struct_2628_t
+{
+struct Struct_2484_t StructMember0;
+ short StructMember1;
+}Struct_2628_t;
+typedef [switch_type(/* enum_16 */ short )] union union_2662
+{
+[case(1)] struct Struct_2716_t unionMember_1;
+}union_2662;
+typedef struct Struct_1624_t
+{
+struct Struct_1518_t StructMember0;
+struct Struct_456_t StructMember1;
+}Struct_1624_t;
+typedef struct Struct_1658_t
+{
+struct Struct_1518_t StructMember0;
+struct Struct_1648_t StructMember1;
+}Struct_1658_t;
+typedef struct Struct_1702_t
+{
+struct Struct_1518_t StructMember0;
+struct Struct_1692_t StructMember1;
+}Struct_1702_t;
+typedef [switch_type(/* enum_16 */ short )] union union_2422
+{
+[case(1)] struct Struct_2514_t unionMember_1;
+[case(2)] struct Struct_2530_t unionMember_2;
+[case(3)] struct Struct_2558_t unionMember_3;
+}union_2422;
+typedef [switch_type(/* enum_16 */ short )] union union_1036
+{
+[case(1)] struct Struct_1204_t unionMember_1;
+[case(2)] struct Struct_1232_t unionMember_2;
+[case(3)] struct Struct_1286_t unionMember_3;
+[case(4)] struct Struct_1352_t unionMember_4;
+[case(5)] struct Struct_1366_t unionMember_5;
+[case(6)] struct Struct_1432_t unionMember_6;
+[case(7)] struct Struct_418_t unionMember_7;
+[case(8)] struct Struct_418_t unionMember_8;
+[case(9)] struct Struct_820_t unionMember_9;
+[case(10)] struct Struct_1432_t unionMember_10;
+[case(11)] struct Struct_418_t unionMember_11;
+[case(12)] struct Struct_418_t unionMember_12;
+[case(13)] struct Struct_418_t unionMember_13;
+[case(14)] struct Struct_418_t unionMember_14;
+[case(16)] struct Struct_820_t unionMember_16;
+[case(17)] struct Struct_408_t unionMember_17;
+[case(18)] struct Struct_1486_t unionMember_18;
+[case(19)] struct Struct_1502_t unionMember_19;
+[case(20)] struct Struct_418_t unionMember_20;
+[case(21)] struct Struct_1518_t unionMember_21;
+[case(22)] struct Struct_1624_t unionMember_22;
+[case(23)] struct Struct_1658_t unionMember_23;
+[case(24)] struct Struct_1676_t unionMember_24;
+[case(25)] struct Struct_1702_t unionMember_25;
+[case(26)] struct Struct_1720_t unionMember_26;
+[case(28)] struct Struct_1784_t unionMember_28;
+[case(29)] struct Struct_1836_t unionMember_29;
+}union_1036;
+typedef [switch_type(/* enum_16 */ short )] union union_2604
+{
+[case(1)] struct Struct_2628_t unionMember_1;
+[case(2)] struct Struct_2628_t unionMember_2;
+[case(3)] struct Struct_2628_t unionMember_3;
+}union_2604;
+long Proc0_SamrConnect(
+[in][unique]wchar_t *arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in]long arg_2);
+
+long Proc1_SamrCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_SamrSetSecurityObject(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_52_t* arg_2);
+
+long Proc3_SamrQuerySecurityObject(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out][ref]struct Struct_52_t** arg_2);
+
+long Proc4_SamrShutdownSamServer(
+[in][context_handle] void* arg_0);
+
+long Proc5_SamrLookupDomainInSamServer(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_102_t* arg_1,
+[out][ref]struct Struct_156_t** arg_2);
+
+long Proc6_SamrEnumerateDomainsInSamServer(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */long *arg_1,
+[out][ref]struct Struct_220_t** arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc7_SamrOpenDomain(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_156_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc8_SamrQueryInformationDomain(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_270** arg_2);
+
+long Proc9_SamrSetInformationDomain(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_270* arg_2);
+
+long Proc10_SamrCreateGroupInDomain(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_102_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc11_SamrEnumerateGroupsInDomain(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */long *arg_1,
+[out][ref]struct Struct_220_t** arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc12_SamrCreateUserInDomain(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_102_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc13_SamrEnumerateUsersInDomain(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */long *arg_1,
+[in]long arg_2,
+[out][ref]struct Struct_220_t** arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5);
+
+long Proc14_SamrCreateAliasInDomain(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_102_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc15_SamrEnumerateAliasesInDomain(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */long *arg_1,
+[out][ref]struct Struct_220_t** arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc16_SamrGetAliasMembership(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_588_t* arg_1,
+[out]/* simple_ref */struct Struct_624_t* arg_2);
+
+long Proc17_SamrLookupNamesInDomain(
+[in][context_handle] void* arg_0,
+[in][range(0,1000)] long arg_1,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(1000)][length_is( arg_1)] /*  */ struct Struct_102_t arg_2[],
+[out]/* simple_ref */struct Struct_624_t* arg_3,
+[out]/* simple_ref */struct Struct_624_t* arg_4);
+
+long Proc18_SamrLookupIdsInDomain(
+[in][context_handle] void* arg_0,
+[in][range(0,1000)] long arg_1,
+[in]/* simple_ref */ /* [DBG] FC_CVARRAY */[size_is(1000)][length_is(arg_1)]long *arg_2/*[] CONFORMANT_ARRAY*/,
+[out]/* simple_ref */struct Struct_730_t* arg_3,
+[out]/* simple_ref */struct Struct_624_t* arg_4);
+
+long Proc19_SamrOpenGroup(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc20_SamrQueryInformationGroup(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_764** arg_2);
+
+long Proc21_SamrSetInformationGroup(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_764* arg_2);
+
+long Proc22_SamrAddMemberToGroup(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc23_SamrDeleteGroup(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc24_SamrRemoveMemberFromGroup(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+
+long Proc25_SamrGetMembersInGroup(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_848_t** arg_1);
+
+long Proc26_SamrSetMemberAttributesOfGroup(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc27_SamrOpenAlias(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc28_SamrQueryInformationAlias(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_888** arg_2);
+
+long Proc29_SamrSetInformationAlias(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_888* arg_2);
+
+long Proc30_SamrDeleteAlias(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc31_SamrAddMemberToAlias(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_156_t* arg_1);
+
+long Proc32_SamrRemoveMemberFromAlias(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_156_t* arg_1);
+
+long Proc33_SamrGetMembersInAlias(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_1002_t* arg_1);
+
+long Proc34_SamrOpenUser(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc35_SamrDeleteUser(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc36_SamrQueryInformationUser(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_1036** arg_2);
+
+long Proc37_SamrSetInformationUser(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_1036* arg_2);
+
+long Proc38_SamrChangePasswordUser(
+[in][context_handle] void* arg_0,
+[in]char arg_1,
+[in][unique]struct Struct_1476_t* arg_2,
+[in][unique]struct Struct_1476_t* arg_3,
+[in]char arg_4,
+[in][unique]struct Struct_1476_t* arg_5,
+[in][unique]struct Struct_1476_t* arg_6,
+[in]char arg_7,
+[in][unique]struct Struct_1476_t* arg_8,
+[in]char arg_9,
+[in][unique]struct Struct_1476_t* arg_10);
+
+long Proc39_SamrGetGroupsForUser(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_1892_t** arg_1);
+
+long Proc40_SamrQueryDisplayInformation(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */[switch_is(arg_1)]union union_1922* arg_7);
+
+long Proc41_SamrGetDisplayEnumerationIndex(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */struct Struct_102_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc42_SamrTestPrivateFunctionsDomain(
+[in][context_handle] void* arg_0);
+
+long Proc43_SamrTestPrivateFunctionsDomain(
+[in][context_handle] void* arg_0);
+
+long Proc44_SamrGetUserDomainPasswordInformation(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_2208_t* arg_1);
+
+long Proc45_SamrRemoveMemberFromForeignDomain(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_156_t* arg_1);
+
+long Proc46_SamrQueryInformationDomain2(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_270** arg_2);
+
+long Proc47_SamrQueryInformationUser2(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_1036** arg_2);
+
+long Proc48_SamrQueryDisplayInformation(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */[switch_is(arg_1)]union union_1922* arg_7);
+
+long Proc49_SamrGetDisplayEnumerationIndex2(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */struct Struct_102_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc50_SamrCreateUser2InDomain(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_102_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc51_SamrQueryDisplayInformation3(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */[switch_is(arg_1)]union union_1922* arg_7);
+
+long Proc52_SamrAddMultipleMembersToAlias(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_588_t* arg_1);
+
+long Proc53_SamrRemoveMultipleMembersFromAlias(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_588_t* arg_1);
+
+long Proc54_SamrOemChangePasswordUser2(
+[in][unique]struct Struct_2288_t* arg_1,
+[in]/* simple_ref */struct Struct_2288_t* arg_2,
+[in][unique]struct Struct_1648_t* arg_3,
+[in][unique]struct Struct_1476_t* arg_4);
+
+long Proc55_SamrUnicodeChangePasswordUser2(
+[in][unique]struct Struct_102_t* arg_1,
+[in]/* simple_ref */struct Struct_102_t* arg_2,
+[in][unique]struct Struct_1648_t* arg_3,
+[in][unique]struct Struct_1476_t* arg_4,
+[in]char arg_5,
+[in][unique]struct Struct_1648_t* arg_6,
+[in][unique]struct Struct_1476_t* arg_7);
+
+long Proc56_SamrGetDomainPasswordInformation(
+[in][unique]struct Struct_102_t* arg_1,
+[out]/* simple_ref */struct Struct_2208_t* arg_2);
+
+long Proc57_SamrConnect2(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in]long arg_2);
+
+long Proc58_SamrSetInformationUser2(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_1036* arg_2);
+
+long Proc59_SamrSetBootKeyInformation(
+[in][context_handle] void* arg_0,
+[in]char arg_1,
+[in]/* simple_ref */struct Struct_102_t* arg_2,
+[in]/* simple_ref */struct Struct_102_t* arg_3);
+
+long Proc60_SamrGetBootKeyInformation(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc61_SamrConnect3(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in]long arg_2,
+[in]long arg_3);
+
+long Proc62_SamrConnect4(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in]long arg_2,
+[in]long arg_3);
+
+long Proc63_SamrUnicodeChangePasswordUser3(
+[in][unique]struct Struct_102_t* arg_1,
+[in]/* simple_ref */struct Struct_102_t* arg_2,
+[in][unique]struct Struct_1648_t* arg_3,
+[in][unique]struct Struct_1476_t* arg_4,
+[in]char arg_5,
+[in][unique]struct Struct_1648_t* arg_6,
+[in][unique]struct Struct_1476_t* arg_7,
+[in][unique]struct Struct_1648_t* arg_8,
+[out][ref]struct Struct_356_t** arg_9,
+[out][ref]struct Struct_2352_t** arg_10);
+
+long Proc64_SamrConnect5(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[switch_is(arg_2)]union union_2382* arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */[switch_is(, *arg_4)]union union_2382* arg_5,
+[out]/* simple_ref */[context_handle] void** arg_6);
+
+long Proc65_SamrRidToSid(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out][ref]struct Struct_156_t** arg_2);
+
+long Proc66_SamrSetDSRMPassword(
+[in][unique]struct Struct_102_t* arg_1,
+[in]long arg_2,
+[in][unique]struct Struct_1476_t* arg_3);
+
+long Proc67_SamrValidatePassword(
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_2422* arg_2,
+[out][ref][switch_is(arg_1)]union union_2604** arg_3);
+
+long Proc68_SamrQueryLocalizableAccountsInDomain(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in]/* enum_16 */ short arg_3,
+[out][ref][switch_is(arg_3)]union union_2662** arg_4);
+
+long Proc69_SamrPerformGenericOperation(
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_2746* arg_2,
+[out][ref][switch_is(arg_1)]union union_2790** arg_3);
+
+long Proc70_SamrSyncDSRMPasswordFromAccount(
+[in]long arg_1);
+
+long Proc71_SamrLookupNamesInDomain2(
+[in][context_handle] void* arg_0,
+[in][range(0,1000)] long arg_1,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(1000)][length_is( arg_1)] /*  */ struct Struct_102_t arg_2[],
+[out]/* simple_ref */struct Struct_624_t* arg_3,
+[out]/* simple_ref */struct Struct_624_t* arg_4);
+
+long Proc72_SamrEnumerateUsersInDomain2(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */long *arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out][ref]struct Struct_220_t** arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6);
+}
+

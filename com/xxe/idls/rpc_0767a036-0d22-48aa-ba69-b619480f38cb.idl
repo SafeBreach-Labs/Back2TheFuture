@@ -1,0 +1,38 @@
+[
+uuid(0767a036-0d22-48aa-ba69-b619480f38cb),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RAiMonitorProcess(
+[in]unsigned __int3264 arg_1,
+[in]long arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in][unique][string] wchar_t* arg_4,
+[in][unique][string] wchar_t* arg_5,
+[in]long arg_6);
+
+long Proc1_RAiSendToService(
+[in]/* simple_ref */[size_is(arg_2)]byte *arg_1,
+[in]long arg_2);
+
+long Proc2_RAiNotifyMsiInstall(
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]long arg_4,
+[in]long arg_5);
+
+long Proc3_RAiLinkChildToParent(
+[in]unsigned __int3264 arg_1,
+[in]long arg_2);
+
+long Proc4_RAiGetFileInfoFromPath(
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_0,
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_1,
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_2,
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_3,
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_4,
+[out]/* simple_ref */[string][size_is(260)] wchar_t* arg_5,
+[in][unique][string] wchar_t* arg_7);
+}
+

@@ -1,0 +1,14 @@
+[
+uuid(552d076a-cb29-4e44-8b6a-d15e59e2c0af),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_IpTransitionProtocolApplyConfigChanges(
+[in]char arg_1);
+
+long Proc1_IpTransitionProtocolApplyConfigChangesEx(
+[in]char arg_1,
+[in][range(0,65535)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]byte *arg_3);
+}
+

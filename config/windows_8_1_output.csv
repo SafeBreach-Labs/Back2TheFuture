@@ -1,0 +1,1406 @@
+CVE-2013-3869,20,Improper Input Validation
+CVE-2013-3876,20,Improper Input Validation
+CVE-2013-3900,20,Improper Input Validation
+CVE-2013-3918,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2013-3940,190,Integer Overflow or Wraparound
+CVE-2013-5056,416,VariantUse After Free
+CVE-2013-5058,190,Integer Overflow or Wraparound
+CVE-2013-7332,399,Resource Management Errors
+CVE-2014-0263,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2014-0266,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2014-0296,310,Cryptographic Issues
+CVE-2014-0300,264,Permissions Privileges and Access Controls
+CVE-2014-0301,415,VariantDouble Free
+CVE-2014-0315,426,BaseUntrusted Search Path
+CVE-2014-0316,399,Resource Management Errors
+CVE-2014-0318,264,Permissions Privileges and Access Controls
+CVE-2014-0323,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2014-1767,415,VariantDouble Free
+CVE-2014-1807,264,Permissions Privileges and Access Controls
+CVE-2014-1811,399,Resource Management Errors
+CVE-2014-1812,255,Credentials Management Errors
+CVE-2014-1814,264,Permissions Privileges and Access Controls
+CVE-2014-1817,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2014-1818,20,Improper Input Validation
+CVE-2014-1819,264,Permissions Privileges and Access Controls
+CVE-2014-1824,94,BaseImproper Control of Generation of Code
+CVE-2014-2780,264,Permissions Privileges and Access Controls
+CVE-2014-2781,264,Permissions Privileges and Access Controls
+CVE-2014-4064,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2014-4074,264,Permissions Privileges and Access Controls
+CVE-2014-4113,264,Permissions Privileges and Access Controls
+CVE-2014-4114,20,Improper Input Validation
+CVE-2014-4118,94,BaseImproper Control of Generation of Code
+CVE-2014-4148,94,BaseImproper Control of Generation of Code
+CVE-2014-6317,129,Improper Validation of Array Index
+CVE-2014-6318,287,ClassImproper Authentication
+CVE-2014-6321,94,BaseImproper Control of Generation of Code
+CVE-2014-6322,20,Improper Input Validation
+CVE-2014-6324,264,Permissions Privileges and Access Controls
+CVE-2014-6332,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2014-6352,94,BaseImproper Control of Generation of Code
+CVE-2014-6355,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0001,264,Permissions Privileges and Access Controls
+CVE-2015-0002,264,Permissions Privileges and Access Controls
+CVE-2015-0003,476,NULL Pointer Dereference
+CVE-2015-0004,264,Permissions Privileges and Access Controls
+CVE-2015-0006,264,Permissions Privileges and Access Controls
+CVE-2015-0008,284,PillarImproper Access Control
+CVE-2015-0009,254,7PK - Security Features
+CVE-2015-0010,310,Cryptographic Issues
+CVE-2015-0011,264,Permissions Privileges and Access Controls
+CVE-2015-0014,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-0016,22,BaseImproper Limitation of a Pathname to a Restricted Directory
+CVE-2015-0057,264,Permissions Privileges and Access Controls
+CVE-2015-0058,415,VariantDouble Free
+CVE-2015-0059,264,Permissions Privileges and Access Controls
+CVE-2015-0060,19,Data Processing Errors
+CVE-2015-0061,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0062,264,Permissions Privileges and Access Controls
+CVE-2015-0073,264,Permissions Privileges and Access Controls
+CVE-2015-0074,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-0076,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0077,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0078,264,Permissions Privileges and Access Controls
+CVE-2015-0079,399,Resource Management Errors
+CVE-2015-0080,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0081,19,Data Processing Errors
+CVE-2015-0084,254,7PK - Security Features
+CVE-2015-0087,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0088,94,BaseImproper Control of Generation of Code
+CVE-2015-0089,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0090,94,BaseImproper Control of Generation of Code
+CVE-2015-0091,94,BaseImproper Control of Generation of Code
+CVE-2015-0092,94,BaseImproper Control of Generation of Code
+CVE-2015-0093,94,BaseImproper Control of Generation of Code
+CVE-2015-0094,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-0095,476,NULL Pointer Dereference
+CVE-2015-0096,426,BaseUntrusted Search Path
+CVE-2015-1635,94,BaseImproper Control of Generation of Code
+CVE-2015-1637,310,Cryptographic Issues
+CVE-2015-1643,264,Permissions Privileges and Access Controls
+CVE-2015-1644,264,Permissions Privileges and Access Controls
+CVE-2015-1647,20,Improper Input Validation
+CVE-2015-1674,254,7PK - Security Features
+CVE-2015-1675,94,BaseImproper Control of Generation of Code
+CVE-2015-1676,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1677,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1678,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1679,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1680,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1681,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-1695,94,BaseImproper Control of Generation of Code
+CVE-2015-1696,94,BaseImproper Control of Generation of Code
+CVE-2015-1697,94,BaseImproper Control of Generation of Code
+CVE-2015-1698,94,BaseImproper Control of Generation of Code
+CVE-2015-1699,94,BaseImproper Control of Generation of Code
+CVE-2015-1702,264,Permissions Privileges and Access Controls
+CVE-2015-1716,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1719,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-1720,416,VariantUse After Free
+CVE-2015-1721,476,NULL Pointer Dereference
+CVE-2015-1722,416,VariantUse After Free
+CVE-2015-1723,416,VariantUse After Free
+CVE-2015-1724,416,VariantUse After Free
+CVE-2015-1725,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-1726,416,VariantUse After Free
+CVE-2015-1727,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-1756,416,VariantUse After Free
+CVE-2015-1769,264,Permissions Privileges and Access Controls
+CVE-2015-2360,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2361,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2362,254,7PK - Security Features
+CVE-2015-2363,264,Permissions Privileges and Access Controls
+CVE-2015-2364,264,Permissions Privileges and Access Controls
+CVE-2015-2365,264,Permissions Privileges and Access Controls
+CVE-2015-2366,264,Permissions Privileges and Access Controls
+CVE-2015-2367,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2370,264,Permissions Privileges and Access Controls
+CVE-2015-2371,264,Permissions Privileges and Access Controls
+CVE-2015-2381,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2382,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2387,264,Permissions Privileges and Access Controls
+CVE-2015-2416,20,Improper Input Validation
+CVE-2015-2417,20,Improper Input Validation
+CVE-2015-2423,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2426,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2428,264,Permissions Privileges and Access Controls
+CVE-2015-2429,264,Permissions Privileges and Access Controls
+CVE-2015-2430,264,Permissions Privileges and Access Controls
+CVE-2015-2432,19,Data Processing Errors
+CVE-2015-2433,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2435,20,Improper Input Validation
+CVE-2015-2453,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-2454,264,Permissions Privileges and Access Controls
+CVE-2015-2455,20,Improper Input Validation
+CVE-2015-2456,20,Improper Input Validation
+CVE-2015-2458,20,Improper Input Validation
+CVE-2015-2459,20,Improper Input Validation
+CVE-2015-2461,20,Improper Input Validation
+CVE-2015-2462,20,Improper Input Validation
+CVE-2015-2463,20,Improper Input Validation
+CVE-2015-2464,20,Improper Input Validation
+CVE-2015-2465,264,Permissions Privileges and Access Controls
+CVE-2015-2472,20,Improper Input Validation
+CVE-2015-2476,310,Cryptographic Issues
+CVE-2015-2478,264,Permissions Privileges and Access Controls
+CVE-2015-2506,20,Improper Input Validation
+CVE-2015-2507,264,Permissions Privileges and Access Controls
+CVE-2015-2509,284,PillarImproper Access Control
+CVE-2015-2511,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2512,264,Permissions Privileges and Access Controls
+CVE-2015-2513,20,Improper Input Validation
+CVE-2015-2514,20,Improper Input Validation
+CVE-2015-2515,416,VariantUse After Free
+CVE-2015-2516,20,Improper Input Validation
+CVE-2015-2517,264,Permissions Privileges and Access Controls
+CVE-2015-2518,264,Permissions Privileges and Access Controls
+CVE-2015-2519,190,Integer Overflow or Wraparound
+CVE-2015-2524,264,Permissions Privileges and Access Controls
+CVE-2015-2525,264,Permissions Privileges and Access Controls
+CVE-2015-2527,264,Permissions Privileges and Access Controls
+CVE-2015-2528,264,Permissions Privileges and Access Controls
+CVE-2015-2529,254,7PK - Security Features
+CVE-2015-2530,20,Improper Input Validation
+CVE-2015-2534,284,PillarImproper Access Control
+CVE-2015-2546,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2549,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-2550,264,Permissions Privileges and Access Controls
+CVE-2015-2552,254,7PK - Security Features
+CVE-2015-2553,264,Permissions Privileges and Access Controls
+CVE-2015-2554,264,Permissions Privileges and Access Controls
+CVE-2015-6095,255,Credentials Management Errors
+CVE-2015-6100,264,Permissions Privileges and Access Controls
+CVE-2015-6101,264,Permissions Privileges and Access Controls
+CVE-2015-6102,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-6103,20,Improper Input Validation
+CVE-2015-6104,20,Improper Input Validation
+CVE-2015-6107,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-6108,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2015-6109,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-6111,399,Resource Management Errors
+CVE-2015-6112,20,Improper Input Validation
+CVE-2015-6113,254,7PK - Security Features
+CVE-2015-6126,416,VariantUse After Free
+CVE-2015-6127,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2015-6131,20,Improper Input Validation
+CVE-2015-6132,264,Permissions Privileges and Access Controls
+CVE-2015-6133,264,Permissions Privileges and Access Controls
+CVE-2015-6171,264,Permissions Privileges and Access Controls
+CVE-2015-6173,264,Permissions Privileges and Access Controls
+CVE-2015-6174,264,Permissions Privileges and Access Controls
+CVE-2016-0006,264,Permissions Privileges and Access Controls
+CVE-2016-0007,264,Permissions Privileges and Access Controls
+CVE-2016-0008,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0014,426,BaseUntrusted Search Path
+CVE-2016-0015,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0016,426,BaseUntrusted Search Path
+CVE-2016-0018,426,BaseUntrusted Search Path
+CVE-2016-0026,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0036,264,Permissions Privileges and Access Controls
+CVE-2016-0038,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0044,20,Improper Input Validation
+CVE-2016-0046,20,Improper Input Validation
+CVE-2016-0048,264,Permissions Privileges and Access Controls
+CVE-2016-0049,255,Credentials Management Errors
+CVE-2016-0051,264,Permissions Privileges and Access Controls
+CVE-2016-0058,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0070,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0073,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0075,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0088,284,PillarImproper Access Control
+CVE-2016-0089,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0090,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0091,20,Improper Input Validation
+CVE-2016-0092,20,Improper Input Validation
+CVE-2016-0093,264,Permissions Privileges and Access Controls
+CVE-2016-0094,264,Permissions Privileges and Access Controls
+CVE-2016-0095,264,Permissions Privileges and Access Controls
+CVE-2016-0096,264,Permissions Privileges and Access Controls
+CVE-2016-0098,20,Improper Input Validation
+CVE-2016-0099,264,Permissions Privileges and Access Controls
+CVE-2016-0101,20,Improper Input Validation
+CVE-2016-0117,20,Improper Input Validation
+CVE-2016-0120,20,Improper Input Validation
+CVE-2016-0121,20,Improper Input Validation
+CVE-2016-0128,254,7PK - Security Features
+CVE-2016-0133,264,Permissions Privileges and Access Controls
+CVE-2016-0142,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0143,264,Permissions Privileges and Access Controls
+CVE-2016-0145,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0151,264,Permissions Privileges and Access Controls
+CVE-2016-0153,284,PillarImproper Access Control
+CVE-2016-0165,264,Permissions Privileges and Access Controls
+CVE-2016-0167,264,Permissions Privileges and Access Controls
+CVE-2016-0168,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0169,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0170,284,PillarImproper Access Control
+CVE-2016-0171,264,Permissions Privileges and Access Controls
+CVE-2016-0173,264,Permissions Privileges and Access Controls
+CVE-2016-0174,264,Permissions Privileges and Access Controls
+CVE-2016-0175,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0176,264,Permissions Privileges and Access Controls
+CVE-2016-0178,264,Permissions Privileges and Access Controls
+CVE-2016-0179,284,PillarImproper Access Control
+CVE-2016-0180,264,Permissions Privileges and Access Controls
+CVE-2016-0182,284,PillarImproper Access Control
+CVE-2016-0185,20,Improper Input Validation
+CVE-2016-0190,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-0195,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-0196,264,Permissions Privileges and Access Controls
+CVE-2016-0197,264,Permissions Privileges and Access Controls
+CVE-2016-3201,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3203,20,Improper Input Validation
+CVE-2016-3209,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3213,264,Permissions Privileges and Access Controls
+CVE-2016-3215,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3216,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3218,264,Permissions Privileges and Access Controls
+CVE-2016-3220,264,Permissions Privileges and Access Controls
+CVE-2016-3221,264,Permissions Privileges and Access Controls
+CVE-2016-3223,264,Permissions Privileges and Access Controls
+CVE-2016-3225,264,Permissions Privileges and Access Controls
+CVE-2016-3230,20,Improper Input Validation
+CVE-2016-3236,19,Data Processing Errors
+CVE-2016-3237,264,Permissions Privileges and Access Controls
+CVE-2016-3238,254,7PK - Security Features
+CVE-2016-3239,264,Permissions Privileges and Access Controls
+CVE-2016-3249,264,Permissions Privileges and Access Controls
+CVE-2016-3251,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3252,264,Permissions Privileges and Access Controls
+CVE-2016-3254,264,Permissions Privileges and Access Controls
+CVE-2016-3258,362,Concurrent Execution using Shared Resource with Improper Synchronization Race Condition
+CVE-2016-3262,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3263,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3266,264,Permissions Privileges and Access Controls
+CVE-2016-3270,264,Permissions Privileges and Access Controls
+CVE-2016-3286,264,Permissions Privileges and Access Controls
+CVE-2016-3287,254,7PK - Security Features
+CVE-2016-3299,284,PillarImproper Access Control
+CVE-2016-3300,264,Permissions Privileges and Access Controls
+CVE-2016-3301,20,Improper Input Validation
+CVE-2016-3302,264,Permissions Privileges and Access Controls
+CVE-2016-3305,19,Data Processing Errors
+CVE-2016-3306,19,Data Processing Errors
+CVE-2016-3308,264,Permissions Privileges and Access Controls
+CVE-2016-3309,264,Permissions Privileges and Access Controls
+CVE-2016-3310,264,Permissions Privileges and Access Controls
+CVE-2016-3311,264,Permissions Privileges and Access Controls
+CVE-2016-3319,284,PillarImproper Access Control
+CVE-2016-3320,254,7PK - Security Features
+CVE-2016-3332,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3333,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3334,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3335,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3338,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3340,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3341,264,Permissions Privileges and Access Controls
+CVE-2016-3342,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3343,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3345,284,PillarImproper Access Control
+CVE-2016-3348,264,Permissions Privileges and Access Controls
+CVE-2016-3349,264,Permissions Privileges and Access Controls
+CVE-2016-3352,285,ClassImproper Authorization
+CVE-2016-3354,254,7PK - Security Features
+CVE-2016-3355,264,Permissions Privileges and Access Controls
+CVE-2016-3368,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3370,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3371,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3373,264,Permissions Privileges and Access Controls
+CVE-2016-3374,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-3375,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-3376,264,Permissions Privileges and Access Controls
+CVE-2016-3393,284,PillarImproper Access Control
+CVE-2016-3396,264,Permissions Privileges and Access Controls
+CVE-2016-7182,20,Improper Input Validation
+CVE-2016-7184,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-7185,264,Permissions Privileges and Access Controls
+CVE-2016-7205,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-7210,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-7211,264,Permissions Privileges and Access Controls
+CVE-2016-7212,284,PillarImproper Access Control
+CVE-2016-7214,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-7215,264,Permissions Privileges and Access Controls
+CVE-2016-7217,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2016-7218,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-7219,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2016-7221,264,Permissions Privileges and Access Controls
+CVE-2016-7223,284,PillarImproper Access Control
+CVE-2016-7224,284,PillarImproper Access Control
+CVE-2016-7237,284,PillarImproper Access Control
+CVE-2016-7238,264,Permissions Privileges and Access Controls
+CVE-2016-7246,264,Permissions Privileges and Access Controls
+CVE-2016-7247,284,PillarImproper Access Control
+CVE-2016-7248,284,PillarImproper Access Control
+CVE-2016-7255,264,Permissions Privileges and Access Controls
+CVE-2016-7256,284,PillarImproper Access Control
+CVE-2016-7259,19,Data Processing Errors
+CVE-2016-7260,264,Permissions Privileges and Access Controls
+CVE-2016-7272,19,Data Processing Errors
+CVE-2016-7274,19,Data Processing Errors
+CVE-2016-7292,19,Data Processing Errors
+CVE-2016-7295,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0005,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0016,476,NULL Pointer Dereference
+CVE-2017-0022,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0023,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0038,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0042,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0055,79,Failure to Preserve Web Page Structure Cross-site Scripting
+CVE-2017-0057,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0058,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0060,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0062,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0063,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0073,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0074,20,Improper Input Validation
+CVE-2017-0076,20,Improper Input Validation
+CVE-2017-0084,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0096,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0097,20,Improper Input Validation
+CVE-2017-0099,20,Improper Input Validation
+CVE-2017-0100,287,ClassImproper Authentication
+CVE-2017-0101,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0102,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0109,20,Improper Input Validation
+CVE-2017-0118,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0121,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0161,362,Concurrent Execution using Shared Resource with Improper Synchronization Race Condition
+CVE-2017-0162,20,Improper Input Validation
+CVE-2017-0163,20,Improper Input Validation
+CVE-2017-0166,131,Incorrect Calculation of Buffer Size
+CVE-2017-0167,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0168,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0169,20,Improper Input Validation
+CVE-2017-0170,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2017-0178,20,Improper Input Validation
+CVE-2017-0179,20,Improper Input Validation
+CVE-2017-0180,20,Improper Input Validation
+CVE-2017-0181,20,Improper Input Validation
+CVE-2017-0182,20,Improper Input Validation
+CVE-2017-0183,20,Improper Input Validation
+CVE-2017-0184,20,Improper Input Validation
+CVE-2017-0185,20,Improper Input Validation
+CVE-2017-0186,20,Improper Input Validation
+CVE-2017-0188,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0190,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0192,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0193,755,Improper Handling of Exceptional Conditions
+CVE-2017-0211,610,ClassExternally Controlled Reference to a Resource in Another Sphere
+CVE-2017-0250,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0258,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0259,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0263,416,VariantUse After Free
+CVE-2017-0267,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0268,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0269,20,Improper Input Validation
+CVE-2017-0270,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0271,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0273,20,Improper Input Validation
+CVE-2017-0274,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0275,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0276,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0280,20,Improper Input Validation
+CVE-2017-0282,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0284,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0285,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0286,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0287,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0288,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0289,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0293,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-0296,120,BaseBuffer Copy without Checking Size of Input
+CVE-2017-0297,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0299,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-0300,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11762,20,Improper Input Validation
+CVE-2017-11763,20,Improper Input Validation
+CVE-2017-11765,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11771,20,Improper Input Validation
+CVE-2017-11772,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11781,20,Improper Input Validation
+CVE-2017-11784,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11785,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11814,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11815,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11816,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11817,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11818,254,7PK - Security Features
+CVE-2017-11831,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11842,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11849,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11850,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11851,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11853,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11880,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-11885,20,Improper Input Validation
+CVE-2017-11927,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8460,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8462,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8465,281,BaseImproper Preservation of Permissions
+CVE-2017-8466,281,BaseImproper Preservation of Permissions
+CVE-2017-8467,281,BaseImproper Preservation of Permissions
+CVE-2017-8468,281,BaseImproper Preservation of Permissions
+CVE-2017-8469,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8470,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8471,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8472,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8473,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8474,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8475,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8476,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8477,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8478,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8479,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8480,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8481,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8482,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8483,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8484,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8485,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8486,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8488,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8489,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8490,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8491,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8492,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8493,178,BaseImproper Handling of Case Sensitivity
+CVE-2017-8495,287,ClassImproper Authentication
+CVE-2017-8527,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8528,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8531,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8532,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8533,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8543,281,BaseImproper Preservation of Permissions
+CVE-2017-8544,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8553,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8554,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8556,281,BaseImproper Preservation of Permissions
+CVE-2017-8557,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2017-8561,281,BaseImproper Preservation of Permissions
+CVE-2017-8562,281,BaseImproper Preservation of Permissions
+CVE-2017-8563,281,BaseImproper Preservation of Permissions
+CVE-2017-8564,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8573,281,BaseImproper Preservation of Permissions
+CVE-2017-8577,281,BaseImproper Preservation of Permissions
+CVE-2017-8578,281,BaseImproper Preservation of Permissions
+CVE-2017-8580,281,BaseImproper Preservation of Permissions
+CVE-2017-8581,281,BaseImproper Preservation of Permissions
+CVE-2017-8582,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8589,281,BaseImproper Preservation of Permissions
+CVE-2017-8590,281,BaseImproper Preservation of Permissions
+CVE-2017-8592,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8593,281,BaseImproper Preservation of Permissions
+CVE-2017-8620,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8633,863,ClassIncorrect Authorization
+CVE-2017-8664,20,Improper Input Validation
+CVE-2017-8666,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8668,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8675,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8676,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8677,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8678,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8679,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8680,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8681,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8682,20,Improper Input Validation
+CVE-2017-8683,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8684,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8687,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8688,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8695,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8699,20,Improper Input Validation
+CVE-2017-8707,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8708,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8709,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8713,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8714,20,Improper Input Validation
+CVE-2017-8717,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8718,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8719,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2017-8727,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8728,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2017-8737,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-0746,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0747,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0748,269,ClassImproper Privilege Management
+CVE-2018-0751,269,ClassImproper Privilege Management
+CVE-2018-0752,732,ClassIncorrect Permission Assignment for Critical Resource
+CVE-2018-0753,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-0754,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0757,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0811,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0813,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0814,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0824,502,BaseDeserialization of Untrusted Data
+CVE-2018-0825,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-0829,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0830,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0832,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0833,476,NULL Pointer Dereference
+CVE-2018-0868,20,Improper Input Validation
+CVE-2018-0878,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2018-0886,287,ClassImproper Authentication
+CVE-2018-0887,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0888,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0894,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0895,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0896,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0897,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0898,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0899,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0900,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0901,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0904,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0926,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0957,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0959,20,Improper Input Validation
+CVE-2018-0960,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0968,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0969,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0970,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0971,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0972,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0973,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0974,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-0975,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-1003,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-1004,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-1010,20,Improper Input Validation
+CVE-2018-1012,20,Improper Input Validation
+CVE-2018-1013,20,Improper Input Validation
+CVE-2018-1015,20,Improper Input Validation
+CVE-2018-1016,20,Improper Input Validation
+CVE-2018-1036,732,ClassIncorrect Permission Assignment for Critical Resource
+CVE-2018-17612,295,BaseImproper Certificate Validation
+CVE-2018-7249,362,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')
+CVE-2018-7250,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8116,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8124,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8127,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8136,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8164,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8166,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8167,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8169,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8174,787,BaseOut-of-bounds Write
+CVE-2018-8205,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8207,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8210,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8251,787,BaseOut-of-bounds Write
+CVE-2018-8271,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8282,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8308,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8309,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8313,269,ClassImproper Privilege Management
+CVE-2018-8330,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8333,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8335,20,Improper Input Validation
+CVE-2018-8339,20,Improper Input Validation
+CVE-2018-8341,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8343,120,BaseBuffer Copy without Checking Size of Input 
+CVE-2018-8344,94,BaseImproper Control of Generation of Code 
+CVE-2018-8345,94,BaseImproper Control of Generation of Code 
+CVE-2018-8348,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8349,502,BaseDeserialization of Untrusted Data
+CVE-2018-8392,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8393,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8394,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8398,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8404,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8405,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8407,665,ClassImproper Initialization
+CVE-2018-8408,665,ClassImproper Initialization
+CVE-2018-8410,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8411,732,ClassIncorrect Permission Assignment for Critical Resource
+CVE-2018-8413,20,Improper Input Validation
+CVE-2018-8415,94,BaseImproper Control of Generation of Code 
+CVE-2018-8419,665,ClassImproper Initialization
+CVE-2018-8420,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2018-8423,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8424,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8433,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8434,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8438,20,Improper Input Validation
+CVE-2018-8439,20,Improper Input Validation
+CVE-2018-8442,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8443,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8444,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8446,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8450,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8453,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8455,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8471,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8472,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8475,20,Improper Input Validation
+CVE-2018-8477,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8481,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8482,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8484,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8485,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8486,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8489,20,Improper Input Validation
+CVE-2018-8493,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8494,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2018-8514,665,ClassImproper Initialization
+CVE-2018-8544,416,VariantUse After Free
+CVE-2018-8547,79,Failure to Preserve Web Page Structure ("Cross-site Scripting")
+CVE-2018-8553,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2018-8561,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8562,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8563,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8565,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8595,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8596,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8611,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8622,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2018-8639,404,ClassImproper Resource Shutdown or Release
+CVE-2018-8641,404,ClassImproper Resource Shutdown or Release
+CVE-2019-0536,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0538,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0543,287,ClassImproper Authentication
+CVE-2019-0549,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0552,863,ClassIncorrect Authorization
+CVE-2019-0554,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0555,862,ClassMissing Authorization
+CVE-2019-0569,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0570,416,VariantUse After Free
+CVE-2019-0575,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0576,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0577,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0578,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0579,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0580,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0581,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0582,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0583,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0584,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0595,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0596,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0597,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0598,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0599,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0603,264,Permissions Privileges and Access Controls
+CVE-2019-0614,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0617,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0620,20,Improper Input Validation
+CVE-2019-0626,787,BaseOut-of-bounds Write
+CVE-2019-0630,19,Data Processing Errors
+CVE-2019-0633,19,Data Processing Errors
+CVE-2019-0635,20,Improper Input Validation
+CVE-2019-0663,665,ClassImproper Initialization
+CVE-2019-0688,327,Use of a Broken or Risky Cryptographic Algorithm
+CVE-2019-0690,20,Improper Input Validation
+CVE-2019-0702,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0703,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0704,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0707,787,BaseOut-of-bounds Write
+CVE-2019-0710,20,Improper Input Validation
+CVE-2019-0711,20,Improper Input Validation
+CVE-2019-0712,20,Improper Input Validation
+CVE-2019-0713,20,Improper Input Validation
+CVE-2019-0714,20,Improper Input Validation
+CVE-2019-0715,20,Improper Input Validation
+CVE-2019-0716,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0718,20,Improper Input Validation
+CVE-2019-0719,20,Improper Input Validation
+CVE-2019-0720,20,Improper Input Validation
+CVE-2019-0722,20,Improper Input Validation
+CVE-2019-0723,20,Improper Input Validation
+CVE-2019-0730,264,Permissions, Privileges, and Access Controls
+CVE-2019-0731,264,Permissions, Privileges, and Access Controls
+CVE-2019-0732,863,ClassIncorrect Authorization
+CVE-2019-0734,264,Permissions Privileges and Access Controls
+CVE-2019-0735,269,ClassImproper Privilege Management
+CVE-2019-0736,787,BaseOut-of-bounds Write
+CVE-2019-0754,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0755,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0756,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0758,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0759,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0765,787,BaseOut-of-bounds Write
+CVE-2019-0767,665,ClassImproper Initialization
+CVE-2019-0772,787,BaseOut-of-bounds Write
+CVE-2019-0774,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0775,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0782,665,ClassImproper Initialization
+CVE-2019-0784,787,BaseOut-of-bounds Write
+CVE-2019-0787,20,Improper Input Validation
+CVE-2019-0788,20,Improper Input Validation
+CVE-2019-0790,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0791,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0792,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0793,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0794,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0795,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0796,264,Permissions, Privileges, and Access Controls
+CVE-2019-0797,264,Permissions Privileges and Access Controls
+CVE-2019-0802,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0803,264,Permissions Privileges and Access Controls
+CVE-2019-0805,345,Insufficient Verification of Data Authenticity
+CVE-2019-0821,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0836,367,Time-of-check Time-of-use (TOCTOU) Race Condition
+CVE-2019-0838,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0839,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0842,787,BaseOut-of-bounds Write
+CVE-2019-0844,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0845,20,Improper Input Validation
+CVE-2019-0846,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0847,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0848,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0849,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0851,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0853,824,BaseAccess of Uninitialized Pointer
+CVE-2019-0856,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0859,264,Permissions Privileges and Access Controls
+CVE-2019-0863,264,Permissions Privileges and Access Controls
+CVE-2019-0877,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0879,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0880,264,Permissions Privileges and Access Controls
+CVE-2019-0881,522,ClassInsufficiently Protected Credentials
+CVE-2019-0882,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0885,20,Improper Input Validation
+CVE-2019-0887,22,BaseImproper Limitation of a Pathname to a Restricted Directory 
+CVE-2019-0888,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0889,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0890,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0891,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0893,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0894,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0895,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0896,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0897,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0898,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0899,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0900,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0901,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0902,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0903,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0904,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0905,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0906,129,Improper Validation of Array Index
+CVE-2019-0907,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0908,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0909,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0936,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-0941,19,Data Processing Errors
+CVE-2019-0943,264,Permissions Privileges and Access Controls
+CVE-2019-0948,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-0961,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-0972,254,7PK - Security Features
+CVE-2019-0973,20,Improper Input Validation
+CVE-2019-0974,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-0984,264,Permissions Privileges and Access Controls
+CVE-2019-0986,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1006,295,BaseImproper Certificate Validation
+CVE-2019-1010,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1012,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1014,264,Permissions Privileges and Access Controls
+CVE-2019-1017,264,Permissions Privileges and Access Controls
+CVE-2019-1019,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1025,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1028,264,Permissions Privileges and Access Controls
+CVE-2019-1039,665,ClassImproper Initialization
+CVE-2019-1040,254,7PK - Security Features
+CVE-2019-1043,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1045,264,Permissions Privileges and Access Controls
+CVE-2019-1046,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1050,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1053,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1057,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-1060,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-1071,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1073,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1078,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1082,264,Permissions Privileges and Access Controls
+CVE-2019-1085,264,Permissions Privileges and Access Controls
+CVE-2019-1086,264,Permissions Privileges and Access Controls
+CVE-2019-1087,264,Permissions Privileges and Access Controls
+CVE-2019-1088,264,Permissions Privileges and Access Controls
+CVE-2019-1089,264,Permissions Privileges and Access Controls
+CVE-2019-1093,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1094,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1095,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1096,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1097,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1102,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1108,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1125,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1130,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1143,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1144,415,VariantDouble Free
+CVE-2019-1145,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1146,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1147,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1148,125,BaseOut-of-bounds Read
+CVE-2019-1149,787,BaseOut-of-bounds Write
+CVE-2019-1150,787,BaseOut-of-bounds Write
+CVE-2019-1151,787,BaseOut-of-bounds Write
+CVE-2019-1152,787,BaseOut-of-bounds Write
+CVE-2019-1153,125,BaseOut-of-bounds Read
+CVE-2019-1155,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1156,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1157,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1158,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1159,264,Permissions Privileges and Access Controls
+CVE-2019-1162,264,Permissions Privileges and Access Controls
+CVE-2019-1164,264,Permissions Privileges and Access Controls
+CVE-2019-1166,354,Improper Validation of Integrity Check Value
+CVE-2019-1168,264,Permissions Privileges and Access Controls
+CVE-2019-1172,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1177,264,Permissions Privileges and Access Controls
+CVE-2019-1178,264,Permissions Privileges and Access Controls
+CVE-2019-1180,264,Permissions Privileges and Access Controls
+CVE-2019-1181,284,PillarImproper Access Control
+CVE-2019-1182,284,PillarImproper Access Control
+CVE-2019-1183,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1187,611,BaseImproper Restriction of XML External Entity Reference
+CVE-2019-1212,787,BaseOut-of-bounds Write
+CVE-2019-1214,269,ClassImproper Privilege Management
+CVE-2019-1215,269,ClassImproper Privilege Management
+CVE-2019-1216,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1219,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1235,346,BaseOrigin Validation Error
+CVE-2019-1236,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1240,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1241,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1242,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1243,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1244,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1245,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1246,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1247,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1248,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1249,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1250,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1252,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1256,269,ClassImproper Privilege Management
+CVE-2019-1267,269,ClassImproper Privilege Management
+CVE-2019-1268,269,ClassImproper Privilege Management
+CVE-2019-1269,269,ClassImproper Privilege Management
+CVE-2019-1271,787,BaseOut-of-bounds Write
+CVE-2019-1274,665,ClassImproper Initialization
+CVE-2019-1280,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1282,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1285,269,ClassImproper Privilege Management
+CVE-2019-1286,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1287,20,Improper Input Validation
+CVE-2019-1290,20,Improper Input Validation
+CVE-2019-1291,20,Improper Input Validation
+CVE-2019-1293,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1311,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1315,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1318,290,BaseAuthentication Bypass by Spoofing
+CVE-2019-1319,269,ClassImproper Privilege Management
+CVE-2019-1325,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1326,20,Improper Input Validation
+CVE-2019-1333,20,Improper Input Validation
+CVE-2019-1334,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1339,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1341,269,ClassImproper Privilege Management
+CVE-2019-1342,755,Improper Handling of Exceptional Conditions
+CVE-2019-1343,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1344,125,BaseOut-of-bounds Read
+CVE-2019-1346,125,BaseOut-of-bounds Read
+CVE-2019-1347,125,BaseOut-of-bounds Read
+CVE-2019-1358,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1359,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2019-1380,367,Time-of-check Time-of-use (TOCTOU) Race Condition
+CVE-2019-1381,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1384,522,ClassInsufficiently Protected Credentials
+CVE-2019-1388,269,ClassImproper Privilege Management
+CVE-2019-1389,20,Improper Input Validation
+CVE-2019-1393,787,BaseOut-of-bounds Write
+CVE-2019-1394,787,BaseOut-of-bounds Write
+CVE-2019-1395,787,BaseOut-of-bounds Write
+CVE-2019-1396,787,BaseOut-of-bounds Write
+CVE-2019-1397,20,Improper Input Validation
+CVE-2019-1399,20,Improper Input Validation
+CVE-2019-1408,787,BaseOut-of-bounds Write
+CVE-2019-1409,665,ClassImproper Initialization
+CVE-2019-1411,125,BaseOut-of-bounds Read
+CVE-2019-1412,125,BaseOut-of-bounds Read
+CVE-2019-1418,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1422,59,BaseImproper Link Resolution Before File Access 
+CVE-2019-1432,125,BaseOut-of-bounds Read
+CVE-2019-1439,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1454,269,ClassImproper Privilege Management
+CVE-2019-1456,787,BaseOut-of-bounds Write
+CVE-2019-1465,125,BaseOut-of-bounds Read
+CVE-2019-1466,125,BaseOut-of-bounds Read
+CVE-2019-1467,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1468,787,BaseOut-of-bounds Write
+CVE-2019-1469,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1470,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1474,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2019-1484,20,Improper Input Validation
+CVE-2020-0607,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0608,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0611,20,Improper Input Validation
+CVE-2020-0613,269,ClassImproper Privilege Management
+CVE-2020-0614,269,ClassImproper Privilege Management
+CVE-2020-0615,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0620,269,ClassImproper Privilege Management
+CVE-2020-0623,269,ClassImproper Privilege Management
+CVE-2020-0625,269,ClassImproper Privilege Management
+CVE-2020-0626,269,ClassImproper Privilege Management
+CVE-2020-0627,269,ClassImproper Privilege Management
+CVE-2020-0628,269,ClassImproper Privilege Management
+CVE-2020-0629,269,ClassImproper Privilege Management
+CVE-2020-0630,269,ClassImproper Privilege Management
+CVE-2020-0631,269,ClassImproper Privilege Management
+CVE-2020-0632,269,ClassImproper Privilege Management
+CVE-2020-0634,269,ClassImproper Privilege Management
+CVE-2020-0635,269,ClassImproper Privilege Management
+CVE-2020-0639,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0641,269,ClassImproper Privilege Management
+CVE-2020-0642,269,ClassImproper Privilege Management
+CVE-2020-0643,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0644,269,ClassImproper Privilege Management
+CVE-2020-0645,20,Improper Input Validation
+CVE-2020-0648,269,ClassImproper Privilege Management
+CVE-2020-0655,20,Improper Input Validation
+CVE-2020-0657,269,ClassImproper Privilege Management
+CVE-2020-0658,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0660,20,Improper Input Validation
+CVE-2020-0662,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0665,269,ClassImproper Privilege Management
+CVE-2020-0666,269,ClassImproper Privilege Management
+CVE-2020-0667,269,ClassImproper Privilege Management
+CVE-2020-0668,269,ClassImproper Privilege Management
+CVE-2020-0675,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0676,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0677,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0678,269,ClassImproper Privilege Management
+CVE-2020-0679,269,ClassImproper Privilege Management
+CVE-2020-0680,269,ClassImproper Privilege Management
+CVE-2020-0681,20,Improper Input Validation
+CVE-2020-0682,269,ClassImproper Privilege Management
+CVE-2020-0683,269,ClassImproper Privilege Management
+CVE-2020-0684,269,ClassImproper Privilege Management
+CVE-2020-0686,269,ClassImproper Privilege Management
+CVE-2020-0687,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0689,20,Improper Input Validation
+CVE-2020-0691,269,ClassImproper Privilege Management
+CVE-2020-0698,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0705,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0707,269,ClassImproper Privilege Management
+CVE-2020-0708,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0715,269,ClassImproper Privilege Management
+CVE-2020-0716,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0719,269,ClassImproper Privilege Management
+CVE-2020-0720,269,ClassImproper Privilege Management
+CVE-2020-0721,269,ClassImproper Privilege Management
+CVE-2020-0722,269,ClassImproper Privilege Management
+CVE-2020-0723,269,ClassImproper Privilege Management
+CVE-2020-0724,269,ClassImproper Privilege Management
+CVE-2020-0725,269,ClassImproper Privilege Management
+CVE-2020-0726,269,ClassImproper Privilege Management
+CVE-2020-0730,59,BaseImproper Link Resolution Before File Access 
+CVE-2020-0731,269,ClassImproper Privilege Management
+CVE-2020-0734,20,Improper Input Validation
+CVE-2020-0735,269,ClassImproper Privilege Management
+CVE-2020-0737,269,ClassImproper Privilege Management
+CVE-2020-0738,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0744,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0745,269,ClassImproper Privilege Management
+CVE-2020-0748,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0752,269,ClassImproper Privilege Management
+CVE-2020-0753,269,ClassImproper Privilege Management
+CVE-2020-0754,269,ClassImproper Privilege Management
+CVE-2020-0755,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0756,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0769,269,ClassImproper Privilege Management
+CVE-2020-0770,269,ClassImproper Privilege Management
+CVE-2020-0771,269,ClassImproper Privilege Management
+CVE-2020-0772,269,ClassImproper Privilege Management
+CVE-2020-0773,269,ClassImproper Privilege Management
+CVE-2020-0774,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0777,269,ClassImproper Privilege Management
+CVE-2020-0778,269,ClassImproper Privilege Management
+CVE-2020-0779,59,BaseImproper Link Resolution Before File Access 
+CVE-2020-0780,269,ClassImproper Privilege Management
+CVE-2020-0781,269,ClassImproper Privilege Management
+CVE-2020-0782,269,ClassImproper Privilege Management
+CVE-2020-0783,269,ClassImproper Privilege Management
+CVE-2020-0785,269,ClassImproper Privilege Management
+CVE-2020-0787,269,ClassImproper Privilege Management
+CVE-2020-0788,269,ClassImproper Privilege Management
+CVE-2020-0790,269,ClassImproper Privilege Management
+CVE-2020-0791,269,ClassImproper Privilege Management
+CVE-2020-0797,269,ClassImproper Privilege Management
+CVE-2020-0799,269,ClassImproper Privilege Management
+CVE-2020-0800,269,ClassImproper Privilege Management
+CVE-2020-0802,269,ClassImproper Privilege Management
+CVE-2020-0803,269,ClassImproper Privilege Management
+CVE-2020-0804,269,ClassImproper Privilege Management
+CVE-2020-0806,269,ClassImproper Privilege Management
+CVE-2020-0814,269,ClassImproper Privilege Management
+CVE-2020-0819,269,ClassImproper Privilege Management
+CVE-2020-0821,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0822,269,ClassImproper Privilege Management
+CVE-2020-0834,269,ClassImproper Privilege Management
+CVE-2020-0838,269,ClassImproper Privilege Management
+CVE-2020-0840,269,ClassImproper Privilege Management
+CVE-2020-0842,269,ClassImproper Privilege Management
+CVE-2020-0843,269,ClassImproper Privilege Management
+CVE-2020-0844,269,ClassImproper Privilege Management
+CVE-2020-0845,269,ClassImproper Privilege Management
+CVE-2020-0849,269,ClassImproper Privilege Management
+CVE-2020-0853,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0857,269,ClassImproper Privilege Management
+CVE-2020-0858,269,ClassImproper Privilege Management
+CVE-2020-0859,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0860,269,ClassImproper Privilege Management
+CVE-2020-0861,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0864,269,ClassImproper Privilege Management
+CVE-2020-0865,269,ClassImproper Privilege Management
+CVE-2020-0866,269,ClassImproper Privilege Management
+CVE-2020-0871,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0874,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0875,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0877,269,ClassImproper Privilege Management
+CVE-2020-0879,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0880,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0881,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0882,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0883,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0885,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0886,269,ClassImproper Privilege Management
+CVE-2020-0887,269,ClassImproper Privilege Management
+CVE-2020-0889,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0897,269,ClassImproper Privilege Management
+CVE-2020-0907,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0909,20,Improper Input Validation
+CVE-2020-0911,269,ClassImproper Privilege Management
+CVE-2020-0912,269,ClassImproper Privilege Management
+CVE-2020-0915,269,ClassImproper Privilege Management
+CVE-2020-0916,269,ClassImproper Privilege Management
+CVE-2020-0921,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0936,269,ClassImproper Privilege Management
+CVE-2020-0938,20,Improper Input Validation
+CVE-2020-0941,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0945,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0946,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0952,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0953,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0955,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0956,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0958,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0959,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0960,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0962,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0963,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0964,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0965,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0982,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0986,269,ClassImproper Privilege Management
+CVE-2020-0987,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-0988,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0992,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0993,400,ClassUncontrolled Resource Consumption
+CVE-2020-0994,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0995,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-0998,269,ClassImproper Privilege Management
+CVE-2020-0999,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1003,269,ClassImproper Privilege Management
+CVE-2020-1004,269,ClassImproper Privilege Management
+CVE-2020-1005,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1007,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1008,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1009,269,ClassImproper Privilege Management
+CVE-2020-1010,269,ClassImproper Privilege Management
+CVE-2020-1011,269,ClassImproper Privilege Management
+CVE-2020-1013,269,ClassImproper Privilege Management
+CVE-2020-1014,269,ClassImproper Privilege Management
+CVE-2020-1015,269,ClassImproper Privilege Management
+CVE-2020-1016,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1020,20,Improper Input Validation
+CVE-2020-1027,269,ClassImproper Privilege Management
+CVE-2020-1030,269,ClassImproper Privilege Management
+CVE-2020-1034,269,ClassImproper Privilege Management
+CVE-2020-1048,269,ClassImproper Privilege Management
+CVE-2020-1051,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1052,269,ClassImproper Privilege Management
+CVE-2020-1054,269,ClassImproper Privilege Management
+CVE-2020-1061,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1067,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1070,269,ClassImproper Privilege Management
+CVE-2020-1071,269,ClassImproper Privilege Management
+CVE-2020-1072,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1076,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1078,269,ClassImproper Privilege Management
+CVE-2020-1079,269,ClassImproper Privilege Management
+CVE-2020-1081,269,ClassImproper Privilege Management
+CVE-2020-1085,269,ClassImproper Privilege Management
+CVE-2020-1091,913,ClassImproper Control of Dynamically-Managed Code Resources
+CVE-2020-1094,269,ClassImproper Privilege Management
+CVE-2020-1097,913,ClassImproper Control of Dynamically-Managed Code Resources
+CVE-2020-1112,434,BaseUnrestricted Upload of File with Dangerous Type
+CVE-2020-1113,295,BaseImproper Certificate Validation
+CVE-2020-1114,269,ClassImproper Privilege Management
+CVE-2020-1115,269,ClassImproper Privilege Management
+CVE-2020-1116,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1125,269,ClassImproper Privilege Management
+CVE-2020-1136,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1141,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1143,269,ClassImproper Privilege Management
+CVE-2020-1149,269,ClassImproper Privilege Management
+CVE-2020-1152,269,ClassImproper Privilege Management
+CVE-2020-1153,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1154,269,ClassImproper Privilege Management
+CVE-2020-1160,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1174,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1175,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1176,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1179,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1194,20,Improper Input Validation
+CVE-2020-1196,269,ClassImproper Privilege Management
+CVE-2020-1207,269,ClassImproper Privilege Management
+CVE-2020-1208,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1212,269,ClassImproper Privilege Management
+CVE-2020-1231,269,ClassImproper Privilege Management
+CVE-2020-1236,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1239,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1245,269,ClassImproper Privilege Management
+CVE-2020-1246,269,ClassImproper Privilege Management
+CVE-2020-1247,269,ClassImproper Privilege Management
+CVE-2020-1249,269,ClassImproper Privilege Management
+CVE-2020-1250,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1251,269,ClassImproper Privilege Management
+CVE-2020-1253,269,ClassImproper Privilege Management
+CVE-2020-1254,269,ClassImproper Privilege Management
+CVE-2020-1255,434,BaseUnrestricted Upload of File with Dangerous Type
+CVE-2020-1256,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1262,269,ClassImproper Privilege Management
+CVE-2020-1263,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1267,20,Improper Input Validation
+CVE-2020-1269,269,ClassImproper Privilege Management
+CVE-2020-1270,269,ClassImproper Privilege Management
+CVE-2020-1272,269,ClassImproper Privilege Management
+CVE-2020-1281,20,Improper Input Validation
+CVE-2020-1282,269,ClassImproper Privilege Management
+CVE-2020-1287,269,ClassImproper Privilege Management
+CVE-2020-1291,269,ClassImproper Privilege Management
+CVE-2020-1302,269,ClassImproper Privilege Management
+CVE-2020-1310,269,ClassImproper Privilege Management
+CVE-2020-1311,269,ClassImproper Privilege Management
+CVE-2020-1314,269,ClassImproper Privilege Management
+CVE-2020-1317,269,ClassImproper Privilege Management
+CVE-2020-1333,269,ClassImproper Privilege Management
+CVE-2020-1334,269,ClassImproper Privilege Management
+CVE-2020-1337,269,ClassImproper Privilege Management
+CVE-2020-1339,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1346,269,ClassImproper Privilege Management
+CVE-2020-1348,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1351,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1354,269,ClassImproper Privilege Management
+CVE-2020-1359,269,ClassImproper Privilege Management
+CVE-2020-1360,269,ClassImproper Privilege Management
+CVE-2020-1365,269,ClassImproper Privilege Management
+CVE-2020-1368,269,ClassImproper Privilege Management
+CVE-2020-1371,269,ClassImproper Privilege Management
+CVE-2020-1373,269,ClassImproper Privilege Management
+CVE-2020-1374,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1376,269,ClassImproper Privilege Management
+CVE-2020-1377,269,ClassImproper Privilege Management
+CVE-2020-1378,269,ClassImproper Privilege Management
+CVE-2020-1379,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1383,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1384,269,ClassImproper Privilege Management
+CVE-2020-1385,269,ClassImproper Privilege Management
+CVE-2020-1389,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1390,269,ClassImproper Privilege Management
+CVE-2020-1396,269,ClassImproper Privilege Management
+CVE-2020-1397,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1399,269,ClassImproper Privilege Management
+CVE-2020-1400,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1401,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1402,269,ClassImproper Privilege Management
+CVE-2020-1406,269,ClassImproper Privilege Management
+CVE-2020-1407,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1408,346,BaseOrigin Validation Error
+CVE-2020-1409,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1412,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1416,269,ClassImproper Privilege Management
+CVE-2020-1419,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1427,269,ClassImproper Privilege Management
+CVE-2020-1428,269,ClassImproper Privilege Management
+CVE-2020-1430,269,ClassImproper Privilege Management
+CVE-2020-1435,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1436,20,Improper Input Validation
+CVE-2020-1437,269,ClassImproper Privilege Management
+CVE-2020-1438,269,ClassImproper Privilege Management
+CVE-2020-1464,347,Improper Verification of Cryptographic Signature
+CVE-2020-1467,269,ClassImproper Privilege Management
+CVE-2020-1468,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1470,269,ClassImproper Privilege Management
+CVE-2020-1473,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1474,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1475,269,ClassImproper Privilege Management
+CVE-2020-1477,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1478,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1484,269,ClassImproper Privilege Management
+CVE-2020-1485,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1486,269,ClassImproper Privilege Management
+CVE-2020-1487,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1488,269,ClassImproper Privilege Management
+CVE-2020-1489,269,ClassImproper Privilege Management
+CVE-2020-1491,269,ClassImproper Privilege Management
+CVE-2020-1492,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1508,94,BaseImproper Control of Generation of Code 
+CVE-2020-1509,269,ClassImproper Privilege Management
+CVE-2020-1513,269,ClassImproper Privilege Management
+CVE-2020-1515,269,ClassImproper Privilege Management
+CVE-2020-1516,269,ClassImproper Privilege Management
+CVE-2020-1517,269,ClassImproper Privilege Management
+CVE-2020-1518,269,ClassImproper Privilege Management
+CVE-2020-1519,269,ClassImproper Privilege Management
+CVE-2020-1520,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1526,269,ClassImproper Privilege Management
+CVE-2020-1529,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1530,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1531,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1534,269,ClassImproper Privilege Management
+CVE-2020-1535,269,ClassImproper Privilege Management
+CVE-2020-1536,269,ClassImproper Privilege Management
+CVE-2020-1537,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1538,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1539,269,ClassImproper Privilege Management
+CVE-2020-1540,269,ClassImproper Privilege Management
+CVE-2020-1541,269,ClassImproper Privilege Management
+CVE-2020-1542,269,ClassImproper Privilege Management
+CVE-2020-1543,269,ClassImproper Privilege Management
+CVE-2020-1544,269,ClassImproper Privilege Management
+CVE-2020-1545,269,ClassImproper Privilege Management
+CVE-2020-1546,269,ClassImproper Privilege Management
+CVE-2020-1547,269,ClassImproper Privilege Management
+CVE-2020-1551,269,ClassImproper Privilege Management
+CVE-2020-1552,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1554,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1557,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1558,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1559,269,ClassImproper Privilege Management
+CVE-2020-1562,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1564,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-1565,269,ClassImproper Privilege Management
+CVE-2020-15705,347,Improper Verification of Cryptographic Signature
+CVE-2020-15706,362,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')
+CVE-2020-15707,362,Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition')
+CVE-2020-1577,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1579,269,ClassImproper Privilege Management
+CVE-2020-1584,269,ClassImproper Privilege Management
+CVE-2020-1587,269,ClassImproper Privilege Management
+CVE-2020-1589,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-1596,327,Use of a Broken or Risky Cryptographic Algorithm
+CVE-2020-1598,269,ClassImproper Privilege Management
+CVE-2020-16887,269,ClassImproper Privilege Management
+CVE-2020-16889,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-16891,20,Improper Input Validation
+CVE-2020-16892,269,ClassImproper Privilege Management
+CVE-2020-16896,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-16900,269,ClassImproper Privilege Management
+CVE-2020-16902,269,ClassImproper Privilege Management
+CVE-2020-16914,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-16916,269,ClassImproper Privilege Management
+CVE-2020-16920,269,ClassImproper Privilege Management
+CVE-2020-16922,347,Improper Verification of Cryptographic Signature
+CVE-2020-16924,119,ClassImproper Restriction of Operations within the Bounds of a Memory Buffer
+CVE-2020-16933,755,Improper Handling of Exceptional Conditions
+CVE-2020-16935,269,ClassImproper Privilege Management
+CVE-2020-16939,269,ClassImproper Privilege Management
+CVE-2020-16940,269,ClassImproper Privilege Management
+CVE-2020-16949,401,VariantMissing Release of Memory after Effective Lifetime
+CVE-2020-17001,269,ClassImproper Privilege Management
+CVE-2020-17011,269,ClassImproper Privilege Management
+CVE-2020-17014,269,ClassImproper Privilege Management
+CVE-2020-17024,269,ClassImproper Privilege Management
+CVE-2020-17025,269,ClassImproper Privilege Management
+CVE-2020-17026,269,ClassImproper Privilege Management
+CVE-2020-17027,269,ClassImproper Privilege Management
+CVE-2020-17028,269,ClassImproper Privilege Management
+CVE-2020-17029,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-17031,269,ClassImproper Privilege Management
+CVE-2020-17032,269,ClassImproper Privilege Management
+CVE-2020-17033,269,ClassImproper Privilege Management
+CVE-2020-17034,269,ClassImproper Privilege Management
+CVE-2020-17036,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-17038,269,ClassImproper Privilege Management
+CVE-2020-17040,287,ClassImproper Authentication
+CVE-2020-17041,269,ClassImproper Privilege Management
+CVE-2020-17043,269,ClassImproper Privilege Management
+CVE-2020-17044,269,ClassImproper Privilege Management
+CVE-2020-17045,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2020-17055,269,ClassImproper Privilege Management
+CVE-2020-17087,269,ClassImproper Privilege Management
+CVE-2020-17088,269,ClassImproper Privilege Management
+CVE-2020-17092,269,ClassImproper Privilege Management
+CVE-2020-17097,269,ClassImproper Privilege Management
+CVE-2020-17140,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-1640,269,ClassImproper Privilege Management
+CVE-2021-1648,269,ClassImproper Privilege Management
+CVE-2021-1649,269,ClassImproper Privilege Management
+CVE-2021-1650,269,ClassImproper Privilege Management
+CVE-2021-1652,269,ClassImproper Privilege Management
+CVE-2021-1653,269,ClassImproper Privilege Management
+CVE-2021-1654,269,ClassImproper Privilege Management
+CVE-2021-1655,269,ClassImproper Privilege Management
+CVE-2021-1657,269,ClassImproper Privilege Management
+CVE-2021-1659,269,ClassImproper Privilege Management
+CVE-2021-1661,269,ClassImproper Privilege Management
+CVE-2021-1675,269,ClassImproper Privilege Management
+CVE-2021-1688,269,ClassImproper Privilege Management
+CVE-2021-1693,269,ClassImproper Privilege Management
+CVE-2021-1694,269,ClassImproper Privilege Management
+CVE-2021-1695,269,ClassImproper Privilege Management
+CVE-2021-1702,269,ClassImproper Privilege Management
+CVE-2021-1704,269,ClassImproper Privilege Management
+CVE-2021-1706,269,ClassImproper Privilege Management
+CVE-2021-1709,269,ClassImproper Privilege Management
+CVE-2021-1727,269,ClassImproper Privilege Management
+CVE-2021-1734,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-24076,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-24079,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-24083,787,BaseOut-of-bounds Write
+CVE-2021-24102,269,ClassImproper Privilege Management
+CVE-2021-24103,269,ClassImproper Privilege Management
+CVE-2021-25195,269,ClassImproper Privilege Management
+CVE-2021-26415,269,ClassImproper Privilege Management
+CVE-2021-26862,269,ClassImproper Privilege Management
+CVE-2021-26868,269,ClassImproper Privilege Management
+CVE-2021-26869,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-26872,269,ClassImproper Privilege Management
+CVE-2021-26873,269,ClassImproper Privilege Management
+CVE-2021-26875,269,ClassImproper Privilege Management
+CVE-2021-26878,269,ClassImproper Privilege Management
+CVE-2021-26882,269,ClassImproper Privilege Management
+CVE-2021-26884,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-26887,269,ClassImproper Privilege Management
+CVE-2021-26898,269,ClassImproper Privilege Management
+CVE-2021-26899,269,ClassImproper Privilege Management
+CVE-2021-26901,269,ClassImproper Privilege Management
+CVE-2021-27072,269,ClassImproper Privilege Management
+CVE-2021-27077,269,ClassImproper Privilege Management
+CVE-2021-27093,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-27096,269,ClassImproper Privilege Management
+CVE-2021-28309,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-28317,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-28318,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-28323,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-28325,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-28440,269,ClassImproper Privilege Management
+CVE-2021-28455,77,Improper Neutralization of Special Elements used in a Command ("Command Injection")
+CVE-2021-28479,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-31184,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-31186,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-31188,269,ClassImproper Privilege Management
+CVE-2021-31193,269,ClassImproper Privilege Management
+CVE-2021-31953,269,ClassImproper Privilege Management
+CVE-2021-31954,269,ClassImproper Privilege Management
+CVE-2021-31956,269,ClassImproper Privilege Management
+CVE-2021-31958,269,ClassImproper Privilege Management
+CVE-2021-31972,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-31973,269,ClassImproper Privilege Management
+CVE-2021-31975,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-31976,200,ClassExposure of Sensitive Information to an Unauthorized Actor
+CVE-2021-34527,269,ClassImproper Privilege Management

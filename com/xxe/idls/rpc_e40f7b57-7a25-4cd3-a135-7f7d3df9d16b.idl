@@ -1,0 +1,51 @@
+[
+uuid(e40f7b57-7a25-4cd3-a135-7f7d3df9d16b),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_28_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_28_t;
+long Proc0_RpcSrvCreateSession(
+[in]/* simple_ref */[size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[in]small arg_3,
+[in]/* enum_16 */ short arg_4,
+[in]/* simple_ref */struct Struct_28_t* arg_5,
+[in]/* simple_ref */struct Struct_28_t* arg_6,
+[out]/* simple_ref */[context_handle] void** arg_7);
+
+long Proc1_RpcSrvDestroySession(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_RpcSrvStartBrokeredActivation(
+[in]long arg_1,
+[in]small arg_2,
+[out]/* simple_ref */struct Struct_28_t* arg_3,
+[out]/* simple_ref */struct Struct_28_t* arg_4,
+[in][context_handle] void* arg_5);
+
+long Proc3_RpcSrvSetServerKeepAliveInterval(
+[in]long arg_1,
+[in][context_handle] void* arg_2);
+
+long Proc4_RpcSrvGetCurrentKeepAliveInterval(
+[out]/* simple_ref */long *arg_1,
+[in][context_handle] void* arg_2);
+
+long Proc5_RpcSrvDecreaseKeepAliveInterval(
+[in][context_handle] void* arg_1);
+
+long Proc6_RpcSrvUsingTransport(
+[out]/* simple_ref */hyper *arg_1,
+[in][context_handle] void* arg_2);
+
+long Proc7_RpcSrvIndicateSlotAllocation(
+[in]small arg_1,
+[in][context_handle] void* arg_2);
+}
+

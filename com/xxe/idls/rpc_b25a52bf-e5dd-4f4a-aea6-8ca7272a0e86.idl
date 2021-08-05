@@ -1,0 +1,327 @@
+[
+uuid(b25a52bf-e5dd-4f4a-aea6-8ca7272a0e86),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_42_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_42_t;
+typedef struct Struct_94_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_94_t;
+typedef struct Struct_218_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_218_t;
+typedef struct Struct_248_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [size_is(StructMember2)] char *StructMember1;
+long StructMember2;
+}Struct_248_t;
+typedef struct Struct_274_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+}Struct_274_t;
+typedef struct Struct_340_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember0)] byte *StructMember2;
+}Struct_340_t;
+typedef struct Struct_478_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] char *StructMember3;
+long StructMember4;
+[unique] [size_is(StructMember4)] char *StructMember5;
+long StructMember6;
+[unique] [size_is(StructMember6)] char *StructMember7;
+long StructMember8;
+hyper StructMember9;
+long StructMember10;
+}Struct_478_t;
+typedef struct Struct_378_t
+{
+long StructMember0;
+long StructMember1;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember1)]  /*  */ struct Struct_340_t* StructMember2;
+}Struct_378_t;
+typedef struct Struct_532_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] char *StructMember2;
+long StructMember3;
+struct Struct_478_t StructMember4;
+}Struct_532_t;
+typedef [switch_type(unsigned long )] union union_184
+{
+[case(1)] /* FC_ZERO */;
+[case(2)] [unique] struct Struct_218_t* unionMember_2;
+[case(3)] [unique] struct Struct_248_t* unionMember_3;
+[case(4)] [unique] struct Struct_274_t* unionMember_4;
+}union_184;
+typedef struct Struct_290_t
+{
+[range(1,4)]  long StructMember0;
+[switch_is(StructMember0)] union union_184 StructMember1;
+}Struct_290_t;
+long Proc0_s_SrvRpcCreateContext(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_s_SrvRpcReleaseContext(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_s_SrvRpcCryptOpenStorageProvider(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */hyper *arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4);
+
+long Proc3_s_SrvRpcCryptIsAlgSupported(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4);
+
+long Proc4_s_SrvRpcCryptEnumAlgorithms(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]long arg_3,
+[in][out]/* simple_ref */long *arg_4,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_4)] /*  */ struct Struct_42_t** arg_5,
+[in]long arg_6);
+
+long Proc5_s_SrvRpcCryptEnumKeys(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in][unique][string] wchar_t* arg_3,
+[out][ref]struct Struct_94_t** arg_4,
+[in][out]/* simple_ref */hyper *arg_5,
+[in]long arg_6);
+
+long Proc6_s_SrvRpcCryptFreeBuffer(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2);
+
+long Proc7_s_SrvRpcCryptFreeProvider(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2);
+
+long Proc8_s_SrvRpcCryptFreeKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3);
+
+long Proc9_s_SrvRpcCryptOpenKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[out]/* simple_ref */hyper *arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]long arg_5,
+[in]long arg_6);
+
+long Proc10_s_SrvRpcCryptCreatePersistedKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[out]/* simple_ref */hyper *arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in][unique][string] wchar_t* arg_5,
+[in]long arg_6,
+[in]long arg_7);
+
+long Proc11_s_SrvRpcCryptGetProviderProperty(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in][out][unique][size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6,
+[in]long arg_7);
+
+long Proc12_s_SrvRpcCryptSetProviderProperty(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in]long arg_6);
+
+long Proc13_s_SrvRpcCryptGetKeyProperty(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in][out][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[out]/* simple_ref */long *arg_7,
+[in]long arg_8);
+
+long Proc14_s_SrvRpcCryptSetKeyProperty(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[in]long arg_7);
+
+long Proc15_s_SrvRpcCryptFinalizeKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]long arg_4);
+
+long Proc16_s_SrvRpcCryptEncrypt(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in][unique]struct Struct_290_t* arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc17_s_SrvRpcCryptDecrypt(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in][unique]struct Struct_290_t* arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc18_s_SrvRpcCryptImportKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in][unique]struct Struct_378_t* arg_5,
+[out]/* simple_ref */hyper *arg_6,
+[in]/* simple_ref */[size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[in]long arg_9);
+
+long Proc19_s_SrvRpcCryptExportKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]hyper arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in][unique]struct Struct_378_t* arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc20_s_SrvRpcCryptSignHash(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in][unique]struct Struct_290_t* arg_4,
+[in]/* simple_ref */[size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc21_s_SrvRpcCryptVerifySignature(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in][unique]struct Struct_290_t* arg_4,
+[in]/* simple_ref */[size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[in]/* simple_ref */[size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[in]long arg_9);
+
+long Proc22_s_SrvRpcCryptDeleteKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]long arg_4);
+
+long Proc23_s_SrvRpcCryptNotifyChangeKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in][out]/* simple_ref */hyper *arg_3,
+[in]long arg_4);
+
+long Proc24_s_SrvRpcCryptSecretAgreement(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]hyper arg_4,
+[out]/* simple_ref */hyper *arg_5,
+[in]long arg_6);
+
+long Proc25_s_SrvRpcCryptDeriveKey(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in][unique]struct Struct_378_t* arg_5,
+[in][out][unique][size_is(arg_7)]byte *arg_6,
+[in]long arg_7,
+[out]/* simple_ref */long *arg_8,
+[in]long arg_9);
+
+long Proc26_s_SrvRpcCryptFreeSecret(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3);
+
+long Proc27_s_SrvRpcCryptCipherEncrypt(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in][out][ptr]struct Struct_532_t* arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc28_s_SrvRpcCryptCipherDecrypt(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in][out][ptr]struct Struct_532_t* arg_6,
+[in][out][unique][size_is(arg_8)]byte *arg_7,
+[in]long arg_8,
+[out]/* simple_ref */long *arg_9,
+[in]long arg_10);
+
+long Proc29_s_SrvRpcCryptKeyDerivation(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]hyper arg_3,
+[in][unique]struct Struct_378_t* arg_4,
+[in][out][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[out]/* simple_ref */long *arg_7,
+[in]long arg_8);
+}
+

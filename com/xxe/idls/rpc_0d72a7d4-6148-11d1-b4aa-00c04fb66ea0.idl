@@ -1,0 +1,15 @@
+[
+uuid(0d72a7d4-6148-11d1-b4aa-00c04fb66ea0),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_SSCertProtectFunction(
+[in]long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[out][ref][size_is(, *arg_7)]byte **arg_6,
+[out]/* simple_ref */long *arg_7);
+}
+

@@ -1,0 +1,57 @@
+[
+uuid(9b008953-f195-4bf9-bde0-4471971e58ed),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_10_t
+{
+hyper StructMember0;
+ short StructMember1;
+ short StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_10_t;
+typedef struct Struct_40_t
+{
+ short StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] byte *StructMember2;
+}Struct_40_t;
+typedef struct Struct_66_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_66_t;
+error_status_t Proc0__SebiCreateWellKnownEvent(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_10_t* arg_2,
+[in][unique]struct Struct_40_t* arg_3,
+[out]/* simple_ref */struct Struct_66_t* arg_4);
+
+error_status_t Proc1__SebiCreatePermanentEvent(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_10_t* arg_2,
+[out]/* simple_ref */struct Struct_66_t* arg_3);
+
+error_status_t Proc2_SebiCreatePrivateEvent(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_10_t* arg_2,
+[out]/* simple_ref */struct Struct_66_t* arg_3);
+
+error_status_t Proc3__SebiDeleteEvent(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_66_t* arg_2);
+
+error_status_t Proc4_SebiEnumerateEvents(
+[in][unique][string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_66_t** arg_3);
+
+error_status_t Proc5__SebiQueryEventData(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_66_t* arg_2,
+[out]/* simple_ref */struct Struct_10_t* arg_3);
+}
+

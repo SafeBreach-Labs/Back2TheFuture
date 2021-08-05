@@ -1,0 +1,240 @@
+[
+uuid(c100beab-d33a-4a4b-bf23-bbef4663d017),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_88_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_88_t;
+typedef struct Struct_248_t
+{
+ long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] /*[range(0,1024)] */ byte *StructMember2;
+}Struct_248_t;
+typedef struct Struct_328_t
+{
+ long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] /*[range(0,1024)] */ byte *StructMember2;
+}Struct_328_t;
+typedef struct Struct_452_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] /*[range(0,10240)] */ byte *StructMember1;
+}Struct_452_t;
+typedef struct Struct_484_t
+{
+ long StructMember0;
+}Struct_484_t;
+typedef struct Struct_764_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] /*[range(0,1024)] */ byte *StructMember1;
+}Struct_764_t;
+typedef struct Struct_100_t
+{
+ long StructMember0;
+struct Struct_88_t StructMember1;
+long StructMember2;
+}Struct_100_t;
+typedef struct Struct_112_t
+{
+ long StructMember0;
+long StructMember1;
+ short StructMember2;
+struct Struct_88_t StructMember3;
+}Struct_112_t;
+typedef struct Struct_468_t
+{
+long StructMember0;
+struct Struct_248_t StructMember1;
+}Struct_468_t;
+typedef struct Struct_822_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,25)] */  /*  */ struct Struct_764_t* StructMember1;
+}Struct_822_t;
+typedef struct Struct_386_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,1000)] */  /*  */ struct Struct_248_t* StructMember1;
+long StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)] /*[range(0,1000)] */  /*  */ struct Struct_328_t* StructMember3;
+}Struct_386_t;
+typedef struct Struct_410_t
+{
+struct Struct_88_t StructMember0;
+ long StructMember1;
+struct Struct_386_t StructMember2;
+}Struct_410_t;
+typedef [switch_type(long )] union union_148
+{
+[case(0)] struct Struct_410_t unionMember_0;
+[case(1)] struct Struct_410_t unionMember_1;
+[case(2)] struct Struct_410_t unionMember_2;
+[case(3)] struct Struct_410_t unionMember_3;
+[case(4)] struct Struct_452_t unionMember_4;
+[case(5)] struct Struct_452_t unionMember_5;
+[case(6)] struct Struct_452_t unionMember_6;
+[case(9)] long unionMember_9;
+[case(10)] struct Struct_88_t unionMember_10;
+[case(7)] struct Struct_468_t unionMember_7;
+[case(8)] struct Struct_468_t unionMember_8;
+[case(11)] struct Struct_484_t unionMember_11;
+}union_148;
+typedef struct Struct_490_t
+{
+ long StructMember0;
+[switch_is(StructMember0)] union union_148 StructMember1;
+}Struct_490_t;
+typedef [switch_type(long )] union union_58
+{
+[case(0)] struct Struct_100_t unionMember_0;
+[case(1)] struct Struct_112_t unionMember_1;
+[case(2)] struct Struct_490_t unionMember_2;
+}union_58;
+typedef struct Struct_506_t
+{
+ long StructMember0;
+[switch_is(StructMember0)] union union_58 StructMember1;
+}Struct_506_t;
+long Proc0_WcnpRpcSubscribe(
+[out]/* simple_ref */long *arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+void Proc1_WcnpRpcUnSubscribe(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_WcnpRpcSetNotificationFilter(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+
+long Proc3_WcnpRpcGetCachedPeers(
+[in][context_handle] void* arg_0);
+
+long Proc4_WcnpRpcAsyncGetNotification(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */struct Struct_506_t* arg_2);
+
+void Proc5_WcnpRpcCancelPendingNotification(
+[in][context_handle] void* arg_0);
+
+long Proc6_WcnpRpcPerformDiscovery(
+[in]long arg_1);
+
+long Proc7_WcnpRpcTargetedWlanDiscovery(
+[in]long arg_1,
+[in][range(0,32)] long arg_2,
+[in][unique][size_is(arg_2)]/*[range(0,32)]*/ byte *arg_3);
+
+long Proc8_WcnpRpcGetPeerUuidFromTransportAddress(
+[in][unique]struct Struct_88_t* arg_1,
+[in][range(0,32)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,32)]*/ byte *arg_3,
+[out]/* simple_ref */struct Struct_88_t* arg_4);
+
+long Proc9_WcnpRpcGetPeer(
+[in]/* simple_ref */struct Struct_88_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc10_WcnpRpcReleasePeer(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc11_WcnpRpcPeerOpenSession(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc12_WcnpRpcPeerGetAttribute(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[in][range(0,1024)] long arg_3,
+[out] /* [DBG] FC_CVARRAY */[size_is(arg_3)]/*[range(0,1024)]*/ [length_is(, *arg_5)]byte arg_4[],
+[out]/* simple_ref */long *arg_5);
+
+long Proc13_WcnpRpcPeerGetAttributeAsInteger(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc14_WcnpRpcPeerGetAttributeAsString(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[in][range(0,1024)] long arg_3,
+[out][string][size_is(arg_3)]/*[range(0,1024)]*/  wchar_t arg_4);
+
+long Proc15_WcnpRpcPeerGetVendorExtensions(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_822_t* arg_1);
+
+long Proc16_WcnpRpcSessionSetPassword(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in][range(0,1024)] long arg_2,
+[in][unique][size_is(arg_2)]/*[range(0,1024)]*/ byte *arg_3);
+
+long Proc17_WcnpRpcSessionSetProfileData(
+[in][context_handle] void* arg_0,
+[in][range(0,32)] long arg_1,
+[in][unique][size_is(arg_1)]/*[range(0,32)]*/ byte *arg_2,
+[in]long arg_3,
+[in]long arg_4);
+
+long Proc18_WcnpRpcSessionSetProfilePassphrase(
+[in][context_handle] void* arg_0,
+[in][range(0,64)] long arg_1,
+[in][unique][size_is(arg_1)]/*[range(0,64)]*/ byte *arg_2);
+
+long Proc19_WcnpRpcSessionConnect(
+[in][context_handle] void* arg_0);
+
+long Proc20_WcnpRpcSessionGetNotifications(
+[in][context_handle] void* arg_0,
+[in][context_handle] void* arg_1);
+
+long Proc21_WcnpRpcSessionGetWirelessProfile(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out]byte arg_2[32],
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]byte arg_6[64]);
+
+long Proc22_WcnpRpcSessionGetAttributeAsInteger(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+void Proc23_WcnpRpcReleaseSession(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc24_WcnpRpcSessionSetVendorExtensions(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]/* simple_ref */struct Struct_822_t* arg_2);
+
+long Proc25_WcnpRpcSessionGetVendorExtensions(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */struct Struct_822_t* arg_2);
+
+long Proc26_WcnpRpcCreateManagementHandle(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc27_WcnpRpcSetAdvertisementsEnabled(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+
+void Proc28_WcnpRpcCloseManagementHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

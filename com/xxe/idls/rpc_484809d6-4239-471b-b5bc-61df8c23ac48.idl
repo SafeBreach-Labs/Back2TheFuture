@@ -1,0 +1,138 @@
+[
+uuid(484809d6-4239-471b-b5bc-61df8c23ac48),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_46_t
+{
+long StructMember0;
+small StructMember1;
+}Struct_46_t;
+typedef struct Struct_58_t
+{
+hyper StructMember0;
+}Struct_58_t;
+typedef struct Struct_110_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+long StructMember3;
+long StructMember4;
+hyper StructMember5;
+hyper StructMember6;
+hyper StructMember7;
+}Struct_110_t;
+typedef struct Struct_196_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+wchar_t StructMember3[18] ;
+wchar_t StructMember4[21] ;
+hyper StructMember5;
+hyper StructMember6;
+hyper StructMember7;
+hyper StructMember8;
+long StructMember9;
+[unique] [size_is(StructMember9)] char *StructMember10;
+}Struct_196_t;
+typedef [switch_type(unsigned long )] union union_154
+{
+[case(1)] struct Struct_196_t unionMember_1;
+}union_154;
+typedef struct Struct_230_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_154 StructMember1;
+}Struct_230_t;
+typedef struct Struct_64_t
+{
+struct Struct_46_t StructMember0;
+long StructMember1;
+struct Struct_58_t StructMember2;
+}Struct_64_t;
+long Proc0_RpcOpenSession(
+[in]long arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc1_RpcCloseSession(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcConnect(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc3_RpcDisconnect(
+[in][context_handle] void* arg_0);
+
+long Proc4_RpcLogoff(
+[in][context_handle] void* arg_0);
+
+long Proc5_RpcGetUserName(
+[in][context_handle] void* arg_0,
+[out][ref][string] wchar_t** arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc6_RpcGetTerminalName(
+[in][context_handle] void* arg_0,
+[out][ref][string] wchar_t** arg_1);
+
+long Proc7_RpcGetState(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc8_RpcIsSessionDesktopLocked(
+[in][context_handle] void* arg_0);
+
+long Proc9_RpcShowMessageBox(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[in]long arg_6);
+
+long Proc10_RpcGetTimes(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */hyper *arg_1,
+[out]/* simple_ref */hyper *arg_2,
+[out]/* simple_ref */hyper *arg_3);
+
+long Proc11_RpcGetSessionCounters(
+[in][out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ struct Struct_64_t* arg_1,
+[in]long arg_2);
+
+long Proc12_RpcGetSessionInformation(
+[in]long arg_1,
+[out]/* simple_ref */struct Struct_110_t* arg_2);
+
+long Proc13_RpcSwitchToServicesSession(
+);
+
+long Proc14_RpcRevertFromServicesSession(
+);
+
+long Proc15_RpcGetLoggedOnCount(
+[out]/* simple_ref */long *arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc16_RpcGetSessionType(
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc17_RpcGetSessionInformationEx(
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */struct Struct_230_t* arg_3);
+
+long Proc18_RpcIsTerminalRemote(
+[in]long arg_1,
+[out]/* simple_ref */small *arg_2);
+
+long Proc19_RpcConnectAndLockTargetDesktop(
+[in]long arg_1);
+}
+

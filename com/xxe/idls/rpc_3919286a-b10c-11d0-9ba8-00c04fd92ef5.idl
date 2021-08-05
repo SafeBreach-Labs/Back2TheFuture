@@ -1,0 +1,41 @@
+[
+uuid(3919286a-b10c-11d0-9ba8-00c04fd92ef5),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_50_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_50_t;
+typedef struct Struct_92_t
+{
+long StructMember0;
+ short StructMember1;
+}Struct_92_t;
+typedef struct Struct_104_t
+{
+ short StructMember0;
+}Struct_104_t;
+typedef struct Struct_62_t
+{
+ short StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+struct Struct_50_t StructMember5;
+}Struct_62_t;
+typedef [switch_type(/* enum_16 */ short )] union union_20
+{
+[case(1)] struct Struct_62_t unionMember_1;
+[case(2)] struct Struct_92_t unionMember_2;
+[case(3)] struct Struct_104_t unionMember_3;
+}union_20;
+long Proc0_DsRolerGetPrimaryDomainInformation(
+[in]/* enum_16 */ short arg_1,
+[out][ref][switch_is(arg_1)]union union_20** arg_2);
+}
+

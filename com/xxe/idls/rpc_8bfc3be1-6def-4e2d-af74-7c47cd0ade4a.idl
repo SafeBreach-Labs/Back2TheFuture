@@ -1,0 +1,54 @@
+[
+uuid(8bfc3be1-6def-4e2d-af74-7c47cd0ade4a),
+version(1.0),
+]
+interface DefaultIfName
+{error_status_t Proc0_RBiSrvChangeApplicationStateForPackageName(
+[in]/* simple_ref */[size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */small *arg_4);
+
+error_status_t Proc1_RBiSrvChangeApplicationStateForPsmKey(
+[in]/* simple_ref */[size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */small *arg_4);
+
+error_status_t Proc2_RBiSrvChangeSessionState(
+[in]/* enum_16 */ short arg_1);
+
+error_status_t Proc3_RBiSrvNotifyNewSession(
+[in]long arg_1,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ [string] wchar_t** arg_2,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ [string] wchar_t** arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[size_is(arg_4)]byte *arg_5,
+[in]long arg_6,
+[out]/* simple_ref */[context_handle] void** arg_7);
+
+error_status_t Proc4_RBiSrvNotifyEndSession(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+error_status_t Proc5_RBiSrvResetActiveSessionForPackage(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+error_status_t Proc6_RBiSrvSetActiveSessionForPackage(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+error_status_t Proc7_RBiSrvUpdateLockScreenApplications(
+[in]long arg_1,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ [string] wchar_t** arg_2,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ [string] wchar_t** arg_3,
+[in]/* simple_ref */[size_is(arg_1)]small *arg_4);
+
+error_status_t Proc8_RBiSrvIsApplicationTerminateSensitive(
+[in]/* simple_ref */[size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[out]/* simple_ref */small *arg_3);
+
+_Function_9_NotDecoded();
+
+}
+

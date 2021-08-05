@@ -1,0 +1,174 @@
+[
+uuid(e60c73e6-88f9-11cf-9af1-0020af6e72f4),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_36_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_36_t;
+typedef struct Struct_124_t
+{
+short StructMember0;
+short StructMember1;
+[size_is(StructMember0)] /*[range(0,0)] */ short StructMember2[] ;
+}Struct_124_t;
+typedef struct Struct_212_t
+{
+[unique] [string]  wchar_t* StructMember0;
+short StructMember1;
+}Struct_212_t;
+typedef struct Struct_414_t
+{
+hyper StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+}Struct_414_t;
+typedef struct Struct_480_t
+{
+hyper StructMember0;
+hyper StructMember1;
+}Struct_480_t;
+typedef struct Struct_588_t
+{
+hyper StructMember0;
+hyper StructMember1;
+long StructMember2;
+}Struct_588_t;
+typedef struct Struct_648_t
+{
+short StructMember0;
+short StructMember1;
+}Struct_648_t;
+typedef struct Struct_48_t
+{
+long StructMember0;
+hyper StructMember1;
+[range(0,300)]  long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+long StructMember9;
+[range(0,300)]  long StructMember10;
+long StructMember11;
+long StructMember12;
+struct Struct_36_t StructMember13;
+}Struct_48_t;
+typedef struct Struct_656_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_648_t StructMember3;
+struct Struct_36_t StructMember4;
+long StructMember5;
+[unique] struct Struct_124_t* StructMember6;
+struct Struct_36_t StructMember7;
+}Struct_656_t;
+error_status_t Proc0_Connect(
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique]struct Struct_48_t* arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref]struct Struct_124_t** arg_7,
+[out]/* simple_ref */hyper *arg_8,
+[in][range(0,131072)] long arg_9,
+[out][size_is(arg_9)]/*[range(0,131072)]*/ hyper arg_10[],
+[out]/* simple_ref */long *arg_11,
+[out]/* simple_ref */long *arg_12,
+[out][ref][string] wchar_t** arg_13,
+[out]/* simple_ref */long *arg_14,
+[out]/* simple_ref */long *arg_15,
+[out]/* simple_ref */long *arg_16,
+[out][ref][size_is(, *arg_16)]/*[range(0,0)]*/ short **arg_17,
+[out]/* simple_ref */long *arg_18,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_18)]/*[range(0,0)]*/  /*  */ struct Struct_212_t** arg_19,
+[out]/* simple_ref */long *arg_20,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_20)]/*[range(0,0)]*/  /*  */ struct Struct_36_t** arg_21,
+[out]/* simple_ref */long *arg_22,
+[out]/* simple_ref */long *arg_23,
+[out][ref]hyper *arg_24,
+[out]/* simple_ref */struct Struct_36_t* arg_25,
+[out]long arg_26[5],
+[out][ref]long *arg_27,
+[out][ref][size_is(, *arg_27)]/*[range(0,0)]*/ byte **arg_28);
+
+error_status_t Proc1_SetAppID(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_36_t* arg_2);
+
+error_status_t Proc2_AllocateReservedIds(
+[in][context_handle] void* arg_1,
+[in][range(0,131072)] long arg_2,
+[out][size_is(arg_2)]/*[range(0,131072)]*/ hyper arg_3[],
+[out]/* simple_ref */long *arg_4);
+
+error_status_t Proc3_BulkUpdateOIDs(
+[in][context_handle] void* arg_1,
+[in][range(0,1048576)] long arg_2,
+[in][size_is(arg_2)]/*[range(0,1048576)]*/ struct Struct_414_t arg_3[],
+[out][size_is(arg_2)]/*[range(0,1048576)]*/ long arg_4[],
+[in][range(0,1048576)] long arg_5,
+[in][size_is(arg_5)]/*[range(0,1048576)]*/ struct Struct_480_t arg_6[],
+[in][range(0,1048576)] long arg_7,
+[in][size_is(arg_7)]/*[range(0,1048576)]*/ hyper arg_8[],
+[in][range(0,1048576)] long arg_9,
+[in][size_is(arg_9)]/*[range(0,1048576)]*/ hyper arg_10[],
+[in][range(0,1048576)] long arg_11,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_11)]/*[range(0,1048576)]*/  /*  */ struct Struct_588_t arg_12[]);
+
+error_status_t Proc4_ClientResolveOXID(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */hyper *arg_2,
+[in][unique]struct Struct_124_t* arg_3,
+[out]/* simple_ref */struct Struct_656_t* arg_4,
+[out]/* simple_ref */hyper *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref][size_is(, *arg_6)]/*[range(0,0)]*/ char **arg_7,
+[out]/* simple_ref */short *arg_8);
+
+error_status_t Proc5_ServerAllocateOXIDAndOIDs(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */hyper *arg_2,
+[in][range(0,1048576)] long arg_3,
+[out] /* [DBG] FC_CVARRAY */[size_is(arg_3)]/*[range(0,1048576)]*/ [length_is(, *arg_5)]hyper arg_4[],
+[out]/* simple_ref */long *arg_5,
+[in]/* simple_ref */struct Struct_656_t* arg_6,
+[in][unique]struct Struct_124_t* arg_7,
+[in][unique]struct Struct_124_t* arg_8,
+[out]/* simple_ref */hyper *arg_9,
+[out][ref]struct Struct_124_t** arg_10);
+
+error_status_t Proc6_ServerAllocateOIDs(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */hyper *arg_2,
+[in][range(0,1048576)] long arg_3,
+[in][size_is(arg_3)]/*[range(0,1048576)]*/ hyper arg_4[],
+[in][range(0,1048576)] long arg_5,
+[out][size_is(arg_5)]/*[range(0,1048576)]*/ hyper arg_6[],
+[out]/* simple_ref */long *arg_7);
+
+error_status_t Proc7_ServerFreeOXIDAndOIDs(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in][range(0,1048576)] long arg_3,
+[in][size_is(arg_3)]/*[range(0,1048576)]*/ hyper arg_4[]);
+
+error_status_t Proc8_SetServerOIDFlags(
+[in][context_handle] void* arg_1,
+[in]hyper arg_2,
+[in]long arg_3);
+
+error_status_t Proc9_Disconnect(
+[in][out]/* simple_ref */[context_handle] void** arg_1,
+[in]long arg_2);
+}
+

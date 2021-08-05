@@ -1,0 +1,23 @@
+[
+uuid(7f1317a8-4dea-4fa2-a551-df5516ff8879),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_LRpcSIDKeyProtect(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]byte *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]byte **arg_6,
+[in]long arg_7);
+
+long Proc1_s_LRpcSIDKeyUnprotect(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_2)]byte *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]byte **arg_5,
+[in]long arg_6);
+}
+

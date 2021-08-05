@@ -1,0 +1,29 @@
+[
+uuid(378e52b0-c0a9-11cf-822d-00aa0051e40f),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_SASetAccountInformation(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]long arg_4);
+
+long Proc1_SASetNSAccountInformation(
+[in][unique][string] wchar_t* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2);
+
+long Proc2_SAGetNSAccountInformation(
+[in][unique][string] wchar_t* arg_0,
+[in][range(0,273)] long arg_1,
+[in][out][size_is(arg_1)]/*[range(0,273)]*/ wchar_t arg_2[]);
+
+long Proc3_SAGetAccountInformation(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][range(0,273)] long arg_2,
+[in][out][size_is(arg_2)]/*[range(0,273)]*/ wchar_t arg_3[]);
+}
+

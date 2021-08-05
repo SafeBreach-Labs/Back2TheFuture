@@ -1,0 +1,310 @@
+[
+uuid(7856fb07-7efe-4029-a4cb-4848641c40ff),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_30_t
+{
+small StructMember0;
+long StructMember1;
+[ref] [size_is(StructMember1)] byte *StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] wchar_t *StructMember4;
+}Struct_30_t;
+typedef struct Struct_162_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] wchar_t *StructMember1;
+}Struct_162_t;
+typedef struct Struct_684_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+}Struct_684_t;
+typedef struct Struct_1424_t
+{
+char StructMember0[6] ;
+}Struct_1424_t;
+typedef struct Struct_178_t
+{
+hyper StructMember0;
+struct Struct_162_t StructMember1;
+struct Struct_162_t StructMember2;
+small StructMember3;
+}Struct_178_t;
+typedef [switch_type(unsigned short )] union union_714
+{
+[case(1)] long unionMember_1;
+[case(2)] double unionMember_2;
+[case(3)] double unionMember_3;
+[case(4)] struct Struct_162_t unionMember_4;
+[case(0)] /* FC_ZERO */;
+}union_714;
+typedef struct Struct_750_t
+{
+ short StructMember0;
+[switch_is(StructMember0)] union union_714 StructMember1;
+}Struct_750_t;
+typedef struct Struct_848_t
+{
+struct Struct_750_t StructMember0;
+struct Struct_750_t StructMember1;
+small StructMember2;
+small StructMember3;
+small StructMember4;
+small StructMember5;
+}Struct_848_t;
+typedef struct Struct_1378_t
+{
+struct Struct_162_t StructMember0;
+hyper StructMember1;
+}Struct_1378_t;
+typedef struct Struct_1446_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_1424_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_1446_t;
+typedef struct Struct_220_t
+{
+hyper StructMember0;
+struct Struct_162_t StructMember1;
+struct Struct_162_t StructMember2;
+small StructMember3;
+long StructMember4;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember4)]  /*  */ struct Struct_178_t* StructMember5;
+}Struct_220_t;
+typedef struct Struct_810_t
+{
+struct Struct_684_t StructMember0;
+[unique] struct Struct_750_t* StructMember1;
+}Struct_810_t;
+typedef struct Struct_962_t
+{
+small StructMember0;
+struct Struct_750_t StructMember1;
+struct Struct_750_t StructMember2;
+struct Struct_810_t StructMember3;
+}Struct_962_t;
+typedef struct Struct_268_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] wchar_t *StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+long StructMember5;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember5)]  /*  */ struct Struct_220_t* StructMember6;
+}Struct_268_t;
+long Proc0_s_IDBFactory_openDatabase(
+[in]/* simple_ref */struct Struct_30_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_4,
+[in]small arg_5,
+[in]hyper arg_6,
+[out][ref]/* enum_16 */ short *arg_7,
+[out]/* simple_ref */[context_handle] void** arg_8,
+[out]/* simple_ref */[context_handle] void** arg_9,
+[out]/* simple_ref */[context_handle] void** arg_10,
+[out]/* simple_ref */struct Struct_268_t* arg_11);
+
+long Proc1_s_IDBFactory_Handle_openDatabase_Blocked(
+[in][out]/* simple_ref */[context_handle] void** arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4,
+[out]/* simple_ref */struct Struct_268_t* arg_5);
+
+long Proc2_s_IDBFactory_deleteDatabase(
+[in]/* simple_ref */struct Struct_30_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_4,
+[in]small arg_5);
+
+long Proc3_s_IDBDatabase_createObjectStore(
+[in][context_handle] void* arg_2,
+[in][context_handle] void* arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[size_is(arg_4)]wchar_t *arg_5,
+[in]long arg_6,
+[in][unique][size_is(arg_6)]wchar_t *arg_7,
+[in]small arg_8,
+[out]/* simple_ref */[context_handle] void** arg_9);
+
+long Proc4_s_IDBDatabase_deleteObjectStore(
+[in][context_handle] void* arg_2,
+[in][context_handle] void* arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[size_is(arg_4)]wchar_t *arg_5);
+
+long Proc5_s_IDBDatabase_transaction(
+[in][context_handle] void* arg_2,
+[in]short arg_3,
+[in]long arg_4,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_4)] /*  */ struct Struct_162_t* arg_5,
+[out]/* simple_ref */[context_handle] void** arg_6);
+
+long Proc6_s_IDBDatabase_close(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc7_s_IDBDatabaseBlocked_close(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc8_s_IDBTransaction_openObjectStore(
+[in][context_handle] void* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc9_s_IDBTransaction_abortAndClose(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc10_s_IDBTransaction_commitAndClose(
+[in][out]/* simple_ref */[context_handle] void** arg_2,
+[out]/* simple_ref */small *arg_3,
+[out]/* simple_ref */struct Struct_268_t* arg_4);
+
+long Proc11_s_IDBObjectStore_put(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_684_t* arg_3,
+[in][unique]struct Struct_750_t* arg_4,
+[out]/* simple_ref */struct Struct_750_t* arg_5);
+
+long Proc12_s_IDBObjectStore_add(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_684_t* arg_3,
+[in][unique]struct Struct_750_t* arg_4,
+[out]/* simple_ref */struct Struct_750_t* arg_5);
+
+long Proc13_s_IDBObjectStore_get(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_750_t* arg_3,
+[out]/* simple_ref */struct Struct_810_t* arg_4);
+
+long Proc14_s_IDBObjectStore_getFromKeyRange(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_848_t* arg_3,
+[out]/* simple_ref */struct Struct_810_t* arg_4);
+
+long Proc15_s_IDBObjectStore_delete(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_750_t* arg_3);
+
+long Proc16_s_IDBObjectStore_deleteFromKeyRange(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_848_t* arg_3);
+
+long Proc17_s_IDBObjectStore_clear(
+[in][context_handle] void* arg_2);
+
+long Proc18_s_IDBObjectStore_openCursor(
+[in][context_handle] void* arg_2,
+[in][unique]struct Struct_848_t* arg_3,
+[in]small arg_4,
+[in]short arg_5,
+[out]/* simple_ref */[context_handle] void** arg_6,
+[out]/* simple_ref */struct Struct_962_t* arg_7);
+
+long Proc19_s_IDBObjectStore_count(
+[in][context_handle] void* arg_2,
+[in][unique]struct Struct_848_t* arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc20_s_IDBObjectStore_createIndex(
+[in][context_handle] void* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]wchar_t *arg_6,
+[in]small arg_7,
+[out]/* simple_ref */hyper *arg_8,
+[out]/* simple_ref */[context_handle] void** arg_9);
+
+long Proc21_s_IDBObjectStore_openIndex(
+[in][context_handle] void* arg_2,
+[in]hyper arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc22_s_IDBObjectStore_deleteIndex(
+[in][context_handle] void* arg_2,
+[in]hyper arg_3);
+
+long Proc23_s_IDBObjectStore_close(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc24_s_IDBIndex_openCursor(
+[in][context_handle] void* arg_2,
+[in][unique]struct Struct_848_t* arg_3,
+[in]small arg_4,
+[in]short arg_5,
+[in]small arg_6,
+[out]/* simple_ref */[context_handle] void** arg_7,
+[out]/* simple_ref */struct Struct_962_t* arg_8);
+
+long Proc25_s_IDBIndex_count(
+[in][context_handle] void* arg_2,
+[in][unique]struct Struct_848_t* arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc26_s_IDBIndex_get(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_750_t* arg_3,
+[out]/* simple_ref */struct Struct_810_t* arg_4);
+
+long Proc27_s_IDBIndex_getFromKeyRange(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_848_t* arg_3,
+[out]/* simple_ref */struct Struct_810_t* arg_4);
+
+long Proc28_s_IDBIndex_getKey(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_750_t* arg_3,
+[out]/* simple_ref */struct Struct_750_t* arg_4);
+
+long Proc29_s_IDBIndex_getKeyFromKeyRange(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_848_t* arg_3,
+[out]/* simple_ref */struct Struct_750_t* arg_4);
+
+long Proc30_s_IDBIndex_close(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc31_s_IDBCursor_update(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_684_t* arg_3);
+
+long Proc32_s_IDBCursor_continue(
+[in][context_handle] void* arg_2,
+[in]small arg_3,
+[in]/* simple_ref */struct Struct_750_t* arg_4,
+[in]small arg_5,
+[out]/* simple_ref */struct Struct_962_t* arg_6);
+
+long Proc33_s_IDBCursor_advance(
+[in][context_handle] void* arg_2,
+[in]long arg_3,
+[in]small arg_4,
+[out]/* simple_ref */struct Struct_962_t* arg_5);
+
+long Proc34_s_IDBCursor_delete(
+[in][context_handle] void* arg_2,
+[out]/* simple_ref */small *arg_3);
+
+long Proc35_s_IDBCursor_close(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc36_s_IDB_BrowserQuota_DeleteWebSiteDatabases(
+[in]long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]wchar_t *arg_2);
+
+long Proc37_s_IDB_BrowserQuota_DeleteAllDatabases(
+);
+
+long Proc38_s_IDB_BrowserQuota_GetSpaceConsumption(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_1378_t** arg_2);
+
+long Proc39_s_IDB_AppQuota_Uninstall(
+[in]/* simple_ref */struct Struct_1446_t* arg_1);
+}
+

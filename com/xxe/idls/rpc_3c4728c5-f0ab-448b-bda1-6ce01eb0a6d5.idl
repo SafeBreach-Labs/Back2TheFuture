@@ -1,0 +1,466 @@
+[
+uuid(3c4728c5-f0ab-448b-bda1-6ce01eb0a6d5),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_10_t
+{
+hyper StructMember0;
+}Struct_10_t;
+typedef struct Struct_84_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3[2] ;
+long StructMember4[2] ;
+}Struct_84_t;
+typedef struct Struct_156_t
+{
+long StructMember0;
+[unique] [size_is(StructMember2)] char *StructMember1;
+long StructMember2;
+}Struct_156_t;
+typedef struct Struct_190_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember4)] char *StructMember3;
+long StructMember4;
+}Struct_190_t;
+typedef struct Struct_264_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_264_t;
+typedef struct Struct_314_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_314_t;
+typedef struct Struct_440_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+}Struct_440_t;
+typedef struct Struct_476_t
+{
+char StructMember0;
+char StructMember1;
+char StructMember2;
+char StructMember3;
+long StructMember4;
+char StructMember5;
+long StructMember6;
+[unique] [size_is(StructMember6)] char *StructMember7;
+long StructMember8;
+[unique] [size_is(StructMember8)] long *StructMember9;
+}Struct_476_t;
+typedef struct Struct_530_t
+{
+char StructMember0;
+char StructMember1;
+char StructMember2;
+long StructMember3;
+long StructMember4;
+char StructMember5;
+long StructMember6;
+[unique] [size_is(StructMember6)] char *StructMember7;
+long StructMember8;
+[unique] [size_is(StructMember8)] long *StructMember9;
+}Struct_530_t;
+typedef struct Struct_704_t
+{
+char StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] char *StructMember2;
+}Struct_704_t;
+typedef struct Struct_782_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_782_t;
+typedef struct Struct_912_t
+{
+short StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)]  /*  */ [string]  wchar_t** StructMember1;
+long StructMember2;
+}Struct_912_t;
+typedef struct Struct_1026_t
+{
+long StructMember0;
+char StructMember1[24] ;
+char StructMember2[196] ;
+}Struct_1026_t;
+typedef struct Struct_1096_t
+{
+long StructMember0;
+char StructMember1;
+char StructMember2[254] ;
+}Struct_1096_t;
+typedef struct Struct_1128_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] short *StructMember1;
+}Struct_1128_t;
+typedef struct Struct_1164_t
+{
+[unique] [size_is(StructMember1)] char *StructMember0;
+long StructMember1;
+}Struct_1164_t;
+typedef struct Struct_1222_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] char *StructMember2;
+}Struct_1222_t;
+typedef struct Struct_1286_t
+{
+long StructMember0;
+char StructMember1[255] ;
+}Struct_1286_t;
+typedef struct Struct_1394_t
+{
+[unique] [size_is(StructMember1)] char *StructMember0;
+long StructMember1;
+}Struct_1394_t;
+typedef struct Struct_1428_t
+{
+long StructMember0;
+char StructMember1[12] ;
+}Struct_1428_t;
+typedef struct Struct_232_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_190_t* StructMember1;
+}Struct_232_t;
+typedef struct Struct_280_t
+{
+struct Struct_264_t StructMember0;
+struct Struct_264_t StructMember1;
+}Struct_280_t;
+typedef struct Struct_374_t
+{
+struct Struct_10_t StructMember0;
+long StructMember1;
+}Struct_374_t;
+typedef struct Struct_412_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_374_t* StructMember1;
+}Struct_412_t;
+typedef struct Struct_822_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_782_t* StructMember1;
+}Struct_822_t;
+typedef struct Struct_952_t
+{
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember1)]  /*  */ struct Struct_912_t* StructMember0;
+long StructMember1;
+}Struct_952_t;
+typedef struct Struct_1062_t
+{
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember1)]  /*  */ struct Struct_1026_t* StructMember0;
+long StructMember1;
+}Struct_1062_t;
+typedef struct Struct_1180_t
+{
+struct Struct_1164_t StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+}Struct_1180_t;
+typedef struct Struct_1260_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1222_t* StructMember1;
+}Struct_1260_t;
+typedef struct Struct_1438_t
+{
+struct Struct_1428_t StructMember0;
+struct Struct_1428_t StructMember1;
+struct Struct_1428_t StructMember2;
+}Struct_1438_t;
+typedef struct Struct_1472_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+struct Struct_1428_t StructMember4;
+short StructMember5;
+short StructMember6;
+[unique] [size_is(/*FC_CALLBACK not implemented */)] char *StructMember7;
+}Struct_1472_t;
+typedef struct Struct_1514_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_1428_t StructMember2;
+short StructMember3;
+[unique] [size_is(/*FC_CALLBACK not implemented */)] char *StructMember4;
+}Struct_1514_t;
+typedef struct Struct_562_t
+{
+struct Struct_440_t StructMember0;
+struct Struct_476_t StructMember1;
+struct Struct_530_t StructMember2;
+}Struct_562_t;
+typedef struct Struct_596_t
+{
+char StructMember0;
+[ref] struct Struct_10_t* StructMember1;
+[ref] struct Struct_562_t* StructMember2;
+}Struct_596_t;
+typedef struct Struct_640_t
+{
+long StructMember0;
+[ref]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_596_t* StructMember1;
+}Struct_640_t;
+long Proc0_RpcSrvEnableDhcp(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in]long arg_2);
+
+long Proc1_RpcSrvRenewLease(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc2_RpcSrvDeleteStaticAddressAndDefaultGateways(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc3_RpcSrvCheckServerAvailability(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc4_RpcSrvRenewLeaseByBroadcast(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc5_RpcSrvReleaseLease(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc6_RpcSrvSetFallbackParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in]/* simple_ref */struct Struct_84_t* arg_2);
+
+long Proc7_RpcSrvGetFallbackParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */struct Struct_84_t* arg_2);
+
+long Proc8_RpcSrvFallbackRefreshParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc9_RpcSrvStaticRefreshParams(
+[in][unique][string] wchar_t* arg_0,
+[in][unique]struct Struct_10_t* arg_1,
+[in]long arg_2);
+
+long Proc10_RpcSrvRemoveDnsRegistrations(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc11_RpcSrvRequestParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_156_t* arg_2,
+[in][unique]struct Struct_232_t* arg_3,
+[in]/* simple_ref */struct Struct_280_t* arg_4,
+[out]/* simple_ref */struct Struct_314_t* arg_5);
+
+long Proc12_RpcSrvPersistentRequestParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_156_t* arg_2,
+[in]/* simple_ref */struct Struct_232_t* arg_3);
+
+long Proc13_RpcSrvRegisterParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_156_t* arg_2,
+[in]/* simple_ref */struct Struct_280_t* arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in]hyper arg_6);
+
+long Proc14_RpcSrvDeRegisterParams(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]hyper arg_2);
+
+long Proc15_RpcSrvEnumInterfaces(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */struct Struct_412_t* arg_1);
+
+long Proc16_RpcSrvQueryLeaseInfo(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */struct Struct_562_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc17_RpcSrvQueryLeaseInfoArray(
+[in][unique][string] wchar_t* arg_0,
+[in][out]/* simple_ref */struct Struct_640_t* arg_1);
+
+long Proc18_RpcSrvSetClassId(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_156_t* arg_2);
+
+long Proc19_RpcSrvGetClassId(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */struct Struct_156_t* arg_2);
+
+long Proc20_RpcSrvSetClientId(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_704_t* arg_2);
+
+long Proc21_RpcSrvGetClientId(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */struct Struct_704_t* arg_2);
+
+long Proc22_RpcSrvNotifyMediaReconnected(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1);
+
+long Proc23_RpcSrvGetOriginalSubnetMask(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc24_RpcSrvSetMSFTVendorSpecificOptions(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_10_t* arg_2,
+[in][unique]struct Struct_156_t* arg_3,
+[in][unique]struct Struct_822_t* arg_4,
+[out]/* simple_ref */long *arg_5);
+
+long Proc25_RpcSrvRequestCachedParams(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_10_t* arg_1,
+[in][unique]struct Struct_156_t* arg_2,
+[in][out]/* simple_ref */struct Struct_822_t* arg_3);
+
+long Proc26_RpcSrvRegisterConnectionStateNotification(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc27_RpcSrvDeRegisterConnectionStateNotification(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc28_RpcSrvGetNotificationStatus(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */struct Struct_952_t* arg_2);
+
+long Proc29_RpcSrvGetDhcpServicedConnections(
+[in][unique][string] wchar_t* arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ [string] wchar_t*** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc30_RpcSrvGetTraceArray(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */struct Struct_1062_t* arg_1);
+
+long Proc31_RpcSrvEnableTracing(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1);
+
+long Proc32_RpcSrvLeaseIpAddressEx(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_1096_t* arg_2,
+[in]long arg_3,
+[in][out][unique]struct Struct_1128_t* arg_4,
+[out][ref]struct Struct_1180_t** arg_5,
+[in][out][unique]struct Struct_1260_t** arg_6,
+[in]/* simple_ref */struct Struct_1286_t* arg_7,
+[in]long arg_8);
+
+long Proc33_RpcSrvRenewIpAddressLeaseEx(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in][out][unique]struct Struct_1180_t* arg_2,
+[in]/* simple_ref */struct Struct_1096_t* arg_3,
+[in][out][unique]struct Struct_1128_t* arg_4,
+[in][out][unique]struct Struct_1260_t** arg_5,
+[in]/* simple_ref */struct Struct_1286_t* arg_6,
+[in]long arg_7);
+
+long Proc34_RpcSrvReleaseIpAddressLeaseEx(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in][out][unique]struct Struct_1180_t* arg_2,
+[in]/* simple_ref */struct Struct_1096_t* arg_3,
+[in]/* simple_ref */struct Struct_1286_t* arg_4,
+[in]long arg_5);
+
+long Proc35_RpcSrvMadcapApiStartup(
+[in][unique][string] wchar_t* arg_0,
+[in][out][unique]long *arg_1);
+
+void Proc36_RpcSrvMadcapApiCleanup(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc37_RpcSrvMadcapEnumerateScopes(
+[in][unique][string] wchar_t* arg_0,
+[in]short arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */struct Struct_704_t* arg_4,
+[in][out][unique]long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc38_RpcSrvMadcapGenUID(
+[in][unique][string] wchar_t* arg_0,
+[in][out][unique]struct Struct_1394_t* arg_1);
+
+long Proc39_RpcSrvMadcapRequestAddress(
+[in][unique][string] wchar_t* arg_0,
+[in]short arg_1,
+[in][unique]struct Struct_1394_t* arg_2,
+[in][unique]struct Struct_1438_t* arg_3,
+[in][unique]struct Struct_1472_t* arg_4,
+[in][out][unique]struct Struct_1514_t* arg_5);
+
+long Proc40_RpcSrvMadcapRenewAddress(
+[in][unique][string] wchar_t* arg_0,
+[in]short arg_1,
+[in][unique]struct Struct_1394_t* arg_2,
+[in][unique]struct Struct_1472_t* arg_3,
+[in][out][unique]struct Struct_1514_t* arg_4);
+
+long Proc41_RpcSrvMadcapReleaseAddress(
+[in][unique][string] wchar_t* arg_0,
+[in]short arg_1,
+[in][unique]struct Struct_1394_t* arg_2,
+[in][unique]struct Struct_1472_t* arg_3);
+}
+

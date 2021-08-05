@@ -1,0 +1,12 @@
+[
+uuid(30b044a5-a225-43f0-b3a4-e060df91f9c1),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_RPC_SmartCardRootCertsNotifyService(
+);
+
+long Proc1_s_RPC_SmartCardCertsNotifyService(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+}
+

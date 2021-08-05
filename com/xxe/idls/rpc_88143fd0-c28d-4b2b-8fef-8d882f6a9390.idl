@@ -1,0 +1,155 @@
+[
+uuid(88143fd0-c28d-4b2b-8fef-8d882f6a9390),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_408_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+}Struct_408_t;
+typedef struct Struct_430_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_430_t;
+typedef struct Struct_694_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+long StructMember3;
+wchar_t StructMember4[33] ;
+wchar_t StructMember5[33] ;
+wchar_t StructMember6[33] ;
+wchar_t StructMember7[33] ;
+}Struct_694_t;
+typedef struct Struct_834_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [string] [size_is(34)]  wchar_t* StructMember3;
+[unique] [string] [size_is(257)]  wchar_t* StructMember4;
+[unique] [string] [size_is(257)]  wchar_t* StructMember5;
+[unique] [string] [size_is(257)]  wchar_t* StructMember6;
+[unique] [string] [size_is(257)]  wchar_t* StructMember7;
+}Struct_834_t;
+typedef struct Struct_442_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+long StructMember3;
+long StructMember4;
+struct Struct_430_t StructMember5;
+}Struct_442_t;
+typedef struct Struct_588_t
+{
+long StructMember0;
+long StructMember1;
+wchar_t StructMember2[33] ;
+long StructMember3;
+long StructMember4;
+struct Struct_430_t StructMember5;
+long StructMember6;
+[unique] [size_is(StructMember6)] char *StructMember7;
+}Struct_588_t;
+typedef [switch_type(unsigned long )] union union_782
+{
+[case(1)] struct Struct_834_t unionMember_1;
+}union_782;
+typedef struct Struct_872_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_782 StructMember1;
+}Struct_872_t;
+typedef [switch_type(unsigned long )] union union_390
+{
+[case(1)] struct Struct_408_t unionMember_1;
+[case(2)] struct Struct_442_t unionMember_2;
+}union_390;
+typedef [switch_type(unsigned long )] union union_676
+{
+[case(1)] struct Struct_408_t unionMember_1;
+[case(2)] struct Struct_694_t unionMember_2;
+}union_676;
+typedef [switch_type(unsigned long )] union union_552
+{
+[case(1)] struct Struct_408_t unionMember_1;
+[case(2)] struct Struct_442_t unionMember_2;
+[case(3)] struct Struct_588_t unionMember_3;
+}union_552;
+typedef struct Struct_464_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_390 StructMember1;
+}Struct_464_t;
+typedef struct Struct_616_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_552 StructMember1;
+}Struct_616_t;
+typedef struct Struct_728_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_676 StructMember1;
+}Struct_728_t;
+long Proc0_RpcOpenEnum(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_RpcCloseEnum(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcFilterByState(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc3_RpcFilterByCallersName(
+[in][context_handle] void* arg_0);
+
+long Proc4_RpcEnumAddFilter(
+[in][context_handle] void* arg_0,
+[in][context_handle] void* arg_1);
+
+long Proc5_RpcGetEnumResult(
+[in][context_handle] void* arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_464_t** arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc6_RpcFilterBySessionType(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_430_t* arg_1);
+
+long Proc7_RpcFilterByLicenseType(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_430_t* arg_1);
+
+long Proc8_RpcGetSessionIds(
+[in]/* enum_16 */ short arg_1,
+[in][range(0,65535)] long arg_2,
+[out][ref][size_is(, *arg_4)]long **arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc9_RpcGetEnumResultEx(
+[in][context_handle] void* arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_616_t** arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc10_RpcGetAllSessions(
+[in][out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_728_t** arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc11_RpcGetAllSessionsEx(
+[in]long arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_872_t** arg_2,
+[out]/* simple_ref */long *arg_3);
+}
+

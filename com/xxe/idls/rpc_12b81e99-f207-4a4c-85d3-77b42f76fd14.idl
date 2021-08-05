@@ -1,0 +1,70 @@
+[
+uuid(12b81e99-f207-4a4c-85d3-77b42f76fd14),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_44_t
+{
+[range(0,1024)]  short StructMember0;
+[range(0,1025)]  short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1)] [length_is(StructMember0)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_44_t;
+typedef struct Struct_114_t
+{
+long StructMember0;
+[unique] [string] [size_is(1025)]  wchar_t* StructMember1;
+[unique] [string] [size_is(1025)]  wchar_t* StructMember2;
+[unique] [string] [size_is(1025)]  wchar_t* StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+long StructMember11;
+short StructMember12;
+[range(0,10240)]  short StructMember13;
+[unique] [size_is(StructMember13)] byte *StructMember14;
+hyper StructMember15;
+hyper StructMember16;
+hyper StructMember17;
+}Struct_114_t;
+typedef struct Struct_184_t
+{
+[range(0,65536)]  long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_184_t;
+typedef struct Struct_258_t
+{
+hyper StructMember0;
+hyper StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_258_t;
+typedef struct Struct_204_t
+{
+struct Struct_44_t StructMember0;
+struct Struct_44_t StructMember1;
+struct Struct_44_t StructMember2;
+struct Struct_44_t StructMember3;
+struct Struct_44_t StructMember4;
+struct Struct_44_t StructMember5;
+struct Struct_114_t StructMember6;
+struct Struct_184_t StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+long StructMember11;
+long StructMember12;
+long StructMember13;
+hyper StructMember14;
+hyper StructMember15;
+hyper StructMember16;
+}Struct_204_t;
+void Proc0_SeclCreateProcessWithLogonW(
+[in]/* simple_ref */struct Struct_204_t* arg_1,
+[out]/* simple_ref */struct Struct_258_t* arg_2);
+}
+

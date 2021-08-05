@@ -1,0 +1,174 @@
+[
+uuid(8174bb16-571b-4c38-8386-1102b449044a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_68_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_68_t;
+typedef struct Struct_82_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_82_t;
+typedef struct Struct_154_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ [string]  wchar_t** StructMember1;
+}Struct_154_t;
+typedef struct Struct_182_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+}Struct_182_t;
+typedef struct Struct_216_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+long StructMember2;
+}Struct_216_t;
+typedef struct Struct_312_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+}Struct_312_t;
+typedef struct Struct_334_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+short StructMember3;
+}Struct_334_t;
+typedef struct Struct_440_t
+{
+long StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_440_t;
+typedef struct Struct_116_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_82_t* StructMember1;
+}Struct_116_t;
+typedef struct Struct_198_t
+{
+[unique] [string]  char* StructMember0;
+struct Struct_182_t StructMember1;
+}Struct_198_t;
+typedef struct Struct_234_t
+{
+struct Struct_198_t StructMember0;
+struct Struct_216_t StructMember1;
+}Struct_234_t;
+typedef struct Struct_488_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+struct Struct_68_t StructMember2;
+struct Struct_68_t StructMember3;
+struct Struct_116_t StructMember4;
+struct Struct_154_t StructMember5;
+long StructMember6;
+short StructMember7;
+}Struct_488_t;
+typedef struct Struct_252_t
+{
+[unique] struct Struct_234_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+struct Struct_68_t StructMember6;
+struct Struct_68_t StructMember7;
+long StructMember8;
+struct Struct_116_t StructMember9;
+struct Struct_154_t StructMember10;
+short StructMember11;
+}Struct_252_t;
+typedef [switch_type(unsigned long )] union union_44
+{
+[case(1)] struct Struct_252_t unionMember_1;
+[case(3)] struct Struct_312_t unionMember_3;
+[case(2)] struct Struct_334_t unionMember_2;
+}union_44;
+typedef struct Struct_356_t
+{
+long StructMember0;
+[switch_is(StructMember0)] union union_44 StructMember1;
+}Struct_356_t;
+long Proc0_RPCPeerIdentityCreate(
+[in][unique][string] wchar_t* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[out][ref][string] wchar_t** arg_4);
+
+long Proc1_RPCPeerIdentityRelease(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RPCPeerIdentityDelete(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc3_RPCPeerIdentityByPeerName(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc4_RPCPeerIdentitySetFriendlyName(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1);
+
+long Proc5_RPCPeerIdentityCreateCert(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_356_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]byte **arg_5);
+
+long Proc6_RPCPeerIdentityGetCert(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]byte **arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref][size_is(, *arg_6)]byte **arg_7);
+
+long Proc7_RPCPeerIdentitySetCert(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]byte *arg_4);
+
+long Proc8_RPCPeerIdentityList(
+[out]/* simple_ref */long *arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_0)] /*  */ struct Struct_440_t** arg_1);
+
+long Proc9_RPCPeerIdentityGroupCreate(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_488_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc10_RPCPeerIdentityGroupList(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_440_t** arg_2);
+
+long Proc11_RPCPeerIdentityGroupDelete(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc12_RPCPeerIdentityImport(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]byte *arg_2);
+}
+

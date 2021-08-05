@@ -1,0 +1,47 @@
+[
+uuid(c0d930f0-b787-4124-99bc-21f0ecb642ce),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_44_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] /*[range(0,0)] */ [length_is(StructMember0/2)] short *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_44_t;
+typedef struct Struct_72_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_72_t;
+long Proc0_LsarConnectLocalUser(
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_72_t* arg_2,
+[in][range(0,65535)] long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]/*[range(0,65535)]*/ char *arg_4);
+
+long Proc1_LsarDisconnectLocalUser(
+[in]/* simple_ref */struct Struct_72_t* arg_1,
+[in][range(0,65535)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,65535)]*/ char *arg_3,
+[in]/* simple_ref */struct Struct_44_t* arg_4,
+[in]/* simple_ref */struct Struct_44_t* arg_5);
+
+long Proc2_LsarCreateConnectedUser(
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */struct Struct_72_t* arg_4,
+[in][range(0,65535)] long arg_5,
+[in][unique][size_is(arg_5)]/*[range(0,65535)]*/ char *arg_6);
+
+long Proc3_LsarIsCurrentUserConnected(
+[in]/* simple_ref */struct Struct_72_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc4_LsarRenewCertificate(
+[in]/* simple_ref */struct Struct_72_t* arg_1);
+}
+

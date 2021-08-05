@@ -1,0 +1,56 @@
+[
+uuid(11220835-5b26-4d94-ae86-c3e475a809de),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_66_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_66_t;
+typedef struct Struct_108_t
+{
+char StructMember0[6] ;
+}Struct_108_t;
+typedef struct Struct_130_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_108_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_130_t;
+long Proc0_s_SSCryptProtectData(
+[out][ref][size_is(, *arg_2)]byte **arg_1,
+[out]/* simple_ref */long *arg_2,
+[in]/* simple_ref */[size_is(arg_4)]byte *arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in][unique][size_is(arg_7)]byte *arg_6,
+[in]long arg_7,
+[in][unique]struct Struct_66_t* arg_8,
+[in]long arg_9,
+[in][unique][size_is(arg_11)]byte *arg_10,
+[in]long arg_11);
+
+long Proc1_s_SSCryptUnprotectData(
+[out][ref][size_is(, *arg_2)]byte **arg_1,
+[out]/* simple_ref */long *arg_2,
+[in]/* simple_ref */[size_is(arg_4)]byte *arg_3,
+[in]long arg_4,
+[out][ref][string] wchar_t** arg_5,
+[in][unique][size_is(arg_7)]byte *arg_6,
+[in]long arg_7,
+[in][unique]struct Struct_66_t* arg_8,
+[in]long arg_9,
+[in][unique][size_is(arg_11)]byte *arg_10,
+[in]long arg_11);
+
+long Proc2_s_SSCryptUpdateProtectedState(
+[in][unique]struct Struct_130_t* arg_1,
+[in][unique][size_is(arg_3)]byte *arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+}
+

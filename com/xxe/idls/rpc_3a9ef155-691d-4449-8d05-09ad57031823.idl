@@ -1,0 +1,75 @@
+[
+uuid(3a9ef155-691d-4449-8d05-09ad57031823),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_40_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_40_t;
+typedef [switch_type(unsigned long )] union union_80
+{
+[case(1)] long unionMember_1;
+}union_80;
+typedef struct Struct_190_t
+{
+hyper StructMember0;
+}Struct_190_t;
+typedef struct Struct_48_t
+{
+long StructMember0;
+struct Struct_40_t StructMember1;
+struct Struct_40_t StructMember2;
+struct Struct_40_t StructMember3;
+}Struct_48_t;
+typedef struct Struct_170_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_48_t StructMember2;
+}Struct_170_t;
+typedef [switch_type(unsigned long )] union union_24
+{
+[case(1)] [unique] struct Struct_48_t* unionMember_1;
+}union_24;
+typedef [switch_type(unsigned long )] union union_144
+{
+[case(1)] [unique] [string]  wchar_t** unionMember_1;
+[case(2)] [unique] struct Struct_170_t* unionMember_2;
+}union_144;
+long Proc0_I_pSchRpcRegisterTask(
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in][unique][string] wchar_t* arg_5,
+[in][unique][string] wchar_t* arg_6,
+[in]/* simple_ref */[switch_is(arg_1)]union union_24* arg_7);
+
+long Proc1_I_pSchRpcEnumTasks(
+[in]long arg_1,
+[in]/* simple_ref */[switch_is(arg_1)]union union_80* arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_5)] /*  */ [string] wchar_t*** arg_6);
+
+long Proc2_I_pSchRpcGetTaskInfo(
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */[switch_is(arg_1)]union union_144* arg_3);
+
+long Proc3_I_pSchRpcAquireTaskStateNotificationsName(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref]struct Struct_190_t** arg_2);
+
+long Proc4_I_pAcquireBackgroundExecutionMode(
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc5_I_pReleaseBackgroundExecutionMode(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

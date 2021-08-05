@@ -1,0 +1,52 @@
+[
+uuid(0a74ef1c-41a4-4e06-83ae-dc74fb1cdd53),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_18_t
+{
+long StructMember0;
+ short StructMember1;
+long StructMember2;
+unsigned __int3264 StructMember3;
+unsigned __int3264 StructMember4;
+}Struct_18_t;
+typedef struct Struct_46_t
+{
+small StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+}Struct_46_t;
+typedef struct Struct_82_t
+{
+small StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] wchar_t *StructMember2;
+}Struct_82_t;
+long Proc0_ItSrvRegisterIdleTask(
+[in][unique][string] wchar_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in]/* simple_ref */struct Struct_18_t* arg_2);
+
+void Proc1_ItSrvUnregisterIdleTask(
+[in][unique][string] wchar_t* arg_0,
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_ItSrvProcessIdleTasks(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc3_ItSrvSetDetectionParameters(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_46_t* arg_1);
+
+long Proc4_ItSrvSetRuntimeOverrides(
+[in][unique][string] wchar_t* arg_0,
+[in][ref]struct Struct_82_t* arg_1);
+}
+

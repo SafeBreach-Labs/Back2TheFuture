@@ -1,0 +1,136 @@
+[
+uuid(7ea70bcf-48af-4f6a-8968-6a440754d5fa),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_40_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_40_t;
+typedef struct Struct_52_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_52_t;
+typedef struct Struct_130_t
+{
+[unique] [size_is(StructMember1)] char *StructMember0;
+long StructMember1;
+}Struct_130_t;
+typedef struct Struct_162_t
+{
+ short StructMember0;
+[unique] [size_is(StructMember2)] char *StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_162_t;
+typedef struct Struct_228_t
+{
+[unique] [size_is(StructMember1)] char *StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember3)] char *StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember5)] char *StructMember4;
+long StructMember5;
+}Struct_228_t;
+typedef struct Struct_294_t
+{
+[unique] [size_is(StructMember2)] char *StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_294_t;
+typedef struct Struct_338_t
+{
+[unique] [size_is(StructMember2)] char *StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember5)] char *StructMember3;
+long StructMember4;
+long StructMember5;
+[unique] [size_is(StructMember8)] char *StructMember6;
+long StructMember7;
+long StructMember8;
+}Struct_338_t;
+typedef struct Struct_416_t
+{
+[unique] [size_is(StructMember1)] char *StructMember0;
+long StructMember1;
+}Struct_416_t;
+typedef [switch_type(/* enum_16 */ short )] union union_16
+{
+[case(1)] struct Struct_40_t unionMember_1;
+[case(2)] struct Struct_52_t unionMember_2;
+[default] ;
+}union_16;
+typedef struct Struct_60_t
+{
+short StructMember0;
+ short StructMember1;
+[switch_is(StructMember1)] union union_16 StructMember2;
+}Struct_60_t;
+typedef struct Struct_76_t
+{
+long StructMember0;
+[unique] struct Struct_60_t* StructMember1;
+long StructMember2;
+}Struct_76_t;
+long Proc0_RpcNsiGetParameter(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][range(0,3)] /* enum_16 */ short arg_2,
+[in][range(0,2)] /* enum_16 */ short arg_3,
+[in][out]/* simple_ref */struct Struct_130_t* arg_4,
+[in][out]/* simple_ref */struct Struct_162_t* arg_5);
+
+long Proc1_RpcNsiGetAllParameters(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][range(0,3)] /* enum_16 */ short arg_2,
+[in][range(0,2)] /* enum_16 */ short arg_3,
+[in][out]/* simple_ref */struct Struct_130_t* arg_4,
+[in][out]/* simple_ref */struct Struct_228_t* arg_5);
+
+long Proc2_RpcNsiEnumerateObjectsAllParameters(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][range(0,3)] /* enum_16 */ short arg_2,
+[in][range(0,2)] /* enum_16 */ short arg_3,
+[in][out]/* simple_ref */struct Struct_294_t* arg_4,
+[in][out]/* simple_ref */struct Struct_338_t* arg_5,
+[in][out]/* simple_ref */long *arg_6);
+
+long Proc3_RpcNsiSetParameter(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][range(0,3)] /* enum_16 */ short arg_2,
+[in][range(0,7)] /* enum_16 */ short arg_3,
+[in][out]/* simple_ref */struct Struct_130_t* arg_4,
+[in][out]/* simple_ref */struct Struct_162_t* arg_5);
+
+long Proc4_RpcNsiSetAllParameters(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][range(0,3)] /* enum_16 */ short arg_2,
+[in][range(0,7)] /* enum_16 */ short arg_3,
+[in][out]/* simple_ref */struct Struct_130_t* arg_4,
+[in][out]/* simple_ref */struct Struct_416_t* arg_5);
+
+long Proc5_RpcNsiRegisterChangeNotification(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc6_RpcNsiDeregisterChangeNotification(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in][out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc7_RpcNsiRequestChangeNotification(
+[in][context_handle] void* arg_2,
+[out]/* simple_ref */struct Struct_130_t* arg_3,
+[out]/* simple_ref */struct Struct_162_t* arg_4,
+[out][ref]/* enum_16 */ short *arg_5);
+
+long Proc8_RpcNsiParameterChange(
+[in]/* simple_ref */struct Struct_76_t* arg_1,
+[in]/* simple_ref */struct Struct_130_t* arg_2,
+[in]/* simple_ref */struct Struct_162_t* arg_3,
+[in]/* enum_16 */ short arg_4);
+}
+

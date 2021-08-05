@@ -1,0 +1,210 @@
+[
+uuid(fd6bb951-c830-4734-bf2c-18ba6ec7ab49),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_132_t
+{
+short StructMember0[256] ;
+short StructMember1[256] ;
+short StructMember2;
+}Struct_132_t;
+typedef struct Struct_194_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+ short StructMember3;
+ short StructMember4;
+ short StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+[unique] [size_is(StructMember9)] /*[range(0,0)] */ char *StructMember11;
+[unique] [size_is(StructMember10)] /*[range(0,0)] */ char *StructMember12;
+}Struct_194_t;
+typedef struct Struct_242_t
+{
+hyper StructMember0;
+hyper StructMember1;
+}Struct_242_t;
+typedef struct Struct_250_t
+{
+long StructMember0;
+hyper StructMember1;
+}Struct_250_t;
+typedef struct Struct_304_t
+{
+short StructMember0[256] ;
+short StructMember1[224] ;
+short StructMember2[260] ;
+struct Struct_242_t StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember6)] /*[range(0,0)] */  /*  */ struct Struct_250_t* StructMember7;
+}Struct_304_t;
+long Proc0_DiscGetInitiatorList(
+[in][range(0,65536)] long arg_0,
+[in]small arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[size_is(arg_0)]/*[range(0,65536)]*/ byte *arg_3);
+
+long Proc1_DiscGetTargets(
+[in][range(0,262144)] long arg_0,
+[in]small arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[size_is(arg_0)]/*[range(0,262144)]*/ byte *arg_3);
+
+long Proc2_DiscGetTargetInfo(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in][range(0,524288)] long arg_3,
+[in]small arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */[size_is(arg_3)]/*[range(0,524288)]*/ byte *arg_6);
+
+long Proc3_DiscLoginTarget(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique]struct Struct_132_t* arg_4,
+[in]hyper arg_5,
+[in][unique]struct Struct_194_t* arg_6,
+[in][unique]struct Struct_304_t* arg_7,
+[in][range(0,4096)] long arg_8,
+[in][unique][size_is(arg_8)]/*[range(0,4096)]*/ char *arg_9,
+[in]small arg_10,
+[in]small arg_11,
+[out]/* simple_ref */struct Struct_242_t* arg_12,
+[out]/* simple_ref */struct Struct_242_t* arg_13);
+
+long Proc4_DiscLogoutTarget(
+[in]/* simple_ref */struct Struct_242_t* arg_0);
+
+long Proc5_DiscRefreshAll(
+);
+
+long Proc6_DiscRefreshInitiator(
+[in]/* simple_ref */[string] wchar_t* arg_0);
+
+long Proc7_DiscSessionIdToHBA(
+[in]/* simple_ref */struct Struct_242_t* arg_0,
+[in][range(0,4096)] long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[string][size_is(arg_1)]/*[range(0,4096)]*/  wchar_t* arg_3);
+
+long Proc8_DiscStaticTarget(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in][range(0,256)] long arg_2,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,256)]*/  /*  */ struct Struct_132_t* arg_3,
+[in][unique]struct Struct_304_t* arg_4,
+[in][unique]struct Struct_194_t* arg_5,
+[in]long arg_6,
+[in]small arg_7,
+[in]small arg_8,
+[in]small arg_9);
+
+long Proc9_DiscSNS(
+[in][unique][string] wchar_t* arg_0,
+[in]small arg_1,
+[in]small arg_2,
+[in]small arg_3);
+
+long Proc10_DiscTargetPortal(
+[in]/* simple_ref */struct Struct_132_t* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2,
+[in][unique]struct Struct_194_t* arg_3,
+[in]hyper arg_4,
+[in]small arg_5,
+[in]small arg_6,
+[in]small arg_7);
+
+long Proc11_DiscReportTargetPortals(
+[out]/* simple_ref */long *arg_0,
+[in][range(0,524288)] long arg_1,
+[in]small arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */[size_is(arg_1)]/*[range(0,524288)]*/ byte *arg_4);
+
+long Proc12_DiscPresharedKey(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]small arg_2,
+[in]hyper arg_3,
+[in]char arg_4,
+[in][range(0,4096)] long arg_5,
+[in][unique][size_is(arg_5)]/*[range(0,4096)]*/ char *arg_6,
+[in]small arg_7,
+[in][range(0,4096)] long arg_8,
+[in][unique][size_is(arg_8)]/*[range(0,4096)]*/ char *arg_9);
+
+long Proc13_DiscGetIKEInformation(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in]char arg_2,
+[in][range(0,4096)] long arg_3,
+[in][unique][size_is(arg_3)]/*[range(0,4096)]*/ char *arg_4,
+[out]/* simple_ref */hyper *arg_5);
+
+long Proc14_DiscAddConnection(
+[in]/* simple_ref */struct Struct_242_t* arg_0,
+[in]long arg_1,
+[in][unique]struct Struct_132_t* arg_2,
+[in]hyper arg_3,
+[in][unique]struct Struct_194_t* arg_4,
+[in][range(0,4096)] long arg_5,
+[in][unique][size_is(arg_5)]/*[range(0,4096)]*/ char *arg_6,
+[out]/* simple_ref */struct Struct_242_t* arg_7);
+
+long Proc15_DiscRemoveConnection(
+[in]/* simple_ref */struct Struct_242_t* arg_0,
+[in]/* simple_ref */struct Struct_242_t* arg_1);
+
+long Proc16_DiscSetTunnelOuterModeAddress(
+[in][unique][string] wchar_t* arg_0,
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]small arg_4);
+
+long Proc17_DiscInitiatorSharedSecret(
+[in][range(0,4096)] long arg_0,
+[in][unique][size_is(arg_0)]/*[range(0,4096)]*/ char *arg_1);
+
+long Proc18_DiscRadiusSharedSecret(
+[in][range(0,4096)] long arg_0,
+[in][unique][size_is(arg_0)]/*[range(0,4096)]*/ char *arg_1);
+
+long Proc19_DiscInitiatorNodeName(
+[in][unique][string] wchar_t* arg_0);
+
+long Proc20_DiscGetInitiatorNodeName(
+[out]/* simple_ref */[string][size_is(224)]/*[range(0,0)]*/  wchar_t* arg_0);
+
+long Proc21_DiscSetupPersistentDevices(
+[in][unique][string] wchar_t* arg_0,
+[in]small arg_1);
+
+long Proc22_DiscGetTargetPortals(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique]short *arg_2,
+[in][range(0,262144)] long arg_3,
+[in]small arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */[size_is(arg_3)]/*[range(0,262144)]*/ byte *arg_6);
+
+long Proc23_DiscRADIUSServer(
+[in][unique][string] wchar_t* arg_0,
+[in]small arg_1,
+[in]small arg_2,
+[in]small arg_3);
+}
+

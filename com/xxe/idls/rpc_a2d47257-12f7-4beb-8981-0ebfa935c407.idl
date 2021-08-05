@@ -1,0 +1,145 @@
+[
+uuid(a2d47257-12f7-4beb-8981-0ebfa935c407),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_34_t
+{
+long StructMember0;
+ short StructMember1;
+long StructMember2;
+}Struct_34_t;
+typedef struct Struct_176_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] /*[range(0,4096)] */ byte *StructMember1;
+}Struct_176_t;
+typedef [switch_type(short )] union union_212
+{
+[case(23)] byte unionMember_23[16] ;
+[case(2)] byte unionMember_2[4] ;
+}union_212;
+typedef struct Struct_344_t
+{
+byte StructMember0[16] ;
+}Struct_344_t;
+typedef [switch_type(/* enum_16 */ short )] union union_516
+{
+[case(2)] long unionMember_2;
+[case(1)] [unique] [string]  wchar_t* unionMember_1;
+[default] ;
+}union_516;
+typedef struct Struct_52_t
+{
+struct Struct_34_t StructMember0;
+ short StructMember1;
+long StructMember2;
+wchar_t StructMember3[128] ;
+ short StructMember4;
+}Struct_52_t;
+typedef struct Struct_242_t
+{
+short StructMember0;
+short StructMember1;
+[switch_is(StructMember0)] union union_212 StructMember2;
+short StructMember3;
+long StructMember4;
+}Struct_242_t;
+typedef struct Struct_398_t
+{
+struct Struct_242_t StructMember0;
+short StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_398_t;
+typedef struct Struct_458_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,100)] */  /*  */ struct Struct_398_t* StructMember1;
+}Struct_458_t;
+typedef struct Struct_534_t
+{
+ short StructMember0;
+[switch_is(StructMember0)] union union_516 StructMember1;
+}Struct_534_t;
+typedef struct Struct_302_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)] /*[range(0,10)] */  /*  */ struct Struct_242_t* StructMember3;
+long StructMember4;
+struct Struct_176_t StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+}Struct_302_t;
+long Proc0_PnrpRpcInitializeCloudList(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1,
+[in][out][unique][string] wchar_t** arg_2);
+
+long Proc1_PnrpRpcGetCloudList(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_52_t** arg_2);
+
+long Proc2_PnrpRpcShutdownCloudList(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc3_PnrpRpcClientInitialize(
+[out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc4_PnrpRpcClientUninitialize(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc5_PnrpRpcRegister(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]/* simple_ref */struct Struct_302_t* arg_4,
+[in][unique]struct Struct_344_t* arg_5,
+[out]/* simple_ref */struct Struct_344_t* arg_6,
+[in][out][unique][string] wchar_t** arg_7);
+
+long Proc6_PnrpRpcUnregister(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc7_PnrpRpcResolve(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in]/* enum_16 */ short arg_6,
+[in][unique]struct Struct_344_t* arg_7,
+[in]long arg_8,
+[in]long arg_9,
+[in]long arg_10,
+[in]long arg_11,
+[in][out][unique][string] wchar_t** arg_12);
+
+long Proc8_PnrpRpcGetResolveResult(
+[in][context_handle] void* arg_0,
+[out][ref]/* enum_16 */ short *arg_1,
+[out][ref]struct Struct_302_t** arg_2,
+[in][out][unique][string] wchar_t** arg_3,
+[in][out][unique]struct Struct_458_t** arg_4);
+
+long Proc9_PnrpRpcEndResolve(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc10_PnrpRpcPing(
+);
+
+long Proc11_PnrpRpcDiagControl(
+[in]/* enum_16 */ short arg_0,
+[in][range(0,20)] long arg_1,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)]/*[range(0,20)]*/  /*  */ struct Struct_534_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)]/*[range(0,0)]*/  /*  */ struct Struct_534_t** arg_4);
+
+long Proc12_PnrpRpcHandlePowerEvent(
+[in]long arg_0);
+}
+

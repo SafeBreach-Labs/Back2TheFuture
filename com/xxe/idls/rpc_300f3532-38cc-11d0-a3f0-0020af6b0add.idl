@@ -1,0 +1,264 @@
+[
+uuid(300f3532-38cc-11d0-a3f0-0020af6b0add),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_2_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_2_t;
+typedef struct Struct_20_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_20_t;
+typedef struct Struct_444_t
+{
+byte StructMember0[8] ;
+}Struct_444_t;
+typedef struct Struct_460_t
+{
+char StructMember0[16] ;
+}Struct_460_t;
+typedef struct Struct_900_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_900_t;
+typedef struct Struct_32_t
+{
+struct Struct_20_t StructMember0;
+}Struct_32_t;
+typedef struct Struct_42_t
+{
+struct Struct_32_t StructMember0;
+struct Struct_32_t StructMember1;
+}Struct_42_t;
+typedef struct Struct_136_t
+{
+wchar_t StructMember0[257] ;
+struct Struct_42_t StructMember1;
+struct Struct_42_t StructMember2;
+long StructMember3;
+}Struct_136_t;
+typedef struct Struct_202_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(1,1)] */  /*  */ struct Struct_136_t* StructMember1;
+}Struct_202_t;
+typedef struct Struct_722_t
+{
+long StructMember0;
+struct Struct_32_t StructMember1;
+}Struct_722_t;
+typedef struct Struct_302_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+[unique] struct Struct_32_t* StructMember4;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,64)] */  /*  */ struct Struct_32_t* StructMember5;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,64)] */  /*  */ struct Struct_42_t* StructMember6;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,64)] */  /*  */ struct Struct_42_t* StructMember7;
+}Struct_302_t;
+typedef struct Struct_420_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,128)] */  /*  */ struct Struct_42_t* StructMember1;
+long StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)] /*[range(0,26)] */  /*  */ struct Struct_32_t* StructMember3;
+}Struct_420_t;
+typedef struct Struct_598_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,32)] */  /*  */ struct Struct_42_t* StructMember1;
+long StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)] /*[range(0,26)] */  /*  */ struct Struct_32_t* StructMember3;
+}Struct_598_t;
+typedef struct Struct_622_t
+{
+struct Struct_42_t StructMember0;
+struct Struct_42_t StructMember1;
+struct Struct_460_t StructMember2;
+long StructMember3;
+}Struct_622_t;
+typedef struct Struct_908_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+long StructMember11;
+long StructMember12;
+long StructMember13;
+long StructMember14;
+long StructMember15;
+long StructMember16;
+long StructMember17;
+long StructMember18;
+long StructMember19;
+long StructMember20;
+long StructMember21;
+long StructMember22;
+long StructMember23;
+long StructMember24;
+long StructMember25;
+struct Struct_2_t StructMember26;
+long StructMember27;
+long StructMember28;
+long StructMember29;
+long StructMember30;
+long StructMember31;
+struct Struct_2_t StructMember32;
+long StructMember33;
+struct Struct_2_t StructMember34;
+struct Struct_2_t StructMember35;
+long StructMember36;
+long StructMember37;
+long StructMember38;
+long StructMember39;
+long StructMember40;
+short StructMember41;
+short StructMember42;
+short StructMember43;
+short StructMember44;
+struct Struct_900_t StructMember45;
+}Struct_908_t;
+typedef struct Struct_470_t
+{
+long StructMember0;
+ long StructMember1;
+struct Struct_32_t StructMember2;
+struct Struct_444_t StructMember3;
+struct Struct_444_t StructMember4;
+long StructMember5;
+struct Struct_2_t StructMember6;
+struct Struct_460_t StructMember7;
+}Struct_470_t;
+typedef struct Struct_540_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,26)] */  /*  */ struct Struct_470_t* StructMember1;
+}Struct_540_t;
+typedef struct Struct_682_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(1,1)] */  /*  */ struct Struct_622_t* StructMember1;
+}Struct_682_t;
+typedef [switch_type(long )] union union_88
+{
+[case(0)] struct Struct_202_t unionMember_0;
+[case(1)] struct Struct_302_t unionMember_1;
+[case(2)] struct Struct_420_t unionMember_2;
+[case(3)] struct Struct_540_t unionMember_3;
+[case(4)] struct Struct_598_t unionMember_4;
+[case(6)] struct Struct_682_t unionMember_6;
+}union_88;
+typedef [switch_type(long )] union union_840
+{
+[case(0)] struct Struct_202_t unionMember_0;
+[case(1)] struct Struct_302_t unionMember_1;
+[case(2)] struct Struct_420_t unionMember_2;
+[case(3)] struct Struct_540_t unionMember_3;
+[case(4)] struct Struct_598_t unionMember_4;
+[case(5)] struct Struct_908_t unionMember_5;
+[case(6)] struct Struct_682_t unionMember_6;
+[case(7)] struct Struct_2_t unionMember_7;
+[case(8)] long unionMember_8;
+}union_840;
+typedef struct Struct_698_t
+{
+ long StructMember0;
+[switch_is(StructMember0)] union union_88 StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_698_t;
+typedef struct Struct_974_t
+{
+ long StructMember0;
+ long StructMember1;
+[switch_is(StructMember0)] union union_840 StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+}Struct_974_t;
+long Proc0_Stubold_LnkMendLink(
+[in]struct Struct_2_t arg_1,
+[in]long arg_2,
+[in]/* simple_ref */struct Struct_42_t* arg_3,
+[in]/* simple_ref */struct Struct_42_t* arg_4,
+[out]/* simple_ref */struct Struct_42_t* arg_5,
+[out][string] wchar_t arg_6[261]);
+
+long Proc1_StubGetFileTrackingInformation(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_42_t* arg_2,
+[out]/* simple_ref */struct Struct_42_t* arg_3,
+[out][string] wchar_t arg_4[261]);
+
+long Proc2_StubGetFileTrackingInformation(
+[in][out]/* simple_ref */struct Struct_698_t* arg_1);
+
+long Proc3_StubLnkSetVolumeId(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_32_t* arg_2);
+
+long Proc4_StubGetFileTrackingInformation(
+);
+
+long Proc5_StubGetFileTrackingInformation(
+[in]/* simple_ref */struct Struct_32_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[out]pipe struct Struct_722_t arg_3);
+
+long Proc6_StubGetFileTrackingInformation(
+[in]/* simple_ref */struct Struct_42_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[out]pipe struct Struct_622_t arg_3);
+
+long Proc7_StubGetFileTrackingInformation(
+[in][range(1,26)] long arg_1,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)]/*[range(1,26)]*/  /*  */ struct Struct_32_t* arg_2);
+
+long Proc8_StubLnkOnRestore(
+);
+
+long Proc9_StubLnkMendLink(
+[in]struct Struct_2_t arg_2,
+[in]long arg_3,
+[in]/* simple_ref */struct Struct_42_t* arg_4,
+[in]/* simple_ref */struct Struct_42_t* arg_5,
+[in]/* simple_ref */struct Struct_460_t* arg_6,
+[out]/* simple_ref */struct Struct_42_t* arg_7,
+[out]/* simple_ref */struct Struct_460_t* arg_8,
+[out][string] wchar_t arg_9[260]);
+
+long Proc10_StubGetFileTrackingInformation(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_42_t* arg_2,
+[out]/* simple_ref */struct Struct_42_t* arg_3,
+[out]/* simple_ref */struct Struct_460_t* arg_4,
+[out][string] wchar_t arg_5[260]);
+
+long Proc11_StubGetFileTrackingInformation(
+[in][out]/* simple_ref */struct Struct_974_t* arg_1);
+
+long Proc12_StubLnkSearchMachine(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_42_t* arg_2,
+[in]/* simple_ref */struct Struct_42_t* arg_3,
+[out]/* simple_ref */struct Struct_42_t* arg_4,
+[out]/* simple_ref */struct Struct_42_t* arg_5,
+[out]/* simple_ref */struct Struct_460_t* arg_6,
+[out]/* simple_ref */[string][size_is(262)]/*[range(0,0)]*/  wchar_t* arg_7);
+}
+

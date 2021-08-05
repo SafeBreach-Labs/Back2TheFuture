@@ -1,0 +1,40 @@
+[
+uuid(f50aac00-c7f3-428e-a022-a6b71bfb9d43),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_SSCatDBAddCatalog(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[out][ref][string] wchar_t** arg_4);
+
+long Proc1_s_SSCatDBDeleteCatalog(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc2_s_SSCatDBEnumCatalogs(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in][range(0,64)] long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]byte *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_5)] /*  */ [string] wchar_t*** arg_6);
+
+long Proc3_s_SSCatDBPauseResumeService(
+[in]long arg_1);
+
+long Proc4_s_SSCatDBRebuildDatabase(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc5_s_SSCatDBPrepareForCall(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc6_s_SSCatDBAddCatalog2(
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in][unique][string] wchar_t* arg_4,
+[out][ref][string] wchar_t** arg_5);
+}
+
