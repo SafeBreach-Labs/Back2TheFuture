@@ -398,7 +398,7 @@
         },
         "pe": {
             "cve_link": {
-                "db_location": "E:\\tests\\db_2.db",
+                "db_location": ".\\config\\cveDB.db",
                 "path_manual_csv_exploits": ".\\config\\exploits.csv",
                 "cve_to_exploit_db": ".\\config\\cve_to_exploit.db",
                 "exploit_db_base_url": "https://www.exploit-db.com/exploits/{}"
