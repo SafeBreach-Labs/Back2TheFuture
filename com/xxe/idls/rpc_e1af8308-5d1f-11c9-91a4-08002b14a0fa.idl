@@ -1,0 +1,97 @@
+[
+uuid(e1af8308-5d1f-11c9-91a4-08002b14a0fa),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_88_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(0,2000)] */ byte StructMember1[] ;
+}Struct_88_t;
+typedef struct Struct_238_t
+{
+char StructMember0[6] ;
+}Struct_238_t;
+typedef struct Struct_28_t
+{
+struct Struct_12_t StructMember0;
+short StructMember1;
+short StructMember2;
+}Struct_28_t;
+typedef struct Struct_270_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_238_t StructMember2;
+[size_is(StructMember1)] /*[range(0,0)] */ long StructMember3[] ;
+}Struct_270_t;
+typedef struct Struct_96_t
+{
+struct Struct_12_t StructMember0;
+[ptr] struct Struct_88_t* StructMember1;
+[string] char StructMember2[64] ;
+}Struct_96_t;
+void Proc0_ept_delete(
+);
+
+void Proc1_ept_delete(
+);
+
+void Proc2_ept_lookup(
+[in]long arg_1,
+[in][ptr]struct Struct_12_t* arg_2,
+[in][ptr]struct Struct_28_t* arg_3,
+[in]long arg_4,
+[in][out]/* simple_ref */[context_handle] void** arg_5,
+[in][range(0,500)] long arg_6,
+[out]/* simple_ref */long *arg_7,
+[out] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)]/*[range(0,500)]*/ [length_is( * arg_7)] /*  */ struct Struct_96_t arg_8[],
+[out]/* simple_ref */long *arg_9);
+
+void Proc3_ept_map(
+[in][ptr]struct Struct_12_t* arg_2,
+[in][ptr]struct Struct_88_t* arg_3,
+[in][out]/* simple_ref */[context_handle] void** arg_4,
+[in][range(0,500)] long arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_5)]/*[range(0,500)]*/ [length_is( * arg_6)] /*  */ struct Struct_88_t** arg_7,
+[out]/* simple_ref */long *arg_8);
+
+void Proc4_ept_lookup_handle_free(
+[in][out]/* simple_ref */[context_handle] void** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+void Proc5_ept_delete(
+);
+
+void Proc6_ept_delete(
+);
+
+void Proc7_ept_map_auth(
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in]/* simple_ref */struct Struct_88_t* arg_3,
+[in][unique]struct Struct_270_t* arg_4,
+[in][out]/* simple_ref */[context_handle] void** arg_5,
+[in][range(0,500)] long arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)]/*[range(0,500)]*/ [length_is( * arg_7)] /*  */ struct Struct_88_t** arg_8,
+[out]/* simple_ref */long *arg_9);
+
+void Proc8_ept_map_auth_async(
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in]/* simple_ref */struct Struct_88_t* arg_3,
+[in][unique]struct Struct_270_t* arg_4,
+[in][out]/* simple_ref */[context_handle] void** arg_5,
+[in][range(0,500)] long arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)]/*[range(0,500)]*/ [length_is( * arg_7)] /*  */ struct Struct_88_t** arg_8,
+[out]/* simple_ref */long *arg_9);
+}
+

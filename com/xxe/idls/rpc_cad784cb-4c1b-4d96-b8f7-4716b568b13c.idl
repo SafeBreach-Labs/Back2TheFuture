@@ -1,0 +1,413 @@
+[
+uuid(cad784cb-4c1b-4d96-b8f7-4716b568b13c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_64_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_64_t;
+typedef struct Struct_544_t
+{
+hyper StructMember0;
+long StructMember1;
+long StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+long StructMember5[4] ;
+[string]  wchar_t StructMember6[120] ;
+}Struct_544_t;
+typedef struct Struct_624_t
+{
+[ref] [string]  wchar_t* StructMember0;
+[ref] [string]  wchar_t* StructMember1;
+[ref] [string]  wchar_t* StructMember2;
+hyper StructMember3;
+long StructMember4;
+long StructMember5;
+}Struct_624_t;
+typedef struct Struct_786_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+}Struct_786_t;
+typedef struct Struct_150_t
+{
+hyper StructMember0;
+hyper StructMember1;
+struct Struct_64_t StructMember2;
+struct Struct_64_t StructMember3;
+struct Struct_64_t StructMember4;
+struct Struct_64_t StructMember5;
+struct Struct_64_t StructMember6;
+struct Struct_64_t StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+long StructMember11;
+long StructMember12;
+long StructMember13;
+long StructMember14;
+long StructMember15;
+[unique] [string]  wchar_t* StructMember16;
+[unique] [string]  wchar_t* StructMember17;
+[unique] [string]  wchar_t* StructMember18;
+[unique] [string]  wchar_t* StructMember19;
+[unique] [size_is(StructMember8)] /*[range(0,0)] */ byte *StructMember20;
+[unique] [size_is(StructMember9)] /*[range(0,0)] */ byte *StructMember21;
+}Struct_150_t;
+typedef struct Struct_392_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_64_t StructMember2;
+struct Struct_64_t StructMember3;
+struct Struct_64_t StructMember4;
+struct Struct_64_t StructMember5;
+long StructMember6;
+long StructMember7;
+[unique] [size_is(StructMember7)] /*[range(0,0)] */ byte *StructMember8;
+}Struct_392_t;
+typedef struct Struct_844_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ struct Struct_786_t* StructMember1;
+}Struct_844_t;
+typedef struct Struct_872_t
+{
+[unique] [string]  wchar_t* StructMember0;
+struct Struct_64_t StructMember1;
+hyper StructMember2;
+}Struct_872_t;
+typedef struct Struct_938_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ struct Struct_872_t* StructMember1;
+}Struct_938_t;
+long Proc0_s_UrlCacheGetManagerInterface(
+[out][ref][size_is(, *arg_2)]/*[range(0,0)]*/ byte **arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc1_DirectAccessResolver__CancelAll(
+);
+
+long Proc2_s_UrlCacheOpenContainer(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]hyper arg_4,
+[in]long arg_5,
+[out]/* simple_ref */[context_handle] void** arg_6);
+
+void Proc3_s_UrlCacheCloseContainer(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc4_s_UrlCacheSetContainerEntryMaximumAge(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+
+long Proc5_s_UrlCacheAddUrl(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in][unique][string] wchar_t* arg_4,
+[in][unique][string] wchar_t* arg_5,
+[in][unique][string] wchar_t* arg_6,
+[in]struct Struct_64_t arg_7,
+[in]struct Struct_64_t arg_8,
+[in]struct Struct_64_t arg_9,
+[in][unique][size_is(arg_11)]/*[range(0,0)]*/ byte *arg_10,
+[in]long arg_11,
+[in]long arg_12,
+[out][ref][string] wchar_t** arg_13);
+
+long Proc6_s_UrlCacheLookupUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */struct Struct_150_t* arg_2,
+[in]long arg_3);
+
+long Proc7_s_UrlCacheCheckUrlsExist(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(1,1024)]*/  /*  */ [string] wchar_t** arg_1,
+[in][range(1,1024)] long arg_2,
+[out]/* simple_ref */[size_is(arg_2)]/*[range(1,1024)]*/ long *arg_3);
+
+long Proc8_s_UrlCacheGetUrlBinaryBlob(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */struct Struct_64_t* arg_3,
+[out]/* simple_ref */struct Struct_64_t* arg_4,
+[out]/* simple_ref */struct Struct_64_t* arg_5,
+[out][ref][size_is(, *arg_7)]/*[range(0,0)]*/ byte **arg_6,
+[out]/* simple_ref */long *arg_7);
+
+long Proc9_s_UrlCacheAddUrlBinaryBlob(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in]struct Struct_64_t arg_3,
+[in]struct Struct_64_t arg_4,
+[in][unique][size_is(arg_6)]/*[range(0,0)]*/ byte *arg_5,
+[in]long arg_6);
+
+long Proc10_s_UrlCacheDeleteUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc11_s_UrlCacheUnlockUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc12_s_UrlCacheUpdateUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_392_t* arg_2,
+[in]long arg_3);
+
+long Proc13_s_UrlCacheEntryEnum(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]hyper arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+void Proc14_s_UrlCacheEntryEnumClose(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc15_s_UrlCacheEntryEnumNext(
+[in][context_handle] void* arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_150_t*** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc16_s_UrlCacheCleanupUrls(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc17_s_UrlCacheCleanupHttpsUrls(
+[in][context_handle] void* arg_0);
+
+long Proc18_s_UrlCacheGetSize(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */hyper *arg_1);
+
+long Proc19_s_UrlCacheGetLimit(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */hyper *arg_1);
+
+long Proc20_s_UrlCacheSetLimit(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1);
+
+long Proc21_s_UrlCacheGetBloomFilter(
+[in][context_handle] void* arg_0,
+[out][ref][string] wchar_t** arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc22_s_UrlCacheGetNextDirectory(
+[in][context_handle] void* arg_0,
+[out][ref][string] wchar_t** arg_1);
+
+long Proc23_s_UrlCacheAddLeakFile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc24_s_UrlCacheCreateGroup(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */hyper *arg_2);
+
+long Proc25_s_UrlCacheDeleteGroup(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1,
+[in]long arg_2);
+
+long Proc26_s_UrlCacheGetGroupIds(
+[in][context_handle] void* arg_0,
+[out][ref][size_is(, *arg_2)]/*[range(0,0)]*/ hyper **arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc27_s_UrlCacheGetGroup(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1,
+[out]/* simple_ref */struct Struct_544_t* arg_2);
+
+long Proc28_s_UrlCacheUpdateGroup(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1,
+[in]/* simple_ref */struct Struct_544_t* arg_2,
+[in]long arg_3);
+
+long Proc29_s_UrlCacheSetUrlGroup(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]hyper arg_2,
+[in]long arg_3);
+
+long Proc30_s_UrlCacheGetContentContainerDirectories(
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ [string] wchar_t*** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc31_s_UrlCacheCreateExtensibleContainer(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]hyper arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc32_s_UrlCacheDeleteExtensibleContainer(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc33_s_UrlCacheGetExtensibleContainersList(
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_624_t** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc34_s_UrlCacheRpcSetGlobalLimit(
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]hyper arg_2);
+
+long Proc35_s_UrlCacheRpcGetGlobalLimit(
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */hyper *arg_2);
+
+long Proc36_s_UrlCacheRpcReloadSettings(
+);
+
+long Proc37_s_AppCacheOpenContainer(
+[in]long arg_1,
+[out][ref][string] wchar_t** arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+void Proc38_s_AppCacheCloseContainer(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc39_s_AppCacheRpcCheckManifest(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[size_is(arg_4)]/*[range(0,0)]*/ byte *arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in]struct Struct_64_t arg_6,
+[in]struct Struct_64_t arg_7,
+[in]struct Struct_64_t arg_8,
+[in]/* simple_ref */[size_is(arg_10)]/*[range(0,0)]*/ byte *arg_9,
+[in]long arg_10,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_11,
+[out][ref][string] wchar_t** arg_12,
+[out][ref][string] wchar_t** arg_13,
+[out]/* simple_ref */[context_handle] void** arg_14);
+
+long Proc40_s_AppCacheRpcLookup(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[out][ref][string] wchar_t** arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc41_s_AppCacheRpcDeleteGroup(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc42_s_AppCacheRpcDeleteIeGroup(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc43_s_AppCacheRpcGetFallbackUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc44_s_AppCacheRpcGetDownloadList(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_844_t* arg_1);
+
+void Proc45_s_AppCacheRpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+void Proc46_s_AppCacheRpcInvalidate(
+[in][context_handle] void* arg_0);
+
+long Proc47_s_AppCacheRpcGetInfo(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_872_t* arg_1);
+
+long Proc48_s_AppCacheRpcGetGroupsList(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_938_t* arg_1);
+
+long Proc49_s_AppCacheRpcFreeSpace(
+[in][context_handle] void* arg_0,
+[in]struct Struct_64_t arg_1);
+
+long Proc50_s_AppCacheRpcGetIeGroupList(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_938_t* arg_1);
+
+long Proc51_s_AppCacheRpcFreeIeSpace(
+[in][context_handle] void* arg_0,
+[in]struct Struct_64_t arg_1);
+
+long Proc52_s_AppCacheRpcRetrieveUrl(
+[in][context_handle] void* arg_0,
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */struct Struct_150_t* arg_4,
+[out]/* simple_ref */long *arg_5);
+
+long Proc53_s_AppCacheRpcCommitUrl(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]struct Struct_64_t arg_4,
+[in]struct Struct_64_t arg_5,
+[in]struct Struct_64_t arg_6,
+[in]/* simple_ref */[size_is(arg_8)]/*[range(0,0)]*/ byte *arg_7,
+[in]long arg_8);
+
+long Proc54_s_AppCacheRpcUpdateExtraData(
+[in][context_handle] void* arg_0,
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][size_is(arg_4)]/*[range(0,0)]*/ byte *arg_3,
+[in]long arg_4);
+
+long Proc55_s_AppCacheRpcFinalize(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,0)]*/ byte *arg_1,
+[in]long arg_2,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_3);
+
+long Proc56_s_DependencyStoreOpenContainer(
+[in]long arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+void Proc57_s_DependencyStoreCloseContainer(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc58_s_DependencyStoreUpdateUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique][size_is(arg_3)]/*[range(0,0)]*/ byte *arg_2,
+[in]long arg_3);
+
+long Proc59_s_DependencyStoreRetrieveUrl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][size_is(, *arg_3)]/*[range(0,0)]*/ byte **arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc60_s_DependencyStoreDeleteContainer(
+[in][context_handle] void* arg_0);
+}
+

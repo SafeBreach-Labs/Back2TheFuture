@@ -1,0 +1,12 @@
+[
+uuid(eb081a0d-10ee-478a-a1dd-50995283e7a8),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_GetWitnessNodes(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */[size_is(arg_2)]char *arg_3,
+[out]/* simple_ref */long *arg_4);
+}
+

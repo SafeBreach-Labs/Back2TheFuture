@@ -1,0 +1,1135 @@
+From aacd0cf6605f46836bc6db2026eb2baf240c5a21 Mon Sep 17 00:00:00 2001
+From: eran segal <eran.segal@safebreach.com>
+Date: Wed, 21 Jul 2021 17:28:29 +0300
+Subject: [PATCH] Modifications for Back2theFuture
+
+---
+ RpcCommon/RpcView.h                     |   2 +-
+ RpcCore/RpcCore.c                       |  24 +-
+ RpcDecompileIt/CMakeLists.txt           |  21 ++
+ RpcDecompileIt/DecompileItRpcStub.cpp   | 137 +++++++++
+ RpcDecompileIt/RpcDecompileIt.cpp       | 384 ++++++++++++++++++++++++
+ RpcDecompileIt/RpcDecompileIt.h         |  70 +++++
+ RpcDecompiler/RpcDecompiler.cpp         |   5 +-
+ RpcDecompiler/RpcDecompilerResource.aps | Bin 0 -> 1928 bytes
+ RpcDecompiler/internalTypeTools.cpp     |   2 +-
+ RpcView/MainWindow.cpp                  |   2 +-
+ RpcView/Pdb.c                           |   1 +
+ RpcView/RpcCoreManager.c                |  38 ++-
+ RpcView/RpcView.cpp                     |  61 ++--
+ 13 files changed, 694 insertions(+), 53 deletions(-)
+ create mode 100644 RpcDecompileIt/CMakeLists.txt
+ create mode 100644 RpcDecompileIt/DecompileItRpcStub.cpp
+ create mode 100644 RpcDecompileIt/RpcDecompileIt.cpp
+ create mode 100644 RpcDecompileIt/RpcDecompileIt.h
+ create mode 100644 RpcDecompiler/RpcDecompilerResource.aps
+
+diff --git a/RpcCommon/RpcView.h b/RpcCommon/RpcView.h
+index a26458d..8b6f279 100644
+--- a/RpcCommon/RpcView.h
++++ b/RpcCommon/RpcView.h
+@@ -3,6 +3,7 @@
+ 
+ #include "RpcCommon.h"
+ #include <Windows.h>
++#include "..\RpcCore\RpcCore.h"
+ 
+ typedef ULONG	RVA_T;
+ 
+@@ -18,7 +19,6 @@ typedef BOOL  (__fastcall*	RpcGetProcessDataFn_T)(RpcModuleInfo_T* pRpcModuleInf
+ typedef VOID  (__cdecl*		RpcPrintFn_T)(void* pContext, const char* pTxt);
+ typedef VOID  (__cdecl*		RpcDebugFn_T)(const char* pFunction, ULONG Line, const char* pFormatString,...);
+ typedef BOOL  (__fastcall*	RpcGetInterfaceNameFn_T)(GUID* pIfId,UCHAR* pName,ULONG NameLength);
+-
+ //Framework helper for decompilation plugin
+ typedef struct _RpcViewHelper_T{
+ 	void*					pContext;
+diff --git a/RpcCore/RpcCore.c b/RpcCore/RpcCore.c
+index f181b8c..7081279 100644
+--- a/RpcCore/RpcCore.c
++++ b/RpcCore/RpcCore.c
+@@ -279,6 +279,7 @@ VOID* __fastcall RpcCoreInit(BOOL bForce)
+ 	UINT					i;
+ 	BOOL					bFound = FALSE;
+ 
++	_cprintf("RpcCoreInit Called...\n");
+ #ifdef _DEBUG
+ 	_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
+ 	_CrtSetReportFile(_CRT_WARN, _CRTDBG_FILE_STDOUT);
+@@ -286,7 +287,10 @@ VOID* __fastcall RpcCoreInit(BOOL bForce)
+ 	//
+ 	// Get the RPC runtime version (rpcrt4.dll) to verify if it is supported by this Core
+ 	//
+-	if (GetSystemDirectoryW(RpcRuntimePath,_countof(RpcRuntimePath))==0) goto End;
++	if (GetSystemDirectoryW(RpcRuntimePath,_countof(RpcRuntimePath))==0){
++		_cprintf("GetSystemDirectory Going to end\n");
++		goto End;
++	} 
+ 	StringCbPrintfW(RpcRuntimePath,sizeof(RpcRuntimePath),L"%s\\rpcrt4.dll",RpcRuntimePath);
+ 	RuntimVersion=GetModuleVersion(RpcRuntimePath);
+ 	for (i = 0; i < _countof(RPC_CORE_RUNTIME_VERSION); i++)
+@@ -294,29 +298,39 @@ VOID* __fastcall RpcCoreInit(BOOL bForce)
+ 		if (bForce && ((RuntimVersion & 0xFFFFFFFF00000000) == (RPC_CORE_RUNTIME_VERSION[i] & 0xFFFFFFFF00000000)))
+ 		{
+ 			bFound = TRUE;
++			_cprintf("RpcCoreInit ==> bFound True\n");
+ 			break;
+ 		}
+ 		if (RuntimVersion == RPC_CORE_RUNTIME_VERSION[i])
+ 		{
+ 			bFound = TRUE;
++			_cprintf("RpcCoreInit ==> bFound True!\n");
+ 			break;
+ 		}
+ 	}
+-	if (!bFound) goto End;
++	if (!bFound) {
++		_cprintf("RpcCoreInit ==> bFound False, Exiting...\n");
++		goto End;
++	} 
+ 	//
+ 	// Invoke CoInitialize, required by SHGetFileInfo
+ 	//
++	_cprintf("RpcCoreInit ==> Before CoInitialize\n");
+ 	CoInitialize(NULL);
++	_cprintf("RpcCoreInit ==> After CoInitialize\n");
+ 	//
+ 	pRpcCoreInternalCtxt=(RpcCoreInternalCtxt_T*)OS_ALLOC(sizeof(RpcCoreInternalCtxt_T));
+-	if (pRpcCoreInternalCtxt==NULL) goto End;
+-	
++	if (pRpcCoreInternalCtxt==NULL) {
++		_cprintf("RpcCoreInit ==> pRpcCoreInternalCtxt is NULL, Exiting.\n");
++		goto End;
++	}
+ 	pRpcCoreInternalCtxt->ModuleVersion = RuntimVersion;
+ 	//
+ 	// Try to activate the DEBUG privilege to access all processes
+ 	//
+ 	AdjustPrivilege(SE_DEBUG_NAME,TRUE);
+ End:
++_cprintf("RpcCoreInit ==> Returning Context: %p...\n", pRpcCoreInternalCtxt);
+ 	return (pRpcCoreInternalCtxt);
+ }
+ 
+@@ -326,7 +340,7 @@ VOID __fastcall	RpcCoreUninit(VOID* pRpcCoreCtxt)
+ {
+ 	OS_FREE(pRpcCoreCtxt);
+ #ifdef _DEBUG
+-	_CrtDumpMemoryLeaks();
++	//_CrtDumpMemoryLeaks();
+ #endif
+ }
+ 
+diff --git a/RpcDecompileIt/CMakeLists.txt b/RpcDecompileIt/CMakeLists.txt
+new file mode 100644
+index 0000000..9eac4c7
+--- /dev/null
++++ b/RpcDecompileIt/CMakeLists.txt
+@@ -0,0 +1,21 @@
++cmake_minimum_required (VERSION 3.0.2)
++
++message("[RpcDecompileIt]")
++
++add_executable(RpcDecompileIt 
++    RpcDecompileIt.cpp
++    DecompileItRpcStub.cpp
++	RpcDecompileIt.h
++)
++			
++
++target_link_libraries(RpcDecompileIt  
++	RpcDecompilerStatic 
++	Rpcrt4.lib 
++	ntdll.lib 	
++	Dbghelp.lib
++)
++
++target_include_directories(RpcDecompileIt PRIVATE
++	"${CMAKE_CURRENT_SOURCE_DIR}/../"
++)
+\ No newline at end of file
+diff --git a/RpcDecompileIt/DecompileItRpcStub.cpp b/RpcDecompileIt/DecompileItRpcStub.cpp
+new file mode 100644
+index 0000000..23c7b32
+--- /dev/null
++++ b/RpcDecompileIt/DecompileItRpcStub.cpp
+@@ -0,0 +1,137 @@
++#include "RpcDecompileIt.h"
++#include <conio.h>
++
++PVOID
++DecompileItRpcAlloc(
++	_In_ size_t Size
++)
++{
++	return malloc(Size);
++}
++
++void
++DecompileItRpcFree(
++	_In_ PVOID pMem
++)
++{
++	free(pMem);
++}
++
++void
++DecompileItRpcPrint(
++	_In_ PVOID Context,
++	_In_ const char *pText
++)
++{
++	UNREFERENCED_PARAMETER(Context);
++
++	printf(pText);
++}
++
++void
++DecompileItRpcDebug(
++	_In_ const char *pFunction,
++	_In_ ULONG Line,
++	_In_ const char *pFormat,
++	...
++)
++{
++	va_list	Arg;
++	UNREFERENCED_PARAMETER(pFunction);
++	UNREFERENCED_PARAMETER(Line);
++	va_start(Arg, pFormat);
++	_vcprintf(pFormat, Arg);
++}
++
++bool
++DecompileItRpcGetInterfaceName(
++	_In_ GUID *pIfId,
++	_Out_ UCHAR *pName,
++	_Out_ ULONG NameLength
++)
++{
++	HKEY		hKey = NULL;
++	ULONG		DataLength;
++	UCHAR		SubKeyName[MAX_PATH];
++	RPC_CSTR	pUuidString = NULL;
++	BOOL		bResult = FALSE;
++
++	if (UuidToStringA(pIfId, &pUuidString) != RPC_S_OK) goto End;
++	sprintf_s((char*) SubKeyName, sizeof(SubKeyName), "Interface\\{%s}", pUuidString);
++
++	if (RegOpenKeyExA(HKEY_CLASSES_ROOT, (LPCSTR)SubKeyName, 0, KEY_READ, &hKey) != ERROR_SUCCESS) goto End;
++	DataLength = NameLength;
++	if (RegQueryValueExA(hKey, NULL, NULL, NULL, pName, &DataLength) != ERROR_SUCCESS) goto End;
++
++	bResult = TRUE;
++End:
++	if (hKey != NULL) RegCloseKey(hKey);
++	if (pUuidString != NULL) RpcStringFreeA(&pUuidString);
++	return (bResult);
++}
++
++
++bool __fastcall
++DecompileItRpcGetProcessData(
++	_In_  RpcModuleInfo_T *Context,
++	_In_  RVA_T Rva, 
++	_Out_ VOID* pBuffer, 
++	_Out_ UINT BufferLength
++)
++{
++	HANDLE  hTargetProcess = INVALID_HANDLE_VALUE;
++	BOOL	bResult = FALSE;
++	VOID*	pAddress = NULL;
++
++	RpcModuleInfo_T *DecompileContext = (RpcModuleInfo_T *)Context;
++
++	if ((Context == NULL) || (DecompileContext->Pid == 0))
++	{
++		goto End;
++	}
++
++	hTargetProcess = OpenProcess(
++		PROCESS_VM_READ | PROCESS_QUERY_INFORMATION,
++		FALSE,
++		DecompileContext->Pid
++	);
++
++	if (hTargetProcess == INVALID_HANDLE_VALUE)
++	{
++		goto End;
++	}
++
++	pAddress = (VOID*)(DecompileContext->pModuleBase + Rva);
++	bResult = ReadProcessMemory(
++		hTargetProcess,
++		pAddress, 
++		pBuffer, 
++		BufferLength, 
++		NULL
++	);
++
++End:
++	if (hTargetProcess != INVALID_HANDLE_VALUE)
++	{
++		CloseHandle(hTargetProcess);
++	}
++
++	return (bResult);
++}
++
++
++void
++DecompileItInitRpcViewStub
++(
++	_Inout_ RpcViewHelper_T *RpcViewStub,
++	_In_ PVOID Context
++)
++{
++	RpcViewStub->pContext = &Context;
++	RpcViewStub->RpcAlloc = (RpcAllocFn_T) &DecompileItRpcAlloc;
++	RpcViewStub->RpcFree = (RpcFreeFn_T) &DecompileItRpcFree;
++	RpcViewStub->RpcGetProcessData = (RpcGetProcessDataFn_T)&DecompileItRpcGetProcessData;
++	RpcViewStub->RpcPrint = &DecompileItRpcPrint;
++	RpcViewStub->RpcDebug = &DecompileItRpcDebug;
++	RpcViewStub->RpcGetInterfaceName = (RpcGetInterfaceNameFn_T)&DecompileItRpcGetInterfaceName;
++}
+\ No newline at end of file
+diff --git a/RpcDecompileIt/RpcDecompileIt.cpp b/RpcDecompileIt/RpcDecompileIt.cpp
+new file mode 100644
+index 0000000..07fab04
+--- /dev/null
++++ b/RpcDecompileIt/RpcDecompileIt.cpp
+@@ -0,0 +1,384 @@
++#include "RpcDecompileIt.h"
++
++#include <string.h>  
++#include <iostream>
++#include <TlHelp32.h>
++
++#include "RpcDecompiler/IdlInterface.h"
++
++#if _WIN64
++	#define RPC_CORE_IS_WOW64 false
++#else
++	#define RPC_CORE_IS_WOW64 true
++#endif
++
++bool
++DecompileInit(
++	_Inout_ PDECOMPILE_IT_CTXT Context
++)
++{
++	WCHAR RefModuleName[MAX_PATH];
++	HMODULE hMods[1024];
++	DWORD 	ModulesSize;
++	BOOL	bOwnProcessWow64 = false;
++	BOOL	bRemoteProcessWow64 = false;
++
++	HANDLE hProcess = OpenProcess(
++		PROCESS_VM_READ | PROCESS_QUERY_INFORMATION,
++		FALSE,
++		Context -> TargetPID
++	);
++
++	if (hProcess==NULL)
++	{
++		printf("[x] Could not access the remote process : %d\n", GetLastError());
++		return false;
++	}
++	Context->hTargetProcess = hProcess;
++
++	IsWow64Process(GetCurrentProcess(), &bOwnProcessWow64);
++	IsWow64Process(hProcess, &bRemoteProcessWow64);
++
++	if (bOwnProcessWow64 != bRemoteProcessWow64)
++	{
++		#define	PROCESS_ARCH(bIsWow64) (bIsWow64) ? "Wow64" : "x64"
++
++		printf("[x] Remote process does not have the same arch as own process : %s != %s\n",
++			PROCESS_ARCH(bRemoteProcessWow64),
++			PROCESS_ARCH(bOwnProcessWow64)
++		);
++		return false;
++	}
++
++
++	
++
++
++	if (!EnumProcessModules(hProcess, hMods, sizeof(hMods), &ModulesSize))
++    {
++		return GetLastError();
++    }
++
++	// stop at the first if ModuleName is not set
++	if (!Context->ModuleName)
++	{
++		Context->ModuleBaseAddress = (uintptr_t) hMods[0];
++	}
++	else
++	{
++		swprintf_s(RefModuleName, sizeof(RefModuleName) / sizeof(WCHAR), L"%hs", Context->ModuleName);
++
++		for (auto ModuleIndex = 0; (unsigned int) ModuleIndex < (ModulesSize / sizeof(HMODULE)); ModuleIndex++ )
++		{
++        	WCHAR ModuleName[MAX_PATH];
++
++
++        	if (GetModuleBaseNameW(
++        		hProcess, 
++        		hMods[ModuleIndex], 
++				ModuleName,
++        		sizeof(ModuleName) / sizeof(WCHAR)
++        	))
++            {
++	        	if (!_wcsicmp(ModuleName, RefModuleName))
++	        	{
++	        		Context->ModuleBaseAddress = (uintptr_t) hMods[ModuleIndex];
++					break;
++	        	}
++	        }
++        }		
++	}
++
++	if (!Context->ModuleBaseAddress)
++    {
++		return false;
++    }
++		
++	
++	if (Context->bAbsoluteAddress)
++	{
++		Context->DescriptorAddress = Context->DescriptorArg;
++		Context->DescriptorOffset = Context->DescriptorAddress - Context->ModuleBaseAddress;
++
++		Context->FormatStrAddress = Context->FormatStrArg;
++		Context->FormatStrOffset = Context->FormatStrAddress - Context->ModuleBaseAddress;
++	}
++	else 
++	{
++		Context->DescriptorOffset = Context->DescriptorArg;
++		Context->DescriptorAddress = Context->DescriptorOffset + Context->ModuleBaseAddress;
++
++		Context->FormatStrOffset = Context->FormatStrArg;
++		Context->FormatStrAddress = Context->FormatStrOffset + Context->ModuleBaseAddress;
++	}
++
++	return true;
++}
++
++
++
++bool
++ReadRpcInterface(
++	_In_  RpcViewHelper_T *RpcViewHelper,
++	_In_  RpcModuleInfo_T  ModuleInfo,
++	_In_  MIDL_STUB_DESC   MidlDescription,
++	_Out_ RPC_IF_ID		  *RpcInterface
++)
++{
++	unsigned int			RpcInterfaceInformationStructSize = 0;
++	RPC_CLIENT_INTERFACE    RpcClientInterface = {0};
++
++
++	if (!RpcInterface || !RpcViewHelper)
++	{
++		return false;
++	}
++
++	// Read RPC_CLIENT_INTERFACE.size to know how many bytes we need to read
++	if (!RpcViewHelper->RpcGetProcessData(
++		&ModuleInfo,
++		(RVA_T) ( (uintptr_t) MidlDescription.RpcInterfaceInformation - ModuleInfo.pModuleBase),
++		&RpcInterfaceInformationStructSize,
++		sizeof(RpcClientInterface.Length)
++	))
++	{
++		return false;
++	}
++
++
++	switch (RpcInterfaceInformationStructSize)
++	{
++	// RPC_SERVER_INTERFACE and RPC_CLIENT_INTERFACE are pretty much the same structure
++	//case sizeof(RPC_SERVER_INTERFACE):
++	case sizeof(RPC_CLIENT_INTERFACE):
++
++		// Read the full structure
++		if (!RpcViewHelper->RpcGetProcessData(
++			&ModuleInfo,
++			(RVA_T)((uintptr_t)MidlDescription.RpcInterfaceInformation - ModuleInfo.pModuleBase),
++			&RpcClientInterface,
++			sizeof(RPC_CLIENT_INTERFACE)
++		))
++		{
++			return false;
++		}
++		
++		RpcInterface->Uuid = RpcClientInterface.InterfaceId.SyntaxGUID;
++		RpcInterface->VersMajor = RpcClientInterface.InterfaceId.SyntaxVersion.MajorVersion;
++		RpcInterface->VersMinor= RpcClientInterface.InterfaceId.SyntaxVersion.MinorVersion;
++
++		break;
++
++	default:
++		return false;
++	}
++	
++	return true;
++}
++
++bool 
++DecompileIt(
++	_In_ DECOMPILE_IT_CTXT Context
++)
++{
++	//uintptr_t 				DecompilerHelperAddr = NULL;
++	//RpcDecompilerHelper_T* 	DecompilerHelper = NULL;
++	MIDL_STUB_DESC			MidlStubDesc;
++	size_t					StubDescBytesRead;
++	RPC_IF_ID				RpcInterfaceId;
++	RpcDecompilerInfo_T		RpcDecompilerInfoStub;
++	RpcDecompilerCtxt_T 	DecompilerStubContext;
++	RpcViewHelper_T 		RpcViewHelperStub;
++
++	RpcModuleInfo_T 	ModuleInfoStub = {
++		/*Pid = */			Context.TargetPID,
++		/*pModuleBase = */	Context.ModuleBaseAddress
++	};
++
++
++	// init RpcView helper stubs in order to use RpcGetProcessData
++	DecompileItInitRpcViewStub(&RpcViewHelperStub, (PVOID) &Context);
++
++	// Read MIDL_STUB_DESC and RPC_INTERFACE structures from remote target
++	if (!ReadProcessMemory(
++		Context.hTargetProcess,
++		(LPCVOID)Context.DescriptorAddress,
++		&MidlStubDesc,
++		sizeof(MidlStubDesc),
++		(SIZE_T*) &StubDescBytesRead
++	))
++	{
++		printf("[x] Could not read MIDL_STUB_DESC structure from desc-offset rva.\n");
++		return false;
++	}
++
++	if (!ReadRpcInterface(
++		&RpcViewHelperStub,
++		ModuleInfoStub,
++		MidlStubDesc,
++		&RpcInterfaceId
++	))
++	{
++		printf("[x] Could not retrieve a RPC_INTERFACE for the  MIDL_STUB_DESC structure.\n");
++		return false;
++	}
++
++	
++	// Init stubs for RpcDecompiler
++	RpcDecompilerInfoStub.ppProcNameTable = new WCHAR*[Context.NumberOfProcedures];
++	for (size_t i = 0; i < Context.NumberOfProcedures; i++)
++	{
++		RpcDecompilerInfoStub.ppProcNameTable[i] = NULL;
++	}
++	
++#ifdef _AMD64_
++	RpcDecompilerInfoStub.bIs64Bits = TRUE;
++#else
++	RpcDecompilerInfoStub.bIs64Bits = FALSE;
++#endif
++
++	RpcDecompilerInfoStub.pFormatStringOffsetTable = Context.FormatStrOffsets;
++	RpcDecompilerInfoStub.pProcFormatString = (RVA_T) Context.FormatStrOffset;
++	RpcDecompilerInfoStub.pTypeFormatString = (RVA_T) ((uintptr_t)MidlStubDesc.pFormatTypes - Context.ModuleBaseAddress);
++
++	DecompilerStubContext.pRpcDecompilerInfo = &RpcDecompilerInfoStub;
++	DecompilerStubContext.pRpcModuleInfo = &ModuleInfoStub;
++	DecompilerStubContext.pRpcViewHelper = &RpcViewHelperStub;
++
++
++	// is it a 64 bits application ?
++	is64B = RpcDecompilerInfoStub.bIs64Bits;
++
++	// robust flags case
++	robustFlagWasSet = (MidlStubDesc.Version >= NDR_VERSION_5_2) ? TRUE : FALSE;
++
++
++	// Decode function
++	std::string IfaceName("DecompileItInterface");
++	IdlInterface Interface(IfaceName, RpcInterfaceId, Context.NumberOfProcedures);
++	if (DS_SUCCESS == Interface.decode((PVOID)&DecompilerStubContext))
++	{
++		std::cout << Interface;
++
++	}
++	
++	return true;
++}
++
++bool
++DecompileUninit(
++	_In_ DECOMPILE_IT_CTXT Context
++)
++{
++	if (Context.hTargetProcess == INVALID_HANDLE_VALUE)
++	{
++		CloseHandle(Context.hTargetProcess);
++	}
++
++	return true;
++}
++
++
++int main(int argc, char* argv[])
++{
++	DECOMPILE_IT_CTXT Context = {0};
++	char*  	EndPtr;
++	bool 	status;
++
++	if (argc < 7)
++	{
++		printf("Usage: %s --pid PID [--module MODULE] --descriptor DESC_OFFSET --format-str FORMAT_STRING_OFFSET [--absolute] [--format-str-offsets OFF1,OFF2,OFFn]\n", argv[0]);
++		printf("  --pid : PID of the target process. %s must be able to open a handle to read the target process memory.\n", argv[0]);
++		printf("  --module : module name to read memory from. If not set, %s read the target executable own module. Ignored if --absolute is set.\n", argv[0]);
++		printf("  --descriptor : offset to the rpc header descriptor for the interface. If --absolute is set, --descriptor is interpreted as a virtual address.\n");
++		printf("  --format-str : offset to the rpc format string for the chosen proc. If --absolute is set, --format-str is interpreted as a virtual address.\n");
++		printf("  --absolute : treat descriptor and format-str as absolute virtual addresses instead of offsets.\n");
++		printf("  --format-str-offsets : offsets within the format string for the various procedures (default:0).\n");
++
++		return 0;
++	}
++
++
++	bool bFormatStrOffsetsProvided = false;
++	for (auto ArgIndex = 0; ArgIndex < argc; ArgIndex++) 
++	{
++		char *CurrentArgument = argv[ArgIndex];
++
++		if (!_stricmp(CurrentArgument, "--pid"))
++		{
++			Context.TargetPID = (DWORD) strtoumax(argv[ArgIndex + 1], &EndPtr, 10);
++		}
++		if (!_stricmp(CurrentArgument, "--module"))
++		{
++			Context.ModuleName = argv[ArgIndex + 1];
++		}
++		else if (!_stricmp(CurrentArgument, "--descriptor"))
++		{
++			Context.DescriptorArg = (size_t) strtoumax(argv[ArgIndex + 1], &EndPtr, 16);
++		}
++		else if (!_stricmp(CurrentArgument, "--format-str"))
++		{
++			Context.FormatStrArg = (size_t) strtoumax(argv[ArgIndex + 1], &EndPtr, 16);
++		}
++		else if (!_stricmp(CurrentArgument, "--absolute"))
++		{
++			Context.bAbsoluteAddress = true;
++		}
++		else if (!_stricmp(CurrentArgument, "--format-str-offsets"))
++		{
++			bFormatStrOffsetsProvided = true;
++
++			// parsing offsets using STL since strtok sucks.
++			std::string offsets_str(argv[ArgIndex + 1]);
++			std::vector<std::string> offsets;
++
++			size_t last_pos = 0;
++			size_t pos = offsets_str.find(',');
++
++			while (pos != std::string::npos) {
++				offsets.push_back(offsets_str.substr(last_pos, pos - last_pos));
++				last_pos = ++pos;
++				pos = offsets_str.find(',', pos);
++
++				if (pos == std::string::npos)
++				{
++					offsets.push_back(
++						offsets_str.substr(last_pos, offsets_str.length())
++					);
++				}
++					
++			}
++
++			Context.NumberOfProcedures = offsets.size();
++			Context.FormatStrOffsets = new uint16_t[Context.NumberOfProcedures];
++
++			for (size_t i = 0; i < offsets.size(); i++)
++			{
++				Context.FormatStrOffsets[i] = (uint16_t)strtoumax(offsets[i].c_str(), &EndPtr, 0);
++			}
++
++		}
++	}
++
++	if (!bFormatStrOffsetsProvided)
++	{
++		Context.NumberOfProcedures = 1;
++		Context.FormatStrOffsets = new uint16_t[1];
++		Context.FormatStrOffsets[0] = 0;
++	}
++
++
++	if (!DecompileInit(
++		&Context
++	))
++	{
++		printf("Could not init the DecompileIt context : %d.\n", GetLastError());
++		return -1;
++	}
++
++	status = DecompileIt(Context);
++
++
++	DecompileUninit(Context);
++	return !status;
++}
+\ No newline at end of file
+diff --git a/RpcDecompileIt/RpcDecompileIt.h b/RpcDecompileIt/RpcDecompileIt.h
+new file mode 100644
+index 0000000..177b2e1
+--- /dev/null
++++ b/RpcDecompileIt/RpcDecompileIt.h
+@@ -0,0 +1,70 @@
++#pragma once
++
++#include <windows.h>
++#include <stdio.h>
++#include <stdint.h>
++#include <stdbool.h>
++#include <inttypes.h>
++#include <psapi.h>
++
++
++#include "RpcCore\RpcCore.h"
++#include "RpcCommon\RpcView.h"
++#include "RpcDecompiler\RpcDecompiler.h"
++
++#pragma warning ( push )
++#pragma warning ( disable: 4201 )
++typedef struct _DECOMPILE_IT_CTXT {
++
++	DWORD 		TargetPID;
++	HANDLE  	hTargetProcess;
++
++	char*		ModuleName;	
++	uintptr_t	ModuleBaseAddress;
++
++	bool   		bAbsoluteAddress;
++	
++	union
++	{
++		uintptr_t DescriptorArg;		
++
++		struct {
++			size_t 		DescriptorOffset;
++			uintptr_t	DescriptorAddress;
++		};
++	};
++
++	union
++	{
++		uintptr_t FormatStrArg;		
++
++		struct {
++			size_t 		FormatStrOffset;
++			uintptr_t	FormatStrAddress;
++		};
++	};
++
++	uint16_t *FormatStrOffsets;
++
++	size_t NumberOfProcedures;
++
++} DECOMPILE_IT_CTXT, *PDECOMPILE_IT_CTXT;
++#pragma warning ( pop )
++
++
++#pragma region RpcViewStub
++
++void
++DecompileItInitRpcViewStub
++(
++	_Inout_ RpcViewHelper_T *RpcViewStub,
++	_In_ PVOID Context
++);
++
++
++// #define ASSIGN_RPC_VIEW_STUB(RpcViewHelperStub, Context) \
++// RpcViewHelper_T RpcViewHelperStub; \
++// DecompileItInitRpcViewStub(&RpcViewHelperStub, (PVOID) Context)
++
++
++#pragma endregion RpcViewStub
+diff --git a/RpcDecompiler/RpcDecompiler.cpp b/RpcDecompiler/RpcDecompiler.cpp
+index 09d5e9f..5bd3c40 100644
+--- a/RpcDecompiler/RpcDecompiler.cpp
++++ b/RpcDecompiler/RpcDecompiler.cpp
+@@ -411,7 +411,7 @@ END:
+ 			}
+ 			else
+ 			{
+-				paramSizeInBytes = OIF_PARAM_SIZE; //TODO : traiter le cas où codage pas OIF
++				paramSizeInBytes = OIF_PARAM_SIZE; //TODO : traiter le cas oï¿½ codage pas OIF
+ 			}
+ 			paramOffset += paramSizeInBytes;//paramSizeInBytes;
+ 			numParam++;
+@@ -744,6 +744,9 @@ End:;
+ 			//return FALSE;
+ 		}
+ 		
++		#define GUID_FORMAT "%08lX-%04hX-%04hX-%02hhX%02hhX-%02hhX%02hhX%02hhX%02hhX%02hhX%02hhX"
++		#define GUID_ARG(guid) guid.Data1, guid.Data2, guid.Data3, guid.Data4[0], guid.Data4[1], guid.Data4[2], guid.Data4[3], guid.Data4[4], guid.Data4[5], guid.Data4[6], guid.Data4[7]
++		printf("IID = {" GUID_FORMAT "}\n", GUID_ARG(pRpcDecompilerCtxt->pRpcDecompilerInfo->pIfId->Uuid));
+ 
+ 		// convert interface name to std::string
+ 		if(wcslen(pRpcDecompilerCtxt->pRpcDecompilerInfo->InterfaceName) == 0)
+diff --git a/RpcDecompiler/RpcDecompilerResource.aps b/RpcDecompiler/RpcDecompilerResource.aps
+new file mode 100644
+index 0000000000000000000000000000000000000000..39ecb31fda690fb80889b7cfc03a67722ef5ffdb
+GIT binary patch
+literal 1928
+zcmbVN%Wl&^6g{QkDL{x-7c5LE5-f-uQk7D{qIKM2lqQk$Xcv~!D45icCXtg;*zp<s
+z0usN#9{3H|^9Pu7$98Ntp$Kj?GoE|z+~=7I0B9UR5DtE3Xq&qgj%V1z7S|wHh~--R
+zQN92e8%}fV`eUc&_T8Sd<4qiU)NOh0iL52JJ3JbBeb>+KY<E07_PcK0@6y=%VjRnj
+zsUJOLDOc-@t6W>Cqs`fb%`Xd8RJgY|Z}VH|bMEIaU;#8oN>;VylvCVz7p@=9iDn%W
+z`0y}5kJdc&;nMN|FEOOrMCs^Qg^tG@tCUJaIxg|7L7gLv(4qc2M$_TWRmN>{yNuZ5
+z{)C(Z+@gMLzeMhsa`8K&e~)$s>fA2l(U@h8wl%z<UN`a~k#(lJ8a)juKUVR^@krbg
+zp7FVMC`lqZ9nUM=VLWB(_LQb%GGY!AQ4fc-!v4<iG<;-K51D;|^MmN?k%~B-uZ9LK
+zOErXi+|BrEkke7Q9dY&Xnzay`=kFf5_y5CZ88_*(8s#J1m3qYWmtEMYurAV%be*Mw
+zc}Cdh4|sy>v{fT7taz8zNh%9=OLCuQ1H_8pBzv}{Iy9bkU8k=iM}dRbrzOE<OVuWh
+zI6<V`O+j;5#Q|%V#svkqococx!c}nE;GNm$EO*6Vznipfk{{pc^j-7gn@Krg|CjUO
+zO-rA@#xvhIvTw&1as;2y#HP^gXpSC>7M~DrILIF|X|(N{(X!0FcFVNuR<+XJ-F#lP
+z+dR*lXN6Wpghia6Bec!3xmh>ctScX@nX_9>t6UPp7gNHTT`e_@#?(8O^?Wg3$m`4O
+z<1}!5=gS$=8!p*=zbZjG-ykAr1~%ZZ2jd6<4w2!qe{u^Q><|$XuGzcl@C`nuq)$9L
+zc#Adm<+M%~QF-29p{E?#*rYqzUKG|?9-$RNqG9egtcp=?mdrnJi&I_E=VpmL%lZhr
+zoX%hVPf8qT{h!GHz$fYi!TkRL!Shn?-|#Gv?4NmN7Q<4Z_dJutn&6irMbh&T5tryB
+SJ&#mW?XMDciB3}cSm!sFNI-i4
+
+literal 0
+HcmV?d00001
+
+diff --git a/RpcDecompiler/internalTypeTools.cpp b/RpcDecompiler/internalTypeTools.cpp
+index 48b0826..5430168 100644
+--- a/RpcDecompiler/internalTypeTools.cpp
++++ b/RpcDecompiler/internalTypeTools.cpp
+@@ -78,7 +78,7 @@ BOOL __fastcall printType(
+ 
+ 	if(pRpcDecompilerCtxt->pRpcDecompilerInfo->pTypeFormatString == NULL) return FALSE;
+ 
+-	RPC_DEBUG_FN((UCHAR*)"\n\n******************** printType *********************");
++	//RPC_DEBUG_FN((UCHAR*)"\n\n******************** printType *********************");
+ 
+ 
+ 	
+diff --git a/RpcView/MainWindow.cpp b/RpcView/MainWindow.cpp
+index e75401e..fffbc7f 100644
+--- a/RpcView/MainWindow.cpp
++++ b/RpcView/MainWindow.cpp
+@@ -423,7 +423,7 @@ void MainWindow_C::Exit()
+ 	pRpcCore->RpcCoreUninitFn(pRpcCoreCtxt);
+ 	delete this;
+ #ifdef _DEBUG
+-	_CrtDumpMemoryLeaks();
++	//_CrtDumpMemoryLeaks();
+ #endif
+ 	ExitProcess(EXIT_SUCCESS);
+ }
+diff --git a/RpcView/Pdb.c b/RpcView/Pdb.c
+index bf240b1..dfa00d4 100644
+--- a/RpcView/Pdb.c
++++ b/RpcView/Pdb.c
+@@ -143,6 +143,7 @@ __checkReturn void* WINAPI PdbInit(__in HANDLE hProcess, __in VOID* pModuleBase,
+ 
+     if (!SymInitialize(hProcess, NULL, FALSE)) goto End;
+ 	if (!GetPdbFilePath(hProcess, pModuleBase, PdbPath, sizeof(PdbPath))) goto End;
++	printf("Pdb Path: %s\n", PdbPath);
+ 	if (!SymLoadModule64(hProcess, NULL, (STRSAFE_LPCSTR)PdbPath, NULL,(DWORD64) pModuleBase, ModuleSize))
+ 	{
+ 		printf("SymLoadModule64 failed\n");
+diff --git a/RpcView/RpcCoreManager.c b/RpcView/RpcCoreManager.c
+index 1dfc04d..a8f48b1 100644
+--- a/RpcView/RpcCoreManager.c
++++ b/RpcView/RpcCoreManager.c
+@@ -73,6 +73,7 @@ BOOL NTAPI LoadCoreEngine(RpcCore_T** ppRpcCoreHelper, void** ppRpcCoreCtxt, BOO
+                         if (pRpcCoreHelper->bWow64Helper) _cprintf("TRUE\n"); else _cprintf("FALSE\n");
+                         *ppRpcCoreHelper = pRpcCoreHelper;
+                         bResult = TRUE;
++                        _cprintf("LoadCoreEngine Success\n");
+                         goto End;
+                     }
+                 }
+@@ -111,12 +112,13 @@ VOID* __fastcall RpcCoreInit(BOOL bForce)
+     }
+ 	pRpcCoreManager->pNativeCoreCtxt = pRpcCoreManager->pNativeCore->RpcCoreInitFn(bForce);
+ #ifdef _WIN64
+-    if (!LoadCoreEngine(&pRpcCoreManager->pWow64Core, &pRpcCoreManager->pWow64CoreCtxt, TRUE,bForce))
++    if (!LoadCoreEngine(&pRpcCoreManager->pNativeCore, &pRpcCoreManager->pNativeCoreCtxt, FALSE, bForce))
+     {
++        _cprintf("LoadCoreEngine Failed in RpcCoreManager RpcCoreInit...\n");
+         OS_FREE(pRpcCoreManager);
+         return NULL;
+     }
+-	pRpcCoreManager->pWow64CoreCtxt = pRpcCoreManager->pWow64Core->RpcCoreInitFn(bForce);
++	pRpcCoreManager->pNativeCoreCtxt = pRpcCoreManager->pNativeCore->RpcCoreInitFn(bForce);
+ #endif
+     return (pRpcCoreManager);
+ }
+@@ -131,9 +133,9 @@ VOID __fastcall RpcCoreUninit(VOID* pRpcCoreCtxt)
+ 
+     pRpcCoreManager->pNativeCore->RpcCoreUninitFn(pRpcCoreManager->pNativeCoreCtxt);
+ #ifdef _WIN64
+-	pRpcCoreManager->pWow64Core->RpcCoreUninitFn(pRpcCoreManager->pWow64CoreCtxt);
++	pRpcCoreManager->pNativeCore->RpcCoreUninitFn(pRpcCoreManager->pNativeCoreCtxt);
+ #endif
+-	OS_FREE(pRpcCoreManager);
++	//OS_FREE(pRpcCoreManager);
+ End:
+     return;
+ }
+@@ -150,7 +152,11 @@ RpcProcessInfo_T*  __fastcall RpcCoreGetProcessInfo(void* pRpcCoreCtxt, DWORD Pi
+ #ifdef _WIN64
+     if (IsProcessWow64(Pid))
+     {
+-        pRpcProcessInfo = pRpcCoreManager->pWow64Core->RpcCoreGetProcessInfoFn(pRpcCoreManager->pWow64CoreCtxt, Pid, Ppid, ProcessInfoMask);
++        return NULL;
++   //     pRpcCoreManager->pWow64Core = pRpcCoreManager->pNativeCore;
++    //    if (pRpcCoreManager->pWow64Core && pRpcCoreManager->pWow64Core->RpcCoreGetProcessInfoFn) {
++    //        pRpcProcessInfo = pRpcCoreManager->pWow64Core->RpcCoreGetProcessInfoFn(pRpcCoreManager->pNativeCoreCtxt, Pid, Ppid, ProcessInfoMask);
++    //    }
+     }
+     else
+ #endif
+@@ -172,7 +178,12 @@ VOID __fastcall RpcCoreFreeProcessInfo(void* pRpcCoreCtxt, RpcProcessInfo_T* pRp
+ #ifdef _WIN64
+ 		if (IsProcessWow64(pRpcProcessInfo->Pid))
+ 		{
+-			pRpcCoreManager->pWow64Core->RpcCoreFreeProcessInfoFn(pRpcCoreManager->pWow64CoreCtxt, pRpcProcessInfo);
++            return;
++            //pRpcCoreManager->pWow64Core = pRpcCoreManager->pNativeCore;
++
++            //if (pRpcCoreManager->pWow64Core && pRpcCoreManager->pWow64Core->RpcCoreGetProcessInfoFn) {
++			//    pRpcCoreManager->pWow64Core->RpcCoreFreeProcessInfoFn(pRpcCoreManager->pNativeCoreCtxt, pRpcProcessInfo);
++           // }
+ 		}
+ 		else
+ #endif
+@@ -194,7 +205,8 @@ RpcInterfaceInfo_T*	__fastcall RpcCoreGetInterfaceInfo(void* pRpcCoreCtxt, DWORD
+ #ifdef _WIN64
+     if (IsProcessWow64(Pid))
+     {
+-        pRpcInterfaceInfo = pRpcCoreManager->pWow64Core->RpcCoreGetInterfaceInfoFn(pRpcCoreManager->pWow64CoreCtxt, Pid, pIf, InterfaceInfoMask);
++        return NULL;
++        //pRpcInterfaceInfo = pRpcCoreManager->pWow64Core->RpcCoreGetInterfaceInfoFn(pRpcCoreManager->pWow64CoreCtxt, Pid, pIf, InterfaceInfoMask);
+     }
+     else
+ #endif
+@@ -217,7 +229,8 @@ VOID __fastcall RpcCoreFreeInterfaceInfo(void* pRpcCoreCtxt, RpcInterfaceInfo_T*
+ #ifdef _WIN64
+ 		if (IsProcessWow64(pRpcInterfaceInfo->Pid))
+ 		{
+-			pRpcCoreManager->pWow64Core->RpcCoreFreeInterfaceInfoFn(pRpcCoreManager->pWow64CoreCtxt, pRpcInterfaceInfo);
++            return;
++			//pRpcCoreManager->pWow64Core->RpcCoreFreeInterfaceInfoFn(pRpcCoreManager->pWow64CoreCtxt, pRpcInterfaceInfo);
+ 		}
+ 		else
+ #endif
+@@ -239,7 +252,8 @@ BOOL __fastcall RpcCoreEnumProcessInterfaces(void* pRpcCoreCtxt, DWORD Pid, RpcC
+ #ifdef _WIN64
+     if (IsProcessWow64(Pid))
+     {
+-        bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessInterfacesFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessInterfacesCallbackFn, pCallbackCtxt, InterfaceInfoMask);
++        return FALSE;
++        //bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessInterfacesFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessInterfacesCallbackFn, pCallbackCtxt, InterfaceInfoMask);
+     }
+     else
+ #endif
+@@ -262,7 +276,8 @@ BOOL __fastcall RpcCoreEnumProcessEndpoints(void* pRpcCoreCtxt, DWORD Pid, RpcCo
+ #ifdef _WIN64
+     if (IsProcessWow64(Pid))
+     {
+-        bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessEndpointsFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessEndpointsCallbackFn, pCallbackCtxt);
++        return FALSE;
++        //bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessEndpointsFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessEndpointsCallbackFn, pCallbackCtxt);
+     }
+     else
+ #endif
+@@ -285,7 +300,8 @@ BOOL __fastcall RpcCoreEnumProcessAuthInfo(void* pRpcCoreCtxt, DWORD Pid, RpcCor
+ #ifdef _WIN64
+     if (IsProcessWow64(Pid))
+     {
+-        bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessAuthInfoFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessAuthInfoCallbackFn, pCallbackCtxt);
++        return FALSE;
++        //bResult = pRpcCoreManager->pWow64Core->RpcCoreEnumProcessAuthInfoFn(pRpcCoreManager->pWow64CoreCtxt, Pid, RpcCoreEnumProcessAuthInfoCallbackFn, pCallbackCtxt);
+     }
+     else
+ #endif
+diff --git a/RpcView/RpcView.cpp b/RpcView/RpcView.cpp
+index 6a3a46f..e7e4249 100644
+--- a/RpcView/RpcView.cpp
++++ b/RpcView/RpcView.cpp
+@@ -14,7 +14,6 @@
+ #include "..\RpcDecompiler\RpcDecompiler.h"
+ #include "..\RpcCore\RpcCore.h"
+ #include "..\RpcCommon\Misc.h"
+-
+ #include <conio.h>
+ 
+ #pragma comment(lib,"Winmm.lib")
+@@ -22,10 +21,10 @@
+ #pragma comment(lib,"Dbghelp.lib")
+ #pragma comment(lib,"Rpcrt4.lib")
+ #pragma comment(lib,"Ws2_32.lib")
+-
+ //
+ // Set the entry point to WinMain in relase configuration
+ //
++
+ #ifndef _DEBUG
+ #pragma comment(linker, "/SUBSYSTEM:WINDOWS")
+ #endif
+@@ -219,9 +218,6 @@ void NTAPI UninitDecompilerInfo(RpcDecompilerInfo_T* pRpcDecompilerInfo)
+ 	if (pRpcDecompilerInfo->ppDispatchProcAddressTable != NULL) OS_FREE(pRpcDecompilerInfo->ppDispatchProcAddressTable);
+ }
+ 
+-
+-#ifdef _DEBUG
+-
+ typedef struct _EnumCtxt_T{ 
+ 	void*			        pRpcCoreCtxt;
+ 	RpcCore_T*		        pRpcCore;
+@@ -282,9 +278,15 @@ static BOOL WINAPI EnumProc(DWORD Pid, DWORD Ppid, EnumCtxt_T* pEnumCtxt, BOOL*
+ 	RpcProcessInfo_T*	pRpcProcessInfo;
+ 
+ 	UNREFERENCED_PARAMETER(pbContinue);
+-
++	if (NULL == pEnumCtxt || NULL == pEnumCtxt->pRpcCore || NULL == pEnumCtxt->pRpcCore->RpcCoreGetProcessInfoFn) {
++		_cprintf("RpcCoreGetProcessInfo is NULL, Continue...\n");
++		goto End;
++	}
+ 	pRpcProcessInfo=pEnumCtxt->pRpcCore->RpcCoreGetProcessInfoFn(pEnumCtxt->pRpcCoreCtxt, Pid, Ppid,RPC_PROCESS_INFO_ALL);
+-	if (pRpcProcessInfo==NULL) goto End;
++	if (pRpcProcessInfo==NULL) {
++		_cprintf("pRpcProcessInfo is NULL, Exiting...\n");	
++		goto End;
++	}
+ 	pEnumCtxt->pRpcCore->RpcCoreFreeProcessInfoFn(pEnumCtxt->pRpcCoreCtxt, pRpcProcessInfo);
+ 	pEnumCtxt->pRpcCore->RpcCoreEnumProcessInterfacesFn(pEnumCtxt->pRpcCoreCtxt, Pid, (RpcCoreEnumProcessInterfacesCallbackFn_T)&EnumInterfaces, pEnumCtxt, RPC_INTERFACE_INFO_ALL);
+ End:
+@@ -293,32 +295,35 @@ End:
+ 
+ 
+ //------------------------------------------------------------------------------
+-int DecompileAllInterfaces(RpcCore_T* pRpcCore)
++int __cdecl DecompileAllInterfaces(RpcCore_T* pRpcCore)
+ {
+     EnumCtxt_T				EnumCtxt = {0};
+ 	RpcDecompilerHelper_T*	pRpcDecompilerHelper;
+ 	HMODULE					hDecompiler = NULL;
+ 
+ 	hDecompiler=LoadDecompilerEngine(&pRpcDecompilerHelper);
+-	if (hDecompiler==NULL) goto End;
++	if (hDecompiler==NULL) {
++		_cprintf("hDecompiler is NULL, Exiting!\n");
++		goto End;
++	}	
+ 
+ 	EnumCtxt.pRpcDecompilerHelper	= pRpcDecompilerHelper;
+     EnumCtxt.pRpcCore               = pRpcCore;
+     EnumCtxt.pRpcCoreCtxt           = pRpcCore->RpcCoreInitFn(FALSE);
+-    if (EnumCtxt.pRpcCoreCtxt==NULL) goto End;
++    if (EnumCtxt.pRpcCoreCtxt==NULL) {
++		_cprintf("EnumCtxt.pRpcCoreCtxt is NULL! Exiting!\n");
++		goto End;
++	} 
+ 
+ 	_cprintf("Start scanning...\n");
+ 	EnumProcess( (EnumProcessCallbackFn_T)&EnumProc, &EnumCtxt );
+ 	_cprintf("Done\n");
+ End:
+-	if (EnumCtxt.pRpcCoreCtxt != NULL) pRpcCore->RpcCoreUninitFn(EnumCtxt.pRpcCoreCtxt);
++	//if (EnumCtxt.pRpcCoreCtxt != NULL) pRpcCore->RpcCoreUninitFn(EnumCtxt.pRpcCoreCtxt);
+ 	if (hDecompiler!=NULL) FreeLibrary(hDecompiler);
+ 	return (0);
+ }
+ 
+-#endif
+-
+-
+ //------------------------------------------------------------------------------
+ #ifdef _DEBUG
+ 	int main(int argc, char* argv[])
+@@ -326,8 +331,11 @@ End:
+ 	int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLine, int nCmdShow)
+ #endif
+ {
++
+ 	MainWindow_C*	pMainWindow			= NULL;
+ 	HICON			hMainIcon;
++	UNREFERENCED_PARAMETER(pMainWindow);
++	UNREFERENCED_PARAMETER(hMainIcon);
+ 	UCHAR			CurrentDirectory[MAX_PATH];
+ 	UCHAR*			pSeparator;
+ 	int             ret = 0;
+@@ -340,8 +348,9 @@ End:
+     UNREFERENCED_PARAMETER(hInstance);
+     UNREFERENCED_PARAMETER(hPrevInstance);
+     UNREFERENCED_PARAMETER(nCmdShow);
++	_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
++	_CrtSetReportFile(_CRT_WARN, _CRTDBG_FILE_STDOUT);
+ 	pCmdLine = GetCommandLineW();
+-
+ 	LPWSTR* argvw = CommandLineToArgvW(pCmdLine, &argc);
+ 
+ 	char** argv = (char**)malloc(argc*sizeof(char*));
+@@ -368,7 +377,6 @@ End:
+ 		_cprintf("%s\n",CurrentDirectory);
+ 		SetCurrentDirectoryA((LPCSTR)CurrentDirectory);
+ 	}
+-#ifdef _DEBUG
+ 	if (argc>1)
+ 	{
+ 		for (int curArg = 1; curArg < argc; curArg++)
+@@ -376,7 +384,7 @@ End:
+ 			if (!_stricmp(argv[1], "/DA"))
+ 			{
+ 				DecompileAllInterfaces(&gRpcCoreManager);
+-				_CrtDumpMemoryLeaks();
++				//_CrtDumpMemoryLeaks();
+ 			}
+ 			else if (!_stricmp(argv[1], "/f"))
+ 			{
+@@ -392,21 +400,8 @@ End:
+ 		//
+ 		//return 0;
+ 	}
+-#else
+-	if (argc>1)
+-	{
+-		if (argvw[1] && !wcsncmp(argvw[1], L"/f", 2))
+-		{
+-			gRpcCoreManager.bForceLoading = TRUE;
+-		}
+-		else
+-		{
+-			_cprintf("Usage %s: [/f]\n", argv[0]);
+-			_cprintf("  /f : force loading for unsupported runtime versions \n");
+-		}
+-	}
+-#endif
+-    pMainWindow = new MainWindow_C(&gRpcCoreManager);
++
++  /*  pMainWindow = new MainWindow_C(&gRpcCoreManager);
+ 
+ 	hMainIcon = LoadIcon(GetModuleHandle(NULL), MAKEINTRESOURCE(ID_MAIN_ICON));
+ 	if (hMainIcon!=NULL)
+@@ -415,7 +410,7 @@ End:
+ 		DestroyIcon(hMainIcon);
+ 	}
+ 	ret =  app.exec();
+-
++	*/
+ #ifndef _DEBUG
+ 	for (int i = 0; i < argc; i++)
+ 		free(argv[i]);
+-- 
+2.28.0.windows.1
+

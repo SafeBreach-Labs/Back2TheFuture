@@ -1,0 +1,75 @@
+[
+uuid(4d9f4ab8-7d1c-11cf-861e-0020af6e7c57),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_6_t
+{
+short StructMember0;
+short StructMember1;
+}Struct_6_t;
+typedef struct Struct_20_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_20_t;
+typedef struct Struct_204_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(0,0)] */ byte StructMember1[] ;
+}Struct_204_t;
+typedef struct Struct_334_t
+{
+short StructMember0;
+short StructMember1;
+[size_is(StructMember0)] /*[range(0,0)] */ short StructMember2[] ;
+}Struct_334_t;
+typedef struct Struct_54_t
+{
+struct Struct_20_t StructMember0;
+long StructMember1;
+[size_is(/* FC_EXPR */((StructMember1 + 7) & 4294967288))] /*[range(0,0)] */ byte StructMember2[] ;
+}Struct_54_t;
+typedef struct Struct_108_t
+{
+long StructMember0;
+long StructMember1;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(/* FC_EXPR */((StructMember0 + 1) & 4294967294))] /*[range(0,0)] */  /*  */ struct Struct_54_t** StructMember2;
+}Struct_108_t;
+typedef struct Struct_154_t
+{
+long StructMember0;
+[unique] struct Struct_108_t* StructMember1;
+}Struct_154_t;
+typedef struct Struct_124_t
+{
+struct Struct_6_t StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_20_t StructMember3;
+[unique] struct Struct_108_t* StructMember4;
+}Struct_124_t;
+error_status_t Proc0_RemoteActivation(
+[in]/* simple_ref */struct Struct_124_t* arg_1,
+[out]/* simple_ref */struct Struct_154_t* arg_2,
+[in]/* simple_ref */struct Struct_20_t* arg_3,
+[in][unique][string] wchar_t* arg_4,
+[in][unique]struct Struct_204_t* arg_5,
+[in]long arg_6,
+[in]long arg_7,
+[in][range(1,32768)] long arg_8,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_8)]/*[range(1,32768)]*/  /*  */ struct Struct_20_t* arg_9,
+[in][range(0,32768)] short arg_10,
+[in][size_is(arg_10)]/*[range(0,32768)]*/ short arg_11[],
+[out]/* simple_ref */hyper *arg_12,
+[out][ref]struct Struct_334_t** arg_13,
+[out]/* simple_ref */struct Struct_20_t* arg_14,
+[out]/* simple_ref */long *arg_15,
+[out]/* simple_ref */struct Struct_6_t* arg_16,
+[out]/* simple_ref */long *arg_17,
+[out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_8)]/*[range(1,32768)]*/  /*  */ struct Struct_204_t** arg_18,
+[out]/* simple_ref */[size_is(arg_8)]/*[range(1,32768)]*/ long *arg_19);
+}
+

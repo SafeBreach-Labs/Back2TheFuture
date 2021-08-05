@@ -1,0 +1,435 @@
+[
+uuid(c503f532-443a-4c69-8300-ccd1fbdb3839),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+typedef struct Struct_28_t
+{
+hyper StructMember0;
+}Struct_28_t;
+typedef struct Struct_40_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2[4] ;
+}Struct_40_t;
+typedef struct Struct_58_t
+{
+long StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+hyper StructMember5[4] ;
+}Struct_58_t;
+typedef struct Struct_102_t
+{
+long StructMember0;
+}Struct_102_t;
+typedef struct Struct_118_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_118_t;
+typedef struct Struct_202_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_202_t;
+typedef struct Struct_482_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+}Struct_482_t;
+typedef struct Struct_578_t
+{
+hyper StructMember0;
+long StructMember1;
+ long StructMember2;
+long StructMember3;
+}Struct_578_t;
+typedef struct Struct_596_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+ long StructMember3;
+ long StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+}Struct_596_t;
+typedef struct Struct_632_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+}Struct_632_t;
+typedef struct Struct_676_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] char *StructMember3;
+long StructMember4;
+[unique] [size_is(StructMember4)] char *StructMember5;
+}Struct_676_t;
+typedef struct Struct_746_t
+{
+ long StructMember0;
+ short StructMember1;
+}Struct_746_t;
+typedef struct Struct_774_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] char *StructMember2;
+}Struct_774_t;
+typedef struct Struct_1000_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+long StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+}Struct_1000_t;
+[unique][size_is(StructMember0)] /* enum_32 : typedef [v1_enum] enum  */ long *StructMember2;
+{
+}Struct_1278_t;
+typedef struct Struct_1522_t
+{
+long StructMember0;
+hyper StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+long StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+long StructMember6;
+}Struct_1522_t;
+typedef struct Struct_1732_t
+{
+long StructMember0;
+ long StructMember1;
+}Struct_1732_t;
+typedef struct Struct_1824_t
+{
+[unique] [string]  wchar_t* StructMember0;
+}Struct_1824_t;
+typedef struct Struct_1874_t
+{
+ short StructMember0;
+long StructMember1;
+long StructMember2;
+ long StructMember3;
+}Struct_1874_t;
+typedef struct Struct_2106_t
+{
+[unique] [string]  char* StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+}Struct_2106_t;
+typedef struct Struct_2200_t
+{
+ long StructMember0;
+long Proc0(
+}Struct_2200_t;
+typedef struct Struct_26_t
+{
+short StructMember0;
+short StructMember1;
+[size_is(StructMember0)] short StructMember2[] ;
+}Struct_26_t;
+typedef [switch_type(long )] union union_186
+{
+[case(1)] [unique] struct Struct_202_t* unionMember_1;
+}union_186;
+typedef struct Struct_224_t
+{
+ long StructMember0;
+[switch_is(StructMember0)] union union_186 StructMember1;
+}Struct_224_t;
+typedef [switch_type(long )] union union_386
+{
+[case(0)] [unique] struct Struct_102_t* unionMember_0;
+[case(1)] [unique] struct Struct_102_t* unionMember_1;
+[case(2)] [unique] struct Struct_102_t* unionMember_2;
+[case(3)] [unique] struct Struct_102_t* unionMember_3;
+[case(4)] [unique] struct Struct_102_t* unionMember_4;
+[case(5)] [unique] struct Struct_102_t* unionMember_5;
+[case(6)] [unique] struct Struct_102_t* unionMember_6;
+[case(7)] [unique] struct Struct_102_t* unionMember_7;
+[case(8)] [unique] struct Struct_102_t* unionMember_8;
+[case(9)] [unique] struct Struct_102_t* unionMember_9;
+[case(10)] [unique] struct Struct_102_t* unionMember_10;
+}union_386;
+typedef struct Struct_462_t
+{
+ long StructMember0;
+long StructMember1;
+[switch_is(StructMember0)] union union_386 StructMember2;
+}Struct_462_t;
+typedef struct Struct_532_t
+{
+hyper StructMember0;
+ long StructMember1;
+long StructMember2;
+[unique] struct Struct_482_t* StructMember3;
+}Struct_532_t;
+typedef struct Struct_554_t
+{
+[unique] struct Struct_482_t* StructMember0;
+[unique] struct Struct_482_t* StructMember1;
+}Struct_554_t;
+typedef struct Struct_708_t
+{
+ long StructMember0;
+ long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+struct Struct_28_t StructMember3;
+ long StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+ long StructMember7;
+}Struct_708_t;
+typedef struct Struct_798_t
+{
+struct Struct_118_t StructMember0;
+struct Struct_118_t StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_798_t;
+typedef struct Struct_962_t
+{
+struct Struct_28_t StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+ long StructMember4;
+long StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+[unique] [string]  wchar_t* StructMember8;
+}Struct_962_t;
+typedef struct Struct_1356_t
+{
+hyper StructMember0;
+struct Struct_28_t StructMember1;
+}Struct_1356_t;
+typedef struct Struct_1376_t
+{
+struct Struct_1356_t StructMember0;
+struct Struct_1356_t StructMember1;
+struct Struct_1356_t StructMember2;
+struct Struct_1356_t StructMember3;
+struct Struct_1356_t StructMember4;
+struct Struct_1356_t StructMember5;
+struct Struct_1356_t StructMember6;
+struct Struct_1356_t StructMember7;
+struct Struct_1356_t StructMember8[4] ;
+}Struct_1376_t;
+typedef struct Struct_1576_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1522_t** StructMember1;
+}Struct_1576_t;
+typedef struct Struct_1986_t
+{
+struct Struct_102_t StructMember0;
+ long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] wchar_t *StructMember4;
+long StructMember5;
+[unique] [size_is(StructMember5)] wchar_t *StructMember6;
+}Struct_1986_t;
+typedef struct Struct_2062_t
+{
+struct Struct_16_t StructMember0;
+long StructMember1;
+long StructMember2;
+hyper StructMember3;
+}Struct_2062_t;
+typedef struct Struct_2168_t
+{
+hyper StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+ long StructMember2;
+ long StructMember3;
+ long StructMember4;
+ long StructMember5;
+long StructMember6;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember6)]  /*  */ struct Struct_482_t** StructMember7;
+long StructMember8;
+long StructMember9;
+}Struct_2168_t;
+typedef struct Struct_1904_t
+{
+struct Struct_28_t StructMember0;
+hyper StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+hyper StructMember5;
+long StructMember6;
+struct Struct_16_t StructMember7;
+hyper StructMember8;
+[unique] [string]  wchar_t* StructMember9;
+struct Struct_28_t StructMember10;
+hyper StructMember11;
+struct Struct_28_t StructMember12;
+hyper StructMember13;
+hyper StructMember14;
+hyper StructMember15;
+hyper StructMember16;
+hyper StructMember17;
+hyper StructMember18;
+}Struct_1904_t;
+typedef struct Struct_2020_t
+{
+struct Struct_1904_t StructMember0;
+struct Struct_1986_t StructMember1;
+hyper StructMember2;
+}Struct_2020_t;
+typedef struct Struct_504_t
+{
+ long StructMember0;
+[unique] struct Struct_482_t* StructMember1;
+struct Struct_58_t StructMember2;
+struct Struct_40_t StructMember3;
+}Struct_504_t;
+typedef [switch_type(long )] union union_922
+{
+[case(0)] [unique] struct Struct_102_t* unionMember_0;
+[case(1)] [unique] struct Struct_962_t* unionMember_1;
+[case(2)] [unique] struct Struct_102_t* unionMember_2;
+[case(3)] [unique] struct Struct_102_t* unionMember_3;
+[case(4)] [unique] struct Struct_1000_t* unionMember_4;
+}union_922;
+typedef struct Struct_74_t
+{
+ long StructMember0;
+ long StructMember1;
+struct Struct_16_t StructMember2;
+struct Struct_28_t StructMember3;
+struct Struct_28_t StructMember4;
+struct Struct_40_t StructMember5;
+struct Struct_58_t StructMember6;
+hyper StructMember7;
+}Struct_74_t;
+typedef struct Struct_1076_t
+{
+hyper StructMember0;
+struct Struct_16_t StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+ long StructMember3;
+ long StructMember4;
+ long StructMember5;
+long StructMember6;
+long StructMember7;
+ long StructMember8;
+long StructMember9;
+ long StructMember10[6] ;
+long StructMember11;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember11)]  /*  */ struct Struct_482_t** StructMember12;
+struct Struct_28_t StructMember13;
+long StructMember14;
+ long StructMember15;
+struct Struct_16_t StructMember16;
+ long StructMember17;
+[switch_is(StructMember3)] union union_922 StructMember18;
+ long StructMember19;
+[unique] [string]  wchar_t* StructMember20;
+ long StructMember21;
+[unique] [string]  wchar_t* StructMember22;
+ long StructMember23;
+long StructMember24;
+struct Struct_28_t StructMember25;
+ long StructMember26;
+struct Struct_28_t StructMember27;
+ long StructMember28;
+long StructMember29;
+long StructMember30;
+[unique] [string]  wchar_t* StructMember31;
+long StructMember32;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember32)]  /*  */ struct Struct_482_t** StructMember33;
+long StructMember34;
+ long StructMember35;
+long StructMember36;
+long StructMember37;
+long StructMember38;
+}Struct_1076_t;
+typedef struct Struct_136_t
+{
+long StructMember0;
+struct Struct_74_t StructMember1;
+struct Struct_74_t StructMember2;
+struct Struct_40_t StructMember3;
+struct Struct_102_t StructMember4[4] ;
+struct Struct_118_t StructMember5[11] ;
+struct Struct_28_t StructMember6;
+}Struct_136_t;
+typedef [switch_type(long )] union union_282
+{
+[case(1)] [unique] struct Struct_462_t* unionMember_1;
+[case(3)] [unique] struct Struct_504_t* unionMember_3;
+[case(4)] [unique] struct Struct_532_t* unionMember_4;
+[case(5)] [unique] struct Struct_554_t* unionMember_5;
+[case(2)] [unique] struct Struct_578_t* unionMember_2;
+[case(6)] [unique] struct Struct_596_t* unionMember_6;
+[case(7)] [unique] struct Struct_102_t* unionMember_7;
+[case(8)] [unique] struct Struct_632_t* unionMember_8;
+[case(9)] [unique] struct Struct_676_t* unionMember_9;
+[case(10)] [unique] struct Struct_708_t* unionMember_10;
+[case(11)] [unique] struct Struct_746_t* unionMember_11;
+[case(12)] [unique] struct Struct_774_t* unionMember_12;
+[case(13)] [unique] struct Struct_118_t* unionMember_13;
+[case(14)] [unique] struct Struct_798_t* unionMember_14;
+}union_282;
+typedef [switch_type(long )] union union_1214
+{
+[case(1)] [unique] struct Struct_1076_t* unionMember_1;
+}union_1214;
+typedef struct Struct_1226_t
+{
+ long StructMember0;
+[switch_is(StructMember0)] union union_1214 StructMember1;
+}Struct_1226_t;
+typedef struct Struct_814_t
+{
+ long StructMember0;
+long StructMember1;
+struct Struct_28_t StructMember2;
+ long StructMember3;
+[switch_is(StructMember3)] union union_282 StructMember4;
+}Struct_814_t;
+error_status_t Proc0__UseProtseq(
+[in]short arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref]struct Struct_26_t** arg_3,
+[out][ref]struct Struct_26_t** arg_4);
+
+error_status_t Proc1__GetCustomProtseqInfo(
+[in]short arg_1,
+[in][size_is(arg_1)]short arg_2[],
+[out][ref]struct Struct_26_t** arg_3);
+
+error_status_t Proc2__UpdateResolverBindings(
+[in]/* simple_ref */struct Struct_26_t* arg_2,
+[in][out]/* simple_ref */hyper *arg_3,
+[out][ref]struct Struct_26_t** arg_4,
+[out][ref]struct Struct_26_t** arg_5);
+
+error_status_t Proc3(
+[in]unsigned __int3264 arg_1);
+
+error_status_t Proc4(
+[in]long arg_1);
+}
+

@@ -1,0 +1,60 @@
+[
+uuid(c9ac6db5-82b7-4e55-ae8a-e464ed7b4277),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_OnInitialConnection(
+);
+
+long Proc1_s_OnCreateSession(
+[in]long arg_1,
+[in]long arg_2,
+[out][string] wchar_t arg_3[128]);
+
+long Proc2_s_OnStartScreenSaverAsDefaultUser(
+[in]long arg_1);
+
+long Proc3_s_OnStopScreenSaverAsDefaultUser(
+[in]long arg_1);
+
+long Proc4_s_OnLogon(
+[in]long arg_1,
+[in]long arg_2,
+[out][string] wchar_t arg_3[128],
+[in][range(0,4096)] long arg_4,
+[in]/* simple_ref */[size_is(arg_4)]/*[range(0,4096)]*/ wchar_t *arg_5);
+
+long Proc5_s_OnLock(
+[in]long arg_1);
+
+long Proc6_s_OnUnlock(
+[in]long arg_1);
+
+long Proc7_s_OnStartScreenSaverAsUser(
+[in]long arg_1);
+
+long Proc8_s_OnStopScreenSaverAsUser(
+[in]long arg_1);
+
+long Proc9_s_OnDisconnect(
+[in]long arg_1);
+
+long Proc10_s_OnReconnect(
+[in]long arg_1);
+
+long Proc11_s_OnLogoff(
+[in]long arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out][string] wchar_t arg_4[128]);
+
+long Proc12_s_OnTerminateSession(
+[in]long arg_1);
+
+long Proc13_s_OnStartShell(
+[in]long arg_1);
+
+long Proc14_s_OnEndShell(
+[in]long arg_1);
+}
+

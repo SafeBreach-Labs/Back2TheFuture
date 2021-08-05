@@ -1,0 +1,68 @@
+[
+uuid(1b37ca91-76b1-4f5e-a3c7-2abfc61f2bb0),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_70_t
+{
+long StructMember0[2] ;
+}Struct_70_t;
+error_status_t Proc0_RBiRtSrvAssociateWorkItem(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_5)]wchar_t *arg_4,
+[in]long arg_5,
+[in]/* simple_ref */struct Struct_12_t* arg_6,
+[in]long arg_7,
+[in]long arg_8);
+
+error_status_t Proc1_RBiRtSrvCreateEvent(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]long arg_2);
+
+error_status_t Proc2_RBiRtSrvCreateStatusStateName(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */struct Struct_70_t* arg_2);
+
+error_status_t Proc3_RBiRtSrvDeleteEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc4_RBiRtSrvDisassociateWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in]small arg_2);
+
+error_status_t Proc5_RBiRtSrvEnumerateWorkItems(
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_12_t** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+error_status_t Proc6_RBiRtSrvGetWorkItemProperties(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out][ref][size_is(, *arg_3)]wchar_t **arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref]struct Struct_70_t** arg_4);
+
+error_status_t Proc7_RBiRtSrvRegisterWorkItem(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_5)]wchar_t *arg_4,
+[in]long arg_5,
+[in]/* simple_ref */struct Struct_12_t* arg_6,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_10)] /*  */ struct Struct_12_t* arg_7,
+[in][unique][size_is(arg_10)]small *arg_8,
+[in]/* simple_ref */[size_is(arg_10+1)]long *arg_9,
+[in]long arg_10,
+[in]long arg_11);
+
+error_status_t Proc8_RBiRtSrvSignalEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+}
+

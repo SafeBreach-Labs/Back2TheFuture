@@ -1,0 +1,9 @@
+[
+uuid(f3190c53-4e0c-491a-aad3-2a7ceb7e25d4),
+version(1.0),
+]
+interface DefaultIfName
+{error_status_t Proc0_VpnikeGetNewTunnelID(
+[in][out]/* simple_ref */hyper *arg_1);
+}
+

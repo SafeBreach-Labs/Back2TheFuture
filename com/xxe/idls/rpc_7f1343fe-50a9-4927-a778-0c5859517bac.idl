@@ -1,0 +1,31 @@
+[
+uuid(7f1343fe-50a9-4927-a778-0c5859517bac),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_24_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_24_t;
+void Proc0_DfsDsGetDcName(
+[in][unique]struct Struct_24_t* arg_2,
+[in]long arg_3,
+[in][out][unique]struct Struct_24_t* arg_4);
+
+void Proc1_DfsDsIsDomainController(
+[in]/* simple_ref */struct Struct_24_t* arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[out]/* simple_ref */small *arg_4);
+
+void Proc2_DfsCredWrite(
+[in]/* simple_ref */struct Struct_24_t* arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[in]/* simple_ref */struct Struct_24_t* arg_4);
+
+void Proc3_DfsCredDelete(
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3);
+}
+

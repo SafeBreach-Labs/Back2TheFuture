@@ -1,0 +1,1005 @@
+[
+uuid(266f33b4-c7c1-4bd1-8f52-ddb8f2214ea9),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_44_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_44_t;
+typedef struct Struct_164_t
+{
+ short StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+ long StructMember5[64] ;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+}Struct_164_t;
+typedef struct Struct_248_t
+{
+long StructMember0;
+char StructMember1[32] ;
+}Struct_248_t;
+typedef struct Struct_274_t
+{
+long StructMember0;
+[size_is(StructMember0)] char StructMember1[] ;
+}Struct_274_t;
+typedef struct Struct_392_t
+{
+char StructMember0;
+char StructMember1;
+short StructMember2;
+}Struct_392_t;
+typedef struct Struct_406_t
+{
+char StructMember0[6] ;
+}Struct_406_t;
+typedef struct Struct_528_t
+{
+char StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_528_t;
+typedef struct Struct_606_t
+{
+wchar_t StructMember0[256] ;
+long StructMember1;
+}Struct_606_t;
+typedef struct Struct_842_t
+{
+ short StructMember0;
+long StructMember1;
+long StructMember2;
+wchar_t StructMember3[256] ;
+wchar_t StructMember4[1024] ;
+long StructMember5;
+long StructMember6;
+}Struct_842_t;
+typedef struct Struct_1016_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [size_is(StructMember1)] char *StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_1016_t;
+typedef struct Struct_1094_t
+{
+ short StructMember0;
+long StructMember1;
+hyper StructMember2;
+[size_is(StructMember1)] char StructMember3[] ;
+}Struct_1094_t;
+typedef struct Struct_1122_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] char *StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_1122_t;
+typedef struct Struct_1196_t
+{
+short StructMember0;
+short StructMember1;
+char StructMember2[4] ;
+}Struct_1196_t;
+typedef struct Struct_1436_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+[size_is(StructMember1)] char StructMember4[] ;
+}Struct_1436_t;
+typedef struct Struct_1458_t
+{
+short StructMember0;
+char StructMember1[6] ;
+hyper StructMember2;
+char StructMember3[112] ;
+}Struct_1458_t;
+typedef struct Struct_1518_t
+{
+short StructMember0;
+}Struct_1518_t;
+typedef struct Struct_1524_t
+{
+char StructMember0;
+}Struct_1524_t;
+typedef struct Struct_1584_t
+{
+long StructMember0;
+long StructMember1;
+char StructMember2;
+char StructMember3[64] ;
+}Struct_1584_t;
+typedef struct Struct_1738_t
+{
+wchar_t StructMember0[256] ;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+[unique] [size_is(StructMember4)] char *StructMember5;
+}Struct_1738_t;
+typedef struct Struct_62_t
+{
+struct Struct_44_t StructMember0;
+wchar_t StructMember1[256] ;
+ long StructMember2;
+}Struct_62_t;
+typedef struct Struct_92_t
+{
+long StructMember0;
+long StructMember1;
+[size_is(StructMember0)] struct Struct_62_t StructMember2[] ;
+}Struct_92_t;
+typedef struct Struct_296_t
+{
+wchar_t StructMember0[256] ;
+struct Struct_248_t StructMember1;
+ short StructMember2;
+ long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+ long StructMember8[8] ;
+long StructMember9;
+long StructMember10;
+long StructMember11;
+ long StructMember12;
+ long StructMember13;
+long StructMember14;
+long StructMember15;
+long StructMember16;
+ short StructMember17;
+long StructMember18;
+}Struct_296_t;
+typedef struct Struct_356_t
+{
+long StructMember0;
+long StructMember1;
+ [size_is(StructMember0)]  /*  */ struct Struct_296_t StructMember2[] ;
+}Struct_356_t;
+typedef struct Struct_498_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_44_t StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_498_t;
+typedef struct Struct_542_t
+{
+struct Struct_528_t StructMember0;
+long StructMember1;
+}Struct_542_t;
+typedef struct Struct_632_t
+{
+long StructMember0;
+long StructMember1;
+[size_is(StructMember0)] struct Struct_606_t StructMember2[] ;
+}Struct_632_t;
+typedef struct Struct_646_t
+{
+struct Struct_248_t StructMember0;
+ short StructMember1;
+}Struct_646_t;
+typedef struct Struct_682_t
+{
+long StructMember0;
+long StructMember1;
+ [size_is(StructMember0)]  /*  */ struct Struct_646_t StructMember2[] ;
+}Struct_682_t;
+typedef struct Struct_718_t
+{
+hyper StructMember0;
+hyper StructMember1;
+struct Struct_44_t StructMember2;
+struct Struct_44_t StructMember3;
+long StructMember4;
+struct Struct_44_t StructMember5;
+long StructMember6;
+long StructMember7;
+hyper StructMember8;
+[size_is(StructMember6)] char StructMember9[] ;
+}Struct_718_t;
+typedef struct Struct_800_t
+{
+struct Struct_44_t StructMember0;
+struct Struct_44_t StructMember1;
+long StructMember2;
+hyper StructMember3;
+[size_is(StructMember2)] char StructMember4[] ;
+}Struct_800_t;
+typedef struct Struct_924_t
+{
+struct Struct_406_t StructMember0;
+ long StructMember1;
+}Struct_924_t;
+typedef struct Struct_1324_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1196_t* StructMember1;
+}Struct_1324_t;
+typedef struct Struct_1406_t
+{
+struct Struct_392_t StructMember0;
+long StructMember1;
+[length_is(0)] char StructMember2[8] ;
+}Struct_1406_t;
+typedef struct Struct_1474_t
+{
+struct Struct_1458_t StructMember0;
+struct Struct_1458_t StructMember1;
+}Struct_1474_t;
+typedef struct Struct_1562_t
+{
+ short StructMember0;
+struct Struct_406_t StructMember1;
+}Struct_1562_t;
+typedef struct Struct_1602_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+ long StructMember3;
+ long StructMember4;
+struct Struct_1584_t StructMember5;
+struct Struct_1584_t StructMember6;
+}Struct_1602_t;
+typedef struct Struct_1782_t
+{
+long StructMember0;
+long StructMember1;
+ [size_is(StructMember0)]  /*  */ struct Struct_1738_t StructMember2[] ;
+}Struct_1782_t;
+typedef struct Struct_432_t
+{
+struct Struct_392_t StructMember0;
+long StructMember1;
+long StructMember2;
+[size_is(StructMember2)] struct Struct_406_t StructMember3[] ;
+}Struct_432_t;
+typedef struct Struct_446_t
+{
+ short StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+[unique] struct Struct_248_t* StructMember2;
+[unique] struct Struct_432_t* StructMember3;
+ short StructMember4;
+long StructMember5;
+}Struct_446_t;
+typedef struct Struct_1148_t
+{
+struct Struct_406_t StructMember0;
+char StructMember1;
+struct Struct_248_t StructMember2;
+}Struct_1148_t;
+typedef struct Struct_1230_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_1148_t* StructMember1;
+long StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember2)]  /*  */ struct Struct_1196_t* StructMember3;
+long StructMember4;
+long StructMember5;
+ short StructMember6;
+}Struct_1230_t;
+typedef struct Struct_1354_t
+{
+struct Struct_392_t StructMember0;
+char StructMember1[34] ;
+struct Struct_248_t StructMember2;
+char StructMember3;
+char StructMember4;
+char StructMember5;
+char StructMember6;
+ short StructMember7;
+}Struct_1354_t;
+typedef union union_1492 switch (/* enum_16 */ short  discrim) U1492_TYPE
+{
+case (0):struct Struct_1518_t unionMember_0;
+case (2):struct Struct_1518_t unionMember_2;
+case (1):struct Struct_1524_t unionMember_1;
+}union_1492;
+typedef struct Struct_1544_t
+{
+struct Struct_406_t StructMember0;
+struct Struct_248_t StructMember1;
+}Struct_1544_t;
+typedef struct Struct_962_t
+{
+ long StructMember0;
+struct Struct_44_t StructMember1;
+struct Struct_406_t StructMember2;
+ long StructMember3;
+long StructMember4;
+long StructMember5;
+ [size_is(StructMember5)]  /*  */ struct Struct_924_t StructMember6[] ;
+}Struct_962_t;
+typedef struct Struct_1624_t
+{
+long StructMember0;
+wchar_t StructMember1[34] ;
+struct Struct_1544_t StructMember2;
+long StructMember3;
+struct Struct_1562_t StructMember4;
+struct Struct_1602_t StructMember5;
+}Struct_1624_t;
+typedef struct Struct_1676_t
+{
+struct Struct_1544_t StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] struct Struct_1624_t* StructMember3;
+}Struct_1676_t;
+long Proc0_RpcOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in][out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc1_RpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RpcEnumInterfaces(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_92_t** arg_1);
+
+long Proc3_RpcSetAutoConfigParameter(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]char *arg_3);
+
+long Proc4_RpcQueryAutoConfigParameter(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_4);
+
+long Proc5_RpcGetInterfaceCapability(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out][ref]struct Struct_164_t** arg_2);
+
+long Proc6_RpcSetInterface(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4);
+
+long Proc7_RpcQueryInterface(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_5);
+
+long Proc8_RpcIhvControl(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_3)]char *arg_4,
+[in]long arg_5,
+[in][out]/* simple_ref */[size_is(arg_5)]char *arg_6,
+[out]/* simple_ref */long *arg_7);
+
+long Proc9_RpcScan(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in][unique]struct Struct_248_t* arg_2,
+[in][unique]struct Struct_274_t* arg_3);
+
+long Proc10_RpcGetAvailableNetworkList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out][ref]struct Struct_356_t** arg_3);
+
+long Proc11_RpcPrivateGetAvailableNetworkList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out][ref]struct Struct_356_t** arg_3);
+
+long Proc12_RpcGetNetworkBssList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in][unique]struct Struct_248_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]char **arg_6);
+
+long Proc13_RpcConnect(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_446_t* arg_2);
+
+long Proc14_RpcConnectEx(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_446_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4);
+
+long Proc15_RpcDisconnect(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1);
+
+long Proc16_RpcRegisterNotification(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc17_RpcAsyncGetNotification(
+[in][context_handle] void* arg_1,
+[out][ref]struct Struct_498_t** arg_2);
+
+long Proc18_RpcSetProfileEapUserData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */struct Struct_542_t* arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]char *arg_6);
+
+long Proc19_RpcSetProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in][unique][string] wchar_t* arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc20_RpcGetProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out][ref][string] wchar_t** arg_3,
+[in][out]/* simple_ref */long *arg_4,
+[in][out][unique]long *arg_5);
+
+long Proc21_RpcDeleteProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc22_RpcRenameProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3);
+
+long Proc23_RpcSetProfileList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ [string] wchar_t** arg_3);
+
+long Proc24_RpcGetProfileList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out][ref]struct Struct_632_t** arg_2);
+
+long Proc25_RpcSetProfilePosition(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3);
+
+long Proc26_RpcSetProfileCustomUserData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4);
+
+long Proc27_RpcGetProfileCustomUserData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4);
+
+long Proc28_RpcSetFilterList(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in][unique]struct Struct_682_t* arg_2);
+
+long Proc29_RpcGetFilterList(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out][ref]struct Struct_682_t** arg_2);
+
+long Proc30_RpcSetPsdIEDataList(
+[in][context_handle] void* arg_0,
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_2)]char *arg_3);
+
+long Proc31_RpcSaveTemporaryProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]long arg_4,
+[in]long arg_5);
+
+long Proc32_RpcIsUIRequestPending(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_718_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc33_RpcSetUIForwardingNetworkList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */struct Struct_44_t* arg_3);
+
+long Proc34_RpcIsNetworkSuppressed(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc35_RpcRemoveUIForwardingNetworkList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1);
+
+long Proc36_RpcQueryExtUIRequest(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */struct Struct_44_t* arg_4,
+[out][ref]struct Struct_718_t** arg_5);
+
+long Proc37_RpcUIResponse(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_718_t* arg_1,
+[in]/* simple_ref */struct Struct_800_t* arg_2);
+
+long Proc38_RpcGetProfileKeyInfo(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[in][out][unique][size_is(arg_4)]char *arg_6,
+[out]/* simple_ref */long *arg_7);
+
+long Proc39_RpcAsyncDoPlap(
+[in]/* simple_ref */wchar_t *arg_1,
+[in]/* simple_ref */struct Struct_44_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_4)] /*  */ struct Struct_842_t arg_5[]);
+
+long Proc40_RpcQueryPlapCredentials(
+[in]/* simple_ref */wchar_t *arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_842_t** arg_2,
+[out][ref][string] wchar_t** arg_3,
+[out]/* simple_ref */struct Struct_44_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */long *arg_8);
+
+long Proc41_RpcCancelPlap(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1);
+
+long Proc42_RpcSetSecuritySettings(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc43_RpcGetSecuritySettings(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_2,
+[out][ref][string] wchar_t** arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc44_RpcHostedNetworkPerformOperation(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[in]long arg_2);
+
+long Proc45_RpcHostedNetworkHlpQueryEverUsed(
+[in]/* simple_ref */wchar_t *arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc46_RpcHostedNetworkSetProperty(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4);
+
+long Proc47_RpcHostedNetworkQueryProperty(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4);
+
+long Proc48_RpcHostedNetworkQueryStatus(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_962_t** arg_1);
+
+long Proc49_RpcHostedNetworkQueryWCNSettings(
+[in]/* simple_ref */wchar_t *arg_0,
+[out][ref]struct Struct_1016_t** arg_1);
+
+long Proc50_RpcHostedNetworkSetWCNSettings(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_1016_t* arg_1);
+
+long Proc51_RpcGetProfileEapUserDataInfo(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc52_RpcQueryPreConnectInput(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_446_t* arg_2,
+[out][ref]/* enum_16 */ short *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_4)] /*  */ struct Struct_842_t** arg_5);
+
+long Proc53_RpcConnectWithInput(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_446_t* arg_2,
+[in]/* simple_ref */struct Struct_1094_t* arg_3);
+
+long Proc54_RpcRefreshConnections(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1);
+
+long Proc55_RpcInternalScan(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2);
+
+long Proc56_RpcHostedNetworkSetSecondaryKey(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_1122_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc57_RpcHostedNetworkQuerySecondaryKey(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */struct Struct_1122_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc58_RpcRegisterVirtualStationNotification(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+
+long Proc59_RpcEnumAllInterfaces(
+[in]/* simple_ref */wchar_t *arg_0,
+[out][ref]struct Struct_92_t** arg_1);
+
+long Proc60_RpcQueryInterfacePortType(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc61_RpcWFDDiscoverDevices(
+[in][context_handle] void* arg_1,
+[in][unique]struct Struct_1230_t* arg_2,
+[out][ref][size_is(, *arg_4)]char **arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc62_RpcWFDGetVisibleDevices(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1,
+[out][ref][size_is(, *arg_1)]char **arg_2);
+
+long Proc63_RpcWFDStopDiscoverDevices(
+[in][context_handle] void* arg_0);
+
+long Proc64_RpcWFDOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in][out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc65_RpcWFDQueryProperty(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3);
+
+long Proc66_RpcWFDSetProperty(
+[in][context_handle] void* arg_0,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]char *arg_3);
+
+long Proc67_RpcWFDSetSecondaryDeviceTypeList(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_1324_t* arg_1);
+
+long Proc68_RpcWFDPairEnumerateCeremonies(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2,
+[in][unique]struct Struct_1354_t* arg_3,
+[out]/* simple_ref */unsigned __int3264 *arg_4,
+[out][ref]/* enum_16 */ short *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc69_RpcWFDPairSelectCeremony(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in]/* enum_16 */ short arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc70_RpcWFDPairWithDevice(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in]/* simple_ref */struct Struct_1406_t* arg_3,
+[in][unique]struct Struct_274_t* arg_4,
+[out][ref][string] wchar_t** arg_5,
+[in][out][unique]struct Struct_274_t** arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */struct Struct_44_t* arg_8,
+[in][out][unique]struct Struct_1436_t** arg_9,
+[out]/* simple_ref */unsigned __int3264 *arg_10);
+
+long Proc71_RpcWFDPairCancel(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc72_RpcWFDPairCancelByDeviceAddress(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1);
+
+long Proc73_RpcWFDOpenSession(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2,
+[out]/* simple_ref */struct Struct_44_t* arg_3,
+[out]/* simple_ref */long *arg_4,
+[in][unique][string] wchar_t* arg_5,
+[out]/* simple_ref */unsigned __int3264 *arg_6,
+[in]/* enum_16 */ short arg_7);
+
+long Proc74_RpcWFDGetSessionEndpointPairs(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1,
+[out]/* simple_ref */struct Struct_1474_t* arg_2,
+[out]/* simple_ref */struct Struct_1474_t* arg_3);
+
+long Proc75_RpcWFDConfigureFirewallForSession(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1,
+[in]/* simple_ref */union_1492 * arg_2);
+
+long Proc76_RpcWFDCancelOpenSession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1);
+
+long Proc77_RpcWFDCloseSession(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2);
+
+long Proc78_RpcWFDForceDisconnect(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2);
+
+long Proc79_RpcWFDForceDisconnectLegacyPeer(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2);
+
+long Proc80_RpcWFDAcceptGroupRequestAndOpenSession(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in]/* enum_16 */ short arg_3,
+[in]/* simple_ref */struct Struct_1406_t* arg_4,
+[in][unique]struct Struct_1354_t* arg_5,
+[in][unique]struct Struct_274_t* arg_6,
+[in][out][unique]struct Struct_274_t** arg_7,
+[out][ref][string] wchar_t** arg_8,
+[out]/* simple_ref */long *arg_9,
+[out]/* simple_ref */struct Struct_44_t* arg_10,
+[out]/* simple_ref */unsigned __int3264 *arg_11);
+
+long Proc81_RpcWFDDeclineGroupRequest(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc82_RpcWFDSetWCNSettings(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1,
+[in]/* simple_ref */struct Struct_1016_t* arg_2);
+
+long Proc83_RpcWFDStartGO(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc84_RpcWFDStopGO(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc85_RpcWFDAcceptConnectRequestAndOpenSession(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in][unique][string] wchar_t* arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */struct Struct_44_t* arg_5,
+[out]/* simple_ref */unsigned __int3264 *arg_6,
+[in]/* enum_16 */ short arg_7);
+
+long Proc86_RpcWFDDeclineConnectRequest(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1);
+
+long Proc87_RpcWFDGetPeerInfo(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]unsigned __int3264 arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2,
+[out]/* simple_ref */struct Struct_44_t* arg_3,
+[out]/* simple_ref */struct Struct_248_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]char **arg_6);
+
+long Proc88_RpcWFDGetDefaultGroupProfile(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1,
+[out][ref][string] wchar_t** arg_2);
+
+long Proc89_RpcWFDGetProfileKeyInfo(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_1624_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[in][out][unique][size_is(, *arg_5)]char *arg_4,
+[in][out]/* simple_ref */long *arg_5);
+
+long Proc90_RpcWFDStartUsingGroup(
+[in][context_handle] void* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out][ref]struct Struct_1676_t** arg_3);
+
+long Proc91_RpcWFDStopUsingGroup(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_1544_t* arg_2);
+
+long Proc92_RpcWFDOpenLegacySessionWithProfile(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc93_RpcWFDCloseLegacySession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc94_RpcWFDIsInterfaceWiFiDirect(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */struct Struct_44_t* arg_3);
+
+long Proc95_RpcIsWiFiDirectRunningOnWiFiAdapter(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc96_RpcWFDSetAdditionalIEs(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in][unique][size_is(arg_1)]char *arg_2);
+
+long Proc97_RpcWFDUpdateDeviceVisibility(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_406_t* arg_1);
+
+long Proc98_RpcWFDOpenLegacySession(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_406_t* arg_2,
+[out]/* simple_ref */unsigned __int3264 *arg_3,
+[out]/* simple_ref */struct Struct_44_t* arg_4);
+
+long Proc99_RpcWFDFlushVisibleDeviceList(
+[in][context_handle] void* arg_0);
+
+long Proc100_RpcWlanNotifyVsIeProvider(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_2)]char *arg_3);
+
+long Proc101_RpcSetProfileMetadata(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]char *arg_6);
+
+long Proc102_RpcGetProfileMetadata(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]char **arg_6);
+
+long Proc103_RpcWCMGetProfileList(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out][ref]struct Struct_1782_t** arg_2);
+
+long Proc104_RpcWcmSetInterface(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4);
+
+long Proc105_RpcWcmGetInterface(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]char **arg_4);
+
+long Proc106_RpcStoreRadioState(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]char *arg_3);
+
+long Proc107_RpcGetStoredRadioState(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3);
+
+long Proc108_RpcGetRadioInformation(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]char **arg_3);
+
+long Proc109_RpcGetProfileIndex(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc110_RpcGetMFPNegotiated(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]/* simple_ref */struct Struct_44_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+}
+

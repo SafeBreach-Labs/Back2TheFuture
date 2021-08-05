@@ -1,0 +1,54 @@
+[
+uuid(3473dd4d-2e88-4006-9cba-22570909dd10),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_6_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+ short StructMember3;
+short StructMember4;
+}Struct_6_t;
+typedef struct Struct_38_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] long *StructMember3;
+long StructMember4;
+long StructMember5;
+}Struct_38_t;
+typedef struct Struct_66_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_66_t;
+typedef struct Struct_80_t
+{
+long StructMember0;
+long StructMember1;
+ short StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+short StructMember4;
+}Struct_80_t;
+typedef struct Struct_122_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)]  /*  */ struct Struct_80_t* StructMember1;
+}Struct_122_t;
+long Proc0_GetProxyForUrl(
+[in]/* simple_ref */struct Struct_6_t* arg_2,
+[in]/* simple_ref */struct Struct_38_t* arg_3,
+[in]/* simple_ref */struct Struct_66_t* arg_4,
+[out]/* simple_ref */struct Struct_122_t* arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc1_ResetAutoProxy(
+[in]long arg_1);
+}
+

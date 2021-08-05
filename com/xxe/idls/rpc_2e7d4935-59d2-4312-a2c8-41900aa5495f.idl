@@ -1,0 +1,24 @@
+[
+uuid(2e7d4935-59d2-4312-a2c8-41900aa5495f),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_30_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_30_t;
+long Proc0_DasCreateChallengeContext(
+[in][ref][range(0,768)] [string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_30_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc1_DasStartChallengeDevicePresence(
+[in]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_DasCloseChallengeContext(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

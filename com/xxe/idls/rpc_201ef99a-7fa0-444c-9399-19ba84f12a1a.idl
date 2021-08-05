@@ -1,0 +1,63 @@
+[
+uuid(201ef99a-7fa0-444c-9399-19ba84f12a1a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_14_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_14_t;
+typedef struct Struct_56_t
+{
+unsigned __int3264 StructMember0;
+unsigned __int3264 StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_56_t;
+typedef struct Struct_22_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+short StructMember9;
+struct Struct_14_t StructMember10;
+}Struct_22_t;
+long Proc0_RAiLaunchAdminProcess(
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in]/* simple_ref */[string] wchar_t* arg_6,
+[in]/* simple_ref */[string] wchar_t* arg_7,
+[in]/* simple_ref */struct Struct_22_t* arg_8,
+[in]unsigned __int3264 arg_9,
+[in]long arg_10,
+[out]/* simple_ref */struct Struct_56_t* arg_11,
+[out]/* simple_ref */long *arg_12);
+
+long Proc1_RAiProcessRunOnce(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */struct Struct_56_t* arg_2);
+
+long Proc2_RAiLogonWithSmartCardCreds(
+[in]long arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]unsigned __int3264 arg_4);
+
+long Proc3_RAiOverrideDesktopPromptPolicy(
+);
+
+long Proc4_RAiDisableElevationForSession(
+[in]long arg_1);
+
+long Proc5_RAiEnableElevationForSession(
+[in]long arg_1);
+}
+

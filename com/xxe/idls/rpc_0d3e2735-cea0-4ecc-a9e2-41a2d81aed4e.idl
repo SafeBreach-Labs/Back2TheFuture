@@ -1,0 +1,126 @@
+[
+uuid(0d3e2735-cea0-4ecc-a9e2-41a2d81aed4e),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_106_t
+{
+long StructMember0[2] ;
+}Struct_106_t;
+typedef struct Struct_120_t
+{
+[unique] struct Struct_12_t* StructMember0;
+small StructMember1;
+}Struct_120_t;
+typedef struct Struct_362_t
+{
+struct Struct_106_t StructMember0[12] ;
+}Struct_362_t;
+error_status_t Proc0_RBiPtSrvActivateDeferredWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc1_RBiPtSrvActivateInBackground(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_5)]wchar_t *arg_4,
+[in]long arg_5,
+[in]/* simple_ref */[size_is(arg_7)]wchar_t *arg_6,
+[in]long arg_7,
+[in]long arg_8,
+[in]long arg_9,
+[in][unique]struct Struct_12_t* arg_10,
+[in][unique][size_is(arg_12)]byte *arg_11,
+[in]long arg_12);
+
+error_status_t Proc2_RBiPtSrvActivateWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc3_RBiPtSrvAssociateActivationProxy(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */struct Struct_106_t* arg_2,
+[in]/* simple_ref */struct Struct_12_t* arg_3,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_5)] /*  */ struct Struct_120_t* arg_4,
+[in]long arg_5,
+[in]long arg_6,
+[in][unique][size_is(arg_8)]wchar_t *arg_7,
+[in]long arg_8);
+
+error_status_t Proc4_RBiPtSrvAssociateApplicationExtensionClass(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in]/* simple_ref */struct Struct_12_t* arg_4,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)] /*  */ struct Struct_120_t* arg_5,
+[in]long arg_6,
+[in]long arg_7,
+[in][unique][size_is(arg_9)]wchar_t *arg_8,
+[in]long arg_9);
+
+error_status_t Proc5_RBiPtSrvCancelWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc6_RBiPtSrvCreateEventForPackageName(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in][unique][size_is(arg_4)]wchar_t *arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_7)]byte *arg_6,
+[in]long arg_7);
+
+error_status_t Proc7_RBiPtSrvDeleteEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc8_RBiPtSrvDisassociateWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in]small arg_2);
+
+error_status_t Proc9_RBiPtSrvEnumerateBrokeredEvents(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_12_t** arg_3);
+
+error_status_t Proc10_RBiPtSrvEnumerateWorkItemsForPackageName(
+[in][unique][size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_4)] /*  */ struct Struct_12_t** arg_5);
+
+error_status_t Proc11_RBiPtSrvQueryBrokeredEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]byte **arg_3);
+
+error_status_t Proc12_RBiPtSrvQuerySystemStateBroadcastChannels(
+[out]/* simple_ref */struct Struct_362_t* arg_1);
+
+error_status_t Proc13_RBiPtSrvQueryWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]byte **arg_3);
+
+error_status_t Proc14_RBiPtSrvSignalEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in][unique]small *arg_2,
+[in][unique]struct Struct_12_t* arg_3,
+[in][unique][size_is(arg_5)]byte *arg_4,
+[in]long arg_5);
+
+error_status_t Proc15_RBiPtSrvSignalMultipleEvents(
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ struct Struct_12_t** arg_1,
+[in]long arg_2,
+[in][unique]small *arg_3,
+[in][unique]struct Struct_12_t* arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6);
+}
+

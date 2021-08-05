@@ -1,0 +1,44 @@
+[
+uuid(5b665b9a-a086-4e26-ae24-96ab050b0ec3),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_30_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_30_t;
+typedef struct Struct_106_t
+{
+struct Struct_30_t StructMember0;
+long StructMember1;
+}Struct_106_t;
+typedef struct Struct_116_t
+{
+struct Struct_106_t StructMember0;
+ long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_116_t;
+typedef struct Struct_158_t
+{
+struct Struct_116_t StructMember0;
+long StructMember1;
+long StructMember2;
+[unique] [size_is(StructMember2)] /*[range(0,0)] */ char *StructMember3;
+}Struct_158_t;
+long Proc0_DasCreateAepStoreAep(
+[in][ref][range(0,768)] [string] wchar_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_158_t* arg_3);
+
+long Proc1_DasDeleteAepStoreAep(
+[in][ref][range(0,768)] [string] wchar_t* arg_1);
+
+long Proc2_DasSetAepStoreAepProperties(
+[in][ref][range(0,768)] [string] wchar_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_158_t* arg_3);
+}
+

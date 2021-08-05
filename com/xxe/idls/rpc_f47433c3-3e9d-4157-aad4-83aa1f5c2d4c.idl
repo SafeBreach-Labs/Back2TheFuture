@@ -1,0 +1,41 @@
+[
+uuid(f47433c3-3e9d-4157-aad4-83aa1f5c2d4c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_466_t
+{
+char StructMember0[6] ;
+}Struct_466_t;
+typedef struct Struct_498_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_466_t StructMember2;
+[size_is(StructMember1)] /*[range(0,0)] */ long StructMember3[] ;
+}Struct_498_t;
+typedef struct Struct_616_t
+{
+[unique] struct Struct_498_t* StructMember0;
+long StructMember1;
+}Struct_616_t;
+long Proc0_RPC_NetworkIsolationDiagnoseConnectFailure(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref]/* enum_16 */ short *arg_2,
+[out][ref]struct Struct_498_t** arg_3);
+
+long Proc1_RPC_NetworkIsolationCreateAppContainer(
+[in]/* simple_ref */struct Struct_498_t* arg_1,
+[in]/* simple_ref */struct Struct_498_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_7)]/*[range(0,0)]*/  /*  */ struct Struct_616_t* arg_6,
+[in]long arg_7);
+
+long Proc2_RPC_NetworkIsolationDeleteAppContainer(
+[in]/* simple_ref */struct Struct_498_t* arg_1,
+[in]/* simple_ref */struct Struct_498_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3);
+}
+

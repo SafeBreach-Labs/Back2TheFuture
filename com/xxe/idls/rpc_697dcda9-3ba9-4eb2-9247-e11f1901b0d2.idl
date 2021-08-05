@@ -1,0 +1,45 @@
+[
+uuid(697dcda9-3ba9-4eb2-9247-e11f1901b0d2),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_6_t
+{
+hyper StructMember0;
+ short StructMember1;
+ short StructMember2;
+ short StructMember3;
+long StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+long StructMember9;
+}Struct_6_t;
+typedef struct Struct_36_t
+{
+long StructMember0[2] ;
+}Struct_36_t;
+error_status_t Proc0__CSebiCreateWellKnownEvent(
+[in]/* simple_ref */struct Struct_6_t* arg_1,
+[out]/* simple_ref */struct Struct_36_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+error_status_t Proc1__CSebiCreatePrivateEvent(
+[in]/* simple_ref */struct Struct_6_t* arg_1,
+[out]/* simple_ref */struct Struct_36_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+error_status_t Proc2__CSebiDeleteEvent(
+[in]struct Struct_36_t arg_1,
+[in][out]/* simple_ref */[context_handle] void** arg_2);
+
+error_status_t Proc3_CSebiEnumerateEvents(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)] /*  */ struct Struct_36_t** arg_2);
+
+error_status_t Proc4__CSebiQueryEventData(
+[in]struct Struct_36_t arg_1,
+[out]/* simple_ref */struct Struct_6_t* arg_2);
+}
+

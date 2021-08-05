@@ -1,0 +1,155 @@
+[
+uuid(4b112204-0e19-11d3-b42b-0000f81feb9f),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_28_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_28_t;
+typedef struct Struct_448_t
+{
+[unique] [string]  char* StructMember0;
+long StructMember1;
+}Struct_448_t;
+typedef struct Struct_82_t
+{
+struct Struct_28_t StructMember0;
+ [size_is()]  /*  */ [unique] [string]  char* StructMember1;
+}Struct_82_t;
+typedef struct Struct_184_t
+{
+[unique] [string]  char* StructMember0;
+[unique] [string]  char* StructMember1;
+[unique] [string]  char* StructMember2;
+[unique] [string]  char* StructMember3;
+[unique] [string]  char* StructMember4;
+long StructMember5;
+long StructMember6;
+[unique] [string]  char* StructMember7;
+struct Struct_28_t StructMember8;
+[unique] [string]  char* StructMember9;
+[unique] [string]  char* StructMember10;
+long StructMember11;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember11)] /*[range(0,0)] */  /*  */ struct Struct_82_t* StructMember12;
+long StructMember13;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember13)] /*[range(0,0)] */  /*  */ [string]  char** StructMember14;
+}Struct_184_t;
+typedef struct Struct_358_t
+{
+ short StructMember0;
+[unique] [string]  char* StructMember1;
+[unique] [string]  char* StructMember2;
+[unique] [string]  char* StructMember3;
+struct Struct_28_t StructMember4;
+[unique] [string]  char* StructMember5;
+long StructMember6;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember6)] /*[range(0,0)] */  /*  */ struct Struct_82_t* StructMember7;
+long StructMember8;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember8)] /*[range(0,0)] */  /*  */ [string]  char** StructMember9;
+}Struct_358_t;
+typedef struct Struct_476_t
+{
+long StructMember0;
+struct Struct_358_t StructMember1;
+}Struct_476_t;
+typedef struct Struct_534_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,1000)] */  /*  */ struct Struct_476_t* StructMember1;
+}Struct_534_t;
+long Proc0__SSDPOpenRpc(
+[out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc1_SSDPCloseRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_RegisterServiceExRpc(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]/* simple_ref */struct Struct_184_t* arg_1,
+[in]long arg_2);
+
+long Proc3__DeregisterServiceRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1);
+
+void Proc4_CleanupCacheRpc(
+);
+
+long Proc5_BeginSearchRpc(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]/* simple_ref */[string] char* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */struct Struct_28_t* arg_3);
+
+long Proc6_GetSearchNotificationRpc(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_358_t** arg_1);
+
+long Proc7_CancelSearchRpc(
+[in][context_handle] void* arg_0);
+
+long Proc8_CloseSearchRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc9_EnableNotificationRpc(
+[in]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc10__InitializeSyncHandle(
+[out]/* simple_ref */[context_handle] void** arg_0);
+
+void Proc11_RemoveSyncHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc12_RegisterNotificationRpc(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in][context_handle] void* arg_1,
+[in]/* enum_16 */ short arg_2,
+[in][unique][string] char* arg_3,
+[in]long arg_4,
+[in]/* simple_ref */struct Struct_28_t* arg_5,
+[in][unique][string] char* arg_6,
+[in]long arg_7,
+[out][ref]struct Struct_448_t** arg_8);
+
+long Proc13_RegisterNotificationAsyncRpc(
+[out]/* simple_ref */[context_handle] void** arg_1,
+[in][context_handle] void* arg_2,
+[in]/* enum_16 */ short arg_3,
+[in][unique][string] char* arg_4,
+[in]long arg_5,
+[in][unique][string] char* arg_6,
+[in]long arg_7,
+[out][ref]struct Struct_448_t** arg_8);
+
+long Proc14__GetNotificationRpc(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_534_t** arg_1);
+
+long Proc15_WakeupGetNotificationRpc(
+[in][context_handle] void* arg_0);
+
+long Proc16_DeregisterNotificationRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1);
+
+void Proc17_SetICSInterfaces(
+[in][range(0,50)] long arg_0,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_0)]/*[range(0,50)]*/  /*  */ struct Struct_28_t* arg_1);
+
+void Proc18_SetICSOff(
+);
+
+long Proc19_EnableFirewallRuleRpc(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in][unique][string] wchar_t* arg_3);
+
+long Proc20_DisableFirewallRuleRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

@@ -1,0 +1,59 @@
+[
+uuid(3b338d89-6cfa-44b8-847e-531531bc9992),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_26_t
+{
+byte StructMember0[68] ;
+}Struct_26_t;
+typedef struct Struct_42_t
+{
+hyper StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+hyper StructMember5;
+}Struct_42_t;
+typedef struct Struct_142_t
+{
+hyper StructMember0;
+hyper StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+}Struct_142_t;
+typedef struct Struct_54_t
+{
+struct Struct_26_t StructMember0;
+wchar_t StructMember1[128] ;
+hyper StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+hyper StructMember5;
+hyper StructMember6;
+hyper StructMember7;
+hyper StructMember8;
+hyper StructMember9;
+hyper StructMember10;
+hyper StructMember11;
+hyper StructMember12;
+hyper StructMember13;
+hyper StructMember14;
+hyper StructMember15;
+hyper StructMember16;
+hyper StructMember17;
+hyper StructMember18;
+struct Struct_42_t StructMember19;
+long StructMember20;
+}Struct_54_t;
+long Proc0_PsmSrvQueryApplicationPerformanceInformation(
+[in][range(0,65535)] long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)]/*[range(0,65535)]*/ [length_is( * arg_2)] /*  */ struct Struct_54_t* arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc1_PsmSrvQueryQuotaInformation(
+[out]/* simple_ref */struct Struct_142_t* arg_1);
+}
+

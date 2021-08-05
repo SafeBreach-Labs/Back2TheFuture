@@ -1,0 +1,20 @@
+[
+uuid(8a7b5006-cc13-11db-9705-005056c00008),
+version(1.0),
+]
+interface DefaultIfName
+{void Proc0_AppIDRpcVerifyFile(
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3,
+[in][out][ptr][string] wchar_t** arg_4);
+
+void Proc1_AppIDRpcVerifyPackageMoniker(
+[in][ptr][string] wchar_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */hyper *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref][size_is(, *arg_5)]byte **arg_6,
+[out][ref][string] wchar_t** arg_7,
+[out][ref][string] wchar_t** arg_8);
+}
+

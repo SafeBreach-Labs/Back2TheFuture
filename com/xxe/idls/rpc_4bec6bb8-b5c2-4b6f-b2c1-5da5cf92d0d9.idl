@@ -1,0 +1,34 @@
+[
+uuid(4bec6bb8-b5c2-4b6f-b2c1-5da5cf92d0d9),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+char StructMember0[6] ;
+}Struct_16_t;
+typedef struct Struct_38_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_16_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_38_t;
+long Proc0_PsmSrvActivateApplication(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_38_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3);
+
+long Proc1_PsmSrvCloseActivationChannel(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_PsmSrvOpenActivationChannel(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc3_PsmSrvRegisterApplicationProcess(
+[in][context_handle] void* arg_0,
+[in]unsigned __int3264 arg_1,
+[in]long arg_2);
+}
+

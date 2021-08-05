@@ -1,0 +1,68 @@
+[
+uuid(c49a5a70-8a7f-4e70-ba16-1e8f1f193ef1),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_42_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_42_t;
+typedef struct Struct_114_t
+{
+byte StructMember0[16] ;
+byte StructMember1[16] ;
+}Struct_114_t;
+typedef struct Struct_92_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ struct Struct_42_t* StructMember1;
+}Struct_92_t;
+typedef struct Struct_170_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ struct Struct_114_t* StructMember1;
+}Struct_170_t;
+typedef struct Struct_186_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_92_t StructMember2;
+struct Struct_92_t StructMember3;
+struct Struct_170_t StructMember4;
+struct Struct_170_t StructMember5;
+}Struct_186_t;
+long Proc0_Rpc_AdhEngineOpen(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_Rpc_AdhEngineClose(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_Rpc_AdhStatusEventSubscribe(
+[in][context_handle] void* arg_1,
+[in][out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc3_Rpc_AdhStatusEventSubscriptionGetLastEvent(
+[in][context_handle] void* arg_2,
+[out][ref]struct Struct_186_t** arg_3);
+
+long Proc4_Rpc_AdhStatusEventUnsubscribe(
+[in][context_handle] void* arg_1,
+[in][out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc5_Rpc_AdhGetConfig(
+[in][context_handle] void* arg_1,
+[in][range(1,1)] /* enum_16 */ short arg_2,
+[in][out][unique] /* [DBG] FC_CVARRAY */[size_is(arg_4)]/*[range(0,65536)]*/ [length_is(, *arg_5)]byte *arg_3/*[] CONFORMANT_ARRAY*/,
+[in][range(0,65536)] long arg_4,
+[in][out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc6_Rpc_AdhGetEvidenceCollectorResult(
+[in][context_handle] void* arg_1,
+[in][range(1,1)] /* enum_16 */ short arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5);
+}
+

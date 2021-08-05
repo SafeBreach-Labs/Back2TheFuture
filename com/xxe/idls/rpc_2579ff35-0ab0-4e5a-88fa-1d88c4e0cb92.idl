@@ -1,0 +1,25 @@
+[
+uuid(2579ff35-0ab0-4e5a-88fa-1d88c4e0cb92),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_SSTpmEndorsementKeyGetInfo(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][range(0,67108864)] long arg_2,
+[in]/* simple_ref */[size_is(arg_2)]/*[range(0,67108864)]*/ byte *arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref][size_is(, *arg_6)]/*[range(0,0)]*/ byte **arg_7);
+
+long Proc1_s_SSTpmEndorsementKeyDecryptChallenge(
+[in][range(0,67108864)] long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]/*[range(0,67108864)]*/ byte *arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,0)]*/ byte **arg_4);
+
+long Proc2_s_SSTpmAttestationCapable(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+}
+

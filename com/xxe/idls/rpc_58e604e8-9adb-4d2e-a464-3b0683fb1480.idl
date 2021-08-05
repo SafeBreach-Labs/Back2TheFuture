@@ -1,0 +1,16 @@
+[
+uuid(58e604e8-9adb-4d2e-a464-3b0683fb1480),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RAiGetTokenForAxIS(
+[in]unsigned __int3264 arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in]/* simple_ref */[string] wchar_t* arg_6,
+[in]/* simple_ref */[string] wchar_t* arg_7,
+[in]long arg_8,
+[out]/* simple_ref */unsigned __int3264 *arg_9);
+}
+

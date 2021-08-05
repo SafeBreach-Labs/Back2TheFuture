@@ -1,0 +1,65 @@
+[
+uuid(f5ed6945-e2e8-4ac9-947d-e6ca413f6172),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+long Proc0_s_pbmReportAppInteractivityChange(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2);
+
+long Proc1_s_pbmSendAppCommand(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_16_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc2_s_pbmSendAppCommandToApp(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */struct Struct_16_t* arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc3_s_RevokeDeviceAccessForPackage(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc4_s_pbmRegisterAppManagerNotification(
+);
+
+long Proc5_s_pbmUnregisterAppManagerNotification(
+);
+
+long Proc6_s_pbmGetActiveMediaApp(
+[out][ref][string] wchar_t** arg_1,
+[out][ref][string] wchar_t** arg_2,
+[out][ref][string] wchar_t** arg_3,
+[out][ref][string] wchar_t** arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6);
+
+long Proc7_s_pbmReportAppClosing(
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc8_s_pbmReportHostedAppStateChange(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_2,
+[in][out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc9_s_SetScreenReaderState(
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc10_s_pbmSwitchSoftNonInteractiveAppsToHardNonInteractive(
+);
+
+long Proc11_s_pbmReportApplicationState(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2);
+}
+

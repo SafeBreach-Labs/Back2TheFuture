@@ -1,0 +1,42 @@
+[
+uuid(2e6035b2-e8f1-41a7-a044-656b439c4c34),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_88_t
+{
+[unique] [string]  wchar_t* StructMember0;
+long StructMember1;
+}Struct_88_t;
+typedef [switch_type(long )] union union_76
+{
+[case(1)] struct Struct_88_t unionMember_1;
+}union_76;
+typedef struct Struct_104_t
+{
+ short StructMember0;
+[switch_is(StructMember0)] union union_76 StructMember1;
+}Struct_104_t;
+long Proc0_ProxyMgrProviderRegisterForEventNotification(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_ProxyMgrProviderUnregisterEventNotification(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_ProxyMgrProviderGetNotification(
+[in][context_handle] void* arg_2,
+[out][ref]/* enum_16 */ short *arg_3);
+
+long Proc3_ProxyMgrGetProxyEventInformation(
+[in][out]/* simple_ref */struct Struct_104_t* arg_1);
+
+long Proc4_ProxyMgrSetProxyConfiguration(
+);
+
+long Proc5_ProxyMgrSetProxyCredentials(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */[size_is(arg_4)]byte *arg_3,
+[in]long arg_4);
+}
+

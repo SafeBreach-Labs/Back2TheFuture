@@ -1,0 +1,158 @@
+[
+uuid(86d35949-83c9-4044-b424-db363231fd0c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_18_t
+{
+[unique] [string]  wchar_t* StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+long StructMember2;
+}Struct_18_t;
+typedef struct Struct_74_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+}Struct_74_t;
+typedef struct Struct_144_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_144_t;
+typedef struct Struct_246_t
+{
+short StructMember0;
+short StructMember1;
+short StructMember2;
+short StructMember3;
+short StructMember4;
+short StructMember5;
+short StructMember6;
+short StructMember7;
+}Struct_246_t;
+long Proc0__SchRpcHighestVersion(
+[out]/* simple_ref */long *arg_1);
+
+long Proc1_SchRpcRegisterTask(
+[in][unique][string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in][unique][string] wchar_t* arg_4,
+[in]long arg_5,
+[in]long arg_6,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)] /*  */ struct Struct_18_t* arg_7,
+[out][ref][string] wchar_t** arg_8,
+[out][ref]struct Struct_74_t** arg_9);
+
+long Proc2__SchRpcRetrieveTask(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */long *arg_3,
+[out][ref][string] wchar_t** arg_4);
+
+long Proc3_SchRpcCreateFolder(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3);
+
+long Proc4_SchRpcSetSecurity(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3);
+
+long Proc5_SchRpcGetSecurity(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[out][ref][string] wchar_t** arg_3);
+
+long Proc6__SchRpcEnumFolders(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_5)] /*  */ [string] wchar_t*** arg_6);
+
+long Proc7__SchRpcEnumTasks(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_5)] /*  */ [string] wchar_t*** arg_6);
+
+long Proc8_SchRpcEnumInstances(
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_144_t** arg_4);
+
+long Proc9_SchRpcGetInstanceInfo(
+[in]/* simple_ref */struct Struct_144_t* arg_1,
+[out][ref][string] wchar_t** arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][string] wchar_t** arg_4,
+[out][ref][string] wchar_t** arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_6)] /*  */ struct Struct_144_t** arg_7,
+[out]/* simple_ref */long *arg_8);
+
+long Proc10_SchRpcStopInstance(
+[in]/* simple_ref */struct Struct_144_t* arg_1,
+[in]long arg_2);
+
+long Proc11_SchRpcStop(
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc12_SchRpcRun(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ [string] wchar_t** arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][string] wchar_t* arg_6,
+[out]/* simple_ref */struct Struct_144_t* arg_7);
+
+long Proc13_SchRpcDelete(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc14_SchRpcRename(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3);
+
+long Proc15__SchRpcScheduledRuntimes(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique]struct Struct_246_t* arg_2,
+[in][unique]struct Struct_246_t* arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_6)] /*  */ struct Struct_246_t** arg_7);
+
+long Proc16__SchRpcGetLastRunInfo(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */struct Struct_246_t* arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc17__SchRpcGetTaskInfo(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4);
+
+long Proc18_SchRpcGetNumberOfMissedRuns(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc19__SchRpcEnableTask(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+}
+

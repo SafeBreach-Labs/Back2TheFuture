@@ -1,0 +1,61 @@
+[
+uuid(99fcfec4-5260-101b-bbcb-00aa0021347a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_68_t
+{
+short StructMember0;
+short StructMember1;
+[size_is(StructMember0)] /*[range(0,0)] */ short StructMember2[] ;
+}Struct_68_t;
+typedef struct Struct_88_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_88_t;
+typedef struct Struct_174_t
+{
+short StructMember0;
+short StructMember1;
+}Struct_174_t;
+error_status_t Proc0_ResolveOxid(
+[in]/* simple_ref */hyper *arg_1,
+[in][range(0,32768)] short arg_2,
+[in][size_is(arg_2)]/*[range(0,32768)]*/ short arg_3[],
+[out][ref]struct Struct_68_t** arg_4,
+[out]/* simple_ref */struct Struct_88_t* arg_5,
+[out]/* simple_ref */long *arg_6);
+
+error_status_t Proc1_SimplePing(
+[in]/* simple_ref */hyper *arg_1);
+
+error_status_t Proc2_ComplexPing(
+[in][out]/* simple_ref */hyper *arg_1,
+[in]short arg_2,
+[in]short arg_3,
+[in]short arg_4,
+[in][unique][size_is(arg_3)]/*[range(0,0)]*/ hyper *arg_5,
+[in][unique][size_is(arg_4)]/*[range(0,0)]*/ hyper *arg_6,
+[out]/* simple_ref */short *arg_7);
+
+error_status_t Proc3_ServerAlive(
+);
+
+error_status_t Proc4_ResolveOxid2(
+[in]/* simple_ref */hyper *arg_1,
+[in][range(0,32768)] short arg_2,
+[in][size_is(arg_2)]/*[range(0,32768)]*/ short arg_3[],
+[out][ref]struct Struct_68_t** arg_4,
+[out]/* simple_ref */struct Struct_88_t* arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */struct Struct_174_t* arg_7);
+
+error_status_t Proc5_ServerAlive2(
+[out]/* simple_ref */struct Struct_174_t* arg_2,
+[out][ref]struct Struct_68_t** arg_3,
+[out]/* simple_ref */long *arg_4);
+}
+

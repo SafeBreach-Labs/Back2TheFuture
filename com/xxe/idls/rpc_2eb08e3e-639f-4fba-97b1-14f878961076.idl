@@ -1,0 +1,79 @@
+[
+uuid(2eb08e3e-639f-4fba-97b1-14f878961076),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+typedef struct Struct_92_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+long StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+[unique] [string]  wchar_t* StructMember8;
+}Struct_92_t;
+typedef struct Struct_28_t
+{
+struct Struct_16_t StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_28_t;
+error_status_t Proc0_Server_ProcessRefresh(
+[in][unique][string] wchar_t* arg_1,
+[in]small arg_2,
+[in]small arg_3,
+[in]small arg_4,
+[in]long arg_5,
+[out]/* simple_ref */struct Struct_28_t* arg_6);
+
+error_status_t Proc1_Server_RegisterForNotification(
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5);
+
+error_status_t Proc2_Server_CheckRegisterForNotification(
+[in][unique][string] wchar_t* arg_1,
+[in]long arg_2);
+
+error_status_t Proc3_Server_LockPolicySection(
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+error_status_t Proc4_Server_UnLockPolicySection(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+error_status_t Proc5_Server_GetGroupPolicyObjectList(
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]long arg_4,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_6)] /*  */ struct Struct_92_t** arg_5,
+[out]/* simple_ref */long *arg_6);
+
+error_status_t Proc6_Server_GetAppliedGroupPolicyObjectList(
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_6)] /*  */ struct Struct_92_t** arg_5,
+[out]/* simple_ref */long *arg_6);
+
+error_status_t Proc7_Server_GenerateGroupPolicyNotification(
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]long arg_3);
+}
+

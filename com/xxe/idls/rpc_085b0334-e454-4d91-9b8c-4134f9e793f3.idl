@@ -1,0 +1,81 @@
+[
+uuid(085b0334-e454-4d91-9b8c-4134f9e793f3),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_34_t
+{
+ short StructMember0;
+long StructMember1;
+unsigned __int3264 StructMember2;
+unsigned __int3264 StructMember3;
+unsigned __int3264 StructMember4;
+hyper StructMember5;
+}Struct_34_t;
+typedef struct Struct_50_t
+{
+[unique] [string]  wchar_t* StructMember0;
+struct Struct_34_t StructMember1;
+}Struct_50_t;
+long Proc0_PsmSrvOpenManagementChannel(
+[out]/* simple_ref */[context_handle] void** arg_1,
+[out]/* simple_ref */unsigned __int3264 *arg_2);
+
+long Proc1_PsmSrvSetApplicationState(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2);
+
+long Proc2_PsmSrvSetApplicationPriority(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* enum_16 */ short arg_2);
+
+long Proc3_PsmSrvReleaseCacheEntry(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc4_PsmSrvAcquireCachedEntries(
+[in][context_handle] void* arg_0,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_50_t** arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc5_PsmSrvQueryApplicationSwapState(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref]/* enum_16 */ short *arg_2);
+
+long Proc6_PsmSrvCloseActivationChannel(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc7_PsmSrvSetApplicationProperties(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][unique]long *arg_3,
+[in][unique]hyper *arg_4,
+[in][unique]hyper *arg_5,
+[in][unique]/* enum_16 */ short *arg_6);
+
+long Proc8_PsmSrvQueryApplicationProperties(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out][unique]long *arg_3,
+[in][out][unique]hyper *arg_4,
+[in][out][unique]hyper *arg_5,
+[in][out][unique]/* enum_16 */ short *arg_6);
+
+long Proc9_PsmSrvQueryMaxMemoryUsage(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */hyper *arg_3);
+
+long Proc10_PsmSrvQueryApplicationCpuUsage(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][out]/* simple_ref */hyper *arg_2,
+[in][out]/* simple_ref */hyper *arg_3);
+}
+

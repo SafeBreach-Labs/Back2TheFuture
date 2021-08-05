@@ -1,0 +1,43 @@
+[
+uuid(a0bc4698-b8d7-4330-a28f-7709e18b6108),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_6_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+long StructMember5;
+long StructMember6;
+long StructMember7;
+}Struct_6_t;
+typedef struct Struct_56_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_56_t;
+typedef struct Struct_68_t
+{
+long StructMember0;
+[unique] [string]  wchar_t* StructMember1;
+ short StructMember2;
+ short StructMember3;
+}Struct_68_t;
+typedef struct Struct_36_t
+{
+long StructMember0;
+struct Struct_6_t StructMember1;
+}Struct_36_t;
+error_status_t Proc0_RPC_SensNotifyWinlogonEvent(
+[in]/* simple_ref */struct Struct_36_t* arg_1);
+
+error_status_t Proc1_RPC_SensNotifyRasEvent(
+[in]/* simple_ref */struct Struct_56_t* arg_1);
+
+error_status_t Proc2_RPC_SensNotifyNetconEvent(
+[in]/* simple_ref */struct Struct_68_t* arg_1);
+}
+

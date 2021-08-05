@@ -1,0 +1,12 @@
+[
+uuid(9d420415-b8fb-4f4a-8c53-4502ead30ca9),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_I_PlaySoundkPostMessage(
+[in]long arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5);
+}
+

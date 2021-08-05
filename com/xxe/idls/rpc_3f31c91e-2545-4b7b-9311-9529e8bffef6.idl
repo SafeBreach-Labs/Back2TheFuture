@@ -1,0 +1,404 @@
+[
+uuid(3f31c91e-2545-4b7b-9311-9529e8bffef6),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_110_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_110_t;
+typedef struct Struct_232_t
+{
+char StructMember0[16] ;
+}Struct_232_t;
+typedef struct Struct_444_t
+{
+long StructMember0;
+ short StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+hyper StructMember4;
+long StructMember5;
+}Struct_444_t;
+typedef struct Struct_472_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+}Struct_472_t;
+typedef struct Struct_508_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+}Struct_508_t;
+typedef struct Struct_548_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+}Struct_548_t;
+typedef struct Struct_730_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+}Struct_730_t;
+typedef struct Struct_764_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] byte *StructMember1;
+long StructMember2;
+}Struct_764_t;
+typedef struct Struct_24_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+[unique] [string]  wchar_t* StructMember11;
+struct Struct_12_t StructMember12;
+}Struct_24_t;
+typedef struct Struct_160_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+long StructMember8;
+long StructMember9;
+long StructMember10;
+[unique] [string]  wchar_t* StructMember11;
+struct Struct_12_t StructMember12;
+}Struct_160_t;
+typedef struct Struct_242_t
+{
+short StructMember0;
+short StructMember1;
+long StructMember2;
+struct Struct_232_t StructMember3;
+long StructMember4;
+}Struct_242_t;
+typedef struct Struct_256_t
+{
+long StructMember0;
+struct Struct_242_t StructMember1;
+}Struct_256_t;
+typedef struct Struct_294_t
+{
+ short StructMember0;
+[unique] struct Struct_12_t* StructMember1;
+}Struct_294_t;
+typedef struct Struct_424_t
+{
+long StructMember0;
+ short StructMember1;
+struct Struct_12_t StructMember2;
+struct Struct_12_t StructMember3;
+}Struct_424_t;
+typedef struct Struct_746_t
+{
+[unique] [string]  char* StructMember0;
+struct Struct_730_t StructMember1;
+}Struct_746_t;
+typedef struct Struct_932_t
+{
+long StructMember0;
+long StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+struct Struct_256_t StructMember5;
+}Struct_932_t;
+typedef struct Struct_488_t
+{
+long StructMember0;
+hyper StructMember1;
+struct Struct_12_t StructMember2;
+struct Struct_472_t StructMember3;
+}Struct_488_t;
+typedef struct Struct_782_t
+{
+struct Struct_746_t StructMember0;
+struct Struct_764_t StructMember1;
+}Struct_782_t;
+typedef struct Struct_564_t
+{
+long StructMember0;
+struct Struct_12_t StructMember1;
+struct Struct_12_t StructMember2;
+long StructMember3;
+long StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+struct Struct_110_t StructMember8;
+struct Struct_110_t StructMember9;
+struct Struct_110_t StructMember10;
+struct Struct_548_t StructMember11;
+struct Struct_548_t StructMember12;
+}Struct_564_t;
+typedef struct Struct_624_t
+{
+long StructMember0;
+struct Struct_12_t StructMember1;
+struct Struct_12_t StructMember2;
+long StructMember3;
+long StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+[unique] [string]  wchar_t* StructMember7;
+struct Struct_110_t StructMember8;
+struct Struct_110_t StructMember9;
+struct Struct_110_t StructMember10;
+struct Struct_472_t StructMember11;
+struct Struct_472_t StructMember12;
+}Struct_624_t;
+typedef struct Struct_822_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] struct Struct_782_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+struct Struct_110_t StructMember6;
+struct Struct_110_t StructMember7;
+long StructMember8;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember8)]  /*  */ struct Struct_12_t* StructMember9;
+}Struct_822_t;
+typedef [switch_type(/* enum_16 */ short )] union union_370
+{
+[case(1)] /* enum_16 */ short unionMember_1;
+[case(2)] /* FC_ZERO */;
+[case(3)] struct Struct_424_t unionMember_3;
+[case(5)] struct Struct_444_t unionMember_5;
+[case(4)] struct Struct_444_t unionMember_4;
+[case(6)] struct Struct_488_t unionMember_6;
+[case(8)] struct Struct_508_t unionMember_8;
+[case(10)] long unionMember_10;
+[default] ;
+}union_370;
+typedef struct Struct_524_t
+{
+ short StructMember0;
+[switch_is(StructMember0)] union union_370 StructMember1;
+}Struct_524_t;
+typedef struct Struct_868_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+hyper StructMember4;
+long StructMember5;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember5)]  /*  */ struct Struct_256_t* StructMember6;
+[unique] struct Struct_822_t* StructMember7;
+}Struct_868_t;
+long Proc0_PeerGroupCreateRpc(
+[in]/* simple_ref */struct Struct_24_t* arg_0,
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_PeerGroupOpenRpc(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc2_PeerGroupJoinRpc(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc3_PeerGroupPasswordJoinRpc(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc4_PeerGroupConnectRpc(
+[in][context_handle] void* arg_0);
+
+long Proc5_PeerGroupCloseRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc6_PeerGroupDeleteRpc(
+[in]/* simple_ref */[string] wchar_t* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc7_PeerGroupCreateInvitationRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique]struct Struct_110_t* arg_2,
+[in]long arg_3,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_3)] /*  */ struct Struct_12_t* arg_4,
+[out][ref][string] wchar_t** arg_5);
+
+long Proc8_PeerGroupCreatePasswordInvitationRpc(
+[in][context_handle] void* arg_0,
+[out][ref][string] wchar_t** arg_1);
+
+long Proc9_PeerGroupGetStatusRpc(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc10_PeerGroupGetPropertiesRpc(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_160_t** arg_1);
+
+long Proc11_PeerGroupSetPropertiesRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_24_t* arg_1);
+
+long Proc12_PeerGroupEnumConnectionsRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc13_PeerGroupEnumMembersRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc14_PeerGroupOpenDirectConnectionRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */struct Struct_256_t* arg_2,
+[out]/* simple_ref */hyper *arg_3);
+
+long Proc15_PeerGroupCloseDirectConnectionRpc(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1);
+
+long Proc16_PeerGroupSendDataRpc(
+[in][context_handle] void* arg_0,
+[in]hyper arg_1,
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]byte *arg_4);
+
+long Proc17_PeerGroupRegisterEventRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]long arg_3,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_3)] /*  */ struct Struct_294_t* arg_4,
+[out]/* simple_ref */[context_handle] void** arg_5);
+
+long Proc18_PeerGroupUnregisterEventRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc19_PeerGroupGetEventDataRpc(
+[in][context_handle] void* arg_0,
+[out][ref]struct Struct_524_t** arg_1);
+
+long Proc20_PeerGroupGetRecordRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out][ref]struct Struct_564_t** arg_2);
+
+long Proc21_PeerGroupAddRecordRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_624_t* arg_1,
+[out]/* simple_ref */struct Struct_12_t* arg_2);
+
+long Proc22_PeerGroupUpdateRecordRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_624_t* arg_1);
+
+long Proc23_PeerGroupDeleteRecordRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+long Proc24_PeerGroupEnumRecordsRpc(
+[in][context_handle] void* arg_0,
+[in][unique]struct Struct_12_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc25_PeerGroupSearchRecordsRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc26_PeerGroupExportDatabaseRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc27_PeerGroupImportDatabaseRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1);
+
+long Proc28_PeerGroupUniversalTimeToPeerTimeRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_110_t* arg_1,
+[out]/* simple_ref */struct Struct_110_t* arg_2);
+
+long Proc29_PeerGroupPeerTimeToUniversalTimeRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_110_t* arg_1,
+[out]/* simple_ref */struct Struct_110_t* arg_2);
+
+long Proc30_PeerGetItemCountRpc(
+[in][context_handle] void* arg_0,
+[out]/* simple_ref */long *arg_1);
+
+long Proc31_PeerGetNextMemberInfoItemRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_868_t*** arg_3);
+
+long Proc32_PeerGetNextConnectionInfoItemRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_932_t*** arg_3);
+
+long Proc33_PeerGetNextRecordItemRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_564_t*** arg_3);
+
+long Proc34_PeerEndEnumerationRpc(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc35_PeerGroupIssueCredentialsRpc(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][unique]struct Struct_822_t* arg_2,
+[in]long arg_3,
+[in][out][unique][string] wchar_t** arg_4);
+
+long Proc36_PeerGroupConnectByAddressRpc(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)] /*  */ struct Struct_256_t* arg_2);
+
+long Proc37_PeerGroupResumePasswordAuthenticationRpc(
+[in][context_handle] void* arg_0,
+[in][context_handle] void* arg_1);
+
+long Proc38_PeerGroupHandlePowerEventRpc(
+[in]long arg_0);
+}
+

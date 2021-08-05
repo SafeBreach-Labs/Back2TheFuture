@@ -1,0 +1,65 @@
+[
+uuid(b12fd546-c875-4b41-97d8-950487662202),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_138_t
+{
+wchar_t StructMember0[256] ;
+wchar_t StructMember1[256] ;
+wchar_t StructMember2[256] ;
+wchar_t StructMember3[256] ;
+wchar_t StructMember4[256] ;
+wchar_t StructMember5[256] ;
+long StructMember6;
+long StructMember7;
+long StructMember8;
+}Struct_138_t;
+long Proc0_RpcCreateUserVhdTemplate(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2);
+
+long Proc1_RpcGetCreateUserProfileVhd(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][range(0,261)] long arg_3,
+[out]/* simple_ref */[string][size_is(arg_3)]/*[range(0,261)]*/  wchar_t* arg_4);
+
+long Proc2_RpcDestroyUserProfileVhd(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc3_RpcRepairUserProfileVhd(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc4_RpcReEncryptUserCredential(
+[in]long arg_1,
+[in]/* simple_ref */[size_is(arg_1)]/*[range(0,0)]*/ byte *arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[size_is(arg_4)]/*[range(0,0)]*/ byte *arg_5,
+[in]/* simple_ref */[string] wchar_t* arg_6,
+[out][ref][string] wchar_t** arg_7);
+
+long Proc5_RpcDeleteFileFromVHD(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc6_RpcSetupVhdForRdv(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]/* simple_ref */[size_is(arg_6)]/*[range(0,0)]*/ byte *arg_5,
+[in]long arg_6);
+
+long Proc7_RpcCopyRdvFolderFromVhdToHost(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2);
+
+long Proc8_RpcQueryVhdOfflineInformation(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref]struct Struct_138_t** arg_2);
+}
+

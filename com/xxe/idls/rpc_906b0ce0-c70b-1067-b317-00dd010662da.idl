@@ -1,0 +1,84 @@
+[
+uuid(906b0ce0-c70b-1067-b317-00dd010662da),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_80_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+long StructMember4;
+long StructMember5;
+}Struct_80_t;
+typedef struct Struct_166_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+}Struct_166_t;
+long Proc0_Poke(
+[in]/* enum_16 */ short arg_1,
+[in][range(37,37)] [string] char arg_2,
+[in][range(1,16)] [string] char arg_3,
+[in][range(37,37)] [string] char arg_4,
+[in][range(8,8)] long arg_5,
+[in][size_is(arg_5)]/*[range(8,8)]*/ char arg_6[]);
+
+long Proc1_BuildContext(
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */struct Struct_80_t* arg_2,
+[in][range(37,37)] [string] char arg_3,
+[in][range(1,16)] [string] char arg_4,
+[in][range(37,37)] [string] char arg_5,
+[in][range(37,37)] [string] char arg_6,
+[in][out][range(37,37)] [string] char arg_7,
+[in][out]/* simple_ref */struct Struct_166_t* arg_8,
+[in][range(8,8)] long arg_9,
+[in][size_is(arg_9)]/*[range(8,8)]*/ char arg_10[],
+[out]/* simple_ref */[context_handle] void** arg_11);
+
+long Proc2_NegotiateResources(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+long Proc3_SendReceive(
+[in][context_handle] void* arg_0,
+[in][range(1,3412)] long arg_1,
+[in][range(40,81920)] long arg_2,
+[in][size_is(arg_2)]/*[range(40,81920)]*/ char arg_3[]);
+
+long Proc4_TearDownContext(
+[in][out]/* simple_ref */[context_handle] void** arg_0,
+[in]/* enum_16 */ short arg_1,
+[in]/* enum_16 */ short arg_2);
+
+long Proc5_BeginTearDown(
+[in][context_handle] void* arg_0,
+[in]/* enum_16 */ short arg_1);
+
+long Proc6_PokeW(
+[in]/* enum_16 */ short arg_1,
+[in][range(37,37)] [string] wchar_t arg_2,
+[in][range(1,16)] [string] wchar_t arg_3,
+[in][range(37,37)] [string] wchar_t arg_4,
+[in][range(8,8)] long arg_5,
+[in][size_is(arg_5)]/*[range(8,8)]*/ char arg_6[]);
+
+long Proc7_BuildContextW(
+[in]/* enum_16 */ short arg_1,
+[in]/* simple_ref */struct Struct_80_t* arg_2,
+[in][range(37,37)] [string] wchar_t arg_3,
+[in][range(1,16)] [string] wchar_t arg_4,
+[in][range(37,37)] [string] wchar_t arg_5,
+[in][range(37,37)] [string] wchar_t arg_6,
+[in][out][range(37,37)] [string] wchar_t arg_7,
+[in][out]/* simple_ref */struct Struct_166_t* arg_8,
+[in][range(8,8)] long arg_9,
+[in][size_is(arg_9)]/*[range(8,8)]*/ char arg_10[],
+[out]/* simple_ref */[context_handle] void** arg_11);
+}
+

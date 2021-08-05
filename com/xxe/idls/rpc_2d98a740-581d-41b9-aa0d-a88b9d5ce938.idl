@@ -1,0 +1,164 @@
+[
+uuid(2d98a740-581d-41b9-aa0d-a88b9d5ce938),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+typedef struct Struct_122_t
+{
+long StructMember0[2] ;
+}Struct_122_t;
+typedef struct Struct_442_t
+{
+char StructMember0[6] ;
+}Struct_442_t;
+typedef struct Struct_136_t
+{
+[unique] struct Struct_12_t* StructMember0;
+small StructMember1;
+}Struct_136_t;
+typedef struct Struct_418_t
+{
+struct Struct_122_t StructMember0[12] ;
+}Struct_418_t;
+typedef struct Struct_464_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_442_t StructMember2;
+[size_is(StructMember1)] long StructMember3[] ;
+}Struct_464_t;
+error_status_t Proc0_RBiSrvActivateDeferredWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc1_RBiSrvActivateInBackground(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in]/* simple_ref */[size_is(arg_5)]byte *arg_4,
+[in]long arg_5,
+[in]/* simple_ref */[size_is(arg_7)]wchar_t *arg_6,
+[in]long arg_7,
+[in]/* simple_ref */[size_is(arg_9)]wchar_t *arg_8,
+[in]long arg_9,
+[in]long arg_10,
+[in]long arg_11,
+[in][unique]struct Struct_12_t* arg_12,
+[in][unique][size_is(arg_14)]byte *arg_13,
+[in]long arg_14);
+
+error_status_t Proc2_RBiSrvActivateWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc3_RBiSrvAssociateActivationProxy(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */struct Struct_122_t* arg_2,
+[in]/* simple_ref */struct Struct_12_t* arg_3,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_5)] /*  */ struct Struct_136_t* arg_4,
+[in]long arg_5,
+[in]long arg_6,
+[in][unique][size_is(arg_8)]wchar_t *arg_7,
+[in]long arg_8);
+
+error_status_t Proc4_RBiSrvAssociateApplicationExtensionClass(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */[size_is(arg_3)]wchar_t *arg_2,
+[in]long arg_3,
+[in]/* simple_ref */struct Struct_12_t* arg_4,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_6)] /*  */ struct Struct_136_t* arg_5,
+[in]long arg_6,
+[in]long arg_7,
+[in][unique][size_is(arg_9)]wchar_t *arg_8,
+[in]long arg_9);
+
+error_status_t Proc5_RBiSrvCancelWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc6_RBiSrvCreateEventForPackageName(
+[out]/* simple_ref */struct Struct_12_t* arg_1,
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in][unique][size_is(arg_4)]wchar_t *arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6,
+[in]long arg_7,
+[in][unique][size_is(arg_9)]byte *arg_8,
+[in]long arg_9);
+
+error_status_t Proc7_RBiSrvDeleteEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc8_RBiSrvDisassociateWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in]small arg_2);
+
+error_status_t Proc9_RBiSrvDiscardPendingActivations(
+[in]/* simple_ref */struct Struct_12_t* arg_1);
+
+error_status_t Proc10_RBiSrvEnumerateBrokeredEvents(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)] /*  */ struct Struct_12_t** arg_3);
+
+error_status_t Proc11_RBiSrvEnumerateUserSessions(
+[out]/* simple_ref */long *arg_1,
+[out][ref][size_is(, *arg_1)]long **arg_2);
+
+error_status_t Proc12_RBiSrvEnumerateWorkItemsForPackageName(
+[in][unique][size_is(arg_2)]wchar_t *arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_4)]byte *arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[out]/* simple_ref */long *arg_6,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_6)] /*  */ struct Struct_12_t** arg_7);
+
+error_status_t Proc13_RBiSrvQueryBrokeredEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]byte **arg_3);
+
+error_status_t Proc14_RBiSrvQuerySystemStateBroadcastChannels(
+[out]/* simple_ref */struct Struct_418_t* arg_1);
+
+error_status_t Proc15_RBiSrvQueryWorkItem(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]byte **arg_3);
+
+error_status_t Proc16_RBiSrvQueryUserSession(
+[in]long arg_1,
+[out][ref]struct Struct_464_t** arg_2);
+
+error_status_t Proc17_RBiSrvSignalEvent(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in][unique]small *arg_2,
+[in][unique]struct Struct_12_t* arg_3,
+[in][unique][size_is(arg_5)]byte *arg_4,
+[in]long arg_5);
+
+error_status_t Proc18_RBiSrvSignalMultipleEvents(
+[in]/* simple_ref */ /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ struct Struct_12_t** arg_1,
+[in]long arg_2,
+[in][unique]small *arg_3,
+[in][unique]struct Struct_12_t* arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6);
+
+error_status_t Proc19_RBiSrvUpdateEventFlags(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in]long arg_2,
+[in]long arg_3);
+
+error_status_t Proc20_RBiSrvUpdateEventInformation(
+[in]/* simple_ref */struct Struct_12_t* arg_1,
+[in][unique][size_is(arg_3)]byte *arg_2,
+[in]long arg_3);
+}
+

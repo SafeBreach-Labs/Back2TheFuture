@@ -1,0 +1,24 @@
+[
+uuid(fd7a0523-dc70-43dd-9b2e-9c5ed48225b1),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RAiGetTokenForMSI(
+[in]unsigned __int3264 arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in]long arg_6,
+[in]/* simple_ref */[string] wchar_t* arg_7,
+[in]/* simple_ref */[string] wchar_t* arg_8,
+[in]/* simple_ref */[string] wchar_t* arg_9,
+[in]/* simple_ref */[string] wchar_t* arg_10,
+[in]/* simple_ref */[string] wchar_t* arg_11,
+[in]/* simple_ref */[string] wchar_t* arg_12,
+[in]long arg_13,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_13)] /*  */ [string] wchar_t** arg_14,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_13)] /*  */ [string] wchar_t** arg_15,
+[in]long arg_16,
+[out]/* simple_ref */unsigned __int3264 *arg_17);
+}
+

@@ -1,0 +1,45 @@
+[
+uuid(aa411582-9bdf-48fb-b42b-faa1eee33949),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+typedef struct Struct_60_t
+{
+ short StructMember0;
+ short StructMember1;
+long StructMember2;
+long StructMember3;
+[size_is(StructMember2)] char StructMember4[] ;
+}Struct_60_t;
+typedef struct Struct_96_t
+{
+short StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] [length_is( arg_0)]  /*  */ struct Struct_60_t** StructMember1;
+}Struct_96_t;
+typedef struct Struct_134_t
+{
+short StructMember0;
+short StructMember1;
+short StructMember2;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] [length_is( arg_0)]  /*  */ struct Struct_96_t* StructMember3;
+}Struct_134_t;
+long Proc0_PMuxRpcPluginRegister(
+[in][unique][string] wchar_t* arg_0,
+[in]/* simple_ref */struct Struct_16_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+void Proc1_PMuxRpcPluginUnregister(
+[in][context_handle] void* arg_0);
+
+void Proc2_PMuxRpcPluginDataIndicate(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_134_t* arg_1);
+}
+

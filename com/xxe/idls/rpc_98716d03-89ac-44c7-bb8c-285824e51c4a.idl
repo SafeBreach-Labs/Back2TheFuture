@@ -1,0 +1,64 @@
+[
+uuid(98716d03-89ac-44c7-bb8c-285824e51c4a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_24_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_24_t;
+typedef struct Struct_196_t
+{
+long StructMember0;
+long StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1)] [length_is(StructMember1)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+long StructMember3;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember3)] [length_is(StructMember3)] char *StructMember4/*[]  CONFORMANT_ARRAY*/;
+long StructMember5;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember5)] [length_is(StructMember5)] wchar_t *StructMember6/*[]  CONFORMANT_ARRAY*/;
+long StructMember7;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember7)] [length_is(StructMember7)] char *StructMember8/*[]  CONFORMANT_ARRAY*/;
+long StructMember9;
+long StructMember10;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember10)] [length_is(StructMember10)] char *StructMember11/*[]  CONFORMANT_ARRAY*/;
+long StructMember12;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember12)] [length_is(StructMember12)] char *StructMember13/*[]  CONFORMANT_ARRAY*/;
+long StructMember14;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember14)] [length_is(StructMember14)] char *StructMember15/*[]  CONFORMANT_ARRAY*/;
+long StructMember16;
+long StructMember17;
+long StructMember18;
+}Struct_196_t;
+void Proc0_XsOpenPrinter(
+[in]/* simple_ref */struct Struct_24_t* arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3,
+[in][out]/* simple_ref */long *arg_4);
+
+void Proc1_XsClosePrinter(
+[in][out]/* simple_ref */[context_handle] void** arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+void Proc2_XsAddJob(
+[in][context_handle] void* arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[in][out]/* simple_ref */struct Struct_24_t* arg_4,
+[in][out]/* simple_ref */long *arg_5,
+[in][out]/* simple_ref */long *arg_6);
+
+void Proc3_XsScheduleJob(
+[in][context_handle] void* arg_2,
+[in]long arg_3,
+[in][out]/* simple_ref */long *arg_4);
+
+void Proc4_XsProcessPnp(
+[in]small arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[in][out]/* simple_ref */long *arg_4);
+
+void Proc5_XsProcDownLevelAPI(
+[in][out]/* simple_ref */struct Struct_196_t* arg_2,
+[in][out]/* simple_ref */long *arg_3);
+}
+

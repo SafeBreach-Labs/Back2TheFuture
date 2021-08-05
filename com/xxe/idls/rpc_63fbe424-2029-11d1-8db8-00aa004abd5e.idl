@@ -1,0 +1,30 @@
+[
+uuid(63fbe424-2029-11d1-8db8-00aa004abd5e),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_14_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_14_t;
+error_status_t Proc0_RPC_IsNetworkAlive(
+[out]/* simple_ref */long *arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */long *arg_3);
+
+error_status_t Proc1_RPC_IsDestinationReachableA(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][out][unique]struct Struct_14_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4);
+
+error_status_t Proc2_RPC_IsDestinationReachableA(
+[in]/* simple_ref */[string] char* arg_1,
+[in][out][unique]struct Struct_14_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4);
+}
+

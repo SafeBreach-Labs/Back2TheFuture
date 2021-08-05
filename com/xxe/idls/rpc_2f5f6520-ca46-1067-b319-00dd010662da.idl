@@ -1,0 +1,22 @@
+[
+uuid(2f5f6520-ca46-1067-b319-00dd010662da),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_ClientAttach(
+[out]/* simple_ref */[context_handle] void** arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4);
+
+void Proc1_ClientRequest(
+[in][context_handle] void* arg_0,
+[in][out]/* simple_ref */ /* [DBG] FC_CVARRAY */[size_is(arg_2)][length_is(, *arg_3)]char *arg_1/*[] CONFORMANT_ARRAY*/,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+void Proc2_ClientDetach(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

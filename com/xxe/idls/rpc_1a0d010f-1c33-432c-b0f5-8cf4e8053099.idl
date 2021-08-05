@@ -1,0 +1,16 @@
+[
+uuid(1a0d010f-1c33-432c-b0f5-8cf4e8053099),
+version(1.0),
+]
+interface DefaultIfName
+{void Proc0_IdSegRequestNextSequence(
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4);
+
+void Proc1_IdSegRequestNodeInvalidation(
+[in][out]/* simple_ref */[size_is(arg_3)]byte *arg_2,
+[in][range(660,2840)] long arg_3,
+[out]/* simple_ref */long *arg_4);
+}
+

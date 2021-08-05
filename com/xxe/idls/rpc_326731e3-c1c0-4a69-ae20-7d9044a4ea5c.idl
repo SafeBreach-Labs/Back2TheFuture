@@ -1,0 +1,48 @@
+[
+uuid(326731e3-c1c0-4a69-ae20-7d9044a4ea5c),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_6_t
+{
+long StructMember0;
+long StructMember1;
+[unique] [string]  wchar_t* StructMember2;
+[unique] [string]  wchar_t* StructMember3;
+[unique] [string]  wchar_t* StructMember4;
+[unique] [string]  wchar_t* StructMember5;
+[unique] [string]  wchar_t* StructMember6;
+unsigned __int3264 StructMember7;
+}Struct_6_t;
+long Proc0_DropClientContext(
+[in][unique]struct Struct_6_t* arg_1,
+[out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc1_ReleaseClientContext(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc2_LoadUserProfileServer(
+[in][context_handle] void* arg_1);
+
+long Proc3_UnloadUserProfileServer(
+[in][context_handle] void* arg_1);
+
+long Proc4_DeleteProfileServer(
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2);
+
+long Proc5_RemapProfileServer(
+[in]long arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3);
+
+long Proc6_CreateProfileServer(
+[in][unique][string] wchar_t* arg_1,
+[in][unique][string] wchar_t* arg_2,
+[out]/* simple_ref */[size_is(arg_4)]/*[range(0,260)]*/ wchar_t *arg_3,
+[in][range(0,260)] long arg_4);
+
+long Proc7_ProcessWmiSettingsServer(
+);
+}
+

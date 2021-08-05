@@ -1,0 +1,1 @@
+c:\python37\python.exe createIdlProject.py -m "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" -s . -e endpoint_mapping.txt -i "idls" -o idl_projects5 -r "one_idl_unordered_ALL.txt"

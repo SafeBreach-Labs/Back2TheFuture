@@ -1,0 +1,27 @@
+[
+uuid(5cbe92cb-f4be-45c9-9fc9-33e73e557b20),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_s_SSRecoverQueryStatus(
+[in][unique][size_is(arg_2)]byte *arg_1,
+[in]long arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc1_s_SSRecoverImportRecoveryKey(
+[in][unique][size_is(arg_2)]byte *arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_4)]byte *arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6);
+
+long Proc2_s_SSRecoverPassword(
+[in][unique][size_is(arg_2)]byte *arg_1,
+[in]long arg_2,
+[in][unique][size_is(arg_4)]byte *arg_3,
+[in]long arg_4,
+[in][unique][size_is(arg_6)]byte *arg_5,
+[in]long arg_6);
+}
+

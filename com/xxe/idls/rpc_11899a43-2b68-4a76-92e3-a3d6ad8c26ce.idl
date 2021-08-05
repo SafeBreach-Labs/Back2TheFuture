@@ -1,0 +1,29 @@
+[
+uuid(11899a43-2b68-4a76-92e3-a3d6ad8c26ce),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_310_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_310_t;
+long Proc0_RpcWaitForSessionState(
+[in]long arg_1,
+[in]long arg_2,
+[in]long arg_3);
+
+long Proc1_RpcRegisterAsyncNotification(
+[in]long arg_1,
+[in]long arg_2,
+[out]/* simple_ref */[context_handle] void** arg_3);
+
+long Proc2_RpcWaitAsyncNotification(
+[in][context_handle] void* arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_3)] /*  */ struct Struct_310_t** arg_2,
+[out]/* simple_ref */long *arg_3);
+
+long Proc3_RpcUnRegisterAsyncNotification(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+}
+

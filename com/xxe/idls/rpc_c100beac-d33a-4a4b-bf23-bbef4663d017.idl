@@ -1,0 +1,37 @@
+[
+uuid(c100beac-d33a-4a4b-bf23-bbef4663d017),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_12_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_12_t;
+long Proc0_WcnSinkOpenHandle(
+[in]long arg_1,
+[in]/* simple_ref */struct Struct_12_t* arg_2,
+[in][range(0,2048)] long arg_3,
+[in][range(0,2048)] long arg_4,
+[in][unique][size_is(arg_4)]/*[range(0,2048)]*/ byte *arg_5,
+[out]/* simple_ref */[context_handle] void** arg_6);
+
+void Proc1_WcnSinkCloseHandle(
+[in]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_WcnSinkDeliverMessage(
+[in][context_handle] void* arg_0,
+[in][range(0,2048)] long arg_1,
+[in][size_is(arg_1)]/*[range(0,2048)]*/ byte arg_2[],
+[in]/* simple_ref */struct Struct_12_t* arg_3);
+
+long Proc3_WcnSinkAsyncGetNextAction(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */ /* enum_32 : typedef [v1_enum] enum  */ long *arg_2,
+[out]/* simple_ref */long *arg_3,
+[out][ref][size_is(, *arg_3)]/*[range(0,0)]*/ byte **arg_4,
+[out]/* simple_ref */struct Struct_12_t* arg_5);
+}
+

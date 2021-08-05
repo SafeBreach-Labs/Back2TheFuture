@@ -1,0 +1,198 @@
+[
+uuid(412f241e-c12a-11ce-abff-0020af6e7a17),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+typedef struct Struct_112_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(0,0)] */ long StructMember1[] ;
+}Struct_112_t;
+typedef struct Struct_198_t
+{
+short StructMember0;
+short StructMember1;
+}Struct_198_t;
+typedef struct Struct_228_t
+{
+short StructMember0;
+short StructMember1;
+[size_is(StructMember0)] /*[range(0,0)] */ short StructMember2[] ;
+}Struct_228_t;
+typedef struct Struct_28_t
+{
+struct Struct_16_t StructMember0;
+hyper StructMember1;
+struct Struct_16_t StructMember2;
+long StructMember3;
+long StructMember4;
+}Struct_28_t;
+typedef struct Struct_70_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(1,65536)] */ struct Struct_28_t StructMember1[] ;
+}Struct_70_t;
+typedef struct Struct_128_t
+{
+struct Struct_16_t StructMember0;
+long StructMember1;
+}Struct_128_t;
+typedef struct Struct_164_t
+{
+long StructMember0;
+[size_is(StructMember0)] /*[range(1,65536)] */ struct Struct_128_t StructMember1[] ;
+}Struct_164_t;
+typedef struct Struct_180_t
+{
+long StructMember0;
+long StructMember1;
+hyper StructMember2;
+hyper StructMember3;
+struct Struct_16_t StructMember4;
+}Struct_180_t;
+typedef struct Struct_238_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+struct Struct_198_t StructMember3;
+struct Struct_16_t StructMember4;
+long StructMember5;
+[unique] struct Struct_228_t* StructMember6;
+struct Struct_16_t StructMember7;
+}Struct_238_t;
+long Proc0_ServerRegisterClsid(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_70_t* arg_2,
+[out][ref]struct Struct_112_t** arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+void Proc1_ServerRevokeClsid(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_164_t* arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+void Proc2_GetThreadID(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+void Proc3_UpdateActivationSettings(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc4_RegisterWindowPropInterface(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in]/* simple_ref */struct Struct_180_t* arg_3,
+[in]/* simple_ref */struct Struct_238_t* arg_4,
+[in]long arg_5,
+[out]/* simple_ref */unsigned __int3264 *arg_6,
+[out]/* simple_ref */error_status_t *arg_7);
+
+long Proc5_GetWindowPropInterface(
+[in][context_handle] void* arg_1,
+[in]unsigned __int3264 arg_2,
+[in]unsigned __int3264 arg_3,
+[in]long arg_4,
+[out]/* simple_ref */struct Struct_180_t* arg_5,
+[out]/* simple_ref */struct Struct_238_t* arg_6,
+[out]/* simple_ref */error_status_t *arg_7);
+
+long Proc6_EnableDisableDynamicIPTracking(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc7_GetCurrentAddrExclusionList(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ [string] wchar_t*** arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc8_SetAddrExclusionList(
+[in][context_handle] void* arg_1,
+[in][range(0,16384)] long arg_2,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)]/*[range(0,16384)]*/  /*  */ [string] wchar_t** arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc9_FlushSCMBindings(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc10_RetireServer(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_16_t* arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc11_NotifyDDStartOrStop(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc12_QueryDragDropActive(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc13_SetOrRevokeForcedDropTarget(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[in]unsigned __int3264 arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc14_IsObjectCreationAllowed(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_16_t* arg_2,
+[in]long arg_3,
+[in]long arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */long *arg_6,
+[out]/* simple_ref */long *arg_7,
+[out]/* simple_ref */error_status_t *arg_8);
+
+long Proc15_ControlTracingForProcess(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+
+long Proc16_QueryPIDForActivation(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_16_t* arg_2,
+[in]long arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */error_status_t *arg_5);
+
+long Proc17_NotifyWinRTActivationStoreChanged(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc18_DecodeProxy(
+[in][context_handle] void* arg_1,
+[in]long arg_2,
+[in]hyper arg_3,
+[out]/* simple_ref */long *arg_4,
+[out]/* simple_ref */long *arg_5,
+[out]/* simple_ref */hyper *arg_6,
+[out]/* simple_ref */error_status_t *arg_7);
+
+long Proc19_NotifyPsmResume(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc20_QueryServerProcessHandleHeld(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_16_t* arg_2,
+[out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */error_status_t *arg_4);
+}
+

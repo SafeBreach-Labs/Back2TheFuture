@@ -1,0 +1,30 @@
+[
+uuid(ace1c026-8b3f-4711-8918-f345d17f5bff),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_28_t
+{
+long StructMember0;
+[ref] [size_is(StructMember0)] /*[range(1,32767)] */ wchar_t *StructMember1;
+}Struct_28_t;
+typedef struct Struct_70_t
+{
+long StructMember0;
+[unique] [size_is(StructMember0)] /*[range(0,65535)] */ char *StructMember1;
+}Struct_70_t;
+long Proc0_S_RPC_LspUpdatePrivateData(
+[in]/* simple_ref */struct Struct_28_t* arg_1,
+[in]long arg_2,
+[in]/* simple_ref */struct Struct_70_t* arg_3,
+[in]/* simple_ref */struct Struct_70_t* arg_4);
+
+long Proc1_S_RPC_LspReadPrivateData(
+[in]/* simple_ref */struct Struct_28_t* arg_1,
+[in]long arg_2,
+[out]/* simple_ref */struct Struct_70_t* arg_3,
+[out]/* simple_ref */hyper *arg_4,
+[out]/* simple_ref */struct Struct_70_t* arg_5,
+[out]/* simple_ref */hyper *arg_6);
+}
+

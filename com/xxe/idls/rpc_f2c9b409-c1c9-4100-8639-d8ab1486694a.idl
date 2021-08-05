@@ -1,0 +1,38 @@
+[
+uuid(f2c9b409-c1c9-4100-8639-d8ab1486694a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_24_t
+{
+short StructMember0;
+short StructMember1;
+[unique]  /* [DBG]  FC_CVARRAY */[size_is(StructMember1/2)] [length_is(StructMember0/2)] wchar_t *StructMember2/*[]  CONFORMANT_ARRAY*/;
+}Struct_24_t;
+typedef struct Struct_52_t
+{
+short StructMember0;
+long StructMember1;
+char StructMember2[16] ;
+}Struct_52_t;
+typedef struct Struct_78_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+char StructMember3[8] ;
+}Struct_78_t;
+void Proc0_ClusterConnectUpcall(
+[in]/* simple_ref */struct Struct_24_t* arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[in][ref]struct Struct_52_t* arg_4,
+[in]/* simple_ref */struct Struct_78_t* arg_5,
+[in]long arg_6);
+
+void Proc1_ClusterDisConnectUpcall(
+[in]/* simple_ref */struct Struct_24_t* arg_2,
+[in]/* simple_ref */struct Struct_24_t* arg_3,
+[in][ref]struct Struct_52_t* arg_4,
+[in]long arg_5);
+}
+

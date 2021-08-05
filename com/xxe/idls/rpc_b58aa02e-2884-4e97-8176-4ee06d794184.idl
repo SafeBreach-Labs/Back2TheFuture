@@ -1,0 +1,10 @@
+[
+uuid(b58aa02e-2884-4e97-8176-4ee06d794184),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_PfRpcServerExecuteCommand(
+[in][out][size_is(, *arg_2)]char arg_1[],
+[in][out]/* simple_ref */long *arg_2);
+}
+

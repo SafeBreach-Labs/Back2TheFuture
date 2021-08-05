@@ -1,0 +1,119 @@
+[
+uuid(9c56d792-0591-4431-8d1f-681bfd80e4c0),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_48_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_48_t;
+typedef struct Struct_458_t
+{
+long StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_458_t;
+typedef struct Struct_72_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_48_t StructMember2;
+long StructMember3;
+[unique] [size_is(StructMember3)] char *StructMember4;
+}Struct_72_t;
+typedef struct Struct_420_t
+{
+struct Struct_48_t StructMember0;
+long StructMember1;
+long StructMember2;
+long StructMember3;
+}Struct_420_t;
+long Proc0_Wwan2RpcOpenHandle(
+[in]/* simple_ref */wchar_t *arg_0,
+[in]long arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */[context_handle] void** arg_4);
+
+long Proc1_Wwan2RpcCloseHandle(
+[in][out]/* simple_ref */[context_handle] void** arg_0);
+
+long Proc2_Wwan2RpcQueryInterfaces(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[in]long arg_2);
+
+long Proc3_Wwan2RpcEnumerateDeviceServices(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in][out][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_2)] /*  */ struct Struct_420_t* arg_3,
+[out]/* simple_ref */struct Struct_458_t* arg_4);
+
+long Proc4_Wwan2RpcRegisterNotification(
+[in][context_handle] void* arg_0,
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc5_Wwan2RpcAsyncGetNotification(
+[in][context_handle] void* arg_1,
+[out][ref]struct Struct_72_t** arg_2);
+
+long Proc6_Wwan2RpcOpenDeviceServiceCommandSession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+long Proc7_Wwan2RpcCloseDeviceServiceCommandSession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+long Proc8_Wwan2RpcSendDeviceServiceCommand(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in] /* enum_32 : typedef [v1_enum] enum  */ long arg_3,
+[in]long arg_4,
+[in]long arg_5,
+[in][unique][size_is(arg_5)]char *arg_6,
+[in][out]/* simple_ref */long *arg_7);
+
+long Proc9_Wwan2RpcQueryDeviceServiceSupportedCommands(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+long Proc10_Wwan2RpcOpenDeviceServiceDataSession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]/* simple_ref */struct Struct_48_t* arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[in][out]/* simple_ref */long *arg_4);
+
+long Proc11_Wwan2RpcCloseDeviceServiceDataSession(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3);
+
+long Proc12_Wwan2RpcWriteDeviceServiceData(
+[in][context_handle] void* arg_0,
+[in]/* simple_ref */struct Struct_48_t* arg_1,
+[in]long arg_2,
+[in]long arg_3,
+[in][unique][size_is(arg_3)]char *arg_4,
+[in][out]/* simple_ref */long *arg_5);
+
+long Proc13_Wwan2RpcSubscribePowerStateEvents(
+[in][context_handle] void* arg_0,
+[in]long arg_1);
+}
+

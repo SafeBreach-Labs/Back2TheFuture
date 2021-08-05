@@ -1,0 +1,48 @@
+[
+uuid(c6f3ee72-ce7e-11d1-b71e-00c04fc3111a),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_16_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_16_t;
+typedef struct Struct_28_t
+{
+struct Struct_16_t StructMember0;
+struct Struct_16_t StructMember1;
+long StructMember2;
+}Struct_28_t;
+long Proc0_ProcessActivatorStarted(
+[in][context_handle] void* arg_1,
+[in]/* simple_ref */struct Struct_28_t* arg_2,
+[out]/* simple_ref */error_status_t *arg_3);
+
+long Proc1_ProcessActivatorInitializing(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc2_ProcessActivatorReady(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc3_ProcessActivatorStopped(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc4_ProcessActivatorPaused(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc5_ProcessActivatorResumed(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+
+long Proc6_ProcessActivatorUserInitializing(
+[in][context_handle] void* arg_1,
+[out]/* simple_ref */error_status_t *arg_2);
+}
+

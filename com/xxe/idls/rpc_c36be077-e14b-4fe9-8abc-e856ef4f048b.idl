@@ -1,0 +1,35 @@
+[
+uuid(c36be077-e14b-4fe9-8abc-e856ef4f048b),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RpcSrvProxyMgrClientRegisterForEventNotification(
+[out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc1_RpcSrvProxyMgrClientGetNotification(
+[in][context_handle] void* arg_2,
+[out][ref]/* enum_16 */ short *arg_3);
+
+long Proc2_RpcSrvProxyMgrClientUnregisterEventNotification(
+[in]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc3_RpcSrvProxyMgrClientGetProxyForUrl(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in][out]/* simple_ref */long *arg_2,
+[out][ref][range(0,2147483647)] [string] wchar_t** arg_3,
+[out][ref][range(0,2147483647)] [string] wchar_t** arg_4);
+
+long Proc4_RpcSrvProxyMgrClientGetProxyCredentials(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]long arg_2,
+[in][out]/* simple_ref */long *arg_3,
+[out]/* simple_ref */long *arg_4,
+[out][ref][size_is(, *arg_4)]/*[range(0,0)]*/ char **arg_5);
+
+long Proc5_RpcSrvProxyMgrClientGetAllProxiesForUrl(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out][ref][range(0,2147483647)] [string] wchar_t** arg_2,
+[out][ref][range(0,2147483647)] [string] wchar_t** arg_3,
+[in]char arg_4);
+}
+

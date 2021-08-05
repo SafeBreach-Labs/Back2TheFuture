@@ -1,0 +1,14 @@
+[
+uuid(1257b580-ce2f-4109-82d6-a9459d0bf6bc),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RpcShadow2(
+[in]long arg_1,
+[in]/* enum_16 */ short arg_2,
+[in]/* enum_16 */ short arg_3,
+[out][ref]/* enum_16 */ short *arg_4,
+[out]/* simple_ref */[string][size_is(arg_6)]/*[range(1,8192)]*/  wchar_t* arg_5,
+[in][range(1,8192)] long arg_6);
+}
+

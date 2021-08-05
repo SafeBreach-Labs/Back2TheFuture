@@ -1,0 +1,189 @@
+[
+uuid(7f9d11bf-7fb9-436b-a812-b2d50c5d4c03),
+version(1.0),
+]
+interface DefaultIfName
+{typedef struct Struct_84_t
+{
+long StructMember0;
+long StructMember1;
+}Struct_84_t;
+typedef struct Struct_182_t
+{
+byte StructMember0[16] ;
+[range(0,128)]  long StructMember1;
+}Struct_182_t;
+typedef struct Struct_258_t
+{
+byte StructMember0[16] ;
+byte StructMember1[16] ;
+}Struct_258_t;
+typedef struct Struct_368_t
+{
+long StructMember0;
+short StructMember1;
+short StructMember2;
+byte StructMember3[8] ;
+}Struct_368_t;
+typedef struct Struct_466_t
+{
+char StructMember0[6] ;
+}Struct_466_t;
+typedef struct Struct_732_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ [string]  wchar_t** StructMember1;
+}Struct_732_t;
+typedef struct Struct_134_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,10000)] */  /*  */ struct Struct_84_t* StructMember1;
+}Struct_134_t;
+typedef struct Struct_150_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,10000)] */  /*  */ struct Struct_84_t* StructMember1;
+}Struct_150_t;
+typedef struct Struct_242_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,10000)] */  /*  */ struct Struct_182_t* StructMember1;
+}Struct_242_t;
+typedef struct Struct_314_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,10000)] */  /*  */ struct Struct_258_t* StructMember1;
+}Struct_314_t;
+typedef struct Struct_422_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,10000)] */  /*  */ struct Struct_368_t* StructMember1;
+}Struct_422_t;
+typedef struct Struct_498_t
+{
+byte StructMember0;
+byte StructMember1;
+struct Struct_466_t StructMember2;
+[size_is(StructMember1)] /*[range(0,0)] */ long StructMember3[] ;
+}Struct_498_t;
+typedef struct Struct_616_t
+{
+[unique] struct Struct_498_t* StructMember0;
+long StructMember1;
+}Struct_616_t;
+typedef struct Struct_674_t
+{
+long StructMember0;
+[unique]  /* [DBG]  FC_BOGUS_ARRAY */ [size_is(StructMember0)] /*[range(0,0)] */  /*  */ struct Struct_616_t* StructMember1;
+}Struct_674_t;
+typedef [switch_type(/* enum_16 */ short )] union union_598
+{
+[case(1)] struct Struct_674_t unionMember_1;
+[case(2)] struct Struct_732_t unionMember_2;
+[default] ;
+}union_598;
+typedef struct Struct_748_t
+{
+ short StructMember0;
+ short StructMember1;
+[unique] struct Struct_498_t* StructMember2;
+[unique] struct Struct_498_t* StructMember3;
+[ref] [string]  wchar_t* StructMember4;
+[switch_is(StructMember1)] union union_598 StructMember5;
+}Struct_748_t;
+typedef struct Struct_814_t
+{
+[unique] struct Struct_498_t* StructMember0;
+[unique] struct Struct_498_t* StructMember1;
+[ref] [string]  wchar_t* StructMember2;
+[ref] [string]  wchar_t* StructMember3;
+[ref] [string]  wchar_t* StructMember4;
+struct Struct_674_t StructMember5;
+struct Struct_732_t StructMember6;
+[unique] [range(1,512)]  [string]  wchar_t* StructMember7;
+[unique] [range(1,10000)]  [string]  wchar_t* StructMember8;
+}Struct_814_t;
+typedef struct Struct_330_t
+{
+long StructMember0;
+long StructMember1;
+struct Struct_134_t StructMember2;
+struct Struct_150_t StructMember3;
+struct Struct_242_t StructMember4;
+struct Struct_314_t StructMember5;
+}Struct_330_t;
+long Proc0_RPC_FWIndicatePortInUse(
+[in][range(0,5)] /* enum_16 */ short arg_1,
+[in]short arg_2,
+[in]long arg_3);
+
+long Proc1_RPC_FWGetIndicatedPortInUse(
+[in][range(0,5)] /* enum_16 */ short arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref][size_is(, *arg_2)]/*[range(0,0)]*/ short **arg_3,
+[out][ref][size_is(, *arg_2)]/*[range(0,0)]*/ short **arg_4);
+
+long Proc2_RPC_FWIndicateTupleInUse(
+[in][range(0,5)] /* enum_16 */ short arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in][range(0,2)] /* enum_16 */ short arg_3,
+[in]short arg_4,
+[in]short arg_5,
+[in]short arg_6,
+[in][unique]struct Struct_330_t* arg_7,
+[in][unique]struct Struct_330_t* arg_8,
+[in][unique]struct Struct_422_t* arg_9,
+[out]/* simple_ref */hyper *arg_10);
+
+long Proc3_RPC_FWResetIndicatedTupleInUse(
+[in][range(0,5)] /* enum_16 */ short arg_1,
+[in][unique][string] wchar_t* arg_2,
+[in]hyper arg_3);
+
+long Proc4_RPC_FWIndicateProxyForUrl(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[in]/* simple_ref */[string] wchar_t* arg_2,
+[in][unique][string] wchar_t* arg_3);
+
+long Proc5_CNetProfileEventSink__NetworkAdded(
+);
+
+long Proc6_RPC_FWIsTargetAProxy(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2);
+
+long Proc7_RPC_NetworkIsolationSetupAppContainerBinaries(
+[in]/* simple_ref */struct Struct_498_t* arg_1,
+[in]/* simple_ref */struct Struct_498_t* arg_2,
+[in]/* simple_ref */[string] wchar_t* arg_3,
+[in]/* simple_ref */[string] wchar_t* arg_4,
+[in]/* simple_ref */[string] wchar_t* arg_5,
+[in]long arg_6,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_8)]/*[range(0,0)]*/  /*  */ [string] wchar_t** arg_7,
+[in]long arg_8);
+
+long Proc8_RPC_NetworkIsolationRegisterForAppContainerChanges(
+[in]long arg_1,
+[in][out]/* simple_ref */[context_handle] void** arg_2);
+
+long Proc9_Rpc_NetworkIsolationRegistrationGetLastEvent(
+[in][context_handle] void* arg_2,
+[out][ref]struct Struct_748_t** arg_3);
+
+long Proc10_RPC_NetworkIsolationUnregisterForAppContainerChanges(
+[in][out]/* simple_ref */[context_handle] void** arg_1);
+
+long Proc11_RPC_NetworkIsolationEnumAppContainers(
+[in]long arg_1,
+[out]/* simple_ref */long *arg_2,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_2)]/*[range(0,0)]*/  /*  */ struct Struct_814_t** arg_3);
+
+long Proc12_RPC_NetworkIsolationGetAppContainerConfig(
+[out]/* simple_ref */long *arg_1,
+[out][ref] /* [DBG] FC_BOGUS_ARRAY */ [size_is(, *arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_616_t** arg_2);
+
+long Proc13_RPC_NetworkIsolationSetAppContainerConfig(
+[in]long arg_1,
+[in][unique] /* [DBG] FC_BOGUS_ARRAY */ [size_is(arg_1)]/*[range(0,0)]*/  /*  */ struct Struct_616_t* arg_2);
+}
+

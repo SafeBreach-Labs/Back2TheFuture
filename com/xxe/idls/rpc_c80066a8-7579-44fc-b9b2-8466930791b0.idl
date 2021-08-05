@@ -1,0 +1,13 @@
+[
+uuid(c80066a8-7579-44fc-b9b2-8466930791b0),
+version(1.0),
+]
+interface DefaultIfName
+{long Proc0_RpcPrintDrvGetInfo(
+[in]/* simple_ref */[string] wchar_t* arg_1,
+[out]/* simple_ref */long *arg_2,
+[out]/* simple_ref */long *arg_3,
+[in]long arg_4,
+[out]/* simple_ref */unsigned __int3264 *arg_5);
+}
+
