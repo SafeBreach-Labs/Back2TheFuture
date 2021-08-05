@@ -5,28 +5,29 @@ We use Microsoft security updates in order to find the patterns.
 
 ## Table of Contents
 
-* [Goal of the project](#Goal)
-* [Overview Steps](#Overview steps)
-* [Installation](#Installation)
-* [Getting Started](#Getting Started)
-  1. [Download Windows updates](#1.-Download-Windows-updates-and-correlate-them)
-  2. [Extract Windows updates](#2.-Extract Windows updates)
-  3. [Compare binaries](#3.-Compare Binaries)
-  4. [Classify changes](#4.-Classify changes)
-  5. [Generate graph](#5.-Graph call)
-  * [Utilities](#Utilities)
-    1. [db merger](#db-merger)
-    2. [bindiff extractor](#bindiff extractor)
-    3. [Generate RPC projects](#Generate-RPC-projects)
-    4. [Generate XXE COM projects](#Generate-XXE-COM-projects)
-    5. [Calculate missing diffs](#Calculate-missing-diffs)
+* [Goal of the project](#goal)
+* [Overview Steps](#overview-steps)
+* [Installation](#installation)
+* [Getting Started](#getting-started)
+* [Steps of the tool](#steps-for-execution):
+  1. [Download Windows updates](#1-download-windows-updates-and-correlate-them)
+  2. [Extract Windows updates](#2-extract-windows-updates)
+  3. [Compare binaries](#3-compare-binaries)
+  4. [Classify changes](#4-classify-changes)
+  5. [Generate graph](#5-graph-call)
+* [Utilities](#utilities)
+  1. [db merger](#db-merger)
+  2. [bindiff extractor](#bindiff-extractor)
+  3. [Generate RPC projects](#generate-rpc-projects)
+  4. [Generate XXE COM projects](#generate-xxe-com-projects)
+  5. [Calculate missing diffs](#calculate-missing-diffs)
 * [Architecture](./docs/Architecture.md)
   * [Overview architecture](./docs/Architecture.md#Overview-architecture-of-rank_changes.py)
-  * [Overview Output Directory Tree](./docs/Architecture.md#Overview-output-directory-tree)
-* [TL;DR](#TL-DR)
-* [Known Issues](#Known-Issues)
-* [Contributions](#Contributions)
-* [License](#License)
+  *  [Overview Output Directory Tree](./docs/Architecture.md#Overview-output-directory-tree)
+* [TL;DR](#tl-dr)
+* [Known Issues](#known-issues)
+* [Contributions](#contributions)
+* [License](#license)
 
 ## Goal
 
@@ -115,7 +116,7 @@ For analysis of all the patches - follow the steps below.
 If you only want to generate cross binaries graphs or find patterns in binaries without patch-diffing, go straight 
 to step 5, and use Generic FS flag.
 
-### 1. Download Windows updates and correlate them
+### 1 Download Windows updates and correlate them
 
 `cve_correlation.py` - downloads the security updates from the internet, extracts them and correlate the changes to the 
 CVEs.
@@ -127,7 +128,7 @@ Common arguments:
 
 Execution time: about **30-60 minutes**
   
-### 2. Extract Windows updates
+### 2 Extract Windows updates
 
 This step has 2 sub-steps:
 
@@ -145,7 +146,7 @@ If you'll use `--path-winsxs` it will include base version of all the files in W
 
 Execution time about **30-60 minutes**  
 
-### 3. Compare Binaries
+### 3 Compare Binaries
 
 `auto_patchdiff.py` - Generate all the diffs between all the patches common arguments: 
 
@@ -159,7 +160,7 @@ It contains all files required for bindiff to compare all the versions.
 
 Execution time about 48-36 hours
 
-### 4. Classify changes
+### 4 Classify changes
 
 `rank_changes.py` - Classify all the changes or patterns from existing directory tree. 
                     The output of this code is an SQL DB with all the [features](./docs/Features.md)
@@ -192,7 +193,7 @@ You might need to update the file `config/default_config.json` specially the obj
 
 Execution time about 72+ hours (Can be over **4 days** If you use all the additional features)
 
-### 5. Graph call
+### 5 Graph call
 
 `extract_cg.py` - Generate a [call graph](https://en.wikipedia.org/wiki/Call_graph) from or to any function across
                    the entire Windows OS. In order to use it, it is required to add few flags to `rank_changes.py`.
@@ -255,11 +256,11 @@ Execute the following commands, and you'll get the DB with all the changes
 
 ### Generate RPC projects
 
-See `rpc\README.md`
+See [rpc\README.md](./rpc/README.md)
 
 ### Generate XXE COM projects
 
-See `rpc\README.md`
+See [xxe\usage_example.md](./xxe/usage_example.md)
 
 ### Calculate missing diffs
 
