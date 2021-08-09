@@ -50,6 +50,7 @@ In order to detect all the patch patterns and find 0-days, it is required to do 
                                            [call graph](https://en.wikipedia.org/wiki/Call_graph) in order to detect
                                            which functions are calling to the vulnerable function you found or which
                                            functions the function you found is calling cross binaries
+
 **You can skip steps 1-4 if you'll use the generated DB found in release, see TL DR**
 
 ## Installation
