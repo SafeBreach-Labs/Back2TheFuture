@@ -25,6 +25,7 @@ We use Microsoft security updates in order to find the patterns.
   * [Overview architecture](./docs/Architecture.md#Overview-architecture-of-rank_changes.py)
   *  [Overview Output Directory Tree](./docs/Architecture.md#Overview-output-directory-tree)
 * [TL;DR](#tl-dr)
+* [Example](#example)
 * [Known Issues](#known-issues)
 * [Contributions](#contributions)
 * [License](#license)
@@ -49,6 +50,7 @@ In order to detect all the patch patterns and find 0-days, it is required to do 
                                            [call graph](https://en.wikipedia.org/wiki/Call_graph) in order to detect
                                            which functions are calling to the vulnerable function you found or which
                                            functions the function you found is calling cross binaries
+**You can skip steps 1-4 if you'll use the generated DB found in release, see TL DR**
 
 ## Installation
 
@@ -217,12 +219,17 @@ Complicated arguments:
 #### Generate api-set mapping:
 
 * mapping between windows apisets supported for WINDOWS 8.1, apisets can be updated using the following tool:
-execute `Dependencies.exe -apisets` [Dependencies](https://github.com/lucasg/Dependencies) and copy 
+execute `Dependencies.exe -apisets` [Dependencies](https://github.com/lucasg/Dependencies) and copy
 the stdout to the configuration .\config\windows\apisets_mapping file.
 
 Execution time about 5 minutes
 
 ## TL DR
+
+For view the patterns found without changes -  use the DB found in releases.
+It contains only the patterns of Windows 8.1 until the date it was released.
+
+## Example
 
 Execute the following commands, and you'll get the DB with all the changes 
 
